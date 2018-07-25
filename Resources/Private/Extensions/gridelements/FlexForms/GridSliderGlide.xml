@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Allgemein</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <layout type="array">
+                        <TCEforms type="array">
+                          <label>Layout</label>
+                          <config>
+                            <type>select</type>
+                            <default>default</default>
+                            <items type="array">
+                              <numIndex index="1" type="array">
+                                <numIndex index="0">default</numIndex>
+                                <numIndex index="1">default</numIndex>
+                              </numIndex>
+                              <numIndex index="2" type="array">
+                                <numIndex index="0">With border - blue arrows (Partner)</numIndex>
+                                <numIndex index="1">partner</numIndex>
+                              </numIndex>
+                              <numIndex index="3" type="array">
+                                <numIndex index="0">full width - background (Trainer)</numIndex>
+                                <numIndex index="1">trainer</numIndex>
+                              </numIndex>
+                            </items>
+                          </config>
+                        </TCEforms>
+                    </layout>
+                    <overlay type="array">
+                        <TCEforms type="array">
+                          <label>Overlay z. B. Bildbeschreibung</label>
+                          <config>
+                            <type>select</type>
+                            <default>desc-overlay</default>
+                            <items type="array">
+                              <numIndex index="1" type="array">
+                                <numIndex index="0">Logo Overlay</numIndex>
+                                <numIndex index="1">logo-overlay</numIndex>
+                              </numIndex>
+                              <numIndex index="2" type="array">
+                                <numIndex index="0">Image Description Overlay</numIndex>
+                                <numIndex index="1">desc-overlay</numIndex>
+                              </numIndex>
+                              <numIndex index="3" type="array">
+                                <numIndex index="0">keinen</numIndex>
+                                <numIndex index="1">no-overlay</numIndex>
+                              </numIndex>
+                            </items>
+                          </config>
+                        </TCEforms>
+                    </overlay>
+                    <adaptiveHeight type="array">
+                        <TCEforms type="array">
+                            <label>adaptiveHeight</label>
+                            <config type="array">
+                                <type>select</type>
+                                <default>true</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">true</numIndex>
+                                        <numIndex index="1">true</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">false</numIndex>
+                                        <numIndex index="1">false</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </adaptiveHeight>
+                    <fade type="array">
+                        <TCEforms type="array">
+                            <label>fade or slide</label>
+                            <config type="array">
+                                <type>select</type>
+                                <default>fade</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">fade</numIndex>
+                                        <numIndex index="1">fade</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">slide</numIndex>
+                                        <numIndex index="1">slide</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </fade>
+                    <autoplay type="array">
+                        <TCEforms type="array">
+                            <label>autoplay</label>
+                            <config type="array">
+                                <type>select</type>
+                                <default>true</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">true</numIndex>
+                                        <numIndex index="1">true</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">false</numIndex>
+                                        <numIndex index="1">false</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </autoplay>
+                    <autoplaySpeed type="array">
+                        <TCEforms type="array">
+                            <label>autoplaySpeed (ms)</label>
+                            <config type="array">
+                                <type>input</type>
+                                <default>4000</default>
+                                <size>4</size>
+                                <max>6</max>
+                                <eval>int</eval>
+                            </config>
+                        </TCEforms>
+                    </autoplaySpeed>
+                    <speed type="array">
+                        <TCEforms type="array">
+                            <label>speed (ms)</label>
+                            <config type="array">
+                                <type>input</type>
+                                <default>1500</default>
+                                <size>4</size>
+                                <max>6</max>
+                                <eval>int</eval>
+                            </config>
+                        </TCEforms>
+                    </speed>
+                </el>
+            </ROOT>
+        </sDEF>
+        <navigation>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Navigation</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <pauseOnHover type="array">
+                        <TCEforms type="array">
+                            <label>pauseOnHover</label>
+                            <config type="array">
+                                <type>select</type>
+                                <default>false</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">false</numIndex>
+                                        <numIndex index="1">false</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">true</numIndex>
+                                        <numIndex index="1">true</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </pauseOnHover>
+                    <arrows type="array">
+                        <TCEforms type="array">
+                            <label>arrows</label>
+                            <config type="array">
+                                <type>select</type>
+                                <default>false</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">true</numIndex>
+                                        <numIndex index="1">true</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">false</numIndex>
+                                        <numIndex index="1">false</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </arrows>
+                    <dots type="array">
+                        <TCEforms type="array">
+                            <label>dots</label>
+                            <config type="array">
+                                <type>select</type>
+                                <default>false</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">false</numIndex>
+                                        <numIndex index="1">false</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">true</numIndex>
+                                        <numIndex index="1">true</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </dots>
+                    <infinite type="array">
+                        <TCEforms type="array">
+                            <label>infinite</label>
+                            <config type="array">
+                                <type>select</type>
+                                <default>true</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">true</numIndex>
+                                        <numIndex index="1">true</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">false</numIndex>
+                                        <numIndex index="1">false</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </infinite>
+                </el>
+            </ROOT>
+        </navigation>
+        <slideshow>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Slides</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <slidesToShow type="array">
+                        <TCEforms type="array">
+                            <label>slidesToShow (anzahl) - 0 means "auto"</label>
+                            <config type="array">
+                                <type>input</type>
+                                <default>1</default>
+                                <size>1</size>
+                                <max>2</max>
+                                <eval>int</eval>
+                            </config>
+                        </TCEforms>
+                    </slidesToShow>
+                    <slidesToScroll type="array">
+                        <TCEforms type="array">
+                            <label>slidesToScroll (anzahl wieviele gleichzeitig gescrollt werden)</label>
+                            <config type="array">
+                                <type>input</type>
+                                <default>1</default>
+                                <size>1</size>
+                                <max>2</max>
+                                <eval>int</eval>
+                            </config>
+                        </TCEforms>
+                    </slidesToScroll>
+                    <asNavFor type="array">
+                        <TCEforms type="array">
+                            <label>Hat einen weiteren Slider als Navigation</label>
+                            <onChange>reload</onChange>
+                            <config type="array">
+                                <type>select</type>
+                                <default>null</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Bitte Wählen (nur wenn benötigt!)</numIndex>
+                                        <numIndex index="1">null</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Ist der Slider</numIndex>
+                                        <numIndex index="1">".image-slider-nav"</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Ist das Navi zum Slider</numIndex>
+                                        <numIndex index="1">".image-slider"</numIndex>
+                                    </numIndex>
+                                </items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </asNavFor>
+                    <centerMode type="array">
+                        <TCEforms type="array">
+                            <label>Center Mode (Empfohlen für Navigation)</label>
+                            <displayCond>FIELD:asNavFor:=:".image-slider"</displayCond>
+                            <config type="array">
+                                <type>select</type>
+                                <default>false</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">true</numIndex>
+                                        <numIndex index="1">true</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">false</numIndex>
+                                        <numIndex index="1">false</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </centerMode>
+                    <focusOnSelect type="array">
+                        <TCEforms type="array">
+                            <label>Focus on Select (Empfohlen für Navigation - true)</label>
+                            <displayCond>FIELD:asNavFor:=:".image-slider"</displayCond>
+                            <config type="array">
+                                <type>select</type>
+                                <default>false</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">true</numIndex>
+                                        <numIndex index="1">true</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">false</numIndex>
+                                        <numIndex index="1">false</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </focusOnSelect>
+                </el>
+            </ROOT>
+        </slideshow>
+    </sheets>
+</T3DataStructure>

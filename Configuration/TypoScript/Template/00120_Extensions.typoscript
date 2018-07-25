@@ -1,0 +1,437 @@
+################################################################
+### Fluid Styled Content ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.txt">
+lib.contentElement {
+    templateRootPaths {
+        20 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Templates/
+        40 = {$styles.templates.templateRootPath}
+    }
+    partialRootPaths {
+        20 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Partials/
+        40 = {$styles.templates.partialRootPath}
+    }
+    layoutRootPaths {
+        20 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Layouts/
+        40 = {$styles.templates.layoutRootPath}
+    }
+}
+
+################################################################
+### Heise shariff - tx_shariff ###
+################################################################
+tt_content.list.20.rxshariff_shariff {
+    settings {
+        enableBackend = 1
+        data {
+            lang = de
+            mail-body =
+            mail-subject =
+            mail-url = mailto:
+            media-url = null
+            orientation = horizontal
+            referrer-track = null
+            services =
+            theme = white
+            twitter-via = null
+        }
+    }
+}
+
+################################################################
+### news - tx_news ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/setup.txt">
+plugin.tx_news {
+    view {
+        templateRootPaths {
+            5 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Templates/
+            10 = {$theme.urls.themeResources}Private/Extensions/news/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            5 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Partials/
+            10 = {$theme.urls.themeResources}Private/Extensions/news/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            5 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Layouts/
+            10 = {$theme.urls.themeResources}Private/Extensions/news/Resources/Private/Layouts/
+        }
+    }
+    settings {
+        cssFile >
+        link {
+            # Funktioniert nur mit angepasster realurl_conf.php
+            skipControllerAndAction = 1
+        }
+
+        displayDummyIfNoMedia = 0
+
+        detail {
+            showSocialShareButtons = 1
+
+            media {
+                image {
+                    maxWidth = 1920
+                }
+            }
+        }
+    }
+}
+
+[globalVar = GP:tx_news_pi1|news > 0]
+    config.defaultGetVars {
+        tx_news_pi1 {
+            controller=News
+            action=detail
+        }
+    }
+[global]
+
+################################################################
+### Typo3 form Extenstion ###
+################################################################
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = {$theme.urls.themeResources}Private/Extensions/form/Configuration/Yaml/myBaseSetup.yaml
+        }
+    }
+}
+
+module.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = {$theme.urls.themeResources}Private/Extensions/form/Configuration/Yaml/myBaseSetup.yaml
+        }
+    }
+}
+
+################################################################
+### Form - ext powermail ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/Main/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/Powermail_Frontend/setup.txt">
+plugin.tx_powermail.view {
+    templateRootPaths {
+        100 = {$theme.urls.themeResources}Private/Extensions/powermail/Templates/
+    }
+    partialRootPaths {
+        100 = {$theme.urls.themeResources}Private/Extensions/powermail/Partials/
+    }
+    layoutRootPaths {
+        100 = {$theme.urls.themeResources}Private/Extensions/powermail/Layouts/
+    }
+}
+
+################################################################
+### indexed_search - Suche ###
+################################################################
+plugin.tx_indexedsearch {
+    view {
+        templateRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Templates/
+            20 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Templates/
+            30 = {$plugin.tx_indexedsearch.view.templateRootPath}
+        }
+        partialRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Partials/
+            20 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Partials/
+            30 = {$plugin.tx_indexedsearch.view.partialRootPath}
+        }
+        layoutRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Layouts/
+            20 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Layouts/
+            30 = {$plugin.tx_indexedsearch.view.layoutRootPath}
+        }
+    }
+
+    settings {
+        targetPid = {$plugin.hhthemeskeleton.indexedSearchId}
+        displayRules = 0
+        displayAdvancedSearchLink = 0
+    }
+}
+
+config {
+    index_enable = 1
+    index_metatags = 0
+    ### Wenn gesetzt, werden externe Medien, auf die auf Seiten verlinkt wird, ebenfalls indiziert.
+    index_externals = 1
+}
+
+### liefert blanke Ergebnisse ohne Header etc. für Ajax nachladen
+search = PAGE
+search {
+    typeNum = 1981
+    config {
+        disableAllHeaderCode = 1
+        xhtml_cleaning = none
+        admPanel = 0
+        metaCharset = utf-8
+        additionalHeaders = Content-Type:text/html;charset=utf-8
+        disablePrefixComment = 1
+    }
+    10 < plugin.tx_indexedsearch
+}
+
+################################################################
+### tt_address Plugin OLD ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tt_address/static/pi1/setup.txt">
+plugin.tx_ttaddress_pi1 {
+    pidList = 20
+    templatePath = {$theme.urls.themeResources}Private/Extensions/tt_address/
+    defaultTemplateFileName = default_hcard.htm
+    wrap.if.isFalse = plugin.tx_ttaddress_pi1.templates.simple_hcard
+    templates {
+        default_hcard {
+            allWrap = <div class="address-default">|</div>
+            phone {
+                ### Eigene Funktion für Links bei Telefonnummern
+                postUserFunc = HauerHeinrich\hhthemeskeleton\Hooks\tt_address_phone_link->user_tt_address_tel_link
+                postUserFunc {
+                    countryCode = 43
+                    areaCode = 4782
+                    titlename = Telefonisch für Sie erreichbar unter
+                    mobile = 0
+                }
+                innerWrap = Tel.:&nbsp;|
+                required = 1
+                10 = TEXT
+                10.value.data = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_ttaddress.xlf:fe.phone.title
+            }
+            mobile < .phone
+            mobile {
+                postUserFunc.mobile = 1
+                required = 1
+            }
+            fax {
+                noTrimWrap = |<span class="fax">Fax: |</span>|
+                required = 1
+            }
+            email {
+                wrap = <span class="email">|</span>
+                ### override = E-Mail
+                typolink {
+                    parameter.field = email
+                    title.field = name
+                    title.noTrimWrap = |Schreibe eine E-Mail an: | |
+                }
+                required = 1
+            }
+            www {
+                typolink {
+                    parameter.field = www
+                    target = _blank
+                    title.field = name
+                    title.noTrimWrap = |Rufe die Webseite von | auf. | |
+                }
+                wrap = <span class="url">|</span>
+                required = 1
+            }
+            address {
+                wrap = <span class="address">|</span>
+                required = 1
+            }
+            city {
+                wrap = <span class="city">|</span>
+                required = 1
+            }
+            zip {
+                wrap = <span class="zip">|</span>
+                required = 1
+            }
+            region {
+                wrap = <span class="region">|</span>
+                required = 1
+            }
+            country {
+                wrap = <span class="country">|</span>
+                required = 1
+            }
+            organization {
+                wrap = <span class="organization">|</span>
+                required = 1
+            }
+            position {
+                wrap = <span class="position">|</span>
+                required = 1
+            }
+            description {
+                wrap = <span class="description">|</span>
+                parseFunc = < lib.parseFunc_RTE
+                required = 1
+            }
+            facebook {
+                value = <img src="{$theme.urls.themeResources}Public/Images/Social/fb1.png" title="Follow me on Facebook" alt="Facebook Profil" />
+                typolink {
+                    value = test
+                    parameter.field = facebook
+                    typolink.target = _blank
+                    ATagParams = class="facebook"
+                }
+                required = 1
+            }
+        }
+        simple_hcard < .default_hcard
+        simple_hcard {
+            allWrap = <div class="address-simple">|</div>
+            placeholderImage = fileadmin/template/dummy/260x260.png
+            image {
+                file {
+                    width = 260
+                }
+            }
+        }
+
+        aside_hcard < .default_hcard
+        aside_hcard {
+            allWrap = <div class="address-aside">|</div>
+            image {
+                file {
+                    width = 320
+                }
+            }
+        }
+        aside_slider_hcard < .default_hcard
+        aside_slider_hcard {
+            allWrap = <div class="address-aside-slider">|</div>
+            placeholderImage = fileadmin/template/dummy/260x260.png
+            image {
+                file {
+                    width = 260
+                }
+            }
+        }
+        suppliers_hcard < .default_hcard
+        suppliers_hcard {
+            allWrap = <div class="address-suppliers">|</div>
+            country {
+                wrap = <span class="country">|–</span>
+                required = 1
+            }
+            phone {
+                innerWrap = Tel.:&nbsp;|
+            }
+        }
+    }
+}
+
+### NEW tt_address
+plugin.tx_ttaddress {
+    view {
+        templateRootPaths {
+            10 = EXT:tt_address/Resources/Private/Templates/Address/
+            20 = EXT:hhthemeskeleton/Resources/Private/Extensions/tt_address/Templates/
+        }
+        partialRootPaths {
+            10 = EXT:tt_address/Resources/Private/Partials/
+            20 = EXT:hhthemeskeleton/Resources/Private/Extensions/tt_address/Partials/
+        }
+        layoutRootPaths {
+            10 = EXT:tt_address/Resources/Private/Layouts/
+            20 = EXT:hhthemeskeleton/Resources/Private/Extensions/tt_address/Layouts/
+        }
+    }
+}
+
+################################################################
+### tt_address - cyz_address Plugin ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cyz_address/Configuration/TypoScript/setup.ts">
+plugin.tx_cyzaddress {
+    view {
+        templateRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/cyz_address/Templates/
+        }
+        partialRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/cyz_address/Partials/
+        }
+        layoutRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/cyz_address/Layouts/
+        }
+    }
+}
+
+################################################################
+### Frontend - Grid Layout (gridelements) - Anpassen ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/setup.ts">
+tt_content.gridelements_pi1.20.10.setup {
+    ### ID des gridelements
+    1 < lib.gridelements.defaultGridSetup
+    1 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            format = html
+
+            partialRootPaths {
+                10 = EXT:fluid_styled_content/Resources/Private/Partials/
+                20 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Partials/
+                30 = {$theme.urls.themeResources}Private/Extensions/gridelements/Html/Partials/
+            }
+            layoutRootPaths {
+                10 = EXT:fluid_styled_content/Resources/Private/Layouts/
+                20 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Layouts/
+                30 = {$theme.urls.themeResources}Private/Extensions/gridelements/Html/Layouts/
+            }
+            templateRootPaths {
+                10 = EXT:fluid_styled_content/Resources/Private/Templates/
+                20 = {$theme.urls.themeResources}Private/Extensions/fluid_styled_content/Resources/Private/Templates/
+                30 = {$theme.urls.themeResources}Private/Extensions/gridelements/Html/Templates/
+            }
+
+            templateName = Grid-100
+        }
+    }
+    2 < .1
+    2 {
+        cObject {
+            templateName = Grid-50-50
+        }
+    }
+    3 < .1
+    3 {
+        cObject {
+            templateName = Grid-33-33-33
+        }
+    }
+    4 < .1
+    4 {
+        cObject {
+            templateName = Grid-66-33
+        }
+    }
+    5 < .1
+    5 {
+        cObject {
+            templateName = Grid-33-66
+        }
+    }
+    6 < .1
+    6 {
+        cObject {
+            templateName = Grid-75-25
+        }
+    }
+    7 < .1
+    7 {
+        cObject {
+            templateName = Grid-25-75
+        }
+    }
+    8 < .1
+    8 {
+        cObject {
+            templateName = Grid-25-25-25-25
+        }
+    }
+    9 < .1
+    9 {
+        cObject {
+            templateName = Grid-Slider
+        }
+    }
+
+    ### Weitere / Eigene Gridelements Layouts bitte mit ID 50 beginnen
+}

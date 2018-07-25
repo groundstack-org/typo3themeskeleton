@@ -1,0 +1,161 @@
+### Load default processing options
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+### Add configuration for the editor
+### For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+### English tutorials:
+### https://typo3worx.eu/2017/02/configure-ckeditor-in-typo3/
+### German Tutorials:
+### https://www.clickstorm.de/blog/der-neue-typo3-rte-ckeditor/
+### https://www.thomaskieslich.de/blog/127-typo3-8x-ckeditor-konfigurieren/
+
+editor:
+  config:
+    contentsCss:
+      - "EXT:rte_ckeditor/Resources/Public/Css/contents.css"
+      - "EXT:hhthemeskeleton/Resources/Public/Css/UserRTE.min.css"
+
+    resize_enabled: true
+
+    stylesSet:
+      - { "name": "bigger-red", "element": "span", "attributes": {"class": "bigger-red"} }
+      - { "name": "bigger-grey", "element": "span", "attributes": {"class": "bigger-grey"} }
+
+    ### format tags:
+    format_tags: "p"
+
+    ### RTE Backend Color:
+    # uiColor: 074e7c
+
+    ### RTE Backend Button List
+    ### - "/" = new line
+    toolbarGroups:
+      - { name: document, groups: [ mode, document, doctools ] }
+      - { name: clipboard, groups: [ clipboard, undo ] }
+      - { name: editing, groups: [ find, selection, spellchecker, editing, removeformat ] }
+      - { name: basicstyles, groups: [ basicstyles, cleanup ] }
+      - "/"
+      - { name: paragraph, groups: [ list, indent, blocks, align, bidi, paragraph ] }
+      - { name: links, groups: [ links ] }
+      - { name: insert, groups: [ insert ] }
+      - { name: styles, groups: [ styles ] }
+      - { name: tools, groups: [ tools ] }
+      - { name: others, groups: [ others ] }
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+      - specialchar
+      - showblocks
+      - link
+
+    removePlugins:
+      - image
+
+    removeButtons:
+      - Save
+      - NewPage
+      - Preview
+      - Print
+      - Form
+      - Checkbox
+      - Radio
+      - TextField
+      - Textarea
+      - Select
+      - Button
+      - ImageButton
+      - HiddenField
+      - CreateDiv
+      - Image
+      - Flash
+      - Table
+      - Smiley
+      - Iframe
+      - About
+
+    allowedContent:
+      - a: { classes: '*' }
+
+    extraAllowedContent:
+      - a[href,document-href,tel,title,class,data-*]
+      - span[!data-*,class]
+      - p[!data-*]
+      - span(shy)
+
+  ### external Plugin e. g.:
+  # externalPlugins:
+    # simplebutton: { resource: "EXT:hhthemeskeleton/Resources/Public/JavaScript/RTE_Plugins/simplebutton/plugin.js" }
+
+### Button config and defaults
+buttons:
+  link:
+    relAttribute:
+      enabled: false
+    properties:
+      class:
+        allowedClasses: '
+            btn-blue,
+            btn-grey,
+            link-internal,
+            link-internal-blank,
+            link-download,
+            link-folder,
+            link-external,
+            link-external-blank,
+            link-mail
+        '
+    page:
+      properties:
+        class:
+          default: 'link-internal'
+    file:
+      properties:
+        class:
+          default: 'link-download'
+    folder:
+      properties:
+        class:
+          default: 'link-folder'
+    url:
+      properties:
+        class:
+          default: 'link-external-blank'
+    mail:
+      properties:
+        class:
+          default: 'link-mail'
+
+### Classes config
+classesAnchor:
+  linkInternal:
+    class: 'link-internal'
+    type: 'page'
+  linkInternalBlank:
+    class: 'link-internal-blank'
+    type: 'page'
+    target: '_blank'
+  linkDownload:
+    class: 'link-download'
+    type: 'file'
+  linkFolder:
+    class: 'link-folder'
+    type: 'folder'
+  linkExternal:
+    class: 'link-external'
+    type: 'url'
+  linkExternalBlank:
+    class: 'link-external-blank'
+    type: 'url'
+    target: '_blank'
+  linkMail:
+    class: 'link-mail'
+    type: 'mail'

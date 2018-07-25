@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-02-08T00:01:00Z" product-name="hhthemeskeleton">
+        <header/>
+        <body>
+
+        <trans-unit id="tceform.pages.subtitle" approved="yes">
+            <source>SEO Title (default value: from title)</source>
+            <target state="translated">SEO Title (default Wert: von Seitentitle)</target>
+        </trans-unit>
+
+        </body>
+    </file>
+</xliff>

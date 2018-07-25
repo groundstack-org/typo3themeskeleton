@@ -1,0 +1,274 @@
+tx_gridelements {
+    overruleRecords = 1
+    setup {
+        1 {
+            title = One Column
+            description = Eine Spalte
+            topLevelLayout = 0
+            iconIdentifier = hh_grid_1_column
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Main
+                                colPos = 1
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        2 {
+            title = Two Columns
+            description = 2 Spalten
+            topLevelLayout = 0
+            iconIdentifier = hh_grid_2_column
+            flexformDS =
+            config {
+                colCount = 2
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Main Left
+                                colPos = 1
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                            2 {
+                                name = Main Right
+                                colPos = 2
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        3 {
+            title = Three Columns
+            description = 3 Spalten
+            topLevelLayout = 0
+            iconIdentifier = hh_grid_3_column
+            flexformDS =
+            config {
+                colCount = 3
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Main Left
+                                colPos = 1
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                            2 {
+                                name = Main Middle
+                                colPos = 3
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                            3 {
+                                name = Main Right
+                                colPos = 2
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        4 {
+            title = 66% - 33%
+            description = deine Beschreibung
+            topLevelLayout = 0
+            iconIdentifier = hh_grid_66-33_column
+            flexformDS =
+            config {
+                colCount = 3
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Main Left
+                                colspan = 2
+                                colPos = 1
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                            2 {
+                                name = Main Right
+                                colPos = 2
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        5 {
+            title = 33% - 66%
+            description = deine Beschreibung
+            topLevelLayout = 0
+            iconIdentifier = hh_grid_33-66_column
+            flexformDS =
+            config {
+                colCount = 3
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Main Left
+                                colPos = 1
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                            2 {
+                                name = Main Right
+                                colspan = 2
+                                colPos = 2
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        6 {
+            title = 75% - 25%
+            description = deine Beschreibung
+            topLevelLayout = 0
+            iconIdentifier = hh_grid_75-25_column
+            flexformDS =
+            config {
+                colCount = 3
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Main Left
+                                colspan = 2
+                                colPos = 1
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                            2 {
+                                name = Main Right
+                                colPos = 2
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        7 {
+            title = 25% - 75%
+            description = deine Beschreibung
+            topLevelLayout = 0
+            iconIdentifier = hh_grid_25-75_column
+            flexformDS =
+            config {
+                colCount = 3
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Main Left
+                                colPos = 1
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                            2 {
+                                name = Main Right
+                                colspan = 2
+                                colPos = 2
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9,10
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        8 {
+            title = Four Columns
+            description = 4 Spalten gleich breit (25% - 25% - 25% - 25%)
+            topLevelLayout = 0
+            iconIdentifier = hh_grid_4_column
+            flexformDS =
+            config {
+                colCount = 4
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Main Left
+                                colPos = 1
+                                allowed = *
+                            }
+                            2 {
+                                name = Main Left Middle
+                                colPos = 2
+                                allowed = *
+                            }
+                            3 {
+                                name = Main Right Middle
+                                colPos = 4
+                                allowed = *
+                            }
+                            4 {
+                                name = Main Right
+                                colPos = 3
+                                allowed = *
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        9 {
+            title = Content Slider / Image Slider
+            description = Wenn als Image Slider genutzt, bitte im ImageContentElement Layout ImageSlider auswählen!
+            topLevelLayout = 0
+            iconIdentifier = hh_grid_slider
+            flexformDS = FILE:EXT:hhthemeskeleton/Resources/Private/Extensions/gridelements/FlexForms/GridSliderGlide.xml
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Slider Content
+                                colPos = 1
+                                allowed = *
+                                allowedGridTypes = 1,2,3,4,5,6,7,8,9
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        # Eigene Elemente nur für dieses Projekt (bitte mit ID 50 beginnen)
+
+    }
+}

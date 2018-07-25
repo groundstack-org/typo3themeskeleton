@@ -1,0 +1,7 @@
+theme {
+    name = hhthemeskeleton
+    urls {
+        themeResources = typo3conf/ext/hhthemeskeleton/Resources/
+        themeFileadmin = fileadmin/hhthemeskeleton/
+    }
+}

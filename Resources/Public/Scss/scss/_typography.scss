@@ -1,0 +1,84 @@
+body {
+    font-family: $basefont;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+}
+
+b,
+.bold {
+    font-weight: 700;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+.indent {
+    padding-left: 20%;
+}
+
+.color-brand {
+    color: $color-brand;
+}
+
+.letter-spacing-1,
+span.letter-spacing-1,
+a.letter-spacing-1 {
+    letter-spacing: $letter-spacing-1;
+}
+
+.letter-spacing-2,
+span.letter-spacing-2,
+a.letter-spacing-2 {
+    letter-spacing: $letter-spacing-2;
+}
+
+.font-size-xlarge,
+span.font-size-xlarge,
+a.font-size-xlarge {
+    font-size: $font-size-xlarge;
+}
+
+.font-size-large,
+span.font-size-large,
+a.font-size-large,
+p.font-size-large {
+    font-size: $font-size-large;
+}
+
+.font-size-medium,
+span.font-size-medium,
+a.font-size-medium {
+    font-size: $font-size-medium;
+}
+
+.font-size-small,
+span.font-size-small,
+a.font-size-small {
+    font-size: $font-size-small;
+}
+
+.blue,
+span.blue {
+    color: $color-brand;
+}

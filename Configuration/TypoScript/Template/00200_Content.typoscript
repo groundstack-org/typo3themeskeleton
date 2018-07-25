@@ -1,0 +1,36 @@
+################################################################
+### LOGO ###
+################################################################
+lib.logo = FILES
+lib.logo {
+    references {
+        table = pages
+        ### PageID
+        uid.dataWrap = {$plugin.hhthemeskeleton.rootPageID}
+        fieldName = media
+    }
+
+    begin = 0
+    maxItems = 1
+
+    renderObj = IMAGE
+    renderObj {
+        file {
+            import.data = file:current:uid
+            import.listNum = 0
+            treatIdAsReference = 1
+        }
+        altText.data = file:current:alternative
+        titleText.data = file:current:title
+        params = itemprop="logo"
+        stdWrap {
+            typolink {
+                parameter.data = file:current:link
+                extTarget = _top
+                ATagParams = itemprop="url" title="{file:current:title}"
+                ATagParams.insertData = 1
+            }
+            wrap = <div id="logo" itemscope itemtype="http://schema.org/Organization">|</div>
+        }
+    }
+}

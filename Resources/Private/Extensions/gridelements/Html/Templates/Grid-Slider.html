@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:hh="http://typo3.org/ns/HauerHeinrich/HhThemeSkeleton/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:layout name="grid-Default" />
+
+<f:section name="content">
+    <!--TYPO3SEARCH_end-->
+    <div class="swiper swiper-container swiper-container-{data.uid}">
+        <!--TYPO3SEARCH_begin-->
+        <f:if condition="{data.flexform_arrows}">
+            <span class="swiper-button-prev"></span>
+        </f:if>
+        <div class="swiper-wrapper">
+            <f:format.raw>{data.tx_gridelements_view_column_1}</f:format.raw>
+        </div>
+        <f:if condition="{data.flexform_arrows}">
+            <span class="swiper-button-next"></span>
+        </f:if>
+        <f:if condition="{data.flexform_dots}">
+            <span class="dots"></span>
+        </f:if>
+    </div>
+
+    <hh:addHeaderData tag="js">
+        <script>
+            window.addEventListener("load", function() {
+                <f:comment></f:comment>var mySwiper{data.uid} = new Swiper('.swiper-container-{data.uid}', {
+                    speed: <f:format.raw>{data.flexform_speed}</f:format.raw>,
+                    effect: '<f:format.raw>{data.flexform_fade}</f:format.raw>',
+                    loop: <f:format.raw>{data.flexform_infinite}</f:format.raw>,
+                    autoplay: {
+                        <f:if condition="{data.flexform_autoplay} == true">
+                            delay:<f:format.raw>{data.flexform_autoplaySpeed}</f:format.raw>,
+                        </f:if>
+                        disableOnInteraction: <f:format.raw>{data.flexform_pauseOnHover}</f:format.raw>,
+                    },
+                    slidesPerView: <f:format.raw>{data.flexform_slidesToShow}</f:format.raw>,
+                    navigation: {
+                        nextEl: 'swiper-button-next',
+                        prevEl: 'swiper-button-prev',
+                    },
+                    pagination: <f:format.raw>{data.flexform_dots}</f:format.raw>,
+                    direction: 'horizontal'
+                });
+            });
+        </script>
+    </hh:addHeaderData>
+</f:section>
+
+</html>

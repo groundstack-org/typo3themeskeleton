@@ -1,0 +1,90 @@
+################################################################
+### Language ###
+################################################################
+### Englisch
+[globalVar = GP:L=1]
+    config {
+        sys_language_uid = 1
+        language = en
+        locale_all = en_EN.UTF-8
+        htmlTag_langKey = en
+    }
+
+    plugin.tx_indexedsearch._DEFAULT_PI_VARS.lang = 1
+
+    page {
+        bodyTagCObject.stdWrap.dataWrap = <body id="page-{field:uid}" class="be-{field:backend_layout} {$plugin.hhthemeskeleton.layout}"><noscript><div><p>Your JavaScript is disabled!<br />To enjoy this site to the fullest please activate it!<br />Thank you.</p></div></noscript>
+    }
+[GLOBAL]
+
+page {
+    headerData {
+        ################################################################
+        ### Language - Link-Meta-Tag alternate - SEO ###
+        ################################################################
+        100 = HMENU
+        100 {
+            special = language
+            ### Set the used language UIDs
+            special.value = 0,1
+            1 = TMENU
+            1 {
+                NO = 1
+                NO {
+                    stdWrap.cObject = TEXT
+                    stdWrap.cObject {
+                        value = de || en
+                    }
+                    linkWrap = <link rel="alternate" hreflang="|"
+                    doNotLinkIt = 1
+                    after.cObject = TEXT
+                    after.cObject {
+                        stdWrap {
+                            noTrimWrap = | href="|" />|
+                            typolink {
+                                parameter.data = page:uid
+                                ### Set the used language L parameter=languageUID
+                                additionalParams = &L=0 || &L=1
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                                addQueryString = 1
+                            }
+                        }
+                    }
+                }
+            }
+            if.isTrue = {$plugin.hhthemeskeleton.multiLanguage}
+        }
+
+        105 = HMENU
+        105 {
+            special = language
+            special.value = 1
+            1 = TMENU
+            1 {
+                NO = 1
+                NO {
+                    stdWrap.cObject = TEXT
+                    stdWrap.cObject {
+                        value = x-default
+                    }
+                    linkWrap = <link rel="alternate" hreflang="|"
+                    doNotLinkIt = 1
+                    after.cObject = TEXT
+                    after.cObject {
+                        stdWrap {
+                            noTrimWrap = | href="|" />|
+                            typolink {
+                                parameter.data = page:uid
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                                addQueryString = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if.isTrue = {$plugin.hhthemeskeleton.multiLanguage}
+    }
+}

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-02-08T00:01:00Z" product-name="hhthemeskeleton">
+        <header/>
+        <body>
+
+        <trans-unit id="tceform.page.header1" approved="yes">
+            <source>Header 1 (h1)</source>
+            <target state="translated">Überschrift 1 (h1)</target>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header2" approved="yes">
+            <source>Header 2 (h2)</source>
+            <target state="translated">Überschrift 2 (h2)</target>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header3" approved="yes">
+            <source>Header 3 (h3)</source>
+            <target state="translated">Überschrift 3 (h3)</target>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header4" approved="yes">
+            <source>Header 4 (h4)</source>
+            <target state="translated">Überschrift 4 (h4)</target>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header5" approved="yes">
+            <source>Header 5 (h5)</source>
+            <target state="translated">Überschrift 5 (h5)</target>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.onlybold" approved="yes">
+            <source>No header, only bold</source>
+            <target state="translated">keine Überschrift, nur bold</target>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header1.lineshort" approved="yes">
+            <source>Header 1 (h1) with short line</source>
+            <target state="translated">Überschrift 1 (h1) mit kurzer linie</target>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header2.lineshort" approved="yes">
+            <source>Header 2 (h2) with short line</source>
+            <target state="translated">Überschrift 2 (h2) mit kurzer linie</target>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header3.lineshort" approved="yes">
+            <source>Header 3 (h3) with short line</source>
+            <target state="translated">Überschrift 3 (h3) mit kurzer linie</target>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header4.lineshort" approved="yes">
+            <source>Header 4 (h4) with short line</source>
+            <target state="translated">Überschrift 4 (h4) mit kurzer linie</target>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header5.lineshort" approved="yes">
+            <source>Header 5 (h5) with short line</source>
+            <target state="translated">Überschrift 5 (h5) mit kurzer linie</target>
+        </trans-unit>
+
+        </body>
+    </file>
+</xliff>

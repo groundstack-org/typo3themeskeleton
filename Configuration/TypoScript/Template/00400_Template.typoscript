@@ -1,0 +1,191 @@
+page {
+    includeCSS >
+    includeCSS {
+        file10 = {$theme.urls.themeResources}Public/Css/theme.min.css
+    }
+}
+
+page {
+    includeJS >
+    includeJSLibs >
+    includeJSFooter >
+    includeJSFooterlibs >
+
+    includeJSLibs {
+        file10 = {$theme.urls.themeResources}Public/JavaScript/functions.min.js
+    }
+
+    includeJSFooterlibs {
+        file10 = {$theme.urls.themeResources}Public/JavaScript/Libs/jquery-3.3.1.min.js
+        file10.forceOnTop = 1
+        file10.excludeFromConcatenation = 1
+
+        ### Slider
+        file20 = {$theme.urls.themeResources}Public/JavaScript/Libs/swiper.min.js
+        file20.async = 1
+        file20.excludeFromConcatenation = 1
+
+        ### Lightbox
+        file30 = {$theme.urls.themeResources}Public/JavaScript/Libs/baguetteBox.min.js
+        file30.async = 1
+        file30.excludeFromConcatenation = 1
+
+        ### Cookie hint
+        file40 = {$theme.urls.themeResources}Public/JavaScript/Libs/cookieconsent.min.js
+        file40.async = 1
+        file40.excludeFromConcatenation = 1
+
+        file45 = {$theme.urls.themeResources}Public/JavaScript/LibsConfig/cookieconsent.config.min.js
+        file45.async = 1
+        file45.excludeFromConcatenation = 1
+    }
+
+    includeJSFooter {
+        file20 = {$theme.urls.themeResources}Public/JavaScript/Ajax.min.js
+        file600 = {$theme.urls.themeResources}Public/JavaScript/Menu.min.js
+        file1000 = {$theme.urls.themeResources}Public/JavaScript/Main.min.js
+    }
+
+    10 = FLUIDTEMPLATE
+    10 {
+        format = html
+        layoutRootPaths {
+            10 = {$theme.urls.themeResources}Private/Html/Layouts/
+        }
+
+        templateRootPaths {
+            10 = {$theme.urls.themeResources}Private/Html/Templates/
+        }
+
+        partialRootPaths {
+            10 = {$theme.urls.themeResources}Private/Html/Partials/
+        }
+
+        ### Template file name must be the same as the ID of the backendlayout
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+
+        dataProcessing {
+            ################################################################
+            ### Main Menu ###
+            ################################################################
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                special = list
+                special.value.field = pages
+                levels = 7
+                as = MenuMain
+                expandAll = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = media
+                    }
+                }
+            }
+
+            ################################################################
+            ### Menu Aside / Submenu ###
+            ################################################################
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                levels = 4
+                entryLevel = 1
+                expandAll = 1
+                includeSpacer = 1
+                as = MenuAside
+            }
+
+            ################################################################
+            ### Path Menu / Breadcrumb Menu ###
+            ################################################################
+            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            30 {
+                special = rootline
+                special.range = 0|-1
+                includeNotInMenu = 1
+                as = MenuPath
+            }
+
+            ################################################################
+            ### Language Menu ###
+            ################################################################
+            40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            40 {
+                special = language
+                special.value = 0,1
+                as = MenuLanguage
+
+                if.isTrue = {$plugin.hhthemefotofinder.multiLanguage}
+            }
+        }
+
+        settings {
+            indexedSearchId = {$plugin.hhthemeskeleton.indexedSearchId}
+            language = TSFE:sys_language_uid
+        }
+
+        variables {
+            layout = TEXT
+            layout {
+                data = levelfield: -1, backend_layout_next_level, slide
+                override.field = backend_layout
+            }
+
+            Banner =< styles.content.get
+            Banner.select.where = colPos = 0
+
+            MainContent =< styles.content.get
+            MainContent.select.where = colPos = 1
+
+            NavAsideBefore =< styles.content.get
+            NavAsideBefore.select.where = colPos = 3
+
+            NavAsideAfter =< styles.content.get
+            NavAsideAfter.select.where = colPos = 4
+
+            AsideRight =< styles.content.get
+            AsideRight.select.where = colPos = 2
+
+            Logo < lib.logo
+
+            FooterColumn1 = CONTENT
+            FooterColumn1 {
+                table = tt_content
+                select {
+                    where = colPos = 1000
+                    pidInList = {$plugin.hhthemeskeleton.footerSeitenID}
+                    orderBy = sorting ASC, colPos ASC
+                    languageField = sys_language_uid
+                }
+            }
+
+            FooterColumn2 < .FooterColumn1
+            FooterColumn2.select.where = colPos = 1001
+
+            FooterColumn3 < .FooterColumn1
+            FooterColumn3.select.where = colPos = 1002
+
+            FooterColumn4 < .FooterColumn1
+            FooterColumn4.select.where = colPos = 1003
+
+            FooterColumn5 < .FooterColumn1
+            FooterColumn5.select.where = colPos = 1004
+        }
+    }
+}

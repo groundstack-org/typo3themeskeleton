@@ -1,0 +1,173 @@
+mod.web_layout.BackendLayouts {
+    default {
+        title = One Column
+        iconIdentifier = hh_one_column
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Banner
+                                colPos = 0
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Main Content
+                                colPos = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    defaultWithSideNav {
+        title = One Column with side Nav and optional content before / after
+        iconIdentifier = hh_navaside_left
+        config {
+            backend_layout {
+                colCount = 3
+                rowCount = 4
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Banner
+                                colPos = 0
+                                colspan = 3
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Aside Nav Content Before (Optional)
+                                colPos = 3
+                                colspan = 1
+                            }
+                            2 {
+                                name = Main Content
+                                colPos = 1
+                                rowspan = 3
+                                colspan = 2
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = Aside Nav (Optional: kann mit Inhalt überschrieben werden)
+                                colPos = 2
+                                colspan = 1
+                            }
+                        }
+                    }
+                    4 {
+                        columns {
+                            1 {
+                                name = Aside Nav Content After (Optional)
+                                colPos = 4
+                                colspan = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    defaultWithAsideRight {
+        title = aside right
+        # icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
+        config {
+            backend_layout {
+                colCount = 2
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Banner
+                                colspan = 2
+                                colPos = 0
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Main Content
+                                colPos = 1
+                            }
+                            2 {
+                                name = Aside
+                                colPos = 2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        title = BE layout for footer content
+        # iconIdentifier = hh_one_column
+        config {
+            backend_layout {
+                colCount = 5
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Column 1
+                                colPos = 1000
+                                allowed {
+                                    CType = textmedia,menu_subpages,shortcut,list,div
+                                }
+                            }
+                            2 {
+                                name = Column 2
+                                colPos = 1001
+                                allowed {
+                                    CType = textmedia,menu_subpages,shortcut,list,div
+                                }
+                            }
+                            3 {
+                                name = Column 3
+                                colPos = 1002
+                                allowed {
+                                    CType = textmedia,menu_subpages,shortcut,list,div
+                                }
+                            }
+                            4 {
+                                name = Column 4
+                                colPos = 1003
+                                allowed {
+                                    CType = textmedia,menu_subpages,shortcut,list,div
+                                }
+                            }
+                            5 {
+                                name = Column 5
+                                colPos = 1004
+                                allowed {
+                                    CType = textmedia,menu_subpages,shortcut,list,div
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ### Eigene / Weitere Layouts bitte mit ID 50 Beginnen
+}

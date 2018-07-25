@@ -1,0 +1,72 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:hh="http://typo3.org/ns/HauerHeinrich/HhThemeSkeleton/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Header">
+    <f:if condition="{gallery.position.noWrap} != 1">
+        <f:render partial="Header/All" arguments="{_all}" />
+    </f:if>
+</f:section>
+
+<f:section name="Main">
+    <f:switch expression="{data.layout}">
+        <f:case value="imageslider">
+            <f:render section="imageslider" arguments="{_all}" />
+        </f:case>
+        <f:defaultCase>
+            <f:render section="default" arguments="{_all}" />
+        </f:defaultCase>
+    </f:switch>
+</f:section>
+
+<f:section name="default">
+    <div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+        <f:if condition="{gallery.position.vertical} != 'below'">
+            <f:render partial="Media/Gallery" arguments="{_all}" />
+        </f:if>
+
+        <f:if condition="{data.bodytext}">
+            <f:then>
+                <div class="ce-bodytext">
+                    <f:if condition="{gallery.position.noWrap}">
+                        <f:render partial="Header/All" arguments="{_all}" />
+                    </f:if>
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+            </f:then>
+            <f:else>
+                <f:if condition="{gallery.position.noWrap}">
+                    <f:if condition="{data.header}">
+                        <div class="ce-bodytext">
+                            <f:render partial="Header/All" arguments="{_all}" />
+                        </div>
+                    </f:if>
+                </f:if>
+            </f:else>
+        </f:if>
+
+        <f:if condition="{gallery.position.vertical} == 'below'">
+            <f:render partial="Media/Gallery" arguments="{_all}" />
+        </f:if>
+    </div>
+</f:section>
+
+<f:section name="imageslider">
+    <f:if condition="{gallery.rows}">
+        <f:for each="{gallery.rows}" as="row">
+            <div class="ce-row swiper-slide">
+                <f:for each="{row.columns}" as="column">
+                    <f:if condition="{column.media}">
+                        <div class="ce-column">
+                            <f:render partial="Media/Type" arguments="{file: column.media, dimensions: column.dimensions, data: data, settings: settings}" />
+                        </div>
+                    </f:if>
+                </f:for>
+            </div>
+        </f:for>
+    </f:if>
+</f:section>
+
+</html>

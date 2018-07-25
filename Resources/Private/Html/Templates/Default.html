@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Content">
+
+    <f:if condition="{Banner}">
+        <div id="banner">
+            <f:format.raw>{Banner}</f:format.raw>
+        </div>
+    </f:if>
+
+    <f:if condition="{MainContent}">
+        <main id="main">
+            <f:format.raw>{MainContent}</f:format.raw>
+        </main>
+    </f:if>
+
+</f:section>
+
+</html>

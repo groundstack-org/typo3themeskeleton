@@ -1,0 +1,56 @@
+#center-page {
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+#header {
+    padding-left: $container-gap-horizontal;
+    padding-right: $container-gap-horizontal;
+    position: relative;
+    z-index: 800;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+#logo {
+    padding-bottom: $header-items-padding-vertical;
+}
+
+#banner {
+    border-bottom: 12px solid $color-brand;
+    position: relative;
+    z-index: 700;
+
+    &::after {
+        background-color: rgba($color-brand, 0.6);
+        bottom: 0;
+        content: " ";
+        height: 24px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 900;
+    }
+}
+
+#main {
+    position: relative;
+    z-index: 500;
+}

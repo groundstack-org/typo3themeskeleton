@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:if condition="{MenuAside}">
+    <ul class="vertical menu menu-sub">
+        <f:for each="{MenuAside}" as="mainItem">
+            <f:render partial="Menu/Elements/Item" arguments="{item: mainItem}"/>
+            <f:if condition="{mainItem.children}">
+                <f:render section="submenu" arguments="{submenu: mainItem.children}"/>
+            </f:if>
+            </li>
+        </f:for>
+    </ul>
+</f:if>
+
+<f:section name="submenu">
+    <ul class="nested vertical menu">
+        <f:for each="{submenu}" as="subItem">
+            <f:render partial="Menu/Elements/Item" arguments="{item: subItem}"/>
+            <f:if condition="{subItem.children}">
+                <f:render section="submenu" arguments="{submenu: subItem.children}"/>
+            </f:if>
+            </li>
+        </f:for>
+    </ul>
+</f:section>
+
+</html>

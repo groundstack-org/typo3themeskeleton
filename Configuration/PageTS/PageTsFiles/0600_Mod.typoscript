@@ -1,0 +1,45 @@
+mod {
+    SHARED {
+        ### Set default language label and Flag for BE languageID = 0
+        defaultLanguageFlag = de
+        defaultLanguageLabel = deutsch
+    }
+
+    wizards.newContentElement.wizardItems.common.elements.textmedia.tt_content_defValues {
+        ### Images: Anzal der Spalten bei Bilder default Wert
+        imagecols = 1
+        ### Images: Bildposition "Oben links"
+        imageorient = 2
+        ### Position: textmedia position left
+        header_position = left
+    }
+
+    web_layout {
+        ### disable or enable copy or translate on content translation
+        localization {
+            enableCopy = 0
+            enableTranslate = 1
+        }
+    }
+
+    web_list.table {
+        ################################################################
+        ### Hide powermail in list-view ###
+        ################################################################
+        tx_powermail_domain_model_answer.hideTable = 1
+        tx_powermail_domain_model_field.hideTable = 1
+        tx_powermail_domain_model_form.hideTable = 1
+        tx_powermail_domain_model_mail.hideTable = 1
+        tx_powermail_domain_model_page.hideTable = 1
+
+        ################################################################
+        ### Hide news in list-view ###
+        ################################################################
+        tx_news_domain_model_link.hideTable = 1
+        tx_news_domain_model_news.hideTable = 1
+        tx_news_domain_model_news_related_mm.hideTable = 1
+        tx_news_domain_model_news_tag_mm.hideTable = 1
+        tx_news_domain_model_news_ttcontent_mm.hideTable = 1
+        tx_news_domain_model_tag.hideTable = 1
+    }
+}

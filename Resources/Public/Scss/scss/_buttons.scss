@@ -1,0 +1,15 @@
+a[class^="btn-"] {
+    display: inline-block;
+    @include prefix(( transition: all 500ms ));
+}
+
+.btn-blue {
+    background-color: $color-brand;
+    color: #fff;
+    padding: 10px 20px;
+
+    &:hover {
+        background-color: grey;
+        color: $color-brand;
+    }
+}

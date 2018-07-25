@@ -1,0 +1,23 @@
+/* Browser Reset */
+*, *:before, *:after {padding:0;margin:0;-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit;}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;position: relative;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block}
+nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none;}
+ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0;}hr{display:block;float:left;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;width:100%;}
+input,select{ vertical-align: middle; outline: 0; } input:focus {outline: 0 none;}
+html, body { font-size: 100.1%; min-height: 100%; min-width: 310px; position: relative; width: 100%; -webkit-overflow-scrolling: touch; }
+html {height: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+body {line-height:1;height: auto;-webkit-text-size-adjust: none; -ms-text-size-adjust: none; text-size-adjust: none; overflow-x:hidden;
+  @include prefix(( backface-visibility: hidden )); height: 100%; background-color: #FFF; }
+img { display: block; height: auto; max-width: 100%; }
+a { text-decoration: none; @include prefix(( transition: color $a-hover-transition-speed )); }
+a img { border: none; /* IE fix */ }
+template, .template { display: none; opacity: 0; visibility: hidden; }
+/* Browser zu alt Medlung */
+.br-to-old { background: red; padding: 1%; position: relative; width: 100%; }
+/* IE FIX SVG */
+.ie img[src*=".svg"] {width: 100%; }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src*=".svg"] {width: 100%; }
+}

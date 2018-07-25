@@ -1,0 +1,6 @@
+RTE {
+    default {
+        ### Set RTE ckeditor preset
+        preset = rte_hauerheinrich
+    }
+}

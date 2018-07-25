@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="default"/>
+
+<f:section name="content">
+
+    <f:flashMessages/>
+
+    <f:switch expression="{settings.layout}">
+        <f:defaultCase>
+            <ul class="list-group">
+                <f:for each="{addresses}" as="address">
+                    <li class="list-group-item">
+                        <f:render partial="Card" arguments="{address:address}"/>
+                        <f:link.action action="show" arguments="{address:address}"
+                                       pageUid="{settings.singleViewPageUid}">
+                            <f:translate
+                                    key="LLL:EXT:cyz_address/Resources/Private/Language/locallang_db.xlf:cyz_address.template.singleView"/>
+                        </f:link.action>
+                    </li>
+                </f:for>
+            </ul>
+        </f:defaultCase>
+    </f:switch>
+
+</f:section>
+
+<f:section name="smalllist">
+    <ul class="list-group smalllist">
+        <f:for each="{addresses}" as="address">
+            <li class="list-group-item">
+                <f:render partial="Card" arguments="{address:address}"/>
+                <f:if condition="{settings.singleViewPageUid}">
+                    <f:link.action action="show" arguments="{address:address}" pageUid="{settings.singleViewPageUid}">
+                        <f:translate key="LLL:EXT:cyz_address/Resources/Private/Language/locallang_db.xlf:cyz_address.template.singleView"/>
+                    </f:link.action>
+                </f:if>
+            </li>
+        </f:for>
+    </ul>
+</f:section>

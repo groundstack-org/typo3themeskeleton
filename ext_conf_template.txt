@@ -1,0 +1,6 @@
+###################
+### RTE Presets ###
+###################
+
+# cat=RTE; type=string; label=LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_extconfig.xlf:extconfig.rtePresetsPath
+rtePresets = EXT:hhthemeskeleton/Configuration/RTE/rte_hauerheinrich.yaml

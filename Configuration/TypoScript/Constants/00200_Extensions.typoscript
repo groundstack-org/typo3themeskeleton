@@ -1,0 +1,116 @@
+################################################################
+### fluid_styled_content ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
+styles {
+    content {
+        defaultHeaderType = 1
+
+        links {
+            target = _top
+        }
+
+        textmedia {
+            maxW = 1920
+            maxWInText = 1200
+            linkWrap {
+                width = 1600m
+                height = 1600m
+
+                lightboxEnabled = 1
+                lightboxCssClass = lightboxing
+            }
+            columnSpacing = 0
+            rowSpacing = 0
+            textMargin = 0
+        }
+    }
+}
+
+
+################################################################
+### gridelements ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/constants.ts">
+
+################################################################
+### powermail ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/Main/constants.txt">
+
+################################################################
+### powermail - Frontend ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/Powermail_Frontend/constants.txt">
+
+################################################################
+### News ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/constants.txt">
+
+################################################################
+### tt_address ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tt_address/static/pi1/constants.txt">
+
+################################################################
+### tt_address - cyz_address Plugin ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cyz_address/Configuration/TypoScript/constants.ts">
+
+################################################################
+### indexed_search - Suche ###
+################################################################
+plugin.tx_indexedsearch.view {
+  templateRootPaths {
+        10 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Templates/
+        30 = {$plugin.tx_indexedsearch.view.templateRootPath}
+    }
+
+  partialRootPaths {
+        10 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Partials/
+        30 = {$plugin.tx_indexedsearch.view.partialRootPath}
+    }
+
+  laoutRootPaths {
+        10 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Layouts/
+        30 = {$plugin.tx_indexedsearch.view.layoutRootPath}
+    }
+}
+
+config {
+    index_enable = 1
+    index_metatags = 0
+    ### Wenn gesetzt, werden externe Medien, auf die auf Seiten verlinkt wird, ebenfalls indiziert.
+    index_externals = 1
+}
+
+plugin.tx_indexedsearch {
+    cssFile >
+    _CSS_DEFAULT_STYLE >
+
+    ### Wieviele Suchergebnisse standardmäßig angezeigt werden sollen:
+    _DEFAULT_PI_VARS.results = 5
+
+    settings {
+        displayRules = 0
+        displayAdvancedSearchLink = 0
+        displayResultNumber = 1
+    }
+    resultlist_stdWrap.wrap = |<button type="button" class="load-more expand secondary"><i class="fa fa-refresh"></i> {$labelMoreSearchResults}</button>
+}
+
+### liefert blanke Ergebnisse ohne Header etc. für Ajax nachladen
+search = PAGE
+search {
+    typeNum = 1981
+    config {
+        disableAllHeaderCode = 1
+        xhtml_cleaning = none
+        admPanel = 0
+        metaCharset = utf-8
+        additionalHeaders = Content-Type:text/html;charset=utf-8
+        disablePrefixComment = 1
+    }
+    10 < plugin.tx_indexedsearch
+}

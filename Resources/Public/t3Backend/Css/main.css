@@ -1,0 +1,31 @@
+/* Typo3 BE FIX */
+/* be logo png */
+.topbar-header-site a { float: left; display: block; max-height: 100%; }
+.topbar-header-site-logo img { height: auto; max-height: 100%; width: auto; }
+
+#branding { display: block; float: left; line-height: 100%; padding: 16px; position: relative; }
+#branding a { cursor: pointer; color: #fff; position: relative; text-decoration: none;
+	-webkit-transition: color 500ms;
+       -moz-transition: color 500ms;
+         -o-transition: color 500ms;
+            transition: color 500ms; }
+#branding a:after, #branding a:before { background-color: #fff; bottom: 0; content: " "; height: 1px; position: absolute; width: 0;
+	-webkit-transition: all 500ms;
+       -moz-transition: all 500ms;
+         -o-transition: all 500ms;
+            transition: all 500ms; }
+#branding a:before { right: 50%; }
+#branding a:after { left: 50%; }
+#branding a:hover { color: #aaaaaa; }
+#branding a:hover:after, #branding a:hover:before { background-color: #aaaaaa; width: 50%; }
+
+#branding::before { content: "|"; float: left; height: 100%; padding-right: 10px; position: relative; width: 2px; }
+
+#branding span { float: left; padding-right: 5px; }
+
+.js #branding::after { background-color: #111111; content: " "; height: 100%; position: absolute; right: 0; top: 0; width: 100%;
+	-webkit-transition: width 2000ms;
+       -moz-transition: width 2000ms;
+         -o-transition: width 2000ms;
+            transition: width 2000ms; }
+.loaded #branding:after { width: 0; }

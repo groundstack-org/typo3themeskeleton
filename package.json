@@ -1,0 +1,26 @@
+{
+  "name": "typo3_gulp_scss",
+  "version": "1.1.0",
+  "description": "Typo3 Gulp SCSS Autocompiler to CSS + CSS Minifier + CSS Sourcemaps + JS Minifier",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:iocron/typo3-gulp-scss.git"
+  },
+  "author": "Sebastian Pieczona",
+  "company": "ioCron",
+  "license": "MIT",
+  "homepage": "https://github.com/iocron/typo3-gulp-scss",
+  "dependencies": {
+    "command-exists": "^1.2.7",
+    "gulp": "^4.0.0",
+    "gulp-babel-minify": "^0.4.3",
+    "gulp-download-stream": "0.0.19",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}

@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+<f:if condition="{item.data.target}">
+    <f:then>
+        <a href="{item.link}" {f:if(condition:item.active, then: 'class="act"')} target="{item.data.target}" title="{item.data.title}">
+    </f:then>
+    <f:else if="{item.target}">
+        <a href="{item.link}" {f:if(condition:item.active, then: 'class="act"')} target="{item.target}" title="{item.data.title}">
+    </f:else>
+    <f:else>
+        <a href="{item.link}" {f:if(condition:item.active, then: 'class="act"')} title="{item.data.title}">
+    </f:else>
+</f:if>
+    {item.title}
+</a>
+
+</html>

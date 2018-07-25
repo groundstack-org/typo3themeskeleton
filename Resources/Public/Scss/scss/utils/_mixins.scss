@@ -1,0 +1,35 @@
+/**
+ * MIXINS
+ */
+
+/* e.g. @include prefix(( box-shadow: 1px 1px 1px 1px opacify($color-main, 0.6) )); */
+$prefixes: -webkit- -moz- -ms- -o-;
+@mixin prefix($declarations) {
+    @each $property, $value in $declarations {
+        @each $prefix in $prefixes {
+            #{$prefix + $property}: $value;
+        }
+
+        /* Output standard non-prefixed declaration */
+        #{$property}: $value;
+    }
+}
+
+/* e.g. @include box-sizing(border-box); */
+@mixin box-sizing($type) {
+    -webkit-box-sizing:$type;
+    -moz-box-sizing:$type;
+    box-sizing:$type;
+}
+
+@mixin clearfix {
+    &::before,
+    &::after {
+        content: ''; // 1
+        display: table; // 2
+    }
+
+    &::after {
+        clear: both;
+    }
+}

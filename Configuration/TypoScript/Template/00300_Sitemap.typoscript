@@ -1,0 +1,225 @@
+## RealURL
+# 'fileName'=> array (
+# 	'index'=> array (
+# 	'sitemap.xml' => array (
+# 		'keyValues' => array (
+# 			'type' => 5000,
+# 		),
+# 	),
+# ),
+## ODER htaccess:
+# Redirect /sitemap.xml http://DEINEDOMAIN.de/?type=5000
+
+XMLSITEMAP >
+XMLSITEMAP = PAGE
+XMLSITEMAP {
+    typeNum = 5000
+    config {
+        xhtml_cleaning = none
+        noCache = 1
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-Type: text/xml; charset=utf-8
+        simulateStaticDocuments = 0
+        tx_realurl_enable = 1
+    }
+    wrap (
+        <?xml version="1.0" encoding="UTF-8"?>
+        <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemalocation="http://www.google.com/schemas/sitemap/0.84 http://www.google.com/schemas/sitemap/0.84/sitemap.xsd" >|
+        </urlset>
+    )
+    5 = TEXT
+    5.char = 10
+
+    ### Home
+    9 = LOAD_REGISTER
+    9 {
+        ### 2 = ID of home page
+        datum.data = DB:pages:{$plugin.hhthemeskeleton.rootPageID}:SYS_LASTCHANGED
+        datum.ifEmpty.field = crdate
+        datum.strftime = %Y-%m-%d
+    }
+    10 = TEXT
+    10 {
+        value (
+            <url>
+                <loc>http://{$plugin.hhthemeskeleton.baseURL}/</loc>
+                <lastmod>{register:datum}</lastmod>
+            </url>
+        )
+        insertData = 1
+    }
+    11 = RESTORE_REGISTER
+
+    ### The MENU
+    30 = HMENU
+    30 {
+        special = directory
+        special.value = {$plugin.hhthemeskeleton.rootPageID}, {$plugin.hhthemeskeleton.sitemapTrennerIDs}
+        ### 15,8,5
+        ### Startseite manuell!
+        excludeUidList = {$plugin.hhthemeskeleton.rootPageID}, {$plugin.hhthemeskeleton.sitemapTrennerIDs}
+
+        1 = TMENU
+        1 {
+            expAll = 1
+            NO = 1
+            NO {
+                doNotShowLink = 1
+
+                stdWrap2 {
+                    cObject = CASE
+                    cObject {
+                        key.field = doktype
+                        1 = COA
+                        1 {
+                            2 = TEXT
+                            2.char = 9
+
+                            3 = TEXT
+                            3.value = <url>
+
+                            4 = TEXT
+                            4.char = 10
+
+                            5 = TEXT
+                            5 {
+                                noTrimWrap = |		<loc>http://{$plugin.hhthemeskeleton.baseURL}|</loc>|
+                                typolink {
+                                    parameter.field = uid
+                                    returnLast = url
+                                }
+                                htmlSpecialChars = 1
+                            }
+
+                            7 = TEXT
+                            7.char = 10
+
+                            8 = TEXT
+                            8.char = 9
+
+                            9 = TEXT
+                            9.char = 9
+
+                            10 = TEXT
+                            10.value = <lastmod>
+
+                            20 = TEXT
+                            20.field = SYS_LASTCHANGED
+                            20.ifEmpty.field = crdate
+                            20.strftime = %Y-%m-%d
+
+                            30 = TEXT
+                            30.value = </lastmod>
+
+                            31 = TEXT
+                            31.char = 10
+
+                            35 = TEXT
+                            35.char = 9
+
+                            40 = TEXT
+                            40.value = </url>
+
+                            41 = TEXT
+                            41.char = 10
+                        }
+                        default = TEXT
+                        # default.field = uid
+                        # default.wrap = <leer>|</leer>
+                    }
+                }
+            }
+        }
+        2 < .1
+        3 < .1
+        4 < .1
+    }
+
+    ### Spezielle Seiten, welche nicht über die normale Navigation wie
+    ### zum Beispiel: News / Events / Disclaimer / Impressum / Metanavigation
+    ### erreichbar sind und im *Menü nicht anzeigen* haben.
+    40 = HMENU
+    40 < .30
+    40 {
+        special = list
+        special.value = {$plugin.hhthemeskeleton.sitemapPageIDs}
+        includeNotInMenu = 1
+    }
+
+    ### Sitemap for tx_news
+    50 = CONTENT
+    50 {
+        table = tx_news_domain_model_news
+        select {
+            pidInList = {$plugin.hhthemeskeleton.sitemapTxNewsStorageID}
+            # recursive = {$plugin.tx_news.settings.sitemap.recursive}
+            selectFields = uid,pid,tstamp,sys_language_uid,l10n_parent
+            orderBy = tstamp DESC
+            # max = {$plugin.tx_news.settings.sitemap.limit}
+            languageField = sys_language_uid
+            where = type=0
+        }
+
+        renderObj = COA
+        renderObj {
+            1 = TEXT
+            1.value = <url>
+
+            7 = TEXT
+            7.char = 10
+
+            8 = TEXT
+            8.char = 9
+
+            9 = TEXT
+            9.char = 9
+
+            10 = COA
+            10 {
+                wrap = <loc>|</loc>
+                10 = COA
+                10 {
+                    ### htmlSpecialChar on the link to encode ampersand
+                    stdWrap.htmlSpecialChars = 1
+                    10 = TEXT
+                    10 {
+                        typolink {
+                            parameter = {$plugin.hhthemeskeleton.sitemapTxNewsDetailID}
+                            forceAbsoluteUrl = 1
+                            returnLast = url
+                            additionalParams.field = uid
+                            additionalParams.wrap = &tx_news_pi1[news]=|
+                        }
+                    }
+                }
+            }
+
+            15 = TEXT
+            15.char = 10
+
+            16 = TEXT
+            16.char = 9
+
+            20 = TEXT
+            20 {
+                wrap = <lastmod>|</lastmod>
+                field = tstamp
+                date = Y-m-d
+            }
+
+            31 = TEXT
+            31.char = 10
+
+            35 = TEXT
+            35.char = 9
+
+            100 = TEXT
+            100.value = </url>
+
+            101 = TEXT
+            101.char = 10
+        }
+    }
+}

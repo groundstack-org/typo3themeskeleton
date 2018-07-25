@@ -1,0 +1,195 @@
+TCEFORM {
+    tt_content {
+        ### START: tt_content hide CEs and fields in BE
+        CType {
+            ### Disable contentelements (CEs)
+            removeItems (
+                text, textpic, image, bullets, table,
+            )
+        }
+        ### Disable fields for specific CEs
+        rowDescription.types {
+            textmedia.disabled = 1
+            div.disabled = 1
+            html.disabled = 1
+            menu.disabled = 1
+            shortcut.disabled = 1
+            uploads.disabled = 1
+        }
+        linkToTop.types {
+            textmedia.disabled = 1
+            div.disabled = 1
+            html.disabled = 1
+            menu.disabled = 1
+            shortcut.disabled = 1
+            uploads.disabled = 1
+        }
+        sectionIndex.types {
+            textmedia.disabled = 1
+            div.disabled = 1
+            html.disabled = 1
+            menu.disabled = 1
+            shortcut.disabled = 1
+            uploads.disabled = 1
+        }
+        imageborder.types {
+            textmedia.disabled = 1
+        }
+        spaceBefore.disabled = 1
+        spaceAfter.disabled = 1
+        space_before_class.disabled = 1
+        space_after_class.disabled = 1
+        frame_class.disabled = 1
+        ### END: tt_content hide CEs and fields in BE
+
+
+        removeItems = 1,2,3
+        header_layout {
+            altLabels {
+                ### Change header label
+                1 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header1
+                2 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header2
+                3 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header3
+                4 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header4
+                5 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header5
+            }
+            addItems {
+                ### Add custom header layouts
+                6 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.onlybold
+                10 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header1.lineshort
+                11 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header2.lineshort
+                12 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header3.lineshort
+                13 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header4.lineshort
+                14 = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header5.lineshort
+            }
+        }
+
+        ### Add custom layouts for CEs
+        uploads_type {
+            addItems {
+                3 = Image Galerie per Dateisammlung
+            }
+        }
+
+        layout {
+            removeItems = 1,2,3
+            types {
+                menu_subpages {
+                    addItems {
+                    }
+                }
+                textmedia {
+                    removeItems = 1,2,3
+                    addItems {
+                        imageslider = Image Slider
+                    }
+                }
+                gridelements_pi1 {
+                    addItems {
+                        10 = Full width
+                        20 = Small width
+                    }
+                }
+            }
+        }
+    }
+
+    ### START: Im Backend Seiteneigenschaften Felder ausblenden
+    pages {
+        nav_title.disabled = 1
+        subtitle.disabled = 0
+        subtitle.label = LLL:EXT:hhthemeskeleton/Resources/Private/Language/locallang_db_pagets.xlf:tceform.pages.subtitle
+        tx_realurl_pathsegment.disabled = 1
+        keywords.disabled = 1
+        abstract.disabled = 1
+        layout {
+            disabled = 1
+            removeItems = 2,3
+            altLabels {
+            }
+        }
+        newUntil.disabled = 1
+        content_from_pid.disabled = 1
+        author_email.disabled = 1
+
+        ### hide Backend Layout "keins / empty"
+        backend_layout_next_level.removeItems= -1
+        backend_layout.removeItems= -1
+    }
+    pages_language_overlay < TCEFORM.pages
+    ### END: Im Backend Seiteneigenschaften Felder ausblenden
+
+
+    ################################################################
+    ### tt_address ###
+    ################################################################
+    ### hide or show tt_address BE fields
+    tt_address {
+        gender.disabled = 0
+        name.disabled = 1
+        first_name.disabled = 0
+        middle_name.disabled = 0
+        last_name.disabled = 0
+        birthday.disabled = 1
+        title.disabled = 1
+        address.disabled = 1
+        position.disabled = 0
+        building.disabled = 1
+        room.disabled = 1
+        phone.disabled = 0
+        fax.disabled = 0
+        mobile.disabled = 1
+        www.disabled = 1
+        email.disabled = 0
+        company.disabled = 1
+        city.disabled = 1
+        zip.disabled = 1
+        region.disabled = 1
+        country.disabled = 1
+        image.disabled = 0
+        description.disabled = 1
+        addressgroup.disabled = 1
+        latitude.disabled = 1
+        longitude.disabled = 1
+        skype.disabled = 1
+        twitter.disabled = 1
+        facebook.disabled = 1
+        linkedin.disabled = 1
+        module_sys_dmail_category.disabled = 0
+        module_sys_dmail_html.disabled = 0
+    }
+
+    ################################################################
+    ### Powermail ###
+    ################################################################
+    tx_powermail_domain_model_form {
+        ### Change and add layouts for form powermail
+        css {
+            removeItems = layout1, layout2, layout3
+            addItems {
+                default = Default Form
+            }
+        }
+    }
+    tx_powermail_domain_model_page {
+        ### Change and add layouts for form pages powermail
+        css {
+            removeItems = layout1, layout2, layout3
+            addItems {
+                withoutheader = Without header (Fieldset Überschrift)
+            }
+        }
+    }
+    tx_powermail_domain_model_field {
+        ### Change and add layouts for form fields powermail
+        css {
+            removeItems = layout1, layout2, layout3
+            addItems {
+                withoutheader = Without header (Bezeichnung)
+                textalignright = Text align right
+            }
+        }
+        ### Disable fields for form powermail
+        feuser_value.disabled = 1
+    }
+}

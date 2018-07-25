@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{settings.indexedSearchId}">
+    <div id="searchbox">
+        <f:form id="tx_indexedsearch" class="main-search" pageUid="{settings.indexedSearchId}" method="post" absolute="0" action="search" extensionName="IndexedSearch" pluginName="pi2" controller="Search">
+            <div class="hidden tx-indexedsearch-hidden-fields">
+                <input name="tx_indexedsearch_pi2[search][_sections]" value="0" type="hidden">
+                <input id="tx_indexedsearch_freeIndexUid" name="tx_indexedsearch_pi2[search][_freeIndexUid]" value="_" type="hidden">
+                <input id="tx_indexedsearch_pointer" name="tx_indexedsearch_pi2[search][pointer]" value="0" type="hidden">
+                <input name="tx_indexedsearch_pi2[search][ext]" value="" type="hidden">
+                <input name="tx_indexedsearch_pi2[search][searchType]" value="1" type="hidden">
+                <input name="tx_indexedsearch_pi2[search][defaultOperand]" value="0" type="hidden">
+                <input name="tx_indexedsearch_pi2[search][mediaType]" value="-1" type="hidden">
+                <input name="tx_indexedsearch_pi2[search][sortOrder]" value="rank_flag" type="hidden">
+                <input name="tx_indexedsearch_pi2[search][group]" value="" type="hidden">
+                <input name="tx_indexedsearch_pi2[search][languageUid]" value="-1" type="hidden">
+                <input name="tx_indexedsearch_pi2[search][desc]" value="" type="hidden">
+                <input name="tx_indexedsearch_pi2[search][numberOfResults]" value="10" type="hidden">
+                <input name="tx_indexedsearch_pi2[search][extendedSearch]" value="" type="hidden">
+            </div>
+
+            <f:form.textfield name="search[sword]" value="" id="tx-indexedsearch-searchbox-sword" class="tx-indexedsearch-searchbox-sword" placeholder="<f:translate key='LLL:EXT:hhthemepatriciosportevents/Resources/Private/Language/locallang_search.xlf:input-search' />" />
+            <f:form.button type="submit" class="tx-indexedsearch-searchbox-button" name="search[submitButton]" value="" id="tx-indexedsearch-searchbox-button-submit"></f:form.button>
+        </f:form>
+    </div>
+</f:if>
+
+</html>

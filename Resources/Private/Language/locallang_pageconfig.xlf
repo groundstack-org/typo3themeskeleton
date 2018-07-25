@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2017-02-08T00:01:00Z" product-name="hhthemeskeleton">
+        <header/>
+        <body>
+
+        <trans-unit id="tceform.page.header1" xml:space="preserve">
+            <source>Header 1 (h1)</source>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header2" xml:space="preserve">
+            <source>header 2 (h2)</source>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header3" xml:space="preserve">
+            <source>header 3 (h3)</source>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header4" xml:space="preserve">
+            <source>header 4 (h4)</source>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header5" xml:space="preserve">
+            <source>header 5 (h5)</source>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.onlybold" xml:space="preserve">
+            <source>No header, only bold</source>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header1.lineshort" xml:space="preserve">
+            <source>Header 1 (h1) with short line</source>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header2.lineshort" xml:space="preserve">
+            <source>header 2 (h2) with short line</source>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header3.lineshort" xml:space="preserve">
+            <source>header 3 (h3) with short line</source>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header4.lineshort" xml:space="preserve">
+            <source>header 4 (h4) with short line</source>
+        </trans-unit>
+
+        <trans-unit id="tceform.page.header5.lineshort" xml:space="preserve">
+            <source>header 5 (h5) with short line</source>
+        </trans-unit>
+
+        </body>
+    </file>
+</xliff>

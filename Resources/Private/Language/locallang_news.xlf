@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2017-02-08T00:01:00Z" product-name="hhthemeskeleton">
+        <header/>
+        <body>
+
+        <trans-unit id="more-link" xml:space="preserve">
+            <source>More</source>
+        </trans-unit>
+
+        </body>
+    </file>
+</xliff>

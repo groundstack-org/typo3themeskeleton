@@ -1,0 +1,47 @@
+## TYPO3 v6.2
+# Ignore serveral upload and file directories.
+/fileadmin/user_upload/
+/fileadmin/_temp_/
+/fileadmin/_processed_/
+/uploads/
+/typo3temp/
+/ENABLE_INSTALL_TOOL
+/typo3conf/ENABLE_INSTALL_TOOL
+
+# Ignore cache
+/typo3conf/temp_CACHED*
+/typo3conf/temp_fieldInfo.php
+/typo3conf/deprecation_*.log
+/typo3conf/AdditionalConfiguration.php
+
+# Ignore system folders, you should have them symlinked.
+# If not comment out the following entries.
+/typo3
+/typo3_src
+/typo3_src-*
+/index.php
+
+### MAC ###
+*.DS_Store
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### other ###
+/install.php
+/symlink.php
+/deploy.php
+/typo3-deploy/
+/deploy/
+._*
+Desktop.ini
+Thumbs.db
+.Spotlight-V100
+.Trashes
+*.pyc
+*.out
+venv
+node_modules
+.sass-cache
+.vscode/
+.githooks/
