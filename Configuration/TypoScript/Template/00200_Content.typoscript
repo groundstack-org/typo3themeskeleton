@@ -6,7 +6,7 @@ lib.logo {
     references {
         table = pages
         ### PageID
-        uid.dataWrap = {$plugin.hhthemeskeleton.rootPageID}
+        uid.dataWrap = {$plugin.typo3themeskeleton.rootPageID}
         fieldName = media
     }
 

@@ -1,5 +1,5 @@
 {
-    "name": "hauerheinrich/hhthemeskeleton",
+    "name": "hauerheinrich/typo3themeskeleton",
     "type": "typo3-cms-extension",
     "description": "",
     "authors": {
@@ -10,7 +10,7 @@
     "keywords": ["TYPO3 CMS", "Theme", "Distribution"],
     "replace": {
         "demoext": "self.version",
-        "typo3-ter/hhthemeskeleton": "self.version"
+        "typo3-ter/typo3themeskeleton": "self.version"
     },
     "require": {
         "typo3/cms-core": "^8.7.0 || ^8.7.99",
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "HauerHeinrich\\HhThemeSkeleton\\": "Classes"
+            "HauerHeinrich\\Typo3ThemeSkeleton\\": "Classes"
         }
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "hhthemeskeleton"
+            "extension-key": "typo3themeskeleton"
         }
     }
 }

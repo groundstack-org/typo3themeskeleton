@@ -36,7 +36,7 @@ XMLSITEMAP {
     9 = LOAD_REGISTER
     9 {
         ### 2 = ID of home page
-        datum.data = DB:pages:{$plugin.hhthemeskeleton.rootPageID}:SYS_LASTCHANGED
+        datum.data = DB:pages:{$plugin.typo3themeskeleton.rootPageID}:SYS_LASTCHANGED
         datum.ifEmpty.field = crdate
         datum.strftime = %Y-%m-%d
     }
@@ -44,7 +44,7 @@ XMLSITEMAP {
     10 {
         value (
             <url>
-                <loc>http://{$plugin.hhthemeskeleton.baseURL}/</loc>
+                <loc>http://{$plugin.typo3themeskeleton.baseURL}/</loc>
                 <lastmod>{register:datum}</lastmod>
             </url>
         )
@@ -56,10 +56,10 @@ XMLSITEMAP {
     30 = HMENU
     30 {
         special = directory
-        special.value = {$plugin.hhthemeskeleton.rootPageID}, {$plugin.hhthemeskeleton.sitemapTrennerIDs}
+        special.value = {$plugin.typo3themeskeleton.rootPageID}, {$plugin.typo3themeskeleton.sitemapTrennerIDs}
         ### 15,8,5
         ### Startseite manuell!
-        excludeUidList = {$plugin.hhthemeskeleton.rootPageID}, {$plugin.hhthemeskeleton.sitemapTrennerIDs}
+        excludeUidList = {$plugin.typo3themeskeleton.rootPageID}, {$plugin.typo3themeskeleton.sitemapTrennerIDs}
 
         1 = TMENU
         1 {
@@ -85,7 +85,7 @@ XMLSITEMAP {
 
                             5 = TEXT
                             5 {
-                                noTrimWrap = |		<loc>http://{$plugin.hhthemeskeleton.baseURL}|</loc>|
+                                noTrimWrap = |		<loc>http://{$plugin.typo3themeskeleton.baseURL}|</loc>|
                                 typolink {
                                     parameter.field = uid
                                     returnLast = url
@@ -144,7 +144,7 @@ XMLSITEMAP {
     40 < .30
     40 {
         special = list
-        special.value = {$plugin.hhthemeskeleton.sitemapPageIDs}
+        special.value = {$plugin.typo3themeskeleton.sitemapPageIDs}
         includeNotInMenu = 1
     }
 
@@ -153,7 +153,7 @@ XMLSITEMAP {
     50 {
         table = tx_news_domain_model_news
         select {
-            pidInList = {$plugin.hhthemeskeleton.sitemapTxNewsStorageID}
+            pidInList = {$plugin.typo3themeskeleton.sitemapTxNewsStorageID}
             # recursive = {$plugin.tx_news.settings.sitemap.recursive}
             selectFields = uid,pid,tstamp,sys_language_uid,l10n_parent
             orderBy = tstamp DESC
@@ -186,7 +186,7 @@ XMLSITEMAP {
                     10 = TEXT
                     10 {
                         typolink {
-                            parameter = {$plugin.hhthemeskeleton.sitemapTxNewsDetailID}
+                            parameter = {$plugin.typo3themeskeleton.sitemapTxNewsDetailID}
                             forceAbsoluteUrl = 1
                             returnLast = url
                             additionalParams.field = uid

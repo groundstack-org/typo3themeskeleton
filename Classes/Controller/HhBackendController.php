@@ -1,12 +1,12 @@
 <?php
-namespace HauerHeinrich\HhThemeSkeleton\Controller;
+namespace HauerHeinrich\Typo3ThemeSkeleton\Controller;
 
 class HhBackendController extends \TYPO3\CMS\Backend\Controller\BackendController {
 
     public function __construct() {
 
         parent::__construct();
-        $extensionname = "hhthemeskeleton";
+        $extensionname = "typo3themeskeleton";
         $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($extensionname);
 
         $this->addCssFile('main', $path . '/Resources/Public/t3Backend/Css/main.css');
