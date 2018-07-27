@@ -1,6 +1,8 @@
 <?php
 namespace HauerHeinrich\HhThemeSkeleton\Hooks;
 
+// use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+
 use TYPO3\CMS\Backend\Controller\BackendController;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Page\PageRenderer;
