@@ -16,7 +16,7 @@ editor:
   config:
     contentsCss:
       - "EXT:rte_ckeditor/Resources/Public/Css/contents.css"
-      - "EXT:hhthemeskeleton/Resources/Public/Css/UserRTE.min.css"
+      - "EXT:typo3themeskeleton/Resources/Public/Css/UserRTE.min.css"
 
     resize_enabled: true
 
@@ -93,7 +93,7 @@ editor:
 
   ### external Plugin e. g.:
   # externalPlugins:
-    # simplebutton: { resource: "EXT:hhthemeskeleton/Resources/Public/JavaScript/RTE_Plugins/simplebutton/plugin.js" }
+    # simplebutton: { resource: "EXT:typo3themeskeleton/Resources/Public/JavaScript/RTE_Plugins/simplebutton/plugin.js" }
 
 ### Button config and defaults
 buttons:

@@ -136,7 +136,7 @@ page {
         }
 
         settings {
-            indexedSearchId = {$plugin.hhthemeskeleton.indexedSearchId}
+            indexedSearchId = {$plugin.typo3themeskeleton.indexedSearchId}
             language = TSFE:sys_language_uid
         }
 
@@ -169,7 +169,7 @@ page {
                 table = tt_content
                 select {
                     where = colPos = 1000
-                    pidInList = {$plugin.hhthemeskeleton.footerSeitenID}
+                    pidInList = {$plugin.typo3themeskeleton.footerSeitenID}
                     orderBy = sorting ASC, colPos ASC
                     languageField = sys_language_uid
                 }
