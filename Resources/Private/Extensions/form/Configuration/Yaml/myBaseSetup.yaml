@@ -1,0 +1,22 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedFileMounts:
+          10: '1:/typo3themeskeleton/Extensions/form/Forms/'
+        allowSaveToExtensionPaths: false
+        allowDeleteFromExtensionPaths: false
+        allowedExtensionPaths:
+          10: 'EXT:typo3themeskeleton/Resources/Private/Extensions/form/Configuration/Forms/'
+
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  20: 'EXT:typo3themeskeleton/Resources/Private/Extensions/form/Resources/Private/Frontend/Templates/'
+                partialRootPaths:
+                  20: 'EXT:typo3themeskeleton/Resources/Private/Extensions/form/Resources/Private/Frontend/Partials/'
+                layoutRootPaths:
+                  20: 'EXT:typo3themeskeleton/Resources/Private/Extensions/form/Resources/Private/Frontend/Layouts/'
