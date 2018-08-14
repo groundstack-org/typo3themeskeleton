@@ -20,7 +20,7 @@ for (var i = 0; i < anchors.length; i++) {
     }, false);
 }
 
-if(document.getElementsByClassName(".ce-uploads-imagegallery")) {
+if(document.getElementsByClassName("ce-uploads-imagegallery")) {
     baguetteBox.run(".ce-uploads-imagegallery", {
         fullScreen: true,
         titleTag: true,
