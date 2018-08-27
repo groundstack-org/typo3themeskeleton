@@ -7,10 +7,7 @@ config {
     sys_language_uid = 0
     sys_language_mode = strict
     sys_language_overlay = hideNonTranslated
-    linkVars = L(0-1)
-    defaultGetVars {
-        L = 0
-    }
+    linkVars = L(0)
     language = {$plugin.typo3themeskeleton.defaultLang}
     locale_all = {$plugin.typo3themeskeleton.defaultLocaleAll}
     metaCharset = utf-8

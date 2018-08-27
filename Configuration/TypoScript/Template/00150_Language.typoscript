@@ -1,6 +1,15 @@
 ################################################################
 ### Language ###
 ################################################################
+[globalVar = LIT:1 = {$plugin.hhthemecrhydraulics.multiLanguage}]
+    config {
+        linkVars = L(0-1)
+        defaultGetVars {
+            L = 0
+        }
+    }
+[global]
+
 ### Englisch
 [globalVar = GP:L=1]
     config {
