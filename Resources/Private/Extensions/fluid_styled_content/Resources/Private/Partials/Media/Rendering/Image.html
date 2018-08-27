@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+    <f:comment>
+        Original:
+        <f:media class="image-embed-item" file="{file}" width="{dimensions.width}" height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" />
+    </f:comment>
+
+    <picture>
+        <source srcset="{f:uri.image(src:'{file.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1920')}" media="(min-width: 1601px)">
+        <source srcset="{f:uri.image(src:'{file.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1600')}" media="(min-width: 1334px)">
+        <source srcset="{f:uri.image(src:'{file.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1333')}" media="(min-width: 1001px)">
+        <source srcset="{f:uri.image(src:'{file.uid}', treatIdAsReference:'1', cropVariant: 'default', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '1000')}" media="(min-width: 801px)">
+        <source srcset="{f:uri.image(src:'{file.uid}', treatIdAsReference:'1', cropVariant: 'smartphone', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '800')}" media="(min-width: 601px)">
+        <source srcset="{f:uri.image(src:'{file.uid}', treatIdAsReference:'1', cropVariant: 'smartphone', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '600')}" media="(min-width: 401px)">
+        <source srcset="{f:uri.image(src:'{file.uid}', treatIdAsReference:'1', cropVariant: 'smartphone', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '400')}" media="(min-width: 321px)">
+        <source srcset="{f:uri.image(src:'{file.uid}', treatIdAsReference:'1', cropVariant: 'smartphone', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '320')}" media="(min-width: 200px)">
+        <img src="{f:uri.image(src:'{file.uid}', treatIdAsReference:'1', cropVariant: 'default', height: '{dimensions.height}', maxHeight: '{data.imageheight}', width: '{dimensions.width}', maxWidth: '{data.imagewidth}')}"
+            {f:if(condition: '{data.imagewidth}', then: 'width="{data.imagewidth}"', else: 'width="{dimensions.width}"')}
+            {f:if(condition: '{data.imageheight}', then: 'height="{data.imageheight}"', else: 'height="{dimensions.height}"')}
+            {f:if(condition: '{file.title}', then: 'title="{file.title}"')}
+            {f:if(condition: '{file.alternative}', then: 'alt="{file.alternative}"')} />
+    </picture>
+
+</html>
