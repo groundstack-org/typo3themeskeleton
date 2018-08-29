@@ -1136,6 +1136,8 @@ button.swiper-pagination-bullet {
     transform: scale(1); } }
 
 #center-page {
+  margin: 0 auto;
+  max-width: 1920px;
   overflow: hidden;
   padding-top: 30px; }
 
