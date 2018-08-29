@@ -135,8 +135,8 @@ gulp.task('upgrade', function(done){
 // SCSS / SASS COMPILER & MINIFIER
 gulp.task('sass:uncompressed', function(done){
   gulp.src(scssPath + '/**/*.scss')
-    .pipe(sass.sync().on('error', sass.logError))
     .pipe(sourcemaps.init())
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(cssPath));
   done();
@@ -144,9 +144,9 @@ gulp.task('sass:uncompressed', function(done){
 
 gulp.task('sass:compressed', function(done){
   gulp.src(scssPath + '/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(rename({ suffix:".min" }))
-    .pipe(sourcemaps.init())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(cssPath));
   done();
