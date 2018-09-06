@@ -1,3 +1,9 @@
+$breakpoints: (
+    small : 300px,
+    medium: 700px,
+    large : 1024px
+);
+
 $color-blue: #001e2f;
 $color-grey: #9d9d9c;
 $color-grey-light: #dfe6ea;
@@ -6,7 +12,13 @@ $color-grey-light: #dfe6ea;
 $color-brand: #166390;
 $color-brand2: #9d9d9c;
 
+/* ------------------------------------- */
+
+$a-color: $color-brand;
+$a-hover-color: $color-brand2;
 $a-hover-transition-speed: 400ms;
+
+/* ------------------------------------- */
 
 $btn-transition-speed: 500ms;
 $btn-blue-color-bg: $color-brand;
@@ -24,26 +36,125 @@ $line-height-base:      1.5em;
 $font-weight-base:      300;
 $font-weight-bold:      500;
 
+/* ------------------------------------- */
+
 $heading-font:          $basefont;
 $heading-weight:        500;
 $heading-case:          none;
 
-$h1-size:               28px;
-$h2-size:               21px;
-$h3-size:               38px;
-$h4-size:               16px;
-$h5-size:               14px;
-$h6-size:               12px;
+$h1-font-sizes: (
+    null  : 2.4rem,
+    small : 2rem,
+    medium: 2.3rem,
+    large : 2.4rem
+);
+
+$h2-font-sizes: (
+    null  : 2.2rem,
+    small : 2rem,
+    medium: 2.3rem,
+    large : 2.4rem
+);
+
+$h3-font-sizes: (
+    null  : 2rem,
+    small : 2rem,
+    medium: 2.3rem,
+    large : 2.4rem
+);
+
+$h4-font-sizes: (
+    null  : 1.8rem,
+    small : 2rem,
+    medium: 2.3rem,
+    large : 2.4rem
+);
+
+$h5-font-sizes: (
+    null  : 1.63rem,
+    small : 2rem,
+    medium: 2.3rem,
+    large : 2.4rem
+);
+
+$h2-subheader-size: (
+    null  : 2.07rem,
+    small : 2rem,
+    medium: 2.3rem,
+    large : 2.4rem
+);
+
+$h3-subheader-size: (
+    null  : 1.85rem,
+    small : 2rem,
+    medium: 2.3rem,
+    large : 2.4rem
+);
+
+$h4-subheader-size: (
+    null  : 1.7rem,
+    small : 2rem,
+    medium: 2.3rem,
+    large : 2.4rem
+);
+
+$h5-subheader-size: (
+    null  : 1.5rem,
+    small : 2rem,
+    medium: 2.3rem,
+    large : 2.4rem
+);
+
+/* ------------------------------------- */
 
 $font-size-default: $font-size-base;
-$font-size-xlarge: 46px;
-$font-size-large: 32px;
-$font-size-medium: 25px;
-$font-size-small: 12px;
-$font-size-xsmall: 10px;
+
+$p-font-sizes: (
+    null  : 1rem,
+    small : 1rem,
+    medium: 1rem,
+    large : 1rem
+);
+
+$font-sizes-xlarge: (
+    null  : 2.4rem,
+    small : 1.7rem,
+    medium: 2.3rem,
+    large : 2.4rem
+);
+
+$font-sizes-large: (
+    null  : 2.2rem,
+    small : 1.4rem,
+    medium: 2rem,
+    large : 2.2rem
+);
+
+$font-sizes-medium: (
+    null  : 2rem,
+    small : 1.15rem,
+    medium: 1.8rem,
+    large : 2rem
+);
+
+$font-sizes-small: (
+    null  : 1.8rem,
+    small : 1.1rem,
+    medium: 1.6rem,
+    large : 1.8rem
+);
+
+$font-sizes-xsmall: (
+    null  : 1.6rem,
+    small : 1rem,
+    medium: 1.3rem,
+    large : 1.6rem
+);
 
 $letter-spacing-1: 1px;
 $letter-spacing-2: 2px;
+
+/* ------------------------------------- */
 
 /* Container */
 $container-gap-horizontal: 6%;

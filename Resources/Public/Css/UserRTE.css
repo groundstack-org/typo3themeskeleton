@@ -3,7 +3,12 @@
  */
 /* e.g. @include prefix(( box-shadow: 1px 1px 1px 1px opacify($color-main, 0.6) )); */
 /* e.g. @include box-sizing(border-box); */
+/* ------------------------------------- */
+/* ------------------------------------- */
 /* Typography */
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
 /* Container */
 /* Header */
 /* for header items like menu a, language a */
@@ -12,11 +17,150 @@
 /* Menu Language */
 /* Cookie-Banner */
 /* Footer */
+html,
 body {
   font-family: "Fira Sans", sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  line-height: 1; }
+  h1:nth-child(2), h2:nth-child(2), h3:nth-child(2), h4:nth-child(2), h5:nth-child(2), h6:nth-child(2) {
+    margin-top: 10px; }
+
+h1 {
+  color: #166390;
+  /* font-size: $h1-size; */
+  font-size: 2.4rem;
+  line-height: 1.5; }
+  @media screen and (min-width: 300px) {
+    h1 {
+      font-size: 2rem; } }
+  @media screen and (min-width: 700px) {
+    h1 {
+      font-size: 2.3rem; } }
+  @media screen and (min-width: 1024px) {
+    h1 {
+      font-size: 2.4rem; } }
+
+h2 {
+  font-size: 2.2rem; }
+  @media screen and (min-width: 300px) {
+    h2 {
+      font-size: 2rem; } }
+  @media screen and (min-width: 700px) {
+    h2 {
+      font-size: 2.3rem; } }
+  @media screen and (min-width: 1024px) {
+    h2 {
+      font-size: 2.4rem; } }
+  h2:nth-child(2) {
+    font-size: 2.07rem; }
+    @media screen and (min-width: 300px) {
+      h2:nth-child(2) {
+        font-size: 2rem; } }
+    @media screen and (min-width: 700px) {
+      h2:nth-child(2) {
+        font-size: 2.3rem; } }
+    @media screen and (min-width: 1024px) {
+      h2:nth-child(2) {
+        font-size: 2.4rem; } }
+
+h3 {
+  font-size: 2rem; }
+  @media screen and (min-width: 300px) {
+    h3 {
+      font-size: 2rem; } }
+  @media screen and (min-width: 700px) {
+    h3 {
+      font-size: 2.3rem; } }
+  @media screen and (min-width: 1024px) {
+    h3 {
+      font-size: 2.4rem; } }
+  h3:nth-child(2) {
+    font-size: 1.85rem; }
+    @media screen and (min-width: 300px) {
+      h3:nth-child(2) {
+        font-size: 2rem; } }
+    @media screen and (min-width: 700px) {
+      h3:nth-child(2) {
+        font-size: 2.3rem; } }
+    @media screen and (min-width: 1024px) {
+      h3:nth-child(2) {
+        font-size: 2.4rem; } }
+
+h4 {
+  font-size: 1.8rem; }
+  @media screen and (min-width: 300px) {
+    h4 {
+      font-size: 2rem; } }
+  @media screen and (min-width: 700px) {
+    h4 {
+      font-size: 2.3rem; } }
+  @media screen and (min-width: 1024px) {
+    h4 {
+      font-size: 2.4rem; } }
+  h4:nth-child(2) {
+    font-size: 1.7rem; }
+    @media screen and (min-width: 300px) {
+      h4:nth-child(2) {
+        font-size: 2rem; } }
+    @media screen and (min-width: 700px) {
+      h4:nth-child(2) {
+        font-size: 2.3rem; } }
+    @media screen and (min-width: 1024px) {
+      h4:nth-child(2) {
+        font-size: 2.4rem; } }
+
+h5 {
+  font-size: 1.63rem; }
+  @media screen and (min-width: 300px) {
+    h5 {
+      font-size: 2rem; } }
+  @media screen and (min-width: 700px) {
+    h5 {
+      font-size: 2.3rem; } }
+  @media screen and (min-width: 1024px) {
+    h5 {
+      font-size: 2.4rem; } }
+  h5:nth-child(2) {
+    font-size: 1.5rem; }
+    @media screen and (min-width: 300px) {
+      h5:nth-child(2) {
+        font-size: 2rem; } }
+    @media screen and (min-width: 700px) {
+      h5:nth-child(2) {
+        font-size: 2.3rem; } }
+    @media screen and (min-width: 1024px) {
+      h5:nth-child(2) {
+        font-size: 2.4rem; } }
+
+a {
+  color: #166390;
+  text-decoration: none;
+  -webkit-transition: color 400ms;
+  -moz-transition: color 400ms;
+  -ms-transition: color 400ms;
+  -o-transition: color 400ms;
+  /* Output standard non-prefixed declaration */
+  transition: color 400ms; }
+  a:hover {
+    color: #9d9d9c; }
+
+p {
+  font-size: 1rem; }
+  @media screen and (min-width: 300px) {
+    p {
+      font-size: 1rem; } }
+  @media screen and (min-width: 700px) {
+    p {
+      font-size: 1rem; } }
+  @media screen and (min-width: 1024px) {
+    p {
+      font-size: 1rem; } }
 
 b,
 .bold {
@@ -60,26 +204,53 @@ span.letter-spacing-2,
 a.letter-spacing-2 {
   letter-spacing: 2px; }
 
-.font-size-xlarge,
-span.font-size-xlarge,
-a.font-size-xlarge {
-  font-size: 46px; }
+.font-size-xlarge {
+  font-size: 2.4rem; }
+  @media screen and (min-width: 300px) {
+    .font-size-xlarge {
+      font-size: 1.7rem; } }
+  @media screen and (min-width: 700px) {
+    .font-size-xlarge {
+      font-size: 2.3rem; } }
+  @media screen and (min-width: 1024px) {
+    .font-size-xlarge {
+      font-size: 2.4rem; } }
 
-.font-size-large,
-span.font-size-large,
-a.font-size-large,
-p.font-size-large {
-  font-size: 32px; }
+.font-size-large {
+  font-size: 2.2rem; }
+  @media screen and (min-width: 300px) {
+    .font-size-large {
+      font-size: 1.4rem; } }
+  @media screen and (min-width: 700px) {
+    .font-size-large {
+      font-size: 2rem; } }
+  @media screen and (min-width: 1024px) {
+    .font-size-large {
+      font-size: 2.2rem; } }
 
-.font-size-medium,
-span.font-size-medium,
-a.font-size-medium {
-  font-size: 25px; }
+.font-size-medium {
+  font-size: 2rem; }
+  @media screen and (min-width: 300px) {
+    .font-size-medium {
+      font-size: 1.15rem; } }
+  @media screen and (min-width: 700px) {
+    .font-size-medium {
+      font-size: 1.8rem; } }
+  @media screen and (min-width: 1024px) {
+    .font-size-medium {
+      font-size: 2rem; } }
 
-.font-size-small,
-span.font-size-small,
-a.font-size-small {
-  font-size: 12px; }
+.font-size-small {
+  font-size: 1.8rem; }
+  @media screen and (min-width: 300px) {
+    .font-size-small {
+      font-size: 1.1rem; } }
+  @media screen and (min-width: 700px) {
+    .font-size-small {
+      font-size: 1.6rem; } }
+  @media screen and (min-width: 1024px) {
+    .font-size-small {
+      font-size: 1.8rem; } }
 
 .blue,
 span.blue {
