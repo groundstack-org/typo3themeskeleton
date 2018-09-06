@@ -2,10 +2,15 @@
  * Werbeagentur Hauer-Heinrich GmbH
  * E-Mail: info@hauer-heinrich.de
  * Website: http://www.hauer-heinrich.de
- *
- * @param {int} w - width of document
- * @param {int} h - height of document
  */
+
+function openLink(link, target) {
+    if(target === "_blank") {
+        window.open = link;
+    } else {
+        window.location.href = link;
+    }
+}
 
 function getCookie(name) {
     var dc = document.cookie;

@@ -20,6 +20,8 @@ page {
         file10.forceOnTop = 1
         file10.excludeFromConcatenation = 1
 
+        file15 = {$theme.urls.themeResources}Public/JavaScript/Libs/pushbar.min.js
+
         ### Slider
         file20 = {$theme.urls.themeResources}Public/JavaScript/Libs/swiper.min.js
         file20.async = 1
@@ -42,7 +44,7 @@ page {
 
     includeJSFooter {
         file20 = {$theme.urls.themeResources}Public/JavaScript/Ajax.min.js
-        file600 = {$theme.urls.themeResources}Public/JavaScript/Menu.min.js
+        file600 = {$theme.urls.themeResources}Public/JavaScript/MenuMain.min.js
         file1000 = {$theme.urls.themeResources}Public/JavaScript/Main.min.js
     }
 
@@ -131,7 +133,7 @@ page {
                 special.value = 0,1
                 as = MenuLanguage
 
-                if.isTrue = {$plugin.hhthemefotofinder.multiLanguage}
+                if.isTrue = {$plugin.typo3themeskeleton.multiLanguage}
             }
         }
 
