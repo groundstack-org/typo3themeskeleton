@@ -1,6 +1,6 @@
 config {
     baseURL = http://{$plugin.typo3themeskeleton.baseURL}
-    admPanel = 0
+    admPanel = 1
     doctype = html5
     # htmlTag_setParams = manifest="/webstorage.appcache"
     sys_language_UID = 0
