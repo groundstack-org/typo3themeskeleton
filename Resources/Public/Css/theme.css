@@ -305,6 +305,7 @@ p {
     p {
       font-size: 1rem; } }
 
+strong,
 b,
 .bold {
   font-weight: 700; }

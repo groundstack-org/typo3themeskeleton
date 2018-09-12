@@ -65,6 +65,7 @@ p {
     @include font-size($p-font-sizes);
 }
 
+strong,
 b,
 .bold {
     font-weight: 700;
