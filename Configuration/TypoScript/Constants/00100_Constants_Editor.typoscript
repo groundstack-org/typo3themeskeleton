@@ -18,9 +18,9 @@ plugin.typo3themeskeleton {
     # cat=plugin.typo3themeskeleton_mainconfig/basic/0070; type=int+; label= Cache Dauer in Sekunden (86400 = 24 hours)
         cacheperiod = 432000
     # cat=plugin.typo3themeskeleton_mainconfig/basic/0080; type=boolean; label= CSS & JS Komprimieren (0 aus / 1 ein)
-        compress = 0
+        compress = 1
     # cat=plugin.typo3themeskeleton_mainconfig/basic/0090; type=boolean; label= CSS & JS Zusammenfassen zu jeweils einer Datei (0 aus / 1 ein)
-        concatenate = 0
+        concatenate = 1
 
     ### Logos & Icons
     ### LOGO
