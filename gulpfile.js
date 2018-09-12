@@ -123,7 +123,7 @@ gulp.task('upgrade', function(done){
 
   exec('npm update', function(err, stdout, stderr){
     if(err == null){
-        console.log("npm update.. Dependencies seem to be up to date.");
+        console.log("npm update.. Dependencies are up to date.");
     } else {
         console.log("npm update.. ", err, stdout, stderr);
     }

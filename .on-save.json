@@ -1,0 +1,18 @@
+[
+  {
+    "srcDir": "Resources/Public/JavaScript",
+    "destDir": "Resources/Public/JavaScript",
+    "files": "**/*.js",
+    "command": "gulp js:compressed",
+    "showOutput": false,
+    "showError": true
+  },
+  {
+    "srcDir": "Resources/Public/Scss",
+    "destDir": "Resources/Public/Css",
+    "files": "**/*.scss",
+    "command": "gulp sass:uncompressed sass:compressed",
+    "showOutput": false,
+    "showError": true
+  }
+]
