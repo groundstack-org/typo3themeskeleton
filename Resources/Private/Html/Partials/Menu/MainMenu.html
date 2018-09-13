@@ -10,7 +10,10 @@
         <f:if condition="{mainItem.children}">
             <f:render section="submenu" arguments="{settings: settings, submenu: mainItem.children, menuEvents: menuEvents, menuReports: menuReports}"/>
         </f:if>
-        </li>
+        <f:comment>
+            hiermit wird auch die RootPage im Menü gelistet, als hauptmenuknoten
+            </li>
+        </f:comment>
     </f:for>
 </f:if>
 
