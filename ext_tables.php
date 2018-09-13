@@ -2,7 +2,12 @@
 defined('TYPO3_MODE') || die();
 
 call_user_func(function() {
-    $extensionname = "typo3themeskeleton";
+    $extension = "typo3themeskeleton";
+    $extensionName = strtolower(\TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($extension));
+    $className = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($extension);
+    // $pluginName = strtolower('PluginName');
+    // $pluginSignature = $extensionName.'_'.$pluginName;
+
     $classname = 'Typo3ThemeSkeleton';
 
     // If BE view - User logged in at BE

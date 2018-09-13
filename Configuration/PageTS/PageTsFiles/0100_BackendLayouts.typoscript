@@ -122,7 +122,7 @@ mod.web_layout.BackendLayouts {
         # iconIdentifier = hh_one_column
         config {
             backend_layout {
-                colCount = 5
+                colCount = 2
                 rowCount = 1
                 rows {
                     1 {
@@ -131,35 +131,14 @@ mod.web_layout.BackendLayouts {
                                 name = Column 1
                                 colPos = 1000
                                 allowed {
-                                    CType = textmedia,menu_subpages,shortcut,list,div
+                                    CType = textmedia,menu_subpages
                                 }
                             }
                             2 {
                                 name = Column 2
                                 colPos = 1001
                                 allowed {
-                                    CType = textmedia,menu_subpages,shortcut,list,div
-                                }
-                            }
-                            3 {
-                                name = Column 3
-                                colPos = 1002
-                                allowed {
-                                    CType = textmedia,menu_subpages,shortcut,list,div
-                                }
-                            }
-                            4 {
-                                name = Column 4
-                                colPos = 1003
-                                allowed {
-                                    CType = textmedia,menu_subpages,shortcut,list,div
-                                }
-                            }
-                            5 {
-                                name = Column 5
-                                colPos = 1004
-                                allowed {
-                                    CType = textmedia,menu_subpages,shortcut,list,div
+                                    CType = textmedia,menu_subpages
                                 }
                             }
                         }
@@ -169,5 +148,4 @@ mod.web_layout.BackendLayouts {
         }
     }
 
-    ### Eigene / Weitere Layouts bitte mit ID 50 Beginnen
 }

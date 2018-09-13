@@ -5,13 +5,22 @@ mod {
         defaultLanguageLabel = deutsch
     }
 
-    wizards.newContentElement.wizardItems.common.elements.textmedia.tt_content_defValues {
-        ### Images: Anzal der Spalten bei Bilder default Wert
-        imagecols = 1
-        ### Images: Bildposition "Oben links"
-        imageorient = 2
-        ### Position: textmedia position left
-        header_position = left
+    wizards {
+        newContentElement {
+            wizardItems {
+                common {
+                    elements.textmedia.tt_content_defValues {
+                        ### Images: Anzal der Spalten bei Bilder default Wert
+                        imagecols = 1
+                        ### Images: Bildposition "Oben links"
+                        imageorient = 2
+                        ### Position: textmedia position left
+                        header_position = left
+                    }
+                }
+                plugins.show := removeFromList(tx_ttaddress, tt_address_pi1, tt_address)
+            }
+        }
     }
 
     web_layout {

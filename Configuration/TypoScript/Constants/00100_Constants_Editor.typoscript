@@ -9,8 +9,6 @@ plugin.typo3themeskeleton {
         baseURLstage = preview.typo3-theme-skeleton.de
     # cat=plugin.typo3themeskeleton_mainconfig/basic/0012; type=string; label= LLL:EXT:typo3themeskeleton/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURLdev
         baseURLdev = www.typo3-theme-skeleton.localhost
-    # cat=plugin.typo3themeskeleton_mainconfig/basic/0030; type=options[http,https]; label= Wird die Webseite Verschlüsselt(SSL-HTTPS) ausgeliefert?
-        SSL = http
     # cat=plugin.typo3themeskeleton_mainconfig/basic/0040; type=int+; label= Root Page ID
         rootPageID = 1
     # cat=plugin.typo3themeskeleton_mainconfig/basic/0060; type=boolean; label= Page Cache ein (KEIN Hacken 0) oder ausschalten (Hacken 1)
@@ -21,10 +19,12 @@ plugin.typo3themeskeleton {
         compress = 1
     # cat=plugin.typo3themeskeleton_mainconfig/basic/0090; type=boolean; label= CSS & JS Zusammenfassen zu jeweils einer Datei (0 aus / 1 ein)
         concatenate = 1
+    # cat=plugin.typo3themeskeleton_mainconfig/basic/0030; type=options[http,https]; label= Wird die Webseite Verschlüsselt(SSL-HTTPS) ausgeliefert?
+        SSL = http
 
     ### Logos & Icons
     ### LOGO
-    # cat=plugin.typo3themeskeleton_LogoAndIcons/basic/0050; type=string; label= Main logo path
+    # cat=plugin.typo3themeskeleton_LogoAndIcons/basic/0050; type=string; label= Main logo path (Logo für FE bitte in Pagesettings -> resources hinterlegen)
         logoPath =
     # cat=plugin.typo3themeskeleton_LogoAndIcons/basic/0053; type=string; label= Touch Icon Dateipfad (320px*320px)
         touchIconReference =
@@ -37,7 +37,7 @@ plugin.typo3themeskeleton {
     # cat=plugin.typo3themeskeleton_Layout/basic/0040; type=int+; label= Page ID der Suchergebnisseite
         indexedSearchId =
     # cat=plugin.typo3themeskeleton_Layout/basic/0055; type=boolean; label= Webseite mehrsprachig? (default de || en)
-        multiLanguage = 1
+        multiLanguage = 0
     # cat=plugin.typo3themeskeleton_Layout/basic/0060; type=color; label= themeColor (interessant z. B. für Smartphones)
         themeColor =
 
@@ -108,7 +108,7 @@ plugin.typo3themeskeleton {
     # cat=plugin.typo3themeskeleton_seo/page/0750; type=string; label= audience
         audience = alle
     # cat=plugin.typo3themeskeleton_seo/page/0760; type=string; label= designer
-        designer = Werbeagentur Hauer-Heinrich GmbH
+        designer = GroundStack.de
     # cat=plugin.typo3themeskeleton_seo/page/0770; type=string; label= Google Analytics Code (UA-0000-0000)
         googleAnalytics =
     # cat=plugin.typo3themeskeleton_seo/page/0775; type=string; label= Google Tag Manager (Ganzer Code!)

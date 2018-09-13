@@ -179,15 +179,6 @@ page {
 
             FooterColumn2 < .FooterColumn1
             FooterColumn2.select.where = colPos = 1001
-
-            FooterColumn3 < .FooterColumn1
-            FooterColumn3.select.where = colPos = 1002
-
-            FooterColumn4 < .FooterColumn1
-            FooterColumn4.select.where = colPos = 1003
-
-            FooterColumn5 < .FooterColumn1
-            FooterColumn5.select.where = colPos = 1004
         }
     }
 }

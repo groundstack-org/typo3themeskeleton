@@ -44,32 +44,6 @@
         }
     }
 
-    .icon-footer {
-        background: $color-brand;
-        border-radius: 100%;
-        border-color: #fff;
-        border-style: solid;
-        border-width: 2px;
-        height: 50px;
-        left: calc(50% - 25px);
-        position: absolute;
-        top: -25px;
-        width: 50px;
-
-        &::after {
-            background: url("../Images/icon-typo3themeskeleton.svg");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            content: " ";
-            height: 70%;
-            left: 15%;
-            position: absolute;
-            top: 15%;
-            width: 70%;
-        }
-    }
-
     .col > * {
         margin-bottom: 20px;
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-02-08T00:01:00Z" product-name="typo3themeskeleton">
+        <header/>
+        <body>
+
+            <trans-unit id="more-link" approved="yes">
+                <source>More</source>
+                <target state="translated">Mehr</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

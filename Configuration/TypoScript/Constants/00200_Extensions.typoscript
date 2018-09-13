@@ -61,20 +61,23 @@ styles {
 ################################################################
 ### indexed_search - Suche ###
 ################################################################
-plugin.tx_indexedsearch.view {
-  templateRootPaths {
-        10 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Templates/
-        30 = {$plugin.tx_indexedsearch.view.templateRootPath}
-    }
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:indexed_search/Configuration/TypoScript/constants.txt">
+plugin.tx_indexedsearch {
+    view {
+        templateRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Templates/
+            30 = {$plugin.tx_indexedsearch.view.templateRootPath}
+        }
 
-  partialRootPaths {
-        10 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Partials/
-        30 = {$plugin.tx_indexedsearch.view.partialRootPath}
-    }
+        partialRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Partials/
+            30 = {$plugin.tx_indexedsearch.view.partialRootPath}
+        }
 
-  laoutRootPaths {
-        10 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Layouts/
-        30 = {$plugin.tx_indexedsearch.view.layoutRootPath}
+        laoutRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/indexed_search/Resources/Private/Layouts/
+            30 = {$plugin.tx_indexedsearch.view.layoutRootPath}
+        }
     }
 }
 
@@ -93,10 +96,11 @@ plugin.tx_indexedsearch {
     _DEFAULT_PI_VARS.results = 5
 
     settings {
-        displayRules = 0
-        displayAdvancedSearchLink = 0
+        # displayRules = 0
+        # displayAdvancedSearchLink = 0
         displayResultNumber = 1
     }
+
     resultlist_stdWrap.wrap = |<button type="button" class="load-more expand secondary"><i class="fa fa-refresh"></i> {$labelMoreSearchResults}</button>
 }
 

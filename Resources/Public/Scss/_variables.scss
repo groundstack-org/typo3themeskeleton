@@ -3,6 +3,7 @@ $breakpoints: (
     medium: 700px,
     large : 1024px
 );
+$mobile: 1000px;
 
 $color-blue: #001e2f;
 $color-grey: #9d9d9c;
@@ -11,6 +12,8 @@ $color-grey-light: #dfe6ea;
 
 $color-brand: #166390;
 $color-brand2: #9d9d9c;
+
+$text-color: #000;
 
 /* ------------------------------------- */
 
@@ -162,8 +165,11 @@ $container-gap-vertical: 50px;
 
 /* Header */
 /* for header items like menu a, language a */
-$header-items-padding-horizontal: 30px;
-$header-items-padding-vertical: 30px;
+$header-items-padding-horizontal: 1.8vw;
+$header-items-padding-vertical: 1.8vw;
+
+$header-items-padding-horizontal-4k: 30px;
+$header-items-padding-vertical-4k: 30px;
 
 /* Menus */
 /* Menu Main */
@@ -174,6 +180,8 @@ $menu-main-color-a: $color-brand;
 $menu-main-color-a-hover: $color-blue;
 $menu-main-color-a-bg: transparent;
 $menu-main-color-a-bg-hover: transparent;
+
+$menu-mobile-btn-color: $color-brand;
 
 /* Menu Language */
 $menu-language-font-size: 17px;
@@ -190,7 +198,10 @@ $cookie-color-link: #fff;
 $cookie-color-link-hover: $color-grey;
 
 /* Footer */
-$footer-bg: url("../Images/footerbg.jpg");
-$footer-color-text: #fff;
-$footer-color-a: #fff;
-$footer-color-a-hover: $color-grey;
+$footer-bg: transparent;
+$footer-color-text: $text-color;
+$footer-color-a: $text-color;
+$footer-color-a-hover: $color-brand;
+
+/* Searchbox */
+$searchbox-font-size: $menu-main-font-size;

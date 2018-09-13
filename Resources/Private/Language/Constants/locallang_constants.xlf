@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2017-02-08T00:01:00Z" product-name="typo3themeskeleton">
+        <header/>
+        <body>
+
+            <trans-unit id="config.baseURL" xml:space="preserve">
+                <source>URL (Main/Default)</source>
+            </trans-unit>
+
+            <trans-unit id="config.baseURLstage" xml:space="preserve">
+                <source>URL (Stage/Dev)</source>
+            </trans-unit>
+
+            <trans-unit id="config.baseURLdev" xml:space="preserve">
+                <source>URL (Local/Dev)</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

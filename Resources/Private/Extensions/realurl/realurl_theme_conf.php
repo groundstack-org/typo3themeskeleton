@@ -30,6 +30,11 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = [
                         'type' => 5000,
                     ],
                 ],
+                'blanksearch' => [
+                    'keyValues' => [
+                        'type' => 1981,
+                    ],
+                ],
             ],
         ],
         'preVars' => [

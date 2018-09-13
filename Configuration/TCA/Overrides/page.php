@@ -11,10 +11,4 @@ call_user_func(function() {
         "Configuration/PageTS/All.typoscript",
         "EXT:{$extensionname} :: Theme Page TS"
     );
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-        $extensionname,
-        "Configuration/PageTS/BackendLayoutFooter.typoscript",
-        "EXT:{$extensionname} :: Theme Page TS - special for footer / end of page"
-    );
 });

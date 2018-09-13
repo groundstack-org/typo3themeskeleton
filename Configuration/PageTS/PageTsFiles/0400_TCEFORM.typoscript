@@ -4,8 +4,10 @@ TCEFORM {
         CType {
             ### Disable contentelements (CEs)
             removeItems (
-                text, textpic, image, bullets, table,
+                text, textpic, image, bullets, table, tx_ttaddress
             )
+
+
         }
         ### Disable fields for specific CEs
         rowDescription.types {
@@ -56,11 +58,6 @@ TCEFORM {
             addItems {
                 ### Add custom header layouts
                 6 = LLL:EXT:typo3themeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.onlybold
-                10 = LLL:EXT:typo3themeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header1.lineshort
-                11 = LLL:EXT:typo3themeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header2.lineshort
-                12 = LLL:EXT:typo3themeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header3.lineshort
-                13 = LLL:EXT:typo3themeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header4.lineshort
-                14 = LLL:EXT:typo3themeskeleton/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header5.lineshort
             }
         }
 
@@ -187,9 +184,16 @@ TCEFORM {
             addItems {
                 withoutheader = Without header (Bezeichnung)
                 textalignright = Text align right
+                dataprotection = Datenschutzfeld (only for checkbox)
             }
         }
+
         ### Disable fields for form powermail
         feuser_value.disabled = 1
+        create_from_typoscript.disabled = 1
+
+        type {
+            removeItems = captcha,location,typoscript
+        }
     }
 }

@@ -126,6 +126,7 @@ plugin.tx_powermail.view {
 ################################################################
 ### indexed_search - Suche ###
 ################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:indexed_search/Configuration/TypoScript/setup.txt">
 plugin.tx_indexedsearch {
     view {
         templateRootPaths {

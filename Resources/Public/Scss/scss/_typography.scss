@@ -63,6 +63,7 @@ a {
 
 p {
     @include font-size($p-font-sizes);
+    margin-bottom: 15px;
 }
 
 strong,
