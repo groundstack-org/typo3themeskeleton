@@ -1,7 +1,7 @@
 page {
     includeCSS >
     includeCSS {
-        file10 = {$theme.urls.themeResources}Public/Css/theme.min.css
+        file10 = {$theme.urls.themeResources}Public/Css/spectre.min.css
     }
 }
 
@@ -20,12 +20,12 @@ page {
         file10.forceOnTop = 1
         file10.excludeFromConcatenation = 1
 
-        file15 = {$theme.urls.themeResources}Public/JavaScript/Libs/pushbar.min.js
+        # file15 = {$theme.urls.themeResources}Public/JavaScript/Libs/pushbar.min.js
 
         ### Slider
-        file20 = {$theme.urls.themeResources}Public/JavaScript/Libs/swiper.min.js
-        file20.async = 1
-        file20.excludeFromConcatenation = 1
+        # file20 = {$theme.urls.themeResources}Public/JavaScript/Libs/swiper.min.js
+        # file20.async = 1
+        # file20.excludeFromConcatenation = 1
 
         ### Lightbox
         file30 = {$theme.urls.themeResources}Public/JavaScript/Libs/baguetteBox.min.js
@@ -43,9 +43,8 @@ page {
     }
 
     includeJSFooter {
-        file20 = {$theme.urls.themeResources}Public/JavaScript/Ajax.min.js
-        file600 = {$theme.urls.themeResources}Public/JavaScript/MenuMain.min.js
-        file1000 = {$theme.urls.themeResources}Public/JavaScript/Main.min.js
+        # file600 = {$theme.urls.themeResources}Public/JavaScript/MenuMain.min.js
+        # file1000 = {$theme.urls.themeResources}Public/JavaScript/Main.min.js
     }
 
     10 = FLUIDTEMPLATE
