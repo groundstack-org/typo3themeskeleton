@@ -1,0 +1,18 @@
+/* GENERAL NAVIGATION OPTIONS */
+.nav-x { overflow:visible; }
+.nav-x * { margin:0; padding:0; }
+.nav-x ul { list-style-type:none; line-height:1.0; }
+.nav-x li,.nav-x div.link { float:left; min-height:1%; min-width:1%; }
+.nav-x a,.nav-x span.active { color:#55585D; font-weight:300; text-decoration:none; font-size:18px; letter-spacing:1px; text-transform:uppercase; }
+.nav-x a:hover,.nav-x li.active a { color:#27697E; font-weight:400; }
+.nav-x ul ul { position:absolute; left:-999em; z-index:999; }
+.nav-x li li { clear:left; }
+.nav-x li:hover ul { left:auto; }
+
+
+/* NAVIGATION TOP */
+#nav-header { display:inline-block; }
+
+
+/* NAVIGATION BOTTOM */
+#nav-footer {  }

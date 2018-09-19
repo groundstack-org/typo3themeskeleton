@@ -3,34 +3,36 @@
     data-namespace-typo3-fluid="true">
 
 <footer id="footer" class="row">
+    <div id="footer-inner">
+        <div id="footer-topbar" class="columns">
+            <div class="col col-12">
+                <f:format.raw>{FooterColumnPictures}</f:format.raw>
+            </div>
+        </div>
 
-    <div id="footer-topbar" class="columns">
-        <div class="col col-12">
-            <f:format.raw>{FooterColumnPictures}</f:format.raw>
+        <div id="footer-midbar" class="columns">
+            <div class="col col-4 col-sm-12">
+                <f:format.raw>{FooterColumnAddress1}</f:format.raw>
+            </div>
+            <div class="col col-4 col-sm-12">
+                <f:format.raw>{FooterColumnAddress2}</f:format.raw>
+            </div>
+            <div class="col col-4 col-sm-12">
+                <f:format.raw>{FooterColumnAddress3}</f:format.raw>
+            </div>
+        </div>
+
+        <div id="footer-bottombar" class="columns">
+            <div class="col col-8 col-md-12">
+                <f:format.raw>{FooterColumnBottomBar1}</f:format.raw>
+            </div>
+            <div class="col col-4 col-md-12">
+                <div id="nav-footer" class="nav-x">
+                    <f:format.raw>{FooterColumnBottomBar2}</f:format.raw>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div id="footer-midbar" class="columns">
-        <div class="col col-4 col-sm-12">
-            <f:format.raw>{FooterColumnAddress1}</f:format.raw>
-        </div>
-        <div class="col col-4 col-sm-12">
-            <f:format.raw>{FooterColumnAddress2}</f:format.raw>
-        </div>
-        <div class="col col-4 col-sm-12">
-            <f:format.raw>{FooterColumnAddress3}</f:format.raw>
-        </div>
-    </div>
-
-    <div id="footer-bottombar" class="columns">
-        <div class="col col-8 col-md-12">
-            <f:format.raw>{FooterColumnBottomBar1}</f:format.raw>
-        </div>
-        <div class="col col-4 col-md-12">
-            <f:format.raw>{FooterColumnBottomBar2}</f:format.raw>
-        </div>
-    </div>
-
 </footer>
 
 </html>

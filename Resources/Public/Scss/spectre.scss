@@ -7,6 +7,10 @@
 @import "normalize";
 @import "base";
 
+// Custom
+@import "custom/layout.scss";
+@import "custom/nav.scss";
+
 // 3th Party Libraries
 @import "libs/baguetteBox";
 @import "libs/cookieconsent";
@@ -14,11 +18,11 @@
 // Elements
 @import "typography";
 // @import "asian";
-// @import "tables";
+@import "tables";
 @import "buttons";
 @import "forms";
 @import "labels";
-@import "codes";
+// @import "codes";
 @import "media";
 
 // Layout
@@ -38,10 +42,10 @@
 @import "menus";
 @import "modals";
 @import "navs";
-@import "pagination";
+// @import "pagination";
 @import "panels";
 @import "popovers";
-@import "steps";
+// @import "steps";
 @import "tabs";
 @import "tiles";
 @import "toasts";

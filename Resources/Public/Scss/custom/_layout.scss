@@ -1,4 +1,12 @@
 #wrapper {  }
 #header {  }
+#header #logo { display:inline-block; height:120px; }
+#header #logo img { width:auto; height:100%; }
 #main {  }
-#footer {  }
+#footer { background:#6397AF; color:#fff; }
+#footer a { color:#fff; }
+#footer-inner {  }
+
+#header, #main, #footer-inner { max-width:1360px; margin:0 auto; padding:0 30px; }
+
+a { color:#27697E; }
