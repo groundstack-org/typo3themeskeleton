@@ -1,16 +1,16 @@
 {
-    "name": "hauerheinrich/typo3themeskeleton",
+    "name": "hauerheinrich/hhthemekroeswang",
     "type": "typo3-cms-extension",
     "description": "",
     "authors": {
-        "name": "Christian Hackl",
+        "name": "Christian Hackl / Sebastian Pieczona",
         "email": "web@hauer-heinrich.de"
     },
     "license": "GPL-2.0",
     "keywords": ["TYPO3 CMS", "Theme", "Distribution"],
     "replace": {
         "demoext": "self.version",
-        "typo3-ter/typo3themeskeleton": "self.version"
+        "typo3-ter/hhthemekroeswang": "self.version"
     },
     "require": {
         "typo3/cms-core": "^8.7.0 || ^8.7.99",
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "HauerHeinrich\\Typo3ThemeSkeleton\\": "Classes"
+            "HauerHeinrich\\Hhthemekroeswang\\": "Classes"
         }
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "typo3themeskeleton"
+            "extension-key": "hhthemekroeswang"
         }
     }
 }

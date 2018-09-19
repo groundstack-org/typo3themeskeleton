@@ -122,21 +122,59 @@ mod.web_layout.BackendLayouts {
         # iconIdentifier = hh_one_column
         config {
             backend_layout {
-                colCount = 2
-                rowCount = 1
+                colCount = 3
+                rowCount = 3
                 rows {
                     1 {
                         columns {
                             1 {
-                                name = Column 1
+                                name = Pictures Column
+                                colspan = 3
+                                colPos = 1200
+                                allowed {
+                                    CType = textmedia
+                                }
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Address Column 1
                                 colPos = 1000
                                 allowed {
                                     CType = textmedia,menu_subpages
                                 }
                             }
                             2 {
-                                name = Column 2
+                                name = Address Column 2
                                 colPos = 1001
+                                allowed {
+                                    CType = textmedia,menu_subpages
+                                }
+                            }
+                            3 {
+                                name = Address Column 3
+                                colPos = 1002
+                                allowed {
+                                    CType = textmedia,menu_subpages
+                                }
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = Bottom Bar Column 1
+                                colPos = 1010
+                                colspan = 2
+                                allowed {
+                                    CType = textmedia,menu_subpages
+                                }
+                            }
+                            2 {
+                                name = Bottom Bar Column 2
+                                colPos = 1011
                                 allowed {
                                     CType = textmedia,menu_subpages
                                 }

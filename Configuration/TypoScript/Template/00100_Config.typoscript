@@ -1,5 +1,5 @@
 config {
-    baseURL = http://{$plugin.typo3themeskeleton.baseURL}
+    baseURL = http://{$plugin.hhthemekroeswang.baseURL}
     admPanel = 1
     doctype = html5
     # htmlTag_setParams = manifest="/webstorage.appcache"
@@ -8,10 +8,10 @@ config {
     sys_language_mode = strict
     sys_language_overlay = hideNonTranslated
     linkVars = L(0)
-    language = {$plugin.typo3themeskeleton.defaultLang}
-    locale_all = {$plugin.typo3themeskeleton.defaultLocaleAll}
+    language = {$plugin.hhthemekroeswang.defaultLang}
+    locale_all = {$plugin.hhthemekroeswang.defaultLocaleAll}
     metaCharset = utf-8
-    htmlTag_langKey = {$plugin.typo3themeskeleton.defaultHtmlLangkey}
+    htmlTag_langKey = {$plugin.hhthemekroeswang.defaultHtmlLangkey}
     noPageTitle = 2
     pageTitleFirst = 0
     inlineStyle2TempFile = 1
@@ -19,8 +19,8 @@ config {
     removeDefaultCss = 1
     moveJsFromHeaderToFooter = 0
     disableImgBorderAttr = 1
-    no_cache = {$plugin.typo3themeskeleton.cache}
-    cache_period = {$plugin.typo3themeskeleton.cacheperiod}
+    no_cache = {$plugin.hhthemekroeswang.cache}
+    cache_period = {$plugin.hhthemekroeswang.cacheperiod}
     extTarget = _blank
     contentObjectExceptionHandler = 0
 
@@ -42,23 +42,23 @@ config {
     ################################################################
     ### CSS & JS Komprimieren ###
     ################################################################
-    compressCss = {$plugin.typo3themeskeleton.compress}
-    compressJs = {$plugin.typo3themeskeleton.compress}
+    compressCss = {$plugin.hhthemekroeswang.compress}
+    compressJs = {$plugin.hhthemekroeswang.compress}
 
     ################################################################
     ### CSS & JS Zusammenfassen zu jeweils einer Datei ###
     ################################################################
-    concatenateCss = {$plugin.typo3themeskeleton.concatenate}
-    concatenateJs = {$plugin.typo3themeskeleton.concatenate}
+    concatenateCss = {$plugin.hhthemekroeswang.concatenate}
+    concatenateJs = {$plugin.hhthemekroeswang.concatenate}
 }
 
 [globalString = ENV:HTTPS=on]
-    config.baseURL = https://{$plugin.typo3themeskeleton.baseURL}
+    config.baseURL = https://{$plugin.hhthemekroeswang.baseURL}
 [global]
 
 [applicationContext = Development]
     config {
-        baseURL = http://{$plugin.typo3themeskeleton.baseURLdev}
+        baseURL = http://{$plugin.hhthemekroeswang.baseURLdev}
         no_cache = 1
         compressCss = 0
         compressJs = 0
@@ -70,12 +70,12 @@ config {
 [global]
 
 [applicationContext = Development] && [globalString = ENV:HTTPS=on]
-    config.baseURL = https://{$plugin.typo3themeskeleton.baseURLdev}
+    config.baseURL = https://{$plugin.hhthemekroeswang.baseURLdev}
 [global]
 
 [applicationContext = Development/Server]
     config {
-        baseURL = http://{$plugin.typo3themeskeleton.baseURLstage}
+        baseURL = http://{$plugin.hhthemekroeswang.baseURLstage}
         no_cache = 1
         compressCss = 0
         compressJs = 0
@@ -85,7 +85,7 @@ config {
 [global]
 
 [applicationContext = Development/Server] && [globalString = ENV:HTTPS=on]
-    config.baseURL = https://{$plugin.typo3themeskeleton.baseURLstage}
+    config.baseURL = https://{$plugin.hhthemekroeswang.baseURLstage}
 [global]
 
 page = PAGE
@@ -101,7 +101,7 @@ page {
         viewport = initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0,user-scalable=yes,width=device-width
 
         title {
-            noTrimWrap = |{$plugin.typo3themeskeleton.beforeMetaTitle} | {$plugin.typo3themeskeleton.afterMetaTitle}|
+            noTrimWrap = |{$plugin.hhthemekroeswang.beforeMetaTitle} | {$plugin.hhthemekroeswang.afterMetaTitle}|
             data = field:title
             data.override = field:subtitle
             data.override.if.isTrue.field = subtitle
@@ -137,7 +137,7 @@ page {
         abstract.field = abstract
         abstract.ifEmpty =
         author.field = author
-        author.ifEmpty = {$plugin.typo3themeskeleton.author}
+        author.ifEmpty = {$plugin.hhthemekroeswang.author}
         keywords.field = keywords
         keywords.ifEmpty =
     }
@@ -153,7 +153,7 @@ page {
     ################################################################
     ### Header Data ###
     ################################################################
-    shortcutIcon = {$plugin.typo3themeskeleton.favi}
+    shortcutIcon = {$plugin.hhthemekroeswang.favi}
     headerData {
         ###
         1 = TEXT
@@ -173,51 +173,51 @@ page {
                 field = title
                 override.field = subtitle
                 override.if.isTrue.field = subtitle
-                noTrimWrap = |<title>{$plugin.typo3themeskeleton.beforeMetaTitle} | {$plugin.typo3themeskeleton.afterMetaTitle}</title>|
+                noTrimWrap = |<title>{$plugin.hhthemekroeswang.beforeMetaTitle} | {$plugin.hhthemekroeswang.afterMetaTitle}</title>|
             }
 
             3 = COA
             3 {
                 20 = TEXT
                 20 {
-                    value = <meta name="geo.region" content="{$plugin.typo3themeskeleton.georegion}" />
-                    if.isTrue = {$plugin.typo3themeskeleton.georegion}
+                    value = <meta name="geo.region" content="{$plugin.hhthemekroeswang.georegion}" />
+                    if.isTrue = {$plugin.hhthemekroeswang.georegion}
                 }
 
                 30 = TEXT
                 30 {
-                    value = <meta name="geo.placename" content="{$plugin.typo3themeskeleton.geoplacename}" />
-                    if.isTrue = {$plugin.typo3themeskeleton.geoplacename}
+                    value = <meta name="geo.placename" content="{$plugin.hhthemekroeswang.geoplacename}" />
+                    if.isTrue = {$plugin.hhthemekroeswang.geoplacename}
                 }
 
                 40 = TEXT
                 40 {
-                    value = <meta name="geo.position" content="{$plugin.typo3themeskeleton.latitude};{$plugin.typo3themeskeleton.longitude}" />
-                    if.isTrue = {$plugin.typo3themeskeleton.latitude}
+                    value = <meta name="geo.position" content="{$plugin.hhthemekroeswang.latitude};{$plugin.hhthemekroeswang.longitude}" />
+                    if.isTrue = {$plugin.hhthemekroeswang.latitude}
                 }
 
                 50 = TEXT
                 50 {
-                    value = <meta name="ICBM" content="{$plugin.typo3themeskeleton.latitude}, {$plugin.typo3themeskeleton.longitude}" />
-                    if.isTrue = {$plugin.typo3themeskeleton.longitude}
+                    value = <meta name="ICBM" content="{$plugin.hhthemekroeswang.latitude}, {$plugin.hhthemekroeswang.longitude}" />
+                    if.isTrue = {$plugin.hhthemekroeswang.longitude}
                 }
 
                 60 = TEXT
                 60 {
-                    value = <meta name="page-topic" content="{$plugin.typo3themeskeleton.pagetopic}">
-                    if.isTrue = {$plugin.typo3themeskeleton.pagetopic}
+                    value = <meta name="page-topic" content="{$plugin.hhthemekroeswang.pagetopic}">
+                    if.isTrue = {$plugin.hhthemekroeswang.pagetopic}
                 }
 
                 70 = TEXT
                 70 {
-                    value = <meta name="audience" content="{$plugin.typo3themeskeleton.audience}">
-                    if.isTrue = {$plugin.typo3themeskeleton.audience}
+                    value = <meta name="audience" content="{$plugin.hhthemekroeswang.audience}">
+                    if.isTrue = {$plugin.hhthemekroeswang.audience}
                 }
 
                 80 = TEXT
                 80 {
-                    value = <meta name="designer" content="{$plugin.typo3themeskeleton.designer}">
-                    if.isTrue = {$plugin.typo3themeskeleton.designer}
+                    value = <meta name="designer" content="{$plugin.hhthemekroeswang.designer}">
+                    if.isTrue = {$plugin.hhthemekroeswang.designer}
                 }
 
                 90 = TEXT
@@ -225,15 +225,15 @@ page {
                     value (
                         <meta http-equiv="imagetoolbar" content="false">
                         <meta name="format-detection" content="telephone=no">
-                        <meta name="theme-color" content="{$plugin.typo3themeskeleton.themeColor}">
-                        <link rel="manifest" href="{$plugin.typo3themeskeleton.SSL}://{$plugin.typo3themeskeleton.baseURL}/{$theme.urls.themeFileadmin}manifest.json">
+                        <meta name="theme-color" content="{$plugin.hhthemekroeswang.themeColor}">
+                        <link rel="manifest" href="{$plugin.hhthemekroeswang.SSL}://{$plugin.hhthemekroeswang.baseURL}/{$theme.urls.themeFileadmin}manifest.json">
                     )
                 }
 
                 100 = TEXT
                 100 {
-                    value = <meta name="google-site-verification" content="{$plugin.typo3themeskeleton.googlesiteverification}" />
-                    if.isTrue = {$plugin.typo3themeskeleton.googlesiteverification}
+                    value = <meta name="google-site-verification" content="{$plugin.hhthemekroeswang.googlesiteverification}" />
+                    if.isTrue = {$plugin.hhthemekroeswang.googlesiteverification}
                 }
             }
 
@@ -248,8 +248,8 @@ page {
                 4 {
                     1 = TEXT
                     1 {
-                        value = <meta property="of:site_name" content="{$plugin.typo3themeskeleton.name}">
-                        if.isTrue = {$plugin.typo3themeskeleton.name}
+                        value = <meta property="of:site_name" content="{$plugin.hhthemekroeswang.name}">
+                        if.isTrue = {$plugin.hhthemekroeswang.name}
                     }
                     2 = TEXT
                     2 {
@@ -282,75 +282,75 @@ page {
                         10 = TEXT
                         10 {
                             wrap = /|">
-                            value = {$plugin.typo3themeskeleton.image}
+                            value = {$plugin.hhthemekroeswang.image}
                         }
-                        if.isTrue = {$plugin.typo3themeskeleton.image}
+                        if.isTrue = {$plugin.hhthemekroeswang.image}
                     }
 
                     20 = TEXT
                     20 {
-                        value = <meta property="og:brand" content="{$plugin.typo3themeskeleton.name}">
-                        if.isTrue = {$plugin.typo3themeskeleton.name}
+                        value = <meta property="og:brand" content="{$plugin.hhthemekroeswang.name}">
+                        if.isTrue = {$plugin.hhthemekroeswang.name}
                     }
 
                     30 = TEXT
                     30 {
-                        value = <meta property="og:latitude" content="{$plugin.typo3themeskeleton.latitude}">
-                        if.isTrue = {$plugin.typo3themeskeleton.latitude}
+                        value = <meta property="og:latitude" content="{$plugin.hhthemekroeswang.latitude}">
+                        if.isTrue = {$plugin.hhthemekroeswang.latitude}
                     }
 
                     40 = TEXT
                     40 {
-                        value = <meta property="og:longitude" content="{$plugin.typo3themeskeleton.longitude}">
-                        if.isTrue = {$plugin.typo3themeskeleton.longitude}
+                        value = <meta property="og:longitude" content="{$plugin.hhthemekroeswang.longitude}">
+                        if.isTrue = {$plugin.hhthemekroeswang.longitude}
                     }
 
                     50 = TEXT
                     50 {
-                        value = <meta property="og:street-address" content="{$plugin.typo3themeskeleton.street}">
-                        if.isTrue = {$plugin.typo3themeskeleton.street}
+                        value = <meta property="og:street-address" content="{$plugin.hhthemekroeswang.street}">
+                        if.isTrue = {$plugin.hhthemekroeswang.street}
                     }
 
                     60 = TEXT
                     60 {
-                        value = <meta property="og:locale" content="{$plugin.typo3themeskeleton.city}">
-                        if.isTrue = {$plugin.typo3themeskeleton.city}
+                        value = <meta property="og:locale" content="{$plugin.hhthemekroeswang.city}">
+                        if.isTrue = {$plugin.hhthemekroeswang.city}
                     }
 
                     70 = TEXT
                     70 {
-                        value = <meta property="og:region" content="{$plugin.typo3themeskeleton.region}">
-                        if.isTrue = {$plugin.typo3themeskeleton.region}
+                        value = <meta property="og:region" content="{$plugin.hhthemekroeswang.region}">
+                        if.isTrue = {$plugin.hhthemekroeswang.region}
                     }
 
                     80 = TEXT
                     80 {
-                        value = <meta property="og:postal-code" content="{$plugin.typo3themeskeleton.plz}">
-                        if.isTrue = {$plugin.typo3themeskeleton.plz}
+                        value = <meta property="og:postal-code" content="{$plugin.hhthemekroeswang.plz}">
+                        if.isTrue = {$plugin.hhthemekroeswang.plz}
                     }
 
                     90 = TEXT
                     90 {
-                        value = <meta property="og:country-name" content="{$plugin.typo3themeskeleton.country}">
-                        if.isTrue = {$plugin.typo3themeskeleton.country}
+                        value = <meta property="og:country-name" content="{$plugin.hhthemekroeswang.country}">
+                        if.isTrue = {$plugin.hhthemekroeswang.country}
                     }
 
                     100 = TEXT
                     100 {
-                        value = <meta property="og:email" content="{$plugin.typo3themeskeleton.mail}">
-                        if.isTrue = {$plugin.typo3themeskeleton.mail}
+                        value = <meta property="og:email" content="{$plugin.hhthemekroeswang.mail}">
+                        if.isTrue = {$plugin.hhthemekroeswang.mail}
                     }
 
                     110 = TEXT
                     110 {
-                        value = <meta property="og:phone_number" content="{$plugin.typo3themeskeleton.tel}">
-                        if.isTrue = {$plugin.typo3themeskeleton.tel}
+                        value = <meta property="og:phone_number" content="{$plugin.hhthemekroeswang.tel}">
+                        if.isTrue = {$plugin.hhthemekroeswang.tel}
                     }
 
                     120 = TEXT
                     120 {
-                        value = <meta property="og:fax_number" content="{$plugin.typo3themeskeleton.fax}">
-                        if.isTrue = {$plugin.typo3themeskeleton.fax}
+                        value = <meta property="og:fax_number" content="{$plugin.hhthemekroeswang.fax}">
+                        if.isTrue = {$plugin.hhthemekroeswang.fax}
                     }
                 }
 
@@ -400,7 +400,7 @@ page {
             ### Apple touch icons
             10 = IMG_RESOURCE
             10 {
-                file = {$plugin.typo3themeskeleton.touchIconReference}
+                file = {$plugin.hhthemekroeswang.touchIconReference}
                 file {
                     width = 57c
                     height = 57c
@@ -550,7 +550,7 @@ page {
             10 = TEXT
             10 {
                 value = <script type="application/ld+json"> [{ "@context" : "http://schema.org",
-                if.isTrue = {$plugin.typo3themeskeleton.name}
+                if.isTrue = {$plugin.hhthemekroeswang.name}
             }
 
             ### cause syntax-editor }] </script>
@@ -558,21 +558,21 @@ page {
             20 = TEXT
             20 {
                 wrap = "@type" : "|",
-                value = {$plugin.typo3themeskeleton.type}
-                if.isTrue = {$plugin.typo3themeskeleton.type}
+                value = {$plugin.hhthemekroeswang.type}
+                if.isTrue = {$plugin.hhthemekroeswang.type}
             }
 
             30 = TEXT
             30 {
                 wrap = "name" : "|",
-                value = {$plugin.typo3themeskeleton.name}
-                if.isTrue = {$plugin.typo3themeskeleton.name}
+                value = {$plugin.hhthemekroeswang.name}
+                if.isTrue = {$plugin.hhthemekroeswang.name}
             }
 
             40 = TEXT
             40 {
-                value = "legalName" : "{$plugin.typo3themeskeleton.legalName}",
-                if.isTrue = {$plugin.typo3themeskeleton.legalName}
+                value = "legalName" : "{$plugin.hhthemekroeswang.legalName}",
+                if.isTrue = {$plugin.hhthemekroeswang.legalName}
             }
 
             50 = TEXT
@@ -592,76 +592,76 @@ page {
                 10 = TEXT
                 10 {
                     wrap = |",
-                    value = {$plugin.typo3themeskeleton.image}
+                    value = {$plugin.hhthemekroeswang.image}
                 }
-                if.isTrue = {$plugin.typo3themeskeleton.image}
+                if.isTrue = {$plugin.hhthemekroeswang.image}
             }
 
             70 = TEXT
             70 {
-                value = "telephone" : "{$plugin.typo3themeskeleton.tel}",
-                if.isTrue = {$plugin.typo3themeskeleton.tel}
+                value = "telephone" : "{$plugin.hhthemekroeswang.tel}",
+                if.isTrue = {$plugin.hhthemekroeswang.tel}
             }
             80 = TEXT
             80 {
-                value = "faxNumber" : "{$plugin.typo3themeskeleton.fax}",
-                if.isTrue = {$plugin.typo3themeskeleton.fax}
+                value = "faxNumber" : "{$plugin.hhthemekroeswang.fax}",
+                if.isTrue = {$plugin.hhthemekroeswang.fax}
             }
             90 = TEXT
             90 {
-                value = "email" : "{$plugin.typo3themeskeleton.mail}",
-                if.isTrue = {$plugin.typo3themeskeleton.mail}
+                value = "email" : "{$plugin.hhthemekroeswang.mail}",
+                if.isTrue = {$plugin.hhthemekroeswang.mail}
             }
             100 = COA
             100 {
                 10 = TEXT
                 10 {
                     value = "address" : { "@type" : "PostalAddress",
-                    if.isTrue = {$plugin.typo3themeskeleton.street}
+                    if.isTrue = {$plugin.hhthemekroeswang.street}
                 }
                 10 = TEXT
                 10 {
-                    value = "streetAddress" : "{$plugin.typo3themeskeleton.street}",
-                    if.isTrue = {$plugin.typo3themeskeleton.street}
+                    value = "streetAddress" : "{$plugin.hhthemekroeswang.street}",
+                    if.isTrue = {$plugin.hhthemekroeswang.street}
                 }
                 20 = TEXT
                 20 {
-                    value = "addressLocality" : "{$plugin.typo3themeskeleton.city}",
-                    if.isTrue = {$plugin.typo3themeskeleton.city}
+                    value = "addressLocality" : "{$plugin.hhthemekroeswang.city}",
+                    if.isTrue = {$plugin.hhthemekroeswang.city}
                 }
                 30 = TEXT
                 30 {
-                    value = "addressRegion" : "{$plugin.typo3themeskeleton.region}",
-                    if.isTrue = {$plugin.typo3themeskeleton.region}
+                    value = "addressRegion" : "{$plugin.hhthemekroeswang.region}",
+                    if.isTrue = {$plugin.hhthemekroeswang.region}
                 }
                 40 = TEXT
                 40 {
-                    value = "addressCountry" : "{$plugin.typo3themeskeleton.country}",
-                    if.isTrue = {$plugin.typo3themeskeleton.country}
+                    value = "addressCountry" : "{$plugin.hhthemekroeswang.country}",
+                    if.isTrue = {$plugin.hhthemekroeswang.country}
                 }
                 50 = TEXT
                 50 {
-                    value = "postalCode" : "{$plugin.typo3themeskeleton.plz}"
-                    if.isTrue = {$plugin.typo3themeskeleton.plz}
+                    value = "postalCode" : "{$plugin.hhthemekroeswang.plz}"
+                    if.isTrue = {$plugin.hhthemekroeswang.plz}
                 }
                 60 = TEXT
                 60 {
                     value = },
-                    if.isTrue = {$plugin.typo3themeskeleton.street}
+                    if.isTrue = {$plugin.hhthemekroeswang.street}
                 }
             }
             110 = TEXT
             110 {
-                value = "openingHours": [ {$plugin.typo3themeskeleton.hours} ]
-                if.isTrue = {$plugin.typo3themeskeleton.hours}
+                value = "openingHours": [ {$plugin.hhthemekroeswang.hours} ]
+                if.isTrue = {$plugin.hhthemekroeswang.hours}
             }
             500 = TEXT
             500 {
                 value = }] </script>
-                if.isTrue = {$plugin.typo3themeskeleton.name}
+                if.isTrue = {$plugin.hhthemekroeswang.name}
             }
 
-            if.isTrue = {$plugin.typo3themeskeleton.name}
+            if.isTrue = {$plugin.hhthemekroeswang.name}
         }
 
         ### Dateien werden per AJAX geladen - noscript für SEO
@@ -680,7 +680,7 @@ page {
         1000 = TEXT
         1000.value (
             <script>
-                var gaProperty = '{$plugin.typo3themeskeleton.googleAnalytics}';
+                var gaProperty = '{$plugin.hhthemekroeswang.googleAnalytics}';
                 var disableStr = 'ga-disable-' + gaProperty;
                 if (document.cookie.indexOf(disableStr + '=true') > -1) {
                     window[disableStr] = true;
@@ -703,22 +703,22 @@ page {
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-                ga('create', '{$plugin.typo3themeskeleton.googleAnalytics}', 'auto');
+                ga('create', '{$plugin.hhthemekroeswang.googleAnalytics}', 'auto');
                 ga('set', 'anonymizeIp', true);
                 ga('send', 'pageview');
                 setTimeout("ga('send','event','Webseitenaufenthalt','20 Sekunden auf Seite')", 20000);
             </script>
         )
-        1000.if.isTrue = {$plugin.typo3themeskeleton.googleAnalytics}
+        1000.if.isTrue = {$plugin.hhthemekroeswang.googleAnalytics}
 
         ################################################################
         ### Google Tag Manager ###
         ################################################################
         1001 = TEXT
         1001.value (
-            {$plugin.typo3themeskeleton.googleTagManager}
+            {$plugin.hhthemekroeswang.googleTagManager}
         )
-        1001.if.isTrue = {$plugin.typo3themeskeleton.googleTagManager}
+        1001.if.isTrue = {$plugin.hhthemekroeswang.googleTagManager}
 
         ################################################################
         ### Piwik Analytics ###
@@ -731,7 +731,7 @@ page {
                 _paq.push(['trackPageView']);
                 _paq.push(['enableLinkTracking']);
                 (function() {
-                    var u="//{$plugin.typo3themeskeleton.piwikAnalytics}/";
+                    var u="//{$plugin.hhthemekroeswang.piwikAnalytics}/";
                     _paq.push(['setTrackerUrl', u+'piwik.php']);
                     _paq.push(['setSiteId', '1']);
                     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -739,7 +739,7 @@ page {
                 })();
             </script>
         )
-        1010.if.isTrue = {$plugin.typo3themeskeleton.piwikAnalytics}
+        1010.if.isTrue = {$plugin.hhthemekroeswang.piwikAnalytics}
     }
 
     ################################################################
@@ -747,7 +747,7 @@ page {
     ################################################################
     bodyTag >
     bodyTagCObject = TEXT
-    bodyTagCObject.stdWrap.dataWrap = <body id="page-{field:uid}" class="be-{field:backend_layout} {$plugin.typo3themeskeleton.layout}"><noscript><div><p>Sie haben JavaScript deaktiviert!<br />Um diese Seite in follen Zügen genießen zu können, aktivieren Sie bitte JavaScript in Ihrem Browser.<br />Danke.</p></div></noscript>
+    bodyTagCObject.stdWrap.dataWrap = <body id="page-{field:uid}" class="be-{field:backend_layout} {$plugin.hhthemekroeswang.layout}"><noscript><div><p>Sie haben JavaScript deaktiviert!<br />Um diese Seite in follen Zügen genießen zu können, aktivieren Sie bitte JavaScript in Ihrem Browser.<br />Danke.</p></div></noscript>
 }
 
 ################################################################

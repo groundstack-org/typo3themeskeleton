@@ -1,6 +1,6 @@
 <?php
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = [
-    'www.typo3-theme-skeleton.de' => [
+    'www.kroeswang.de' => [
         'init' => [
             'enableCHashCache' => true,
             'respectSimulateStaticURLs' => 0,
@@ -96,10 +96,10 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = [
 ];
 
 $realurl_additional = [
-    'typo3-theme-skeleton.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.typo3-theme-skeleton.de'],
-    'preview.typo3-theme-skeleton.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.typo3-theme-skeleton.de'],
-    'www.typo3-theme-skeleton.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.typo3-theme-skeleton.de'],
-    'typo3-theme-skeleton.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.typo3-theme-skeleton.de'],
+    'kroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kroeswang.de'],
+    'preview.kroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kroeswang.de'],
+    'www.kroeswang.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kroeswang.de'],
+    'kroeswang.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kroeswang.de'],
 ];
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array_merge(
     $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'],
@@ -107,21 +107,21 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array_merge(
 );
 
 $customChanges = [
-    'www.typo3-theme-skeleton.de' => [
+    'www.kroeswang.de' => [
         'pagePath' => [
             'rootpage_id' => 1,
         ],
     ],
 
     // PREVIEW
-    'preview.typo3-theme-skeleton.de' => [
+    'preview.kroeswang.de' => [
         'pagePath' => [
             'rootpage_id' => 1
         ]
     ],
 
     // LOCALHOST
-    'www.typo3-theme-skeleton.localhost' => [
+    'www.kroeswang.localhost' => [
         'pagePath' => [
             'rootpage_id' => 1
         ]

@@ -15,6 +15,10 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
 
+[*.typoscript]
+indent_style = space
+indent_size = 4
+
 # CSS-Files
 [*.css]
 indent_style = space
@@ -61,6 +65,6 @@ indent_style = space
 indent_size = 2
 
 # package.json
-[package.json,]
+[package.json]
 indent_style = space
 indent_size = 2

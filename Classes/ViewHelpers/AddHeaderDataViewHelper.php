@@ -1,5 +1,5 @@
 <?php
-    namespace HauerHeinrich\Typo3ThemeSkeleton\ViewHelpers;
+    namespace HauerHeinrich\Hhthemekroeswang\ViewHelpers;
 
     /***************************************************************
      * Copyright notice

@@ -1,5 +1,5 @@
 <?php
-namespace HauerHeinrich\Typo3ThemeSkeleton\Hooks;
+namespace HauerHeinrich\Hhthemekroeswang\Hooks;
 
 // use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 

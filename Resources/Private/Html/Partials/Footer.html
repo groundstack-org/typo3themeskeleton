@@ -1,14 +1,36 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-    xmlns:hh="http://typo3.org/ns/HauerHeinrich/Typo3ThemeSkeleton/ViewHelpers"
+    xmlns:hh="http://typo3.org/ns/HauerHeinrich/Hhthemekroeswang/ViewHelpers"
     data-namespace-typo3-fluid="true">
 
 <footer id="footer" class="row">
-    <div class="col col-xs-3">
-        <f:format.raw>{FooterColumn1}</f:format.raw>
+
+    <div class="row1">
+        <div class="col col-xs-9">
+            <f:format.raw>{FooterColumnPictures}</f:format.raw>
+        </div>
     </div>
-    <div class="col col-xs-3">
-        <f:format.raw>{FooterColumn2}</f:format.raw>
+
+    <div class="row2">
+        <div class="col col-xs-3">
+            <f:format.raw>{FooterColumnAddress1}</f:format.raw>
+        </div>
+        <div class="col col-xs-3">
+            <f:format.raw>{FooterColumnAddress2}</f:format.raw>
+        </div>
+        <div class="col col-xs-3">
+            <f:format.raw>{FooterColumnAddress3}</f:format.raw>
+        </div>
     </div>
+
+    <div class="row3">
+        <div class="col col-xs-3">
+            <f:format.raw>{FooterColumnBottomBar1}</f:format.raw>
+        </div>
+        <div class="col col-xs-3">
+            <f:format.raw>{FooterColumnBottomBar2}</f:format.raw>
+        </div>
+    </div>
+
 </footer>
 
 </html>

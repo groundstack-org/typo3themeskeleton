@@ -1,7 +1,7 @@
 theme {
-    name = typo3themeskeleton
+    name = hhthemekroeswang
     urls {
-        themeResources = typo3conf/ext/typo3themeskeleton/Resources/
-        themeFileadmin = fileadmin/typo3themeskeleton/
+        themeResources = typo3conf/ext/hhthemekroeswang/Resources/
+        themeFileadmin = fileadmin/hhthemekroeswang/
     }
 }

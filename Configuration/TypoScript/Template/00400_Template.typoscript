@@ -133,12 +133,12 @@ page {
                 special.value = 0,1
                 as = MenuLanguage
 
-                if.isTrue = {$plugin.typo3themeskeleton.multiLanguage}
+                if.isTrue = {$plugin.hhthemekroeswang.multiLanguage}
             }
         }
 
         settings {
-            indexedSearchId = {$plugin.typo3themeskeleton.indexedSearchId}
+            indexedSearchId = {$plugin.hhthemekroeswang.indexedSearchId}
             language = TSFE:sys_language_uid
         }
 
@@ -166,19 +166,31 @@ page {
 
             Logo < lib.logo
 
-            FooterColumn1 = CONTENT
-            FooterColumn1 {
+            FooterColumnAddress1 = CONTENT
+            FooterColumnAddress1 {
                 table = tt_content
                 select {
                     where = colPos = 1000
-                    pidInList = {$plugin.typo3themeskeleton.footerSeitenID}
+                    pidInList = {$plugin.hhthemekroeswang.footerSeitenID}
                     orderBy = sorting ASC, colPos ASC
                     languageField = sys_language_uid
                 }
             }
 
-            FooterColumn2 < .FooterColumn1
-            FooterColumn2.select.where = colPos = 1001
+            FooterColumnAddress2 < .FooterColumnAddress1
+            FooterColumnAddress2.select.where = colPos = 1001
+
+            FooterColumnAddress3 < .FooterColumnAddress1
+            FooterColumnAddress3.select.where = colPos = 1002
+
+            FooterColumnBottomBar1 < .FooterColumnAddress1
+            FooterColumnBottomBar1.select.where = colPos = 1010
+
+            FooterColumnBottomBar2 < .FooterColumnAddress1
+            FooterColumnBottomBar2.select.where = colPos = 1011
+
+            FooterColumnPictures < .FooterColumnAddress1
+            FooterColumnPictures.select.where = colPos = 1200
         }
     }
 }

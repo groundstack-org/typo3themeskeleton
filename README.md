@@ -1,4 +1,4 @@
-typo3themeskeleton
+hhthemekroeswang
 
 ToDo:
 - add licance

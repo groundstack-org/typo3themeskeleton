@@ -1,120 +1,120 @@
 ### humans.txt nicht vergessen ;)
 
 ### Definitionen für Konstants Editor im Backend:
-plugin.typo3themeskeleton {
+plugin.hhthemekroeswang {
     ### Basic
-    # cat=plugin.typo3themeskeleton_mainconfig/basic/0010; type=string; label= LLL:EXT:typo3themeskeleton/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURL
-        baseURL = www.typo3-theme-skeleton.de
-    # cat=plugin.typo3themeskeleton_mainconfig/basic/0011; type=string; label= LLL:EXT:typo3themeskeleton/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURLstage
-        baseURLstage = preview.typo3-theme-skeleton.de
-    # cat=plugin.typo3themeskeleton_mainconfig/basic/0012; type=string; label= LLL:EXT:typo3themeskeleton/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURLdev
-        baseURLdev = www.typo3-theme-skeleton.localhost
-    # cat=plugin.typo3themeskeleton_mainconfig/basic/0040; type=int+; label= Root Page ID
+    # cat=plugin.hhthemekroeswang_mainconfig/basic/0010; type=string; label= LLL:EXT:hhthemekroeswang/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURL
+        baseURL = www.kroeswang.de
+    # cat=plugin.hhthemekroeswang_mainconfig/basic/0011; type=string; label= LLL:EXT:hhthemekroeswang/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURLstage
+        baseURLstage = preview.kroeswang.de
+    # cat=plugin.hhthemekroeswang_mainconfig/basic/0012; type=string; label= LLL:EXT:hhthemekroeswang/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURLdev
+        baseURLdev = www.kroeswang.localhost
+    # cat=plugin.hhthemekroeswang_mainconfig/basic/0040; type=int+; label= Root Page ID
         rootPageID = 1
-    # cat=plugin.typo3themeskeleton_mainconfig/basic/0060; type=boolean; label= Page Cache ein (KEIN Hacken 0) oder ausschalten (Hacken 1)
+    # cat=plugin.hhthemekroeswang_mainconfig/basic/0060; type=boolean; label= Page Cache ein (KEIN Hacken 0) oder ausschalten (Hacken 1)
         cache = 1
-    # cat=plugin.typo3themeskeleton_mainconfig/basic/0070; type=int+; label= Cache Dauer in Sekunden (86400 = 24 hours)
+    # cat=plugin.hhthemekroeswang_mainconfig/basic/0070; type=int+; label= Cache Dauer in Sekunden (86400 = 24 hours)
         cacheperiod = 432000
-    # cat=plugin.typo3themeskeleton_mainconfig/basic/0080; type=boolean; label= CSS & JS Komprimieren (0 aus / 1 ein)
+    # cat=plugin.hhthemekroeswang_mainconfig/basic/0080; type=boolean; label= CSS & JS Komprimieren (0 aus / 1 ein)
         compress = 1
-    # cat=plugin.typo3themeskeleton_mainconfig/basic/0090; type=boolean; label= CSS & JS Zusammenfassen zu jeweils einer Datei (0 aus / 1 ein)
+    # cat=plugin.hhthemekroeswang_mainconfig/basic/0090; type=boolean; label= CSS & JS Zusammenfassen zu jeweils einer Datei (0 aus / 1 ein)
         concatenate = 1
-    # cat=plugin.typo3themeskeleton_mainconfig/basic/0030; type=options[http,https]; label= Wird die Webseite Verschlüsselt(SSL-HTTPS) ausgeliefert?
+    # cat=plugin.hhthemekroeswang_mainconfig/basic/0030; type=options[http,https]; label= Wird die Webseite Verschlüsselt(SSL-HTTPS) ausgeliefert?
         SSL = http
 
     ### Logos & Icons
     ### LOGO
-    # cat=plugin.typo3themeskeleton_LogoAndIcons/basic/0050; type=string; label= Main logo path (Logo für FE bitte in Pagesettings -> resources hinterlegen)
+    # cat=plugin.hhthemekroeswang_LogoAndIcons/basic/0050; type=string; label= Main logo path (Logo für FE bitte in Pagesettings -> resources hinterlegen)
         logoPath =
-    # cat=plugin.typo3themeskeleton_LogoAndIcons/basic/0053; type=string; label= Touch Icon Dateipfad (320px*320px)
+    # cat=plugin.hhthemekroeswang_LogoAndIcons/basic/0053; type=string; label= Touch Icon Dateipfad (320px*320px)
         touchIconReference =
-    # cat=plugin.typo3themeskeleton_LogoAndIcons/basic/0054; type=string; label= Favicon Dateipfad
+    # cat=plugin.hhthemekroeswang_LogoAndIcons/basic/0054; type=string; label= Favicon Dateipfad
         favi =
 
     ### Layout
-    # cat=plugin.typo3themeskeleton_Layout/basic/0031; type=int+; label= Page ID der Seite für den Inhalt für den Footer
-        footerSeitenID = 9
-    # cat=plugin.typo3themeskeleton_Layout/basic/0040; type=int+; label= Page ID der Suchergebnisseite
+    # cat=plugin.hhthemekroeswang_Layout/basic/0031; type=int+; label= Page ID der Seite für den Inhalt für den Footer
+        footerSeitenID = 4
+    # cat=plugin.hhthemekroeswang_Layout/basic/0040; type=int+; label= Page ID der Suchergebnisseite
         indexedSearchId =
-    # cat=plugin.typo3themeskeleton_Layout/basic/0055; type=boolean; label= Webseite mehrsprachig? (default de || en)
+    # cat=plugin.hhthemekroeswang_Layout/basic/0055; type=boolean; label= Webseite mehrsprachig? (default de || en)
         multiLanguage = 0
-    # cat=plugin.typo3themeskeleton_Layout/basic/0060; type=color; label= themeColor (interessant z. B. für Smartphones)
+    # cat=plugin.hhthemekroeswang_Layout/basic/0060; type=color; label= themeColor (interessant z. B. für Smartphones)
         themeColor =
 
 	### SEO
-    # cat=plugin.typo3themeskeleton_seo/page/0005; type=string; label= Trenner ID(s) Liste Komma getrennt, welche in die Sitemap aufgenommen werden sollten
+    # cat=plugin.hhthemekroeswang_seo/page/0005; type=string; label= Trenner ID(s) Liste Komma getrennt, welche in die Sitemap aufgenommen werden sollten
         sitemapTrennerIDs =
-    # cat=plugin.typo3themeskeleton_seo/page/0006; type=string; label= Page ID(s) Liste Komma getrennt, welche in die Sitemap aufgenommen werden sollten (falls diese nicht bei den Trennern oben inkludiert sind)
+    # cat=plugin.hhthemekroeswang_seo/page/0006; type=string; label= Page ID(s) Liste Komma getrennt, welche in die Sitemap aufgenommen werden sollten (falls diese nicht bei den Trennern oben inkludiert sind)
         sitemapPageIDs =
-    # cat=plugin.typo3themeskeleton_seo/page/0007; type=int+; label= tx_news Storage ID (if you have more than one then update / change the sitemap.ts!)
+    # cat=plugin.hhthemekroeswang_seo/page/0007; type=int+; label= tx_news Storage ID (if you have more than one then update / change the sitemap.ts!)
         sitemapTxNewsStorageID =
-    # cat=plugin.typo3themeskeleton_seo/page/0007; type=int+; label= tx_news Detail Page ID (if you have more than one then update / change the sitemap.ts!)
+    # cat=plugin.hhthemekroeswang_seo/page/0007; type=int+; label= tx_news Detail Page ID (if you have more than one then update / change the sitemap.ts!)
         sitemapTxNewsDetailID =
-    #cat=plugin.typo3themeskeleton_seo/page/0010; type=string; label= lang
+    #cat=plugin.hhthemekroeswang_seo/page/0010; type=string; label= lang
         defaultLang = de
-    #cat=plugin.typo3themeskeleton_seo/page/0020; type=string; label= localeall
+    #cat=plugin.hhthemekroeswang_seo/page/0020; type=string; label= localeall
         defaultLocaleAll = de_DE.UTF-8
-    #cat=plugin.typo3themeskeleton_seo/page/0030; type=string; label= htmllangkey
+    #cat=plugin.hhthemekroeswang_seo/page/0030; type=string; label= htmllangkey
         defaultHtmlLangkey = de-DE
-    #cat=plugin.typo3themeskeleton_seo/page/0100; type=string; label= bevor Meta Title
+    #cat=plugin.hhthemekroeswang_seo/page/0100; type=string; label= bevor Meta Title
         beforeMetaTitle =
-    #cat=plugin.typo3themeskeleton_seo/page/0110; type=string; label= nach Meta Title
+    #cat=plugin.hhthemekroeswang_seo/page/0110; type=string; label= nach Meta Title
         afterMetaTitle =
 
-    # cat=plugin.typo3themeskeleton_seo/page/0400; type=string; label= Author name if not set in page settings (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0400; type=string; label= Author name if not set in page settings (schema.org)
         author = Theme Skeleton
 
     # Absolute Pfade angeben!
-    #cat=plugin.typo3themeskeleton_seo/page/0500; type=string; label= Type (required) (schema.org)
+    #cat=plugin.hhthemekroeswang_seo/page/0500; type=string; label= Type (required) (schema.org)
         type = Organization
-    # cat=plugin.typo3themeskeleton_seo/page/0510; type=string; label= Name (required) (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0510; type=string; label= Name (required) (schema.org)
         name = Theme Skeleton Homepage
-    # cat=plugin.typo3themeskeleton_seo/page/0520; type=string; label= legalName (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0520; type=string; label= legalName (schema.org)
         legalName = Theme Skeleton GmbH
-    # cat=plugin.typo3themeskeleton_seo/page/0530; type=string; label= Unternehmens logo (absolute)Dateipfad (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0530; type=string; label= Unternehmens logo (absolute)Dateipfad (schema.org)
         logo =
-    # cat=plugin.typo3themeskeleton_seo/page/0540; type=string; label= Unternehmens Bild (absolute)Dateipfad (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0540; type=string; label= Unternehmens Bild (absolute)Dateipfad (schema.org)
         image =
-    # cat=plugin.typo3themeskeleton_seo/page/0550; type=string; label= tel (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0550; type=string; label= tel (schema.org)
         tel =
-    # cat=plugin.typo3themeskeleton_seo/page/0560; type=string; label= fax (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0560; type=string; label= fax (schema.org)
         fax =
-    # cat=plugin.typo3themeskeleton_seo/page/0570; type=string; label= mail (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0570; type=string; label= mail (schema.org)
         mail =
-    # cat=plugin.typo3themeskeleton_seo/page/0580; type=string; label= street (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0580; type=string; label= street (schema.org)
         street =
-    # cat=plugin.typo3themeskeleton_seo/page/0590; type=string; label= city (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0590; type=string; label= city (schema.org)
         city =
-    # cat=plugin.typo3themeskeleton_seo/page/0600; type=string; label= plz (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0600; type=string; label= plz (schema.org)
         plz =
-    # cat=plugin.typo3themeskeleton_seo/page/0610; type=string; label= region (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0610; type=string; label= region (schema.org)
         region =
-    # cat=plugin.typo3themeskeleton_seo/page/0620; type=string; label= country (schema.org)
+    # cat=plugin.hhthemekroeswang_seo/page/0620; type=string; label= country (schema.org)
         country =
-    # cat=plugin.typo3themeskeleton_seo/page/0630; type=string; label= hours (schema.org) ("Mo-Th 09:30-17:30", "Sa 07:30-12:00")
+    # cat=plugin.hhthemekroeswang_seo/page/0630; type=string; label= hours (schema.org) ("Mo-Th 09:30-17:30", "Sa 07:30-12:00")
         hours =
 
     ### Zusätzliche Meta Daten
-    # cat=plugin.typo3themeskeleton_seo/page/0700; type=string; label= georegion (e. g. DE-BY)
+    # cat=plugin.hhthemekroeswang_seo/page/0700; type=string; label= georegion (e. g. DE-BY)
         georegion = DE-BY
-    # cat=plugin.typo3themeskeleton_seo/page/0710; type=string; label= geoplacename (e. g. Passau)
+    # cat=plugin.hhthemekroeswang_seo/page/0710; type=string; label= geoplacename (e. g. Passau)
         geoplacename =
-    # cat=plugin.typo3themeskeleton_seo/page/0720; type=string; label= latitude geoposition e. g. from: http://de.mygeoposition.com/
+    # cat=plugin.hhthemekroeswang_seo/page/0720; type=string; label= latitude geoposition e. g. from: http://de.mygeoposition.com/
         latitude =
-    # cat=plugin.typo3themeskeleton_seo/page/0730; type=string; label= longitude
+    # cat=plugin.hhthemekroeswang_seo/page/0730; type=string; label= longitude
         longitude =
-    # cat=plugin.typo3themeskeleton_seo/page/0740; type=string; label= pagetopic (Dienstleistung)
+    # cat=plugin.hhthemekroeswang_seo/page/0740; type=string; label= pagetopic (Dienstleistung)
         pagetopic =
-    # cat=plugin.typo3themeskeleton_seo/page/0750; type=string; label= audience
+    # cat=plugin.hhthemekroeswang_seo/page/0750; type=string; label= audience
         audience = alle
-    # cat=plugin.typo3themeskeleton_seo/page/0760; type=string; label= designer
+    # cat=plugin.hhthemekroeswang_seo/page/0760; type=string; label= designer
         designer = GroundStack.de
-    # cat=plugin.typo3themeskeleton_seo/page/0770; type=string; label= Google Analytics Code (UA-0000-0000)
+    # cat=plugin.hhthemekroeswang_seo/page/0770; type=string; label= Google Analytics Code (UA-0000-0000)
         googleAnalytics =
-    # cat=plugin.typo3themeskeleton_seo/page/0775; type=string; label= Google Tag Manager (Ganzer Code!)
+    # cat=plugin.hhthemekroeswang_seo/page/0775; type=string; label= Google Tag Manager (Ganzer Code!)
         googleTagManager =
-    # cat=plugin.typo3themeskeleton_seo/page/0780; type=string; label= Piwik Analytics Code (URL ohne http(s)! www.MEINEDOMAIN.de)
+    # cat=plugin.hhthemekroeswang_seo/page/0780; type=string; label= Piwik Analytics Code (URL ohne http(s)! www.MEINEDOMAIN.de)
         piwikAnalytics =
-    # cat=plugin.typo3themeskeleton_seo/page/0800; type=string; label= Google Site Verification (only Code / ID not meta tag!)
+    # cat=plugin.hhthemekroeswang_seo/page/0800; type=string; label= Google Site Verification (only Code / ID not meta tag!)
         googlesiteverification =
 }

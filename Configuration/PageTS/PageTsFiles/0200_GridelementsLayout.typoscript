@@ -249,7 +249,7 @@ tx_gridelements {
             description = Wenn als Image Slider genutzt, bitte im ImageContentElement Layout ImageSlider auswählen!
             topLevelLayout = 0
             iconIdentifier = hh_grid_slider
-            flexformDS = FILE:EXT:typo3themeskeleton/Resources/Private/Extensions/gridelements/FlexForms/GridSliderGlide.xml
+            flexformDS = FILE:EXT:hhthemekroeswang/Resources/Private/Extensions/gridelements/FlexForms/GridSliderGlide.xml
             config {
                 colCount = 1
                 rowCount = 1

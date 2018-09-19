@@ -2,7 +2,7 @@
 defined('TYPO3_MODE') || die();
 
 call_user_func(function() {
-    $extensionname = "typo3themeskeleton";
+    $extensionname = "hhthemekroeswang";
 
     // Typo3 extension manager gearwheel icon (ext_conf_template.txt)
     $_extConfig = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$extensionname]);
@@ -85,10 +85,10 @@ call_user_func(function() {
     // Hooks
     // Hook for Viewhelper "AddHeaderDataViewHelper"
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-postProcess'][] =
-        HauerHeinrich\Typo3ThemeSkeleton\Hooks\AddFooterData::class . '->addJSFooter';
+        HauerHeinrich\Hhthemekroeswang\Hooks\AddFooterData::class . '->addJSFooter';
 
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-postProcess'][] =
-        HauerHeinrich\Typo3ThemeSkeleton\Hooks\AddHeaderData::class . '->addCSSHeader';
+        HauerHeinrich\Hhthemekroeswang\Hooks\AddHeaderData::class . '->addCSSHeader';
 
     // AJAX eID
     // $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['hhtheme'] = "EXT:{$extensionname}/Classes/EidApi/index.php";

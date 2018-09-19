@@ -1,2 +1,2 @@
 # Include all PageTS files
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:typo3themeskeleton/Configuration/PageTS/PageTsFiles" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:hhthemekroeswang/Configuration/PageTS/PageTsFiles" extensions="typoscript">
