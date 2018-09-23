@@ -1,0 +1,55 @@
+.navflow {
+    @media screen and (max-width:960px){
+        background-image:url('../Images/icons/three-bars.svg');
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:contain;
+        width:32px;
+        height:32px;
+        cursor:pointer;
+        float:right;
+
+        &.navflow-active {
+            cursor:inherit;
+            nav { height:100%; }
+        }
+
+        nav {
+            position:fixed;
+            left:0; top:0;
+            z-index:1250;
+            height:0;
+            width:100%;
+            background:rgba(0,0,0,0.5);
+            display:block;
+            overflow:hidden;
+
+            /* RESET */
+            *, ul, ul ul, ul li, ul li ul li, ul li:first-of-type, ul li:last-of-type, ul li a, ul li a:first-of-type, ul li a:last-of-type { margin:0; padding:0; display:block; position:relative; top:0; left:0; box-sizing:border-box; }
+
+            /* MOBILE NAVIGATION + OVERLAY */
+            & > ul {
+                background-color:rgba(255,255,255,0.95); height:100%; width:45%; min-width:200px; max-width:320px; overflow:scroll;
+
+                li { float:none; display:block; }
+                li a, li a:first-of-type, li a:last-of-type { text-align:left; padding:10px 16px; }
+                ul > li:first-of-type > a { padding-top:20px; }
+                ul > li:last-of-type > a { padding-bottom:20px; }
+                li a:focus, li a:active { outline:0; }
+
+                /* 2th+ LEVEL NAVIGATIONS */
+                ul { display:none; overflow:hidden; }
+
+                /* LOGO */
+                &::before {
+                    content:""; display:block;
+                    background-image:url("../Images/kroeswang-logo.svg");
+                    background-repeat:no-repeat;
+                    background-position:center center;
+                    background-size:auto 70%;
+                    height:100px;
+                }
+            }
+        }
+    }
+}

@@ -1,12 +1,79 @@
+body { background:url("../Images/bg-white.svg") repeat-x center top #eee; }
+
+/* WRAPPER (Header, Content, Footer) */
 #wrapper {  }
-#header {  }
-#header #logo { display:inline-block; height:120px; }
-#header #logo img { width:auto; height:100%; }
-#main {  }
-#footer { background:#6397AF; color:#fff; }
-#footer a { color:#fff; }
-#footer-inner {  }
 
-#header, #main, #footer-inner { max-width:1360px; margin:0 auto; padding:0 30px; }
+/* MAIN LAYOUT SETTINGS */
+#header, #banner, #content, #footer-topbar, #footer-midbar, #footer-bottombar-inner { max-width:1400px; margin:0 auto; padding:0 $containerSpacing; padding-bottom:$containerSpacing; }
 
-a { color:#27697E; }
+/* HEADER */
+#header {
+    padding-top:$containerSpacing;
+
+    #logo { display:inline-block; height:120px; width:21%; min-width:250px; }
+    #logo a { width:100%; display:inline-block; }
+    #logo img { width:100%; height:auto; }
+
+    @media screen and (max-width:360px){
+        text-align:center;
+
+        #logo { min-width:230px; }
+    }
+}
+
+/* CONTENT  (Main, Sidebar) */
+#content {
+    display:flex; flex-direction:row; flex:0 1 auto; align-items:stretch; justify-content:flex-start;
+
+    #main { flex-basis:$gridColumnRight; }
+    #sidebar { flex-basis:$gridColumnLeft; margin-right:$gridColumnSpacing; min-width:250px; }
+
+    @media screen and (max-width:$size-sm){
+        #sidebar { display:none; }
+    }
+}
+
+/* FOOTER */
+#footer {
+    background:#6397AF; color:#fff; margin-top:115px;
+
+    a { color:#fff; }
+
+    #footer-inner { padding-top:$containerSpacing; }
+
+    #footer-topbar {
+        .ce-gallery .ce-column { display:inline-block; margin:0 15px; margin-bottom:15px; }
+        .ce-gallery .ce-column img { width:auto; height:230px; }
+
+        #footer-topbar-inner { width:100%; margin-top:-115px; }
+
+        @media screen and (max-width:$size-lg){
+            .ce-gallery .ce-column img { height:170px; }
+            #footer-topbar-inner { margin-top:-85px; }
+        }
+        @media screen and (max-width:$size-sm){
+            & { display:none; }
+            @at-root #footer { margin-top:0; }
+        }
+    }
+
+    #footer-midbar {  }
+    #footer-bottombar { background:#27697E; }
+    #footer-bottombar p { margin-bottom:0; }
+    #footer-bottombar-inner { padding-top:$containerSpacing; padding-bottom:$containerSpacing; }
+
+    /* CE GALLERY in FOOTER */
+    @media screen and (max-width:$size-sm){
+        #footer-topbar .ce-gallery { text-align:center; }
+    }
+
+
+    /* On Home / Startpage only (BdB Siegel) */
+    #page-1 & #footer-topbar .ce-gallery .ce-row::before {
+        content:""; display:inline-block; width:230px; height:230px; margin-right:80px; background:url("../Images/kroeswang-bdb-siegel.png") no-repeat center center transparent; background-size:contain;
+
+        @media screen and (max-width:$size-xl){
+            display:none;
+        }
+    }
+}

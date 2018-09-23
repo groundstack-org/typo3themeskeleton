@@ -1,18 +1,38 @@
 /* GENERAL NAVIGATION OPTIONS */
-.nav-x { overflow:visible; }
-.nav-x * { margin:0; padding:0; }
-.nav-x ul { list-style-type:none; line-height:1.0; }
-.nav-x li,.nav-x div.link { float:left; min-height:1%; min-width:1%; }
-.nav-x a,.nav-x span.active { color:#55585D; font-weight:300; text-decoration:none; font-size:18px; letter-spacing:1px; text-transform:uppercase; }
-.nav-x a:hover,.nav-x li.active a { color:#27697E; font-weight:400; }
-.nav-x ul ul { position:absolute; left:-999em; z-index:999; }
-.nav-x li li { clear:left; }
-.nav-x li:hover ul { left:auto; }
+.nav-x {
+    nav { display:inline-block; }
+    * { margin:0; padding:0; }
 
+    ul { list-style-type:none; line-height:1.0; }
+    li { float:left; min-height:1%; min-width:1%; display:inline-block; margin-left:12px; margin-right:12px; }
+    li:first-of-type { margin-left:0; }
+    li:last-of-type { margin-right:0; }
+
+    a { color:#55585D; font-weight:300; padding:0; text-decoration:none; font-size:18px; }
+    a:hover, li.active a { color:#27697E; font-weight:400; }
+    nav > ul > li > a { padding:12px 0; }
+
+    ul ul { position:absolute; left:-999em; z-index:999; min-width:170px; padding-top:28px; padding-bottom:10px; margin-left:-20px; background:rgba(255,255,255,0.6); }
+    li li { clear:left; padding:0; margin:0; width:100%; text-align:left; }
+    li li:first-of-type { border-top:4px solid #6397AF; padding-top:10px; }
+    li li a { padding:10px 20px; display:block; }
+    li:hover ul { left:auto; }
+}
 
 /* NAVIGATION TOP */
-#nav-header { display:inline-block; }
+.nav-header {
+    display:inline-block; text-align:right; width:69%;
 
+    nav ul li { margin-left:40px; margin-right:40px; }
+    nav ul li li { margin-left:0; margin-right:0; }
+}
 
 /* NAVIGATION BOTTOM */
-#nav-footer {  }
+.nav-footer {
+    @media screen and (max-width:$size-md){
+        #footer-bottombar & {
+            li { float:none; width:100%; padding:0; margin:0; margin-top:10px; }
+            a { padding:12px; display:block; border:1px solid #6397AF; text-align:center; }
+        }
+    }
+}

@@ -12,13 +12,15 @@ page {
     includeJSFooterlibs >
 
     includeJSLibs {
-        file10 = {$theme.urls.themeResources}Public/JavaScript/functions.min.js
+        # file10 = {$theme.urls.themeResources}Public/JavaScript/functions.min.js
     }
 
     includeJSFooterlibs {
         file10 = {$theme.urls.themeResources}Public/JavaScript/Libs/jquery-3.3.1.min.js
         file10.forceOnTop = 1
         file10.excludeFromConcatenation = 1
+
+        file12 = {$theme.urls.themeResources}Public/JavaScript/navflow.js
 
         # file15 = {$theme.urls.themeResources}Public/JavaScript/Libs/pushbar.min.js
 
@@ -33,13 +35,13 @@ page {
         file30.excludeFromConcatenation = 1
 
         ### Cookie hint
-        file40 = {$theme.urls.themeResources}Public/JavaScript/Libs/cookieconsent.min.js
-        file40.async = 1
-        file40.excludeFromConcatenation = 1
+        # file40 = {$theme.urls.themeResources}Public/JavaScript/Libs/cookieconsent.min.js
+        # file40.async = 1
+        # file40.excludeFromConcatenation = 1
 
-        file45 = {$theme.urls.themeResources}Public/JavaScript/LibsConfig/cookieconsent.config.min.js
-        file45.async = 1
-        file45.excludeFromConcatenation = 1
+        # file45 = {$theme.urls.themeResources}Public/JavaScript/LibsConfig/cookieconsent.config.min.js
+        # file45.async = 1
+        # file45.excludeFromConcatenation = 1
     }
 
     includeJSFooter {

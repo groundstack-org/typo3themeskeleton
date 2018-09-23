@@ -1,0 +1,9 @@
+/* Vertical Alignments */
+.vertical-top { position:relative; top:0; transform:translateY(0); }
+.vertical-middle { position:relative; top:50%; transform:translateY(-50%); }
+.vertical-bottom { position:relative; top:100%; transform:translateY(-100%); }
+
+/* Horizontal Alignments */
+.horizontal-left, .ce-left { text-align:left; }
+.horizontal-center, .ce-center { text-align:center; }
+.horizontal-right, .ce-right { text-align:right; }

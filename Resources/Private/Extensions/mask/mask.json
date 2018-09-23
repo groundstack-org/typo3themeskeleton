@@ -1,0 +1,97 @@
+{
+    "tt_content": {
+        "elements": {
+            "banner_header": {
+                "label": "Banner (Header)",
+                "key": "banner_header",
+                "shortLabel": "",
+                "description": "",
+                "icon": "",
+                "color": "#000000",
+                "labels": [
+                    "\u00dcberschrift",
+                    "Text",
+                    "Bild"
+                ],
+                "columns": [
+                    "tx_mask_banner_headline",
+                    "tx_mask_banner_text",
+                    "tx_mask_banner_images"
+                ]
+            }
+        },
+        "sql": {
+            "tx_mask_banner_headline": {
+                "tt_content": {
+                    "tx_mask_banner_headline": "text"
+                }
+            },
+            "tx_mask_banner_text": {
+                "tt_content": {
+                    "tx_mask_banner_text": "text"
+                }
+            },
+            "tx_mask_banner_images": {
+                "tt_content": {
+                    "tx_mask_banner_images": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_banner_headline": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": "",
+                    "format": ""
+                },
+                "exclude": "1",
+                "key": "banner_headline"
+            },
+            "tx_mask_banner_text": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "10",
+                    "default": "",
+                    "placeholder": "",
+                    "max": "",
+                    "format": ""
+                },
+                "exclude": "1",
+                "key": "banner_text"
+            },
+            "tx_mask_banner_images": {
+                "exclude": "1",
+                "options": "file",
+                "l10n_mode": "copy",
+                "config": {
+                    "minitems": "",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": "jpg,png,svg,jpeg"
+                            }
+                        }
+                    ]
+                },
+                "key": "banner_images"
+            }
+        }
+    },
+    "sys_file_reference": {
+        "sql": {
+            "tx_mask_banner_images": {
+                "sys_file_reference": {
+                    "tx_mask_banner_images": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        }
+    }
+}

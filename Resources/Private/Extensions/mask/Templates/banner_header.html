@@ -1,0 +1,24 @@
+<div class="banner-header">
+
+    <div class="banner-text">
+        <div class="banner-text-inner vertical-bottom">
+            <f:if condition="{data.tx_mask_banner_headline}">
+                <h2><f:format.nl2br>{data.tx_mask_banner_headline}</f:format.nl2br></h2>
+            </f:if>
+
+            <f:if condition="{data.tx_mask_banner_text}">
+                <p><f:format.nl2br>{data.tx_mask_banner_text}</f:format.nl2br></p>
+            </f:if>
+        </div>
+    </div>
+
+    <f:if condition="{data.tx_mask_banner_images}">
+        <div class="banner-images">
+            <f:for each="{data.tx_mask_banner_images}" as="file">
+                <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+                <f:comment>{file.description} / {file.identifier}</f:comment>
+            </f:for>
+        </div>
+    </f:if>
+
+</div>
