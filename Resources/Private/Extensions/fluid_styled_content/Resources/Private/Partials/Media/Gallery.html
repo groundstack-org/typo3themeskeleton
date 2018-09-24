@@ -10,7 +10,7 @@
         </f:if>
 
         <f:for each="{gallery.rows}" as="row">
-            <div class="ce-row">
+            <f:comment><div class="ce-row"></f:comment>
                 <f:for each="{row.columns}" as="column">
                     <f:if condition="{column.media}">
                         <div class="ce-column">
@@ -18,7 +18,7 @@
                         </div>
                     </f:if>
                 </f:for>
-            </div>
+            <f:comment></div></f:comment>
         </f:for>
 
         <f:if condition="{gallery.position.horizontal} == 'center'">
