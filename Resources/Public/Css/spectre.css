@@ -2058,16 +2058,12 @@ a {
 
 /* CONTENT  (Main, Sidebar) */
 #content {
-  /*display:flex; flex-direction:row; flex:0 1 auto; align-items:stretch; justify-content:flex-start;*/
   padding-top: 70px;
   /*#main { flex-basis:$gridColumnRight; }*/ }
   #content #main > div {
     padding-left: calc(21% + 14px); }
   #content #main > div.fullscreen {
     padding-left: 0; }
-  #content #sidebar {
-    display: none;
-    /*flex-basis:$gridColumnLeft; margin-right:$gridColumnSpacing; min-width:250px;*/ }
   @media screen and (max-width: 600px) {
     #content {
       padding-top: 22px; }
