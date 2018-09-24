@@ -76,6 +76,10 @@ TCEFORM {
             #    quoteSlider = Quote Slider
             # }
 
+            addItems {
+                fullscreen = Fullscreen
+            }
+
             types {
                 menu_subpages {
                     addItems {

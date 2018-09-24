@@ -2014,6 +2014,15 @@ div.column {
 .split {
   display: block; }
 
+/* CONTAINER WIDTH HELPER */
+/*
+.fullscreen { width:100vw; max-width:1400px; position:absolute; left:50%; }
+.fullscreen > div { position:relative; left:-50%; }
+*/
+.fullscreen, #content #main > div.fullscreen {
+  width: 100%;
+  transform: translateX(0); }
+
 /* GENERAL LAYOUT ELEMENTS */
 body {
   background: url("../Images/bg-white.svg") repeat-x center top #eee; }
@@ -2053,18 +2062,15 @@ a {
 
 /* CONTENT  (Main, Sidebar) */
 #content {
-  display: flex;
-  flex-direction: row;
-  flex: 0 1 auto;
-  align-items: stretch;
-  justify-content: flex-start;
-  padding-top: 70px; }
-  #content #main {
-    flex-basis: 79%; }
+  /*display:flex; flex-direction:row; flex:0 1 auto; align-items:stretch; justify-content:flex-start;*/
+  padding-top: 70px;
+  /*#main { flex-basis:$gridColumnRight; }*/ }
+  #content #main > div {
+    transform: translateX(264px);
+    width: calc(100% - 264px); }
   #content #sidebar {
-    flex-basis: 21%;
-    margin-right: 14px;
-    min-width: 250px; }
+    display: none;
+    /*flex-basis:$gridColumnLeft; margin-right:$gridColumnSpacing; min-width:250px;*/ }
   @media screen and (max-width: 600px) {
     #content {
       padding-top: 22px; }
@@ -2374,6 +2380,35 @@ html.navflow-body-active, .navflow-body-active body {
       .banner-header .banner-text-inner {
         transform: none;
         top: 0; } }
+
+/* GALLERY MODULE */
+#content .ce-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: calc(100% + 24px);
+  margin-left: -12px; }
+  #content .ce-gallery .ce-column {
+    padding: 0 12px;
+    margin-bottom: 24px; }
+  #content .ce-gallery .ce-column figure {
+    display: block; }
+  #content .ce-gallery .ce-column picture {
+    display: block; }
+  #content .ce-gallery .ce-column img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  #content .ce-gallery[data-ce-columns="1"] .ce-column {
+    width: 100%; }
+  #content .ce-gallery[data-ce-columns="2"] .ce-column {
+    width: 50%; }
+  #content .ce-gallery[data-ce-columns="3"] .ce-column {
+    width: 33.32%; }
+  #content .ce-gallery[data-ce-columns="4"] .ce-column {
+    width: 25%; }
+  #content .ce-gallery[data-ce-columns="5"] .ce-column {
+    width: 20%; }
 
 .accordion input:checked ~ .accordion-header .icon, .accordion[open] .accordion-header .icon {
   transform: rotate(90deg); }

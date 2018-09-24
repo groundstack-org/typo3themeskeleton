@@ -27,3 +27,23 @@
         .banner-text-inner { transform:none; top:0; }
     }
 }
+
+/* GALLERY MODULE */
+#content .ce-gallery {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    width:calc(100% + 24px);
+    margin-left:-12px;
+
+    .ce-column { padding:0 12px; margin-bottom:24px; }
+    .ce-column figure { display:block; }
+    .ce-column picture { display:block; }
+    .ce-column img { display:block; width:100%; height:auto; }
+
+    &[data-ce-columns="1"] .ce-column { width:100%; }
+    &[data-ce-columns="2"] .ce-column { width:50%; }
+    &[data-ce-columns="3"] .ce-column { width:33.32%; }
+    &[data-ce-columns="4"] .ce-column { width:25%; }
+    &[data-ce-columns="5"] .ce-column { width:20%; }
+}

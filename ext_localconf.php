@@ -92,4 +92,23 @@ call_user_func(function() {
 
     // AJAX eID
     // $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['hhtheme'] = "EXT:{$extensionname}/Classes/EidApi/index.php";
+
+    // Set paths of extension 'mask'
+    $customChanges = [
+        "EXT" => [
+            "extConf" => [
+                "mask" => serialize([
+                    "json" => "typo3conf/ext/{$extensionname}/Resources/Private/Extensions/mask/mask.json",
+                    "content" => "typo3conf/ext/{$extensionname}/Resources/Private/Extensions/mask/Templates/",
+                    "layouts" => "typo3conf/ext/{$extensionname}/Resources/Private/Extensions/mask/Layouts/",
+                    "partials" => "typo3conf/ext/{$extensionname}/Resources/Private/Extensions/mask/Partials/",
+                    "backend" => "typo3conf/ext/{$extensionname}/Resources/Private/Extensions/mask/Backend/",
+                    "layouts_backend" => "typo3conf/ext/{$extensionname}/Resources/Private/Extensions/mask/Backend/Layouts/",
+                    "partials_backend" => "typo3conf/ext/{$extensionname}/Resources/Private/Extensions/mask/Backend/Partials/",
+                    "preview" => "typo3conf/ext/{$extensionname}/Resources/Private/Extensions/mask/Preview/"
+                ]),
+            ]
+        ]
+    ];
+    $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], $customChanges);
 });

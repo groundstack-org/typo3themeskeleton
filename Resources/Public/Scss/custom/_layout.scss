@@ -27,10 +27,12 @@ a { color:#27697E; }
 
 /* CONTENT  (Main, Sidebar) */
 #content {
-    display:flex; flex-direction:row; flex:0 1 auto; align-items:stretch; justify-content:flex-start; padding-top:70px;
+    /*display:flex; flex-direction:row; flex:0 1 auto; align-items:stretch; justify-content:flex-start;*/
+    padding-top:70px;
 
-    #main { flex-basis:$gridColumnRight; }
-    #sidebar { flex-basis:$gridColumnLeft; margin-right:$gridColumnSpacing; min-width:250px; }
+    /*#main { flex-basis:$gridColumnRight; }*/
+    #main > div { transform:translateX(264px); width:calc(100% - 264px); }
+    #sidebar { display:none; /*flex-basis:$gridColumnLeft; margin-right:$gridColumnSpacing; min-width:250px;*/ }
 
     @media screen and (max-width:$size-sm){
         padding-top:$containerSpacing;
