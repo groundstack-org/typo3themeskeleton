@@ -31,7 +31,8 @@ a { color:#27697E; }
     padding-top:70px;
 
     /*#main { flex-basis:$gridColumnRight; }*/
-    #main > div { transform:translateX(264px); width:calc(100% - 264px); }
+    #main > div { padding-left:calc(#{$gridColumnLeft} + #{$gridColumnSpacing}); }
+    #main > div.fullscreen { padding-left:0; }
     #sidebar { display:none; /*flex-basis:$gridColumnLeft; margin-right:$gridColumnSpacing; min-width:250px;*/ }
 
     @media screen and (max-width:$size-sm){

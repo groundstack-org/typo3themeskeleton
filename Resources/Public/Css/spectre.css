@@ -2019,10 +2019,6 @@ div.column {
 .fullscreen { width:100vw; max-width:1400px; position:absolute; left:50%; }
 .fullscreen > div { position:relative; left:-50%; }
 */
-.fullscreen, #content #main > div.fullscreen {
-  width: 100%;
-  transform: translateX(0); }
-
 /* GENERAL LAYOUT ELEMENTS */
 body {
   background: url("../Images/bg-white.svg") repeat-x center top #eee; }
@@ -2066,8 +2062,9 @@ a {
   padding-top: 70px;
   /*#main { flex-basis:$gridColumnRight; }*/ }
   #content #main > div {
-    transform: translateX(264px);
-    width: calc(100% - 264px); }
+    padding-left: calc(21% + 14px); }
+  #content #main > div.fullscreen {
+    padding-left: 0; }
   #content #sidebar {
     display: none;
     /*flex-basis:$gridColumnLeft; margin-right:$gridColumnSpacing; min-width:250px;*/ }

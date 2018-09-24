@@ -16,5 +16,3 @@
 .fullscreen { width:100vw; max-width:1400px; position:absolute; left:50%; }
 .fullscreen > div { position:relative; left:-50%; }
 */
-
-.fullscreen, #content #main > div.fullscreen { width:100%; transform:translateX(0); }
