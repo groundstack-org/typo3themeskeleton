@@ -1,5 +1,4 @@
-/* LINKS */
-a { color:#27697E; }
+/* MODULAR ELEMENTS */
 
 /* BANNER (Header) */
 .banner-header {
@@ -21,9 +20,10 @@ a { color:#27697E; }
         .banner-images img { height:100%; object-fit:cover; object-position:left center; }
     }
     @media screen and (max-width:$size-sm){
-        flex-direction:column;
+        flex-direction:column-reverse;
 
         .banner-text, .banner-images { flex-basis:100%; }
-        .banner-text { margin-right:0; }
+        .banner-text { margin-right:0; margin-top:14px; }
+        .banner-text-inner { transform:none; top:0; }
     }
 }

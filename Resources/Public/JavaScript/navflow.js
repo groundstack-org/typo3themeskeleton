@@ -1,22 +1,45 @@
 ;(function($, root, window, document) {	// Alias Technique
     $(function() {	// Equal to $(document).ready()
 
+        // Navflow - General Variables / Helpers
+        var html = $("html"),
+            navContainerActiveClass = "navflow-active",
+            navBodyActiveClass = "navflow-body-active";
+
         // Navflow - Mobile Icon (for opening the offcanvas)
         $(".navflow").on("click.navflow", function(e){
             e.preventDefault();
+            e.stopImmediatePropagation();
             var navContainer = $(this),
                 nav = navContainer.children("nav");
 
-            navContainer.addClass("navflow-active");
+            navContainer.addClass(navContainerActiveClass);
+            html.addClass(navBodyActiveClass);
 
             nav.on("click.navflow", function(e){
                 e.preventDefault();
                 e.stopImmediatePropagation();
 
                 if(e.target === e.currentTarget){
-                    navContainer.removeClass("navflow-active");
+                    navContainer.removeClass(navContainerActiveClass);
+                    html.removeClass(navBodyActiveClass);
                 }
             });
+        });
+
+        // Navflow - iOS Scroll Fix / General Body/Html Scrollbar Prevention
+        $(".navflow").on("touchmove.navflow", function(e){
+            if($(e.target).is("ul ul, li, a") === false){
+                //console.log(e.target);
+                e.preventDefault();
+                e.stopImmediatePropagation();
+            }
+        });
+        $("html, body").on("touchmove.navflow", function(e){
+            if($("html.navBodyActiveClass").length){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+            }
         });
 
         // Navflow - Mobile Navigation Logic

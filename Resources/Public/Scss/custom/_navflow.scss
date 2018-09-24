@@ -1,17 +1,20 @@
+html.navflow-body-active, .navflow-body-active body { overflow:hidden; -webkit-overflow-scrolling:unset; }
+
 .navflow {
-    @media screen and (max-width:960px){
-        background-image:url('../Images/icons/three-bars.svg');
+    @media screen and (max-width:1024px){
+        background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEyIDE2Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS40MSA5SC41OUMwIDkgMCA4LjU5IDAgOGMwLS41OSAwLTEgLjU5LTFIMTEuNGMuNTkgMCAuNTkuNDEuNTkgMSAwIC41OSAwIDEtLjU5IDFoLjAxem0wLTRILjU5QzAgNSAwIDQuNTkgMCA0YzAtLjU5IDAtMSAuNTktMUgxMS40Yy41OSAwIC41OS40MS41OSAxIDAgLjU5IDAgMS0uNTkgMWguMDF6TS41OSAxMUgxMS40Yy41OSAwIC41OS40MS41OSAxIDAgLjU5IDAgMS0uNTkgMUguNTlDMCAxMyAwIDEyLjU5IDAgMTJjMC0uNTkgMC0xIC41OS0xeiIvPjwvc3ZnPg==');
         background-repeat:no-repeat;
         background-position:center center;
         background-size:contain;
         width:32px;
         height:32px;
+        overflow:visible;
         cursor:pointer;
-        float:right;
 
         &.navflow-active {
             cursor:inherit;
-            nav { height:100%; }
+            nav { width:100%; height:100%; background-color:rgba(0,0,0,0.5); }
+            nav > ul { margin-left:0; }
         }
 
         nav {
@@ -20,17 +23,38 @@
             z-index:1250;
             height:0;
             width:100%;
-            background:rgba(0,0,0,0.5);
+            background-color:rgba(0,0,0,0);
             display:block;
             overflow:hidden;
+            transition:background-color 750ms;
 
             /* RESET */
-            *, ul, ul ul, ul li, ul li ul li, ul li:first-of-type, ul li:last-of-type, ul li a, ul li a:first-of-type, ul li a:last-of-type { margin:0; padding:0; display:block; position:relative; top:0; left:0; box-sizing:border-box; }
+            *, ul, ul ul, ul li, ul li ul li, ul li:first-of-type, ul li:last-of-type, ul li a, ul li a:first-of-type, ul li a:last-of-type { margin:0; padding:0; display:block; position:relative; top:0; left:0; box-sizing:border-box; box-shadow:none; }
 
             /* MOBILE NAVIGATION + OVERLAY */
             & > ul {
-                background-color:rgba(255,255,255,0.95); height:100%; width:45%; min-width:200px; max-width:320px; overflow:scroll;
+                background-color:rgba(255,255,255,0.95);
+                height:100%; width:45%;
+                min-width:200px; max-width:320px;
+                margin-left:-45%;
+                overflow:scroll;
+                transition:margin-left 750ms;
+                -webkit-overflow-scrolling:touch;
 
+                /* LOGO */
+                &::before {
+                    content:""; display:block;
+                    background-image:url("../Images/kroeswang-logo.svg");
+                    background-repeat:no-repeat;
+                    background-position:center center;
+                    background-size:auto 71%;
+                    height:100px;
+                }
+
+                /* Part of the iOS Bottom Bar Fix */
+                &::after { content:""; display:block; width:100%; height:50px; }
+
+                /* 1th LEVEL NAVIGATION */
                 li { float:none; display:block; }
                 li a, li a:first-of-type, li a:last-of-type { text-align:left; padding:10px 16px; }
                 ul > li:first-of-type > a { padding-top:20px; }
@@ -39,16 +63,6 @@
 
                 /* 2th+ LEVEL NAVIGATIONS */
                 ul { display:none; overflow:hidden; }
-
-                /* LOGO */
-                &::before {
-                    content:""; display:block;
-                    background-image:url("../Images/kroeswang-logo.svg");
-                    background-repeat:no-repeat;
-                    background-position:center center;
-                    background-size:auto 70%;
-                    height:100px;
-                }
             }
         }
     }

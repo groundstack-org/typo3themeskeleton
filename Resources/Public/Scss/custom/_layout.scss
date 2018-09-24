@@ -1,4 +1,6 @@
+/* GENERAL LAYOUT ELEMENTS */
 body { background:url("../Images/bg-white.svg") repeat-x center top #eee; }
+a { color:#27697E; }
 
 /* WRAPPER (Header, Content, Footer) */
 #wrapper {  }
@@ -9,26 +11,30 @@ body { background:url("../Images/bg-white.svg") repeat-x center top #eee; }
 /* HEADER */
 #header {
     padding-top:$containerSpacing;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-end;
 
     #logo { display:inline-block; height:120px; width:21%; min-width:250px; }
     #logo a { width:100%; display:inline-block; }
     #logo img { width:100%; height:auto; }
 
-    @media screen and (max-width:360px){
-        text-align:center;
-
-        #logo { min-width:230px; }
+    @media screen and (max-width:1024px){
+        align-items:flex-start;
     }
 }
 
 /* CONTENT  (Main, Sidebar) */
 #content {
-    display:flex; flex-direction:row; flex:0 1 auto; align-items:stretch; justify-content:flex-start;
+    display:flex; flex-direction:row; flex:0 1 auto; align-items:stretch; justify-content:flex-start; padding-top:70px;
 
     #main { flex-basis:$gridColumnRight; }
     #sidebar { flex-basis:$gridColumnLeft; margin-right:$gridColumnSpacing; min-width:250px; }
 
     @media screen and (max-width:$size-sm){
+        padding-top:$containerSpacing;
+
         #sidebar { display:none; }
     }
 }
@@ -57,10 +63,22 @@ body { background:url("../Images/bg-white.svg") repeat-x center top #eee; }
         }
     }
 
-    #footer-midbar {  }
+    #footer-midbar {
+        padding-top:90px; padding-left:21%;
+        header h1, header h2, header h3 { color:#27697E; text-transform:uppercase; }
+        header { position:absolute; transform:translateY(-100%); }
+        header .split:last-of-type { font-weight:400; }
+
+        @media screen and (max-width:$size-lg){
+            padding-left:$containerSpacing;
+        }
+    }
     #footer-bottombar { background:#27697E; }
     #footer-bottombar p { margin-bottom:0; }
     #footer-bottombar-inner { padding-top:$containerSpacing; padding-bottom:$containerSpacing; }
+
+    #footer-inner, #footer-bottombar { background-image:url("../Images/kroeswang-logo-footer.svg"); background-repeat:no-repeat; background-position:11% bottom; background-size:320px auto; }
+    #footer-bottombar { background-image:url("../Images/kroeswang-logo-footer-darker.svg"); }
 
     /* CE GALLERY in FOOTER */
     @media screen and (max-width:$size-sm){

@@ -1,4 +1,5 @@
 // Variables and mixins
+@import "custom/variables";
 @import "variables";
 @import "mixins";
 
@@ -6,15 +7,6 @@
 // Reset and dependencies
 @import "normalize";
 @import "base";
-
-// Custom
-@import "custom/variables";
-@import "custom/spectre-override";
-@import "custom/helpers";
-@import "custom/layout.scss";
-@import "custom/nav.scss";
-@import "custom/navflow.scss";
-@import "custom/elements.scss";
 
 // 3th Party Libraries
 @import "libs/baguetteBox";
@@ -33,6 +25,16 @@
 // Layout
 @import "layout";
 @import "navbar";
+
+// CUSTOM (/custom/)
+@import "custom/fonts";
+@import "custom/typography";
+@import "custom/spectre-override";
+@import "custom/helpers";
+@import "custom/layout.scss";
+@import "custom/nav.scss";
+@import "custom/navflow.scss";
+@import "custom/elements.scss";
 
 // Components
 @import "accordions";
