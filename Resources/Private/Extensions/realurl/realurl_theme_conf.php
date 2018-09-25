@@ -96,10 +96,10 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = [
 ];
 
 $realurl_additional = [
-    'kroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kroeswang.de'],
-    'preview.kroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kroeswang.de'],
-    'www.kroeswang.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kroeswang.de'],
-    'kroeswang.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kroeswang.de'],
+    'kroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
+    'preview.kanzleikroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
+    'www.kroeswang.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
+    'kroeswang.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
 ];
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array_merge(
     $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'],
@@ -107,14 +107,14 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array_merge(
 );
 
 $customChanges = [
-    'www.kroeswang.de' => [
+    'www.kanzleikroeswang.de' => [
         'pagePath' => [
             'rootpage_id' => 1,
         ],
     ],
 
     // PREVIEW
-    'preview.kroeswang.de' => [
+    'preview.kanzleikroeswang.de' => [
         'pagePath' => [
             'rootpage_id' => 1
         ]

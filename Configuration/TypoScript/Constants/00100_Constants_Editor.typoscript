@@ -4,9 +4,9 @@
 plugin.hhthemekroeswang {
     ### Basic
     # cat=plugin.hhthemekroeswang_mainconfig/basic/0010; type=string; label= LLL:EXT:hhthemekroeswang/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURL
-        baseURL = www.kroeswang.de
+        baseURL = www.kanzleikroeswang.de
     # cat=plugin.hhthemekroeswang_mainconfig/basic/0011; type=string; label= LLL:EXT:hhthemekroeswang/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURLstage
-        baseURLstage = preview.kroeswang.de
+        baseURLstage = preview.kanzleikroeswang.de
     # cat=plugin.hhthemekroeswang_mainconfig/basic/0012; type=string; label= LLL:EXT:hhthemekroeswang/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURLdev
         baseURLdev = www.kroeswang.localhost
     # cat=plugin.hhthemekroeswang_mainconfig/basic/0040; type=int+; label= Root Page ID
