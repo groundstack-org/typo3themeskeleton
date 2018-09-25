@@ -46,4 +46,14 @@
     &[data-ce-columns="3"] .ce-column { width:33.32%; }
     &[data-ce-columns="4"] .ce-column { width:25%; }
     &[data-ce-columns="5"] .ce-column { width:20%; }
+
+    @media screen and (max-width:$size-sm) {
+        &[data-ce-columns] .ce-column { width:50%; }
+    }
+
+    @media screen and (max-width:$size-xs) {
+        &[data-ce-columns] .ce-column { width:100%; }
+    }
+
+
 }
