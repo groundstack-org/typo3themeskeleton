@@ -45,7 +45,13 @@ a { color:#27697E; }
 #wrapper, #content #main {
     div.frame-layout-fullscreen { padding-left:0; }
     div.frame-layout-quoteText { padding-top:115px; background:url("../Images/icons/quotes.svg") no-repeat 10px 10px transparent; background-size:86px 68px; }
-    div.frame-layout-quoteBorder { padding-top:$containerSpacing; border:1px solid #27697E; border-left:0; border-right:0; }
+    div.frame-layout-quoteBorder {
+        padding-top:$containerSpacing; border:1px solid #27697E; border-left:0; border-right:0;
+
+        @media screen and (max-width:$size-lg){
+            border:0;
+        }
+    }
     div.frame-layout-quoteImage {
         .ce-textpic, .ce-gallery, .ce-column, .image, .image picture { width:auto; height:100%; }
 

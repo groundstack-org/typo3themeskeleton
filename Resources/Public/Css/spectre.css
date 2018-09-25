@@ -2075,6 +2075,9 @@ a {
   border: 1px solid #27697E;
   border-left: 0;
   border-right: 0; }
+  @media screen and (max-width: 1024px) {
+    #wrapper div.frame-layout-quoteBorder, #content #main div.frame-layout-quoteBorder {
+      border: 0; } }
 
 #wrapper div.frame-layout-quoteImage .ce-textpic, #wrapper div.frame-layout-quoteImage .ce-gallery, #wrapper div.frame-layout-quoteImage .ce-column, #wrapper div.frame-layout-quoteImage .image, #wrapper div.frame-layout-quoteImage .image picture, #content #main div.frame-layout-quoteImage .ce-textpic, #content #main div.frame-layout-quoteImage .ce-gallery, #content #main div.frame-layout-quoteImage .ce-column, #content #main div.frame-layout-quoteImage .image, #content #main div.frame-layout-quoteImage .image picture {
   width: auto;
