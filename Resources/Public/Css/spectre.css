@@ -2206,9 +2206,15 @@ a {
   padding: 0;
   text-decoration: none; }
 
-.nav-x a:hover, .nav-x li.active a {
+.nav-x a:hover {
+  color: #27697E; }
+
+.nav-x a.act {
   color: #27697E;
   font-weight: 400; }
+
+.nav-x li.navflow-link-submenu a {
+  font-weight: 300; }
 
 .nav-x nav > ul > li > a {
   padding: 12px 0; }
@@ -2236,8 +2242,7 @@ a {
 
 .nav-x li li a {
   padding: 10px 20px;
-  display: block;
-  font-weight: 300 !important; }
+  display: block; }
 
 .nav-x li:hover ul {
   left: auto; }

@@ -9,13 +9,15 @@
     li:last-of-type { margin-right:0; }
 
     a { color:#55585D; font-weight:300; padding:0; text-decoration:none; }
-    a:hover, li.active a { color:#27697E; font-weight:400; }
+    a:hover { color:#27697E; }
+    a.act { color:#27697E; font-weight:400; }
+    li.navflow-link-submenu a { font-weight:300; }
     nav > ul > li > a { padding:12px 0; }
 
     ul ul { position:absolute; left:-999em; z-index:999; min-width:170px; padding-top:28px; padding-bottom:10px; margin-left:-20px; background:rgba(255,255,255,0.6); }
     li li { clear:left; padding:0; margin:0; width:100%; text-align:left; }
     li li:first-of-type { border-top:4px solid #6397AF; padding-top:10px; }
-    li li a { padding:10px 20px; display:block; font-weight:300 !important; }
+    li li a { padding:10px 20px; display:block; }
     li:hover ul { left:auto; }
 }
 
