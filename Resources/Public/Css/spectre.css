@@ -2205,7 +2205,8 @@ a {
 
 .nav-x li li a {
   padding: 10px 20px;
-  display: block; }
+  display: block;
+  font-weight: 300 !important; }
 
 .nav-x li:hover ul {
   left: auto; }
