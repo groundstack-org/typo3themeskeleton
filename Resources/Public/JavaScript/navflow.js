@@ -7,6 +7,7 @@
             navFlow = $(".navflow"),
             navFlowLi = navFlow.find("nav li"),
             navFlowA = navFlow.find("nav a"),
+            navFlowLinkSubmenu = "navflow-link-submenu",
             navContainerActiveClass = "navflow-active",
             navBodyActiveClass = "navflow-body-active",
             navBodyAvailableClass = "navflow-body-available",
@@ -65,8 +66,8 @@
                     // Add Submenu Click Link/Button
                     var ulLevelAllOthers = li.parent("ul").find("> li > ul").not(ul);
 
-                    if(ul.find("> .navflow-link-submenu").length == 0){
-                        var liCategory = $("<li class='navflow-link-submenu'></li>"),
+                    if(ul.find("> ." + navFlowLinkSubmenu).length == 0){
+                        var liCategory = $("<li class='"+ navFlowLinkSubmenu +"'></li>"),
                             aCategory = a.clone(false);
 
                         liCategory.prependTo(ul);
@@ -102,6 +103,7 @@
             } else if($(window).width() > mobileBreakpoint) {
                 // Navflow - Remove Helper Class if the nav is currently not available on mobile
                 html.removeClass(navBodyAvailableClass);
+                $("." + navFlowLinkSubmenu).remove();
             }
         });
 
