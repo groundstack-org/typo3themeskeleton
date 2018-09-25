@@ -2064,11 +2064,11 @@ a {
     padding-left: calc(21% + 14px); }
   #content #main > div.fullscreen {
     padding-left: 0; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1024px) {
     #content {
       padding-top: 22px; }
-      #content #sidebar {
-        display: none; } }
+      #content #main > div {
+        padding-left: 0; } }
 
 /* FOOTER */
 #footer {

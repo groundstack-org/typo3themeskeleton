@@ -33,10 +33,9 @@ a { color:#27697E; }
     #main > div { padding-left:calc(#{$gridColumnLeft} + #{$gridColumnSpacing}); }
     #main > div.fullscreen { padding-left:0; }
 
-    @media screen and (max-width:$size-sm){
-        padding-top:$containerSpacing;
-
-        #sidebar { display:none; }
+    @media screen and (max-width:1024px){
+      padding-top:$containerSpacing;
+      #main > div { padding-left:0; }
     }
 }
 
