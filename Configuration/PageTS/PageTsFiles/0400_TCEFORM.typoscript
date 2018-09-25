@@ -78,6 +78,9 @@ TCEFORM {
 
             addItems {
                 fullscreen = Fullscreen
+                quoteText = Quote - Text
+                quoteImage = Quote - Image
+                quoteBorder = Quote - Border
             }
 
             types {
@@ -93,8 +96,7 @@ TCEFORM {
                 }
                 gridelements_pi1 {
                     addItems {
-                        10 = Full width
-                        20 = Small width
+                        gridFullwidth = Grid Fullwidth
                     }
                 }
             }

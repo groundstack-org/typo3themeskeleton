@@ -1,4 +1,5 @@
-/* MODULAR ELEMENTS */
+/* COLUMNS (SPECTRE EXTEND) */
+.columns > .col > .frame { height:100%; }
 
 /* BANNER (Header) */
 .banner-header {
@@ -10,7 +11,7 @@
 
     .banner-text { flex-basis:$gridColumnLeft; background:#6397AF; color:#fff; margin-right:$gridColumnSpacing; min-width:250px; }
     .banner-text h1, .banner-text h2, .banner-text h3 {  }
-    .banner-text p { margin-bottom:0; }
+    .banner-text p { margin-bottom:0; font-size:1.1rem; }
     .banner-text-inner { padding:20px 20px; }
 
     .banner-images { flex-basis:$gridColumnRight; }

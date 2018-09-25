@@ -27,7 +27,7 @@
     nav ul li { margin-left:40px; margin-right:40px; }
     nav ul li li { margin-left:0; margin-right:0; }
 
-    @media screen and (max-width:1024px){
+    @media screen and (max-width:$size-lg){
         padding-right:0;
     }
 }

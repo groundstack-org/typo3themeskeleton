@@ -1,7 +1,7 @@
 html.navflow-body-active, .navflow-body-active body { overflow:hidden; -webkit-overflow-scrolling:unset; }
 
 .navflow {
-    @media screen and (max-width:1024px){
+    @media screen and (max-width:$size-lg){
         background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEyIDE2Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS40MSA5SC41OUMwIDkgMCA4LjU5IDAgOGMwLS41OSAwLTEgLjU5LTFIMTEuNGMuNTkgMCAuNTkuNDEuNTkgMSAwIC41OSAwIDEtLjU5IDFoLjAxem0wLTRILjU5QzAgNSAwIDQuNTkgMCA0YzAtLjU5IDAtMSAuNTktMUgxMS40Yy41OSAwIC41OS40MS41OSAxIDAgLjU5IDAgMS0uNTkgMWguMDF6TS41OSAxMUgxMS40Yy41OSAwIC41OS40MS41OSAxIDAgLjU5IDAgMS0uNTkgMUguNTlDMCAxMyAwIDEyLjU5IDAgMTJjMC0uNTkgMC0xIC41OS0xeiIvPjwvc3ZnPg==');
         background-repeat:no-repeat;
         background-position:center center;

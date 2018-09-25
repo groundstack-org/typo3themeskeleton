@@ -2,10 +2,10 @@
 
 <f:switch expression="{data.tx_gridelements_backend_layout}">
     <f:case value="9">
-        <div id="c{data.uid}" class="grid-container columns grid-slider-container grid-{data.flexform_layout}">
+        <div id="c{data.uid}" class="grid-container frame-layout-{data.layout} columns grid-slider-container grid-{data.flexform_layout}">
     </f:case>
     <f:case default="true">
-        <div id="c{data.uid}" class="grid-container columns row" data-children="{f:count(subject: data.tx_gridelements_view_children)}">
+        <div id="c{data.uid}" class="grid-container frame-layout-{data.layout} columns row" data-children="{f:count(subject: data.tx_gridelements_view_children)}">
     </f:case>
 </f:switch>
     <f:render partial="Header/All" arguments="{_all}" />

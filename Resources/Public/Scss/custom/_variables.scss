@@ -1,7 +1,16 @@
 /* SPECTRE - OVERRIDES */
-$primary-color: #27697E;
+$primary-color: #6397AF;
+$layout-spacing: 24px;
 
-/* CUSTOM VARIABLES */
+/* SPECTRE - OVERRIDES: RESPONSIVE BREAKPOINTS */
+$size-xs: 480px;
+$size-sm: 600px;
+$size-md: 840px;
+$size-lg: 1024px;
+$size-xl: 1280px;
+$size-2x: 1440px;
+
+/* HHTHEMEKROESWANG CUSTOM VARIABLES (scss/custom/) */
 $gridColumnLeft: 21%;
 $gridColumnRight: 79%;
 $gridColumnSpacing: 14px;
@@ -10,11 +19,3 @@ $containerSpacing: 22px;
 
 $base-font-family: 'Open Sans', sans-serif !default;
 $body-font-family: $base-font-family !default;
-
-// Responsive breakpoints
-$size-xs: 480px;
-$size-sm: 600px;
-$size-md: 840px;
-$size-lg: 960px;
-$size-xl: 1280px;
-$size-2x: 1440px;
