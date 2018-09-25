@@ -2084,6 +2084,9 @@ a {
   width: auto;
   height: 100%; }
 
+#wrapper div.frame-layout-quoteImage .ce-column, #content #main div.frame-layout-quoteImage .ce-column {
+  padding: 0; }
+
 #wrapper div.frame-layout-quoteImage .image, #content #main div.frame-layout-quoteImage .image {
   overflow: hidden; }
 
