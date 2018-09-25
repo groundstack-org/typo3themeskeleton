@@ -96,6 +96,8 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = [
 ];
 
 $realurl_additional = [
+    'kanzleikroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
+    'www.kanzleikroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
     'kroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
     'preview.kanzleikroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
     'www.kroeswang.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
