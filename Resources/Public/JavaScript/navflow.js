@@ -22,7 +22,7 @@
             urlPath = window.location.pathname,
             mobileBreakpoint = 1024,
             eventElements = $(".navflow, .navflow nav, .navflow nav ul, .navflow nav a, html, body"),
-            lang = $("html[lang]").attr("lang").slice(0,2),
+            lang = $("html[lang]").length ? $("html[lang]").attr("lang").slice(0,2) : "en",
             langWithFallback = (lang == "en" || lang == "de" || lang == "it" || lang == "es" || lang == "fr") ? lang : "en";
 
         // Navflow - Main Logic with Responsiveness
