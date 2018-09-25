@@ -3,9 +3,10 @@
 
         $(window).on("resize.navflow", function(e){
             // Reset existing navflow events
-            var eventElements = $(".navflow, .navflow nav, .navflow a, html, body");
+            var eventElements = $(".navflow, .navflow nav, .navflow nav ul, .navflow nav a, html, body");
             eventElements.off("click.navflow");
             eventElements.off("touchmove.navflow");
+            eventElements.filter("ul").stop(true);
 
             // Navflow - Only on Mobile Screens
             if($(window).width() <= 1024){
@@ -40,7 +41,6 @@
                 // Navflow - iOS Scroll Fix / General Body/Html Scrollbar Prevention
                 $(".navflow").on("touchmove.navflow", function(e){
                     if($(e.target).is("ul ul, li, a") === false){
-                        //console.log(e.target);
                         e.preventDefault();
                         e.stopImmediatePropagation();
                     }
@@ -59,14 +59,19 @@
                       ul = li.children("ul");
 
                   if(a.length && ul.length){
-                    var liCategory = $("<li></li>"),
-                        aCategory = a.clone(false),
-                        ulLevelAllOthers = li.parent("ul").find("> li > ul").not(ul);
+                    // Add Submenu Click Link/Button
+                    var ulLevelAllOthers = li.parent("ul").find("> li > ul").not(ul);
 
-                    liCategory.prependTo(ul);
-                    aCategory.prependTo(liCategory);
-                    aCategory.text("Zur Kategorie " + aCategory.text());
+                    if(ul.find("> .navflow-link-submenu").length == 0){
+                        var liCategory = $("<li class='navflow-link-submenu'></li>"),
+                            aCategory = a.clone(false);
 
+                        liCategory.prependTo(ul);
+                        aCategory.prependTo(liCategory);
+                        aCategory.text("Zur Kategorie " + aCategory.text());
+                    }
+
+                    // Add Submenu Slide Effect
                     a.on("click.navflow", function(e){
                       e.preventDefault();
                       e.stopImmediatePropagation();
