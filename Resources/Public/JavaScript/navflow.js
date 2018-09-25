@@ -13,7 +13,8 @@
             navBodyAvailableClass = "navflow-body-available",
             navUrlElement = null,
             urlPath = window.location.pathname,
-            mobileBreakpoint = 1024;
+            mobileBreakpoint = 1024,
+            eventElements = $(".navflow, .navflow nav, .navflow nav ul, .navflow nav a, html, body");;
 
         // Navflow - Main Logic with Responsiveness
         $(window).on("resize.navflow", function(e){
@@ -100,10 +101,14 @@
                     var navUrlOpenElements = navUrlElement.parents("li").find("> a").not(navUrlElement);
                     navUrlOpenElements.triggerHandler("click.navflow");
                 }
-            } else if($(window).width() > mobileBreakpoint) {
+            } else if($(window).width() > mobileBreakpoint && html.hasClass(navBodyAvailableClass) == true){
                 // Navflow - Remove Helper Class if the nav is currently not available on mobile
                 html.removeClass(navBodyAvailableClass);
                 $("." + navFlowLinkSubmenu).remove();
+
+                eventElements.off("click.navflow");
+                eventElements.off("touchmove.navflow");
+                eventElements.filter("ul").stop(true);
             }
         });
 
