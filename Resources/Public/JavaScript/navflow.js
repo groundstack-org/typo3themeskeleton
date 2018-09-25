@@ -1,24 +1,27 @@
 ;(function($, root, window, document) {	// Alias Technique
     $(function() {	// Equal to $(document).ready()
 
-        $(window).on("resize.navflow", function(e){
-            // Reset existing navflow events
-            var eventElements = $(".navflow, .navflow nav, .navflow nav ul, .navflow nav a, html, body");
-            eventElements.off("click.navflow");
-            eventElements.off("touchmove.navflow");
-            eventElements.filter("ul").stop(true);
+        // Navflow - General Variables / Helpers
+        var html = $("html"),
+            htmlBody = $("html, body"),
+            navFlow = $(".navflow"),
+            navFlowLi = navFlow.find("nav li"),
+            navFlowA = navFlow.find("nav a"),
+            navContainerActiveClass = "navflow-active",
+            navBodyActiveClass = "navflow-body-active",
+            navBodyAvailableClass = "navflow-body-available",
+            navUrlElement = null,
+            urlPath = window.location.pathname,
+            mobileBreakpoint = 1024;
 
-            // Navflow - Only on Mobile Screens
-            if($(window).width() <= 1024){
-                // Navflow - General Variables / Helpers
-                var html = $("html"),
-                    navContainerActiveClass = "navflow-active",
-                    navBodyActiveClass = "navflow-body-active",
-                    navUrlElement = null,
-                    urlPath = window.location.pathname;
+        // Navflow - Main Logic with Responsiveness
+        $(window).on("resize.navflow", function(e){
+            if($(window).width() <= mobileBreakpoint && html.hasClass(navBodyAvailableClass) == false){
+                // Navflow - Add Helper Class if the nav is currently available on mobile
+                html.addClass(navBodyAvailableClass);
 
                 // Navflow - Mobile Icon (for opening the offcanvas)
-                $(".navflow").on("click.navflow", function(e){
+                navFlow.on("click.navflow", function(e){
                     e.preventDefault();
                     e.stopImmediatePropagation();
                     var navContainer = $(this),
@@ -39,13 +42,13 @@
                 });
 
                 // Navflow - iOS Scroll Fix / General Body/Html Scrollbar Prevention
-                $(".navflow").on("touchmove.navflow", function(e){
+                navFlow.on("touchmove.navflow", function(e){
                     if($(e.target).is("ul ul, li, a") === false){
                         e.preventDefault();
                         e.stopImmediatePropagation();
                     }
                 });
-                $("html, body").on("touchmove.navflow", function(e){
+                htmlBody.on("touchmove.navflow", function(e){
                     if($("html.navBodyActiveClass").length){
                         e.preventDefault();
                         e.stopImmediatePropagation();
@@ -53,7 +56,7 @@
                 });
 
                 // Navflow - Mobile Navigation Logic
-                $(".navflow nav li").each(function(cnt, eli){
+                navFlowLi.each(function(cnt, eli){
                   var li = $(eli),
                       a = li.children("a"),
                       ul = li.children("ul");
@@ -83,7 +86,7 @@
                 });
 
                 // Navflow - Open active Submenu's if a submenu link is active
-                $(".navflow nav a").each(function(cnt, eli){
+                navFlowA.each(function(cnt, eli){
                     var a = $(eli),
                         url = a.attr("href");
 
@@ -96,6 +99,9 @@
                     var navUrlOpenElements = navUrlElement.parents("li").find("> a").not(navUrlElement);
                     navUrlOpenElements.triggerHandler("click.navflow");
                 }
+            } else if($(window).width() > mobileBreakpoint) {
+                // Navflow - Remove Helper Class if the nav is currently not available on mobile
+                html.removeClass(navBodyAvailableClass);
             }
         });
 
