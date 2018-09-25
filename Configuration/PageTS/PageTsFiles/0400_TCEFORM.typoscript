@@ -81,6 +81,7 @@ TCEFORM {
                 quoteText = Quote - Text
                 quoteImage = Quote - Image
                 quoteBorder = Quote - Border
+                containerSpacing = Extra Container Spacing
             }
 
             types {

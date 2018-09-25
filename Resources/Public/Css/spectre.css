@@ -2054,7 +2054,8 @@ a {
   padding-top: 70px;
   /*#main { flex-basis:$gridColumnRight; }*/ }
   #content #main > div {
-    padding-left: calc(21% + 14px); }
+    padding-left: calc(21% + 14px);
+    padding-bottom: 22px; }
   @media screen and (max-width: 1024px) {
     #content {
       padding-top: 22px; }
@@ -2090,6 +2091,9 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover; }
+
+#wrapper div.frame-layout-containerSpacing, #content #main div.frame-layout-containerSpacing {
+  padding-bottom: calc(22px * 3); }
 
 /* FOOTER */
 #footer {
@@ -2368,6 +2372,7 @@ html.navflow-body-active, .navflow-body-active body {
 .columns > .col > .frame {
   height: 100%; }
 
+/* GRID CONTAINER */
 /* BANNER (Header) */
 .banner-header {
   display: flex;
