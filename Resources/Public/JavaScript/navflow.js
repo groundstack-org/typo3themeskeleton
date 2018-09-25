@@ -8,13 +8,22 @@
             navFlowLi = navFlow.find("nav li"),
             navFlowA = navFlow.find("nav a"),
             navFlowLinkSubmenu = "navflow-link-submenu",
+            navFlowLinkSubmenuBacktoText = {
+                "de": "Zur Kategorie ",
+                "en": "To category ",
+                "it": "Alla categoria ",
+                "es": "A la categoría ",
+                "fr": "À la catégorie "
+            },
             navContainerActiveClass = "navflow-active",
             navBodyActiveClass = "navflow-body-active",
             navBodyAvailableClass = "navflow-body-available",
             navUrlElement = null,
             urlPath = window.location.pathname,
             mobileBreakpoint = 1024,
-            eventElements = $(".navflow, .navflow nav, .navflow nav ul, .navflow nav a, html, body");;
+            eventElements = $(".navflow, .navflow nav, .navflow nav ul, .navflow nav a, html, body"),
+            lang = $("html[lang]").attr("lang").slice(0,2),
+            langWithFallback = (lang == "en" || lang == "de" || lang == "it" || lang == "es" || lang == "fr") ? lang : "en";
 
         // Navflow - Main Logic with Responsiveness
         $(window).on("resize.navflow", function(e){
@@ -73,7 +82,7 @@
 
                         liCategory.prependTo(ul);
                         aCategory.prependTo(liCategory);
-                        aCategory.text("Zur Kategorie " + aCategory.text());
+                        aCategory.text(navFlowLinkSubmenuBacktoText[langWithFallback] + aCategory.text());
                     }
 
                     // Add Submenu Slide Effect
