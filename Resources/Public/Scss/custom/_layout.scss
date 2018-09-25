@@ -86,6 +86,8 @@ a { color:#27697E; }
 
         @media screen and (max-width:$size-lg){
             padding-left:$containerSpacing;
+
+            #footer-midbar-inner { margin-left:0; margin-right:0; }
         }
     }
     #footer-bottombar { background:#27697E; }
