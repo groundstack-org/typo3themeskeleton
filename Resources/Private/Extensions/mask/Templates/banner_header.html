@@ -15,7 +15,7 @@
     <f:if condition="{data.tx_mask_banner_images}">
         <div class="banner-images">
             <f:for each="{data.tx_mask_banner_images}" as="file">
-                <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+                <f:image image="{file}" alt="{file.alternative}" title="{file.title}" />
                 <f:comment>{file.description} / {file.identifier}</f:comment>
             </f:for>
         </div>
