@@ -4,6 +4,8 @@
 
 <footer id="footer" class="row">
     <div id="footer-inner">
+
+        <f:if condition="({FooterColumnPictures})">
         <div id="footer-topbar">
             <div id="footer-topbar-inner">
                 <div class="col col-12">
@@ -11,7 +13,9 @@
                 </div>
             </div>
         </div>
+        </f:if>
 
+        <f:if condition="({FooterColumnAddress1} || {FooterColumnAddress2} || {FooterColumnAddress3})">
         <div id="footer-midbar">
             <div id="footer-midbar-inner" class="columns">
                 <div class="col col-4 col-sm-12">
@@ -25,7 +29,9 @@
                 </div>
             </div>
         </div>
+        </f:if>
 
+        <f:if condition="({FooterColumnBottomBar1} || {FooterColumnBottomBar2})">
         <div id="footer-bottombar">
             <div id="footer-bottombar-inner" class="columns">
                 <div class="col col-8 col-md-12">
@@ -38,6 +44,7 @@
                 </div>
             </div>
         </div>
+        </f:if>
     </div>
 </footer>
 
