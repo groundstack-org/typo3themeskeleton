@@ -1,3 +1,14 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;                /* disable text select */
+    -webkit-touch-callout: none;              /* disable callout, image save panel (popup) */
+    -webkit-tap-highlight-color: transparent; /* "turn off" link highlight */
+}
+
+a:focus {
+    outline: 0; // Firefox (remove border on link click)
+}
+
 #center-page {
     margin: 0 auto;
     max-width: 1920px;
