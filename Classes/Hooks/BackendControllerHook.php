@@ -34,7 +34,7 @@ class BackendControllerHook {
      * @param BackendController $backendController
      */
     public function addJavaScript(array $configuration, BackendController $backendController) {
-        $extensionname = "hhintranet";
+        $extensionname = "hhthemeskeleton";
         $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($extensionname);
 
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
