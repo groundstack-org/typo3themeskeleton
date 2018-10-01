@@ -60,6 +60,9 @@ a { color:#27697E; }
         .image img { width:100%; height:100%; object-fit:cover; }
     }
     div.frame-layout-containerSpacing { padding-bottom:calc(#{$containerSpacing} * 3); }
+    div.galleryNoAutoImageFormatting {
+        .ce-gallery .ce-column img { width:auto; height:auto; }
+    }
 }
 
 /* FOOTER */
