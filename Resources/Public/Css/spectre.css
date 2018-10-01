@@ -2098,7 +2098,7 @@ a {
 #wrapper div.frame-layout-containerSpacing, #content #main div.frame-layout-containerSpacing {
   padding-bottom: calc(22px * 3); }
 
-#wrapper div.galleryNoAutoImageFormatting .ce-gallery .ce-column img, #content #main div.galleryNoAutoImageFormatting .ce-gallery .ce-column img {
+#wrapper div.frame-layout-galleryNoAutoImageFormatting .ce-gallery .ce-column img, #content #main div.frame-layout-galleryNoAutoImageFormatting .ce-gallery .ce-column img {
   width: auto;
   height: auto; }
 
