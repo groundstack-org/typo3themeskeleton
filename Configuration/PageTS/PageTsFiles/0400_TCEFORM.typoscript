@@ -83,6 +83,7 @@ TCEFORM {
                 quoteBorder = Quote - Border
                 containerSpacing = Extra Container Spacing
                 galleryNoAutoImageFormatting = Gallery - No Auto Image Formatting
+                borderAll = Border All (top, right, bottom, left)
             }
 
             types {

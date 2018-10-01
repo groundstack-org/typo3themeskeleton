@@ -47,6 +47,7 @@ a { color:#27697E; }
     div.frame-layout-quoteText { padding-top:115px; background:url("../Images/icons/quotes.svg") no-repeat 10px 10px transparent; background-size:86px 68px; }
     div.frame-layout-quoteBorder {
         padding-top:$containerSpacing; border:1px solid #27697E; border-left:0; border-right:0;
+        display:flex; flex-direction:column; height:100%; justify-content:center; -ms-flex-pack:center;
 
         @media screen and (max-width:$size-lg){
             border:0;
@@ -62,6 +63,10 @@ a { color:#27697E; }
     div.frame-layout-containerSpacing { padding-bottom:calc(#{$containerSpacing} * 3); }
     div.frame-layout-galleryNoAutoImageFormatting {
         .ce-gallery .ce-column img { width:auto; height:auto; }
+    }
+    div.frame-layout-borderAll {
+        border:2px solid #88B2C5;
+        padding:$containerSpacing;
     }
 }
 
