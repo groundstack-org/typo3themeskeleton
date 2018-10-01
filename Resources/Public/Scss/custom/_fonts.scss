@@ -1,55 +1,16 @@
-/* open-sans-300 - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../Fonts/open-sans-v15-latin-300.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Light'), local('OpenSans-Light'),
-       url('../Fonts/open-sans-v15-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../Fonts/open-sans-v15-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../Fonts/open-sans-v15-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('../Fonts/open-sans-v15-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../Fonts/open-sans-v15-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
 
-/* open-sans-regular - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../Fonts/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-       url('../Fonts/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../Fonts/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../Fonts/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../Fonts/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../Fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
-
-/* open-sans-600 - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../Fonts/open-sans-v15-latin-600.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
-       url('../Fonts/open-sans-v15-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../Fonts/open-sans-v15-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../Fonts/open-sans-v15-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('../Fonts/open-sans-v15-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../Fonts/open-sans-v15-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
-
-/* open-sans-700 - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../Fonts/open-sans-v15-latin-700.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Bold'), local('OpenSans-Bold'),
-       url('../Fonts/open-sans-v15-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../Fonts/open-sans-v15-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../Fonts/open-sans-v15-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../Fonts/open-sans-v15-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../Fonts/open-sans-v15-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
+    @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=8eaa5001-8cb3-46ba-842b-735ee26f8c4e&fontids=1119900,1119933");
+    @font-face{
+        font-family:"Futura BT";
+        font-style: normal;
+        font-weight: 400;
+        src:url("../Fonts/1119900/7ed1bebb-81a9-4c57-9513-f0538c1b83fc.eot?#iefix");
+        src:url("../Fonts/1119900/7ed1bebb-81a9-4c57-9513-f0538c1b83fc.eot?#iefix") format("eot"),url("../Fonts/1119900/9fb69c26-4303-492d-8121-d3af0a6112fc.woff2") format("woff2"),url("../Fonts/1119900/ddc0f223-a296-451a-8681-ad80508eb419.woff") format("woff"),url("../Fonts/1119900/c18fc865-7a4e-45d9-bbb0-4e4553cc4136.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Futura BT";
+        font-style: normal;
+        font-weight: 300;
+        src:url("../Fonts/1119933/bf74a9d0-0954-467f-abf2-269d642a34e6.eot?#iefix");
+        src:url("../Fonts/1119933/bf74a9d0-0954-467f-abf2-269d642a34e6.eot?#iefix") format("eot"),url("../Fonts/1119933/65ebef59-02fa-4697-bd6a-b9c18fbae1cd.woff2") format("woff2"),url("../Fonts/1119933/bb6e42eb-bc30-4c8a-b4ee-bdba1631f178.woff") format("woff"),url("../Fonts/1119933/7c212380-c01a-48df-b253-606f78f6c4db.ttf") format("truetype");
+    }

@@ -21,7 +21,7 @@ a { color:#27697E; }
 
     #logo { display:inline-block; height:120px; width:21%; min-width:250px; }
     #logo a { width:100%; display:inline-block; }
-    #logo img { width:100%; height:auto; }
+    #logo img { width:100%; height:auto; max-width:99%; }
 
     @media screen and (max-width:$size-lg){
         align-items:flex-start;
