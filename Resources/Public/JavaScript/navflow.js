@@ -118,6 +118,7 @@
                 eventElements.off("click.navflow");
                 eventElements.off("touchmove.navflow");
                 eventElements.filter("ul").stop(true);
+                navFlow.find("nav ul").css("display", "");
             }
         });
 

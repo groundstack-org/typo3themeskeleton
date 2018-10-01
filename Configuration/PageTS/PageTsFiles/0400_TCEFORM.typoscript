@@ -84,6 +84,7 @@ TCEFORM {
                 containerSpacing = Extra Container Spacing
                 galleryNoAutoImageFormatting = Gallery - No Auto Image Formatting
                 borderAll = Border All (top, right, bottom, left)
+                videoScreen = Video Screen
             }
 
             types {
