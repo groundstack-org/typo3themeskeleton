@@ -1945,7 +1945,8 @@ html, body {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 300;
   margin-bottom: 1em;
-  line-height: 1.36; }
+  line-height: 1.36;
+  hyphens: auto; }
   #content h1, #content h2, #content h3, #content h4, #content h5, #content h6, #content .h1, #content .h2, #content .h3, #content .h4, #content .h5, #content .h6 {
     color: #27697E; }
 
@@ -2328,7 +2329,7 @@ html.navflow-body-active, .navflow-body-active body {
           background-color: rgba(255, 255, 255, 0.95);
           height: 100%;
           width: 45%;
-          min-width: 200px;
+          min-width: 230px;
           max-width: 320px;
           margin-left: -45%;
           overflow: scroll;

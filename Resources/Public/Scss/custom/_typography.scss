@@ -4,6 +4,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight:300;
     margin-bottom:1em;
     line-height:1.36;
+    hyphens:auto;
     @at-root #content & { color: #27697E; }
 }
 
