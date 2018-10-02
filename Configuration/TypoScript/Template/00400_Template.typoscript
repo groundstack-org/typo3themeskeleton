@@ -35,9 +35,9 @@ page {
         file30.excludeFromConcatenation = 1
 
         ### Cookie hint
-        # file40 = {$theme.urls.themeResources}Public/JavaScript/Libs/cookieconsent.min.js
-        # file40.async = 1
-        # file40.excludeFromConcatenation = 1
+        file40 = {$theme.urls.themeResources}Public/JavaScript/Libs/cookieconsent.min.js
+        file40.async = 1
+        file40.excludeFromConcatenation = 1
 
         # file45 = {$theme.urls.themeResources}Public/JavaScript/LibsConfig/cookieconsent.config.min.js
         # file45.async = 1
@@ -46,7 +46,7 @@ page {
 
     includeJSFooter {
         # file600 = {$theme.urls.themeResources}Public/JavaScript/MenuMain.min.js
-        # file1000 = {$theme.urls.themeResources}Public/JavaScript/Main.min.js
+        file1000 = {$theme.urls.themeResources}Public/JavaScript/Main.min.js
     }
 
     10 = FLUIDTEMPLATE

@@ -2368,6 +2368,13 @@ html.navflow-body-active, .navflow-body-active body {
             display: none;
             overflow: hidden; } }
 
+/* COOKIE CONSENT */
+.cc-window {
+  font-size: 0.9rem;
+  opacity: 0.87; }
+  .cc-window:hover {
+    opacity: 1; }
+
 /* VIDEOS (YouTube, Vimeo) */
 div.frame-layout-videoScreen > .column:first-of-type {
   width: 460px;

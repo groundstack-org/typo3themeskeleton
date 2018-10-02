@@ -1,3 +1,11 @@
+/* COOKIE CONSENT */
+.cc-window {
+    font-size:0.9rem;
+    opacity:0.87;
+
+    &:hover { opacity:1; }
+}
+
 /* VIDEOS (YouTube, Vimeo) */
 div.frame-layout-videoScreen {
     & > .column:first-of-type { width:460px; max-width:100%; }
