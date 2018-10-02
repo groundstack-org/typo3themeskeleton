@@ -52,6 +52,23 @@ config {
     concatenateJs = {$plugin.typo3themeskeleton.concatenate}
 }
 
+page {
+    config {
+        additionalHeaders {
+            ### https://securityheaders.com/
+            1.header = Server:
+            5.header = X-Powered-By:
+            10.header = strict-transport-security:max-age=31536000
+            20.header = X-Frame-Options: SAMEORIGIN
+            30.header = X-Xss-Protection: 1; mode=block
+            40.header = X-Content-Type-Options: nosniff
+            50.header = Referrer-Policy:strict-origin
+            60.header = Content-Security-Policy: default-src 'unsafe-inline' data: https://*
+            70.header = Feature-Policy: vibrate 'self'; push *; camera 'none'
+        }
+    }
+}
+
 [globalString = ENV:HTTPS=on]
     config.baseURL = https://{$plugin.typo3themeskeleton.baseURL}
 [global]
@@ -66,6 +83,15 @@ config {
         concatenateJs = 0
 
         admPanel = 1
+    }
+
+    page {
+        config {
+            additionalHeaders {
+                ### https://securityheaders.com/
+                60.header = Content-Security-Policy: default-src 'unsafe-inline' data: http://*
+            }
+        }
     }
 [global]
 
@@ -140,19 +166,6 @@ page {
         author.ifEmpty = {$plugin.typo3themeskeleton.author}
         keywords.field = keywords
         keywords.ifEmpty =
-    }
-
-    additionalHeaders {
-        ### https://securityheaders.com/
-        1.header = Server:
-        5.header = X-Powered-By:
-        10.header = strict-transport-security:max-age=31536000
-        20.header = X-Frame-Options: SAMEORIGIN
-        30.header = X-Xss-Protection: 1; mode=block
-        40.header = X-Content-Type-Options: nosniff
-        50.header = Referrer-Policy:strict-origin
-        60.header = Content-Security-Policy: default-src 'unsafe-inline' data: https://*
-        70.header = Feature-Policy: vibrate 'self'; push *; camera 'none'
     }
 
     ################################################################
