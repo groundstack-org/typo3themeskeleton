@@ -1,6 +1,6 @@
 /* GENERAL LAYOUT ELEMENTS */
 body { background:url("../Images/bg-white.svg") repeat-x center top #eee; }
-a { color:#27697E; }
+a { color:#27697E; box-shadow:none; outline:none; }
 a:focus { box-shadow:none; outline:none; }
 
 /* SPECTRE OVERRIDES */
