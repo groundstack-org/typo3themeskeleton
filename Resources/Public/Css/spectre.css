@@ -1991,6 +1991,10 @@ body {
 a {
   color: #27697E; }
 
+a:focus {
+  box-shadow: none;
+  outline: none; }
+
 /* SPECTRE OVERRIDES */
 .image {
   margin: 0; }
