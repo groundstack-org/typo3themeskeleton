@@ -1,5 +1,4 @@
 // Variables and mixins
-@import "custom/variables";
 @import "variables";
 @import "mixins";
 
@@ -8,51 +7,37 @@
 @import "normalize";
 @import "base";
 
-// 3th Party Libraries
-@import "libs/baguetteBox";
-@import "libs/cookieconsent";
-
 // Elements
 @import "typography";
-// @import "asian";
+@import "asian";
 @import "tables";
 @import "buttons";
 @import "forms";
 @import "labels";
-// @import "codes";
+@import "codes";
 @import "media";
 
 // Layout
 @import "layout";
 @import "navbar";
 
-// CUSTOM (/custom/)
-@import "custom/fonts";
-@import "custom/typography";
-@import "custom/helpers";
-@import "custom/layout.scss";
-@import "custom/nav.scss";
-@import "custom/navflow.scss";
-@import "custom/elements.scss";
-@import "custom/icons.scss";
-
 // Components
 @import "accordions";
 @import "avatars";
 @import "badges";
-// @import "breadcrumbs";
+@import "breadcrumbs";
 @import "bars";
 @import "cards";
-// @import "chips";
+@import "chips";
 @import "dropdowns";
 @import "empty";
 @import "menus";
 @import "modals";
 @import "navs";
-// @import "pagination";
+@import "pagination";
 @import "panels";
 @import "popovers";
-// @import "steps";
+@import "steps";
 @import "tabs";
 @import "tiles";
 @import "toasts";
