@@ -95,7 +95,7 @@ TCEFORM {
                 textmedia {
                     removeItems = 1,2,3
                     addItems {
-                        imageslider = Image Slider
+                        gallerySlider = Gallery Slider
                     }
                 }
                 gridelements_pi1 {

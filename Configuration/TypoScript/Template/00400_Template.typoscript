@@ -34,6 +34,10 @@ page {
         file30.async = 1
         file30.excludeFromConcatenation = 1
 
+        # Tiny Slider
+        file35 = {$theme.urls.themeResources}Public/JavaScript/Libs/slick.js
+        file36 = {$theme.urls.themeResources}Public/JavaScript/Libs/slick.custom.js
+
         ### Cookie hint
         file40 = {$theme.urls.themeResources}Public/JavaScript/Libs/cookieconsent.min.js
         # file40.async = 1
