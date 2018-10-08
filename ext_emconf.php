@@ -11,8 +11,8 @@
  ***************************************************************/
 
 $EM_CONF['hhthemestack'] = [
-    'title' => 'Kroeswang',
-    'description' => 'Distribution Kroeswang: Anpassbar im Backend im Konstanten Editor.',
+    'title' => 'Themestack',
+    'description' => 'Distribution Themestack: Anpassbar im Backend im Konstanten Editor.',
     'category' => 'distribution',
     'author' => 'Christian Hackl / Sebastian Pieczona',
     'author_email' => 'web@hauer-heinrich.de',

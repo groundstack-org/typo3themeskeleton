@@ -1,6 +1,6 @@
 <?php
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = [
-    'www.kroeswang.de' => [
+    'www.bulicek.de' => [
         'init' => [
             'enableCHashCache' => true,
             'respectSimulateStaticURLs' => 0,
@@ -96,12 +96,11 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = [
 ];
 
 $realurl_additional = [
-    'kanzleikroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
-    'www.kanzleikroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
-    'kroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
-    'preview.kanzleikroeswang.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
-    'www.kroeswang.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
-    'kroeswang.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.kanzleikroeswang.de'],
+    'bulicek.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.bulicek.de'],
+    'www.bulicek.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.bulicek.de'],
+    'preview.bulicek.de' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.bulicek.de'],
+    'www.bulicek.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.bulicek.de'],
+    'bulicek.localhost' => $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl']['www.bulicek.de'],
 ];
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array_merge(
     $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'],
@@ -109,21 +108,21 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array_merge(
 );
 
 $customChanges = [
-    'www.kanzleikroeswang.de' => [
+    'www.bulicek.de' => [
         'pagePath' => [
             'rootpage_id' => 1,
         ],
     ],
 
     // PREVIEW
-    'preview.kanzleikroeswang.de' => [
+    'preview.bulicek.de' => [
         'pagePath' => [
             'rootpage_id' => 1
         ]
     ],
 
     // LOCALHOST
-    'www.kroeswang.localhost' => [
+    'www.bulicek.localhost' => [
         'pagePath' => [
             'rootpage_id' => 1
         ]

@@ -111,20 +111,11 @@ a:focus { box-shadow:none; outline:none; }
     #footer-bottombar p { margin-bottom:0; }
     #footer-bottombar-inner { padding-top:$containerSpacing; padding-bottom:$containerSpacing; }
 
-    #footer-inner, #footer-bottombar { background-image:url("../Images/kroeswang-logo-footer.svg"); background-repeat:no-repeat; background-position:11% bottom; background-size:320px auto; }
-    #footer-bottombar { background-image:url("../Images/kroeswang-logo-footer-darker.svg"); }
+    #footer-inner, #footer-bottombar { background-image:url("../Images/logo-footer.svg"); background-repeat:no-repeat; background-position:11% bottom; background-size:320px auto; }
+    #footer-bottombar { background-image:url("../Images/logo-footer-darker.svg"); }
 
     /* CE GALLERY in FOOTER */
     @media screen and (max-width:$size-sm){
         #footer-topbar .ce-gallery { text-align:center; }
-    }
-
-    /* On Home / Startpage only (BdB Siegel) */
-    #page-1 & #footer-topbar .ce-gallery::before {
-        content:""; display:inline-block; width:230px; height:230px; margin-right:80px; background:url("../Images/kroeswang-bdb-siegel.png") no-repeat center center transparent; background-size:contain;
-
-        @media screen and (max-width:$size-xl){
-            display:none;
-        }
     }
 }

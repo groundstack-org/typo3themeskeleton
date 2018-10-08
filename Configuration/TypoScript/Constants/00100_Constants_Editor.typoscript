@@ -4,11 +4,11 @@
 plugin.hhthemestack {
     ### Basic
     # cat=plugin.hhthemestack_mainconfig/basic/0010; type=string; label= LLL:EXT:hhthemestack/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURL
-        baseURL = www.kanzleikroeswang.de
+        baseURL = www.bulicek.de
     # cat=plugin.hhthemestack_mainconfig/basic/0011; type=string; label= LLL:EXT:hhthemestack/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURLstage
-        baseURLstage = preview.kanzleikroeswang.de
+        baseURLstage = preview.bulicek.de
     # cat=plugin.hhthemestack_mainconfig/basic/0012; type=string; label= LLL:EXT:hhthemestack/Resources/Private/Language/Constants/locallang_constants.xlf:config.baseURLdev
-        baseURLdev = www.kroeswang.localhost
+        baseURLdev = www.bulicek.localhost
     # cat=plugin.hhthemestack_mainconfig/basic/0040; type=int+; label= Root Page ID
         rootPageID = 1
     # cat=plugin.hhthemestack_mainconfig/basic/0060; type=boolean; label= Page Cache ein (KEIN Hacken 0) oder ausschalten (Hacken 1)

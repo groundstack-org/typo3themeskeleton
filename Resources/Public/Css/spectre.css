@@ -1,6 +1,6 @@
 /* SPECTRE - OVERRIDES */
 /* SPECTRE - OVERRIDES: RESPONSIVE BREAKPOINTS */
-/* HHTHEMEKROESWANG CUSTOM VARIABLES (scss/custom/) */
+/* HHTHEMESTACK CUSTOM VARIABLES (scss/custom/) */
 /*! Spectre.css v0.5.3 | MIT License | github.com/picturepan2/spectre */
 /* Manually forked from Normalize.css */
 /* normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -2099,8 +2099,7 @@ a:focus {
   background: #6397AF;
   color: #fff;
   margin-top: 115px;
-  /* CE GALLERY in FOOTER */
-  /* On Home / Startpage only (BdB Siegel) */ }
+  /* CE GALLERY in FOOTER */ }
   #footer a {
     color: #fff; }
   #footer #footer-inner {
@@ -2150,26 +2149,15 @@ a:focus {
     padding-top: 22px;
     padding-bottom: 22px; }
   #footer #footer-inner, #footer #footer-bottombar {
-    background-image: url("../Images/kroeswang-logo-footer.svg");
+    background-image: url("../Images/logo-footer.svg");
     background-repeat: no-repeat;
     background-position: 11% bottom;
     background-size: 320px auto; }
   #footer #footer-bottombar {
-    background-image: url("../Images/kroeswang-logo-footer-darker.svg"); }
+    background-image: url("../Images/logo-footer-darker.svg"); }
   @media screen and (max-width: 600px) {
     #footer #footer-topbar .ce-gallery {
       text-align: center; } }
-  #page-1 #footer #footer-topbar .ce-gallery::before {
-    content: "";
-    display: inline-block;
-    width: 230px;
-    height: 230px;
-    margin-right: 80px;
-    background: url("../Images/kroeswang-bdb-siegel.png") no-repeat center center transparent;
-    background-size: contain; }
-    @media screen and (max-width: 1280px) {
-      #page-1 #footer #footer-topbar .ce-gallery::before {
-        display: none; } }
 
 /* GENERAL NAVIGATION OPTIONS */
 .nav-x nav {
@@ -2348,7 +2336,7 @@ html.navflow-body-active, .navflow-body-active body {
           .navflow nav > ul::before {
             content: "";
             display: block;
-            background-image: url("../Images/kroeswang-logo.svg");
+            background-image: url("../Images/logo.svg");
             background-repeat: no-repeat;
             background-position: center center;
             background-size: auto 71%;
