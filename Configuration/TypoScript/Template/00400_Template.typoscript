@@ -36,10 +36,10 @@ page {
 
         ### Cookie hint
         file40 = {$theme.urls.themeResources}Public/JavaScript/Libs/cookieconsent.min.js
-        file40.async = 1
-        file40.excludeFromConcatenation = 1
+        # file40.async = 1
+        # file40.excludeFromConcatenation = 1
 
-        # file45 = {$theme.urls.themeResources}Public/JavaScript/LibsConfig/cookieconsent.config.min.js
+        file45 = {$theme.urls.themeResources}Public/JavaScript/Libs/cookieconsent.custom.min.js
         # file45.async = 1
         # file45.excludeFromConcatenation = 1
     }
