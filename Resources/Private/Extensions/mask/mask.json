@@ -8,15 +8,15 @@
                 "description": "",
                 "icon": "",
                 "color": "#000000",
-                "labels": [
-                    "\u00dcberschrift",
-                    "Text",
-                    "Bild"
-                ],
                 "columns": [
                     "tx_mask_banner_headline",
                     "tx_mask_banner_text",
                     "tx_mask_banner_images"
+                ],
+                "labels": [
+                    "\u00dcberschrift",
+                    "Text",
+                    "Bild"
                 ]
             }
         },
@@ -72,7 +72,7 @@
                 "l10n_mode": "copy",
                 "config": {
                     "minitems": "",
-                    "maxitems": "1",
+                    "maxitems": "6",
                     "filter": [
                         {
                             "parameters": {
