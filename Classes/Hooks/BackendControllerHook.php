@@ -20,7 +20,7 @@ class BackendControllerHook {
      * @param BackendController $backendController
      */
     public function addCss(array $configuration, BackendController $backendController) {
-        $extensionname = "hhthemeskeleton";
+        $extensionname = "hhthemestack";
         $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($extensionname);
 
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
