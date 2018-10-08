@@ -2255,50 +2255,12 @@ a:focus {
 #wrapper div.frame-layout-fullscreen, #content #main div.frame-layout-fullscreen {
   padding-left: 0; }
 
-#wrapper div.frame-layout-quoteText, #content #main div.frame-layout-quoteText {
-  padding-top: 115px;
-  background: url("../Images/icons/quotes.svg") no-repeat 10px 10px transparent;
-  background-size: 86px 68px; }
-
-#wrapper div.frame-layout-quoteBorder, #content #main div.frame-layout-quoteBorder {
-  padding-top: 22px;
-  border: 1px solid #27697E;
-  border-left: 0;
-  border-right: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  -ms-flex-pack: center; }
-  @media screen and (max-width: 1024px) {
-    #wrapper div.frame-layout-quoteBorder, #content #main div.frame-layout-quoteBorder {
-      border: 0; } }
-
-#wrapper div.frame-layout-quoteImage .ce-textpic, #wrapper div.frame-layout-quoteImage .ce-gallery, #wrapper div.frame-layout-quoteImage .ce-column, #wrapper div.frame-layout-quoteImage .image, #wrapper div.frame-layout-quoteImage .image picture, #content #main div.frame-layout-quoteImage .ce-textpic, #content #main div.frame-layout-quoteImage .ce-gallery, #content #main div.frame-layout-quoteImage .ce-column, #content #main div.frame-layout-quoteImage .image, #content #main div.frame-layout-quoteImage .image picture {
-  width: auto;
-  height: 100%; }
-
-#wrapper div.frame-layout-quoteImage .ce-column, #content #main div.frame-layout-quoteImage .ce-column {
-  padding: 0; }
-
-#wrapper div.frame-layout-quoteImage .image, #content #main div.frame-layout-quoteImage .image {
-  overflow: hidden; }
-
-#wrapper div.frame-layout-quoteImage .image img, #content #main div.frame-layout-quoteImage .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
-
 #wrapper div.frame-layout-containerSpacing, #content #main div.frame-layout-containerSpacing {
   padding-bottom: calc(22px * 3); }
 
 #wrapper div.frame-layout-galleryNoAutoImageFormatting .ce-gallery .ce-column img, #content #main div.frame-layout-galleryNoAutoImageFormatting .ce-gallery .ce-column img {
   width: auto;
   height: auto; }
-
-#wrapper div.frame-layout-borderAll, #content #main div.frame-layout-borderAll {
-  border: 2px solid #88B2C5;
-  padding: 22px; }
 
 /* FOOTER */
 #footer {

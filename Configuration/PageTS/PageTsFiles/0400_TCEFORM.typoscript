@@ -78,12 +78,8 @@ TCEFORM {
 
             addItems {
                 fullscreen = Fullscreen
-                quoteText = Quote - Text
-                quoteImage = Quote - Image
-                quoteBorder = Quote - Border
                 containerSpacing = Extra Container Spacing
                 galleryNoAutoImageFormatting = Gallery - No Auto Image Formatting
-                borderAll = Border All (top, right, bottom, left)
                 videoScreen = Video Screen
             }
 
