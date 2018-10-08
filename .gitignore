@@ -13,7 +13,7 @@
 /typo3conf/temp_fieldInfo.php
 /typo3conf/deprecation_*.log
 /typo3conf/AdditionalConfiguration.php
-_tmp/*
+_tmp
 !_tmp/.gitkeep
 
 # Ignore system folders, you should have them symlinked.
