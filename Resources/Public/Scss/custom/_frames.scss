@@ -1,0 +1,35 @@
+/* FRAME LAYOUTS */
+#wrapper, #content #main {
+    div.frame-layout-fullscreen { padding-left:0; }
+    div.frame-layout-containerSpacing { padding-bottom:calc(#{$containerSpacing} * 3); }
+    div.frame-layout-galleryNoAutoImageFormatting {
+        .ce-gallery .ce-column img { width:auto; height:auto; }
+    }
+}
+
+/* FRAME VIDEO (YouTube, Vimeo) */
+div.frame-layout-videoScreen {
+    & > .column:first-of-type { width:460px; max-width:100%; }
+
+    .video {
+        margin:0; padding:30px;
+        background-image:url("../Images/mac_monitor.png");
+        background-repeat:no-repeat;
+        background-size:contain;
+        min-width:421px;
+        min-height:364px;
+
+        .video-embed {  }
+        .video-embed iframe { border:0; outline:0; }
+        .video-embed, .video-embed iframe { width:366px; height:212px; }
+    }
+
+    @media screen and (max-width:$size-xs){
+        .video {
+            min-width:320px;
+            min-height:276px;
+
+            .video-embed, .video-embed iframe { width:266px; height:150px; }
+        }
+    }
+}

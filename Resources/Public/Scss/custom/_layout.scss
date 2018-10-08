@@ -42,15 +42,6 @@ a:focus { box-shadow:none; outline:none; }
     }
 }
 
-/* FRAME LAYOUTS */
-#wrapper, #content #main {
-    div.frame-layout-fullscreen { padding-left:0; }
-    div.frame-layout-containerSpacing { padding-bottom:calc(#{$containerSpacing} * 3); }
-    div.frame-layout-galleryNoAutoImageFormatting {
-        .ce-gallery .ce-column img { width:auto; height:auto; }
-    }
-}
-
 /* FOOTER */
 #footer {
     background:#6397AF; color:#fff; margin-top:115px;

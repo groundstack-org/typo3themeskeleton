@@ -32,11 +32,12 @@
 @import "custom/fonts";
 @import "custom/typography";
 @import "custom/helpers";
-@import "custom/layout.scss";
-@import "custom/nav.scss";
-@import "custom/navflow.scss";
-@import "custom/elements.scss";
-@import "custom/icons.scss";
+@import "custom/layout";
+@import "custom/frames";
+@import "custom/nav";
+@import "custom/navflow";
+@import "custom/elements";
+@import "custom/icons";
 
 // Components
 @import "spectre/accordions";

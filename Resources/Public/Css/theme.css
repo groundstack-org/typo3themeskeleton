@@ -2251,17 +2251,6 @@ a:focus {
       #content #main > div {
         padding-left: 0; } }
 
-/* FRAME LAYOUTS */
-#wrapper div.frame-layout-fullscreen, #content #main div.frame-layout-fullscreen {
-  padding-left: 0; }
-
-#wrapper div.frame-layout-containerSpacing, #content #main div.frame-layout-containerSpacing {
-  padding-bottom: calc(22px * 3); }
-
-#wrapper div.frame-layout-galleryNoAutoImageFormatting .ce-gallery .ce-column img, #content #main div.frame-layout-galleryNoAutoImageFormatting .ce-gallery .ce-column img {
-  width: auto;
-  height: auto; }
-
 /* FOOTER */
 #footer {
   background: #6397AF;
@@ -2326,6 +2315,45 @@ a:focus {
   @media screen and (max-width: 600px) {
     #footer #footer-topbar .ce-gallery {
       text-align: center; } }
+
+/* FRAME LAYOUTS */
+#wrapper div.frame-layout-fullscreen, #content #main div.frame-layout-fullscreen {
+  padding-left: 0; }
+
+#wrapper div.frame-layout-containerSpacing, #content #main div.frame-layout-containerSpacing {
+  padding-bottom: calc(22px * 3); }
+
+#wrapper div.frame-layout-galleryNoAutoImageFormatting .ce-gallery .ce-column img, #content #main div.frame-layout-galleryNoAutoImageFormatting .ce-gallery .ce-column img {
+  width: auto;
+  height: auto; }
+
+/* FRAME VIDEO (YouTube, Vimeo) */
+div.frame-layout-videoScreen > .column:first-of-type {
+  width: 460px;
+  max-width: 100%; }
+
+div.frame-layout-videoScreen .video {
+  margin: 0;
+  padding: 30px;
+  background-image: url("../Images/mac_monitor.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 421px;
+  min-height: 364px; }
+  div.frame-layout-videoScreen .video .video-embed iframe {
+    border: 0;
+    outline: 0; }
+  div.frame-layout-videoScreen .video .video-embed, div.frame-layout-videoScreen .video .video-embed iframe {
+    width: 366px;
+    height: 212px; }
+
+@media screen and (max-width: 480px) {
+  div.frame-layout-videoScreen .video {
+    min-width: 320px;
+    min-height: 276px; }
+    div.frame-layout-videoScreen .video .video-embed, div.frame-layout-videoScreen .video .video-embed iframe {
+      width: 266px;
+      height: 150px; } }
 
 /* GENERAL NAVIGATION OPTIONS */
 .nav-x nav {
@@ -2536,34 +2564,6 @@ html.navflow-body-active, .navflow-body-active body {
   opacity: 0.87; }
   .cc-window:hover {
     opacity: 1; }
-
-/* VIDEOS (YouTube, Vimeo) */
-div.frame-layout-videoScreen > .column:first-of-type {
-  width: 460px;
-  max-width: 100%; }
-
-div.frame-layout-videoScreen .video {
-  margin: 0;
-  padding: 30px;
-  background-image: url("../Images/mac_monitor.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-width: 421px;
-  min-height: 364px; }
-  div.frame-layout-videoScreen .video .video-embed iframe {
-    border: 0;
-    outline: 0; }
-  div.frame-layout-videoScreen .video .video-embed, div.frame-layout-videoScreen .video .video-embed iframe {
-    width: 366px;
-    height: 212px; }
-
-@media screen and (max-width: 480px) {
-  div.frame-layout-videoScreen .video {
-    min-width: 320px;
-    min-height: 276px; }
-    div.frame-layout-videoScreen .video .video-embed, div.frame-layout-videoScreen .video .video-embed iframe {
-      width: 266px;
-      height: 150px; } }
 
 /* COLUMNS (SPECTRE EXTEND) */
 .columns > .col > .frame {
