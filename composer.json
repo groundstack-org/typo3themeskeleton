@@ -1,5 +1,5 @@
 {
-    "name": "hauerheinrich/hhthemekroeswang",
+    "name": "hauerheinrich/hhthemestack",
     "type": "typo3-cms-extension",
     "description": "",
     "authors": {
@@ -10,7 +10,7 @@
     "keywords": ["TYPO3 CMS", "Theme", "Distribution"],
     "replace": {
         "demoext": "self.version",
-        "typo3-ter/hhthemekroeswang": "self.version"
+        "typo3-ter/hhthemestack": "self.version"
     },
     "require": {
         "typo3/cms-core": "^8.7.0 || ^8.7.99",
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "HauerHeinrich\\Hhthemekroeswang\\": "Classes"
+            "HauerHeinrich\\Hhthemestack\\": "Classes"
         }
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "hhthemekroeswang"
+            "extension-key": "hhthemestack"
         }
     }
 }

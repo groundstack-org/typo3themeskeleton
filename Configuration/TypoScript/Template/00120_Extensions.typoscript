@@ -147,7 +147,7 @@ plugin.tx_indexedsearch {
     }
 
     settings {
-        targetPid = {$plugin.hhthemekroeswang.indexedSearchId}
+        targetPid = {$plugin.hhthemestack.indexedSearchId}
         displayRules = 0
         displayAdvancedSearchLink = 0
     }
@@ -189,7 +189,7 @@ plugin.tx_ttaddress_pi1 {
             allWrap = <div class="address-default">|</div>
             phone {
                 ### Eigene Funktion für Links bei Telefonnummern
-                postUserFunc = HauerHeinrich\hhthemekroeswang\Hooks\tt_address_phone_link->user_tt_address_tel_link
+                postUserFunc = HauerHeinrich\hhthemestack\Hooks\tt_address_phone_link->user_tt_address_tel_link
                 postUserFunc {
                     countryCode = 43
                     areaCode = 4782
@@ -199,7 +199,7 @@ plugin.tx_ttaddress_pi1 {
                 innerWrap = Tel.:&nbsp;|
                 required = 1
                 10 = TEXT
-                10.value.data = LLL:EXT:hhthemekroeswang/Resources/Private/Language/locallang_ttaddress.xlf:fe.phone.title
+                10.value.data = LLL:EXT:hhthemestack/Resources/Private/Language/locallang_ttaddress.xlf:fe.phone.title
             }
             mobile < .phone
             mobile {
@@ -323,15 +323,15 @@ plugin.tx_ttaddress {
     view {
         templateRootPaths {
             10 = EXT:tt_address/Resources/Private/Templates/Address/
-            20 = EXT:hhthemekroeswang/Resources/Private/Extensions/tt_address/Templates/
+            20 = EXT:hhthemestack/Resources/Private/Extensions/tt_address/Templates/
         }
         partialRootPaths {
             10 = EXT:tt_address/Resources/Private/Partials/
-            20 = EXT:hhthemekroeswang/Resources/Private/Extensions/tt_address/Partials/
+            20 = EXT:hhthemestack/Resources/Private/Extensions/tt_address/Partials/
         }
         layoutRootPaths {
             10 = EXT:tt_address/Resources/Private/Layouts/
-            20 = EXT:hhthemekroeswang/Resources/Private/Extensions/tt_address/Layouts/
+            20 = EXT:hhthemestack/Resources/Private/Extensions/tt_address/Layouts/
         }
     }
 }

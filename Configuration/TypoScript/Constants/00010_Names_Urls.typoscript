@@ -1,7 +1,7 @@
 theme {
-    name = hhthemekroeswang
+    name = hhthemestack
     urls {
-        themeResources = typo3conf/ext/hhthemekroeswang/Resources/
-        themeFileadmin = fileadmin/hhthemekroeswang/
+        themeResources = typo3conf/ext/hhthemestack/Resources/
+        themeFileadmin = fileadmin/hhthemestack/
     }
 }

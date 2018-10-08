@@ -3,11 +3,11 @@ TYPO3:
     Form:
       persistenceManager:
         allowedFileMounts:
-          10: '1:/hhthemekroeswang/Extensions/form/Forms/'
+          10: '1:/hhthemestack/Extensions/form/Forms/'
         allowSaveToExtensionPaths: false
         allowDeleteFromExtensionPaths: false
         allowedExtensionPaths:
-          10: 'EXT:hhthemekroeswang/Resources/Private/Extensions/form/Configuration/Forms/'
+          10: 'EXT:hhthemestack/Resources/Private/Extensions/form/Configuration/Forms/'
 
       prototypes:
         standard:
@@ -15,8 +15,8 @@ TYPO3:
             Form:
               renderingOptions:
                 templateRootPaths:
-                  20: 'EXT:hhthemekroeswang/Resources/Private/Extensions/form/Resources/Private/Frontend/Templates/'
+                  20: 'EXT:hhthemestack/Resources/Private/Extensions/form/Resources/Private/Frontend/Templates/'
                 partialRootPaths:
-                  20: 'EXT:hhthemekroeswang/Resources/Private/Extensions/form/Resources/Private/Frontend/Partials/'
+                  20: 'EXT:hhthemestack/Resources/Private/Extensions/form/Resources/Private/Frontend/Partials/'
                 layoutRootPaths:
-                  20: 'EXT:hhthemekroeswang/Resources/Private/Extensions/form/Resources/Private/Frontend/Layouts/'
+                  20: 'EXT:hhthemestack/Resources/Private/Extensions/form/Resources/Private/Frontend/Layouts/'

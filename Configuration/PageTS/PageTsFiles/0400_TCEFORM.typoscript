@@ -49,15 +49,15 @@ TCEFORM {
         header_layout {
             altLabels {
                 ### Change header label
-                1 = LLL:EXT:hhthemekroeswang/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header1
-                2 = LLL:EXT:hhthemekroeswang/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header2
-                3 = LLL:EXT:hhthemekroeswang/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header3
-                4 = LLL:EXT:hhthemekroeswang/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header4
-                5 = LLL:EXT:hhthemekroeswang/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header5
+                1 = LLL:EXT:hhthemestack/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header1
+                2 = LLL:EXT:hhthemestack/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header2
+                3 = LLL:EXT:hhthemestack/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header3
+                4 = LLL:EXT:hhthemestack/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header4
+                5 = LLL:EXT:hhthemestack/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.header5
             }
             addItems {
                 ### Add custom header layouts
-                6 = LLL:EXT:hhthemekroeswang/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.onlybold
+                6 = LLL:EXT:hhthemestack/Resources/Private/Language/locallang_pageconfig.xlf:tceform.page.onlybold
             }
         }
 
@@ -111,7 +111,7 @@ TCEFORM {
     pages {
         nav_title.disabled = 1
         subtitle.disabled = 0
-        subtitle.label = LLL:EXT:hhthemekroeswang/Resources/Private/Language/locallang_db_pagets.xlf:tceform.pages.subtitle
+        subtitle.label = LLL:EXT:hhthemestack/Resources/Private/Language/locallang_db_pagets.xlf:tceform.pages.subtitle
         tx_realurl_pathsegment.disabled = 1
         keywords.disabled = 1
         abstract.disabled = 1

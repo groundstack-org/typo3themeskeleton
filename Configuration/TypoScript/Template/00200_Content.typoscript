@@ -6,7 +6,7 @@ lib.logo {
     references {
         table = pages
         ### PageID
-        uid.dataWrap = {$plugin.hhthemekroeswang.rootPageID}
+        uid.dataWrap = {$plugin.hhthemestack.rootPageID}
         fieldName = media
     }
 

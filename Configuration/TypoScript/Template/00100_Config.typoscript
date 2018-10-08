@@ -1,5 +1,5 @@
 config {
-    baseURL = http://{$plugin.hhthemekroeswang.baseURL}
+    baseURL = http://{$plugin.hhthemestack.baseURL}
     admPanel = 1
     doctype = html5
     # htmlTag_setParams = manifest="/webstorage.appcache"
@@ -8,10 +8,10 @@ config {
     sys_language_mode = strict
     sys_language_overlay = hideNonTranslated
     linkVars = L(0)
-    language = {$plugin.hhthemekroeswang.defaultLang}
-    locale_all = {$plugin.hhthemekroeswang.defaultLocaleAll}
+    language = {$plugin.hhthemestack.defaultLang}
+    locale_all = {$plugin.hhthemestack.defaultLocaleAll}
     metaCharset = utf-8
-    htmlTag_langKey = {$plugin.hhthemekroeswang.defaultHtmlLangkey}
+    htmlTag_langKey = {$plugin.hhthemestack.defaultHtmlLangkey}
     noPageTitle = 2
     pageTitleFirst = 0
     inlineStyle2TempFile = 1
@@ -19,8 +19,8 @@ config {
     removeDefaultCss = 1
     moveJsFromHeaderToFooter = 0
     disableImgBorderAttr = 1
-    no_cache = {$plugin.hhthemekroeswang.cache}
-    cache_period = {$plugin.hhthemekroeswang.cacheperiod}
+    no_cache = {$plugin.hhthemestack.cache}
+    cache_period = {$plugin.hhthemestack.cacheperiod}
     extTarget = _blank
     contentObjectExceptionHandler = 0
 
@@ -42,23 +42,23 @@ config {
     ################################################################
     ### CSS & JS Komprimieren ###
     ################################################################
-    compressCss = {$plugin.hhthemekroeswang.compress}
-    compressJs = {$plugin.hhthemekroeswang.compress}
+    compressCss = {$plugin.hhthemestack.compress}
+    compressJs = {$plugin.hhthemestack.compress}
 
     ################################################################
     ### CSS & JS Zusammenfassen zu jeweils einer Datei ###
     ################################################################
-    concatenateCss = {$plugin.hhthemekroeswang.concatenate}
-    concatenateJs = {$plugin.hhthemekroeswang.concatenate}
+    concatenateCss = {$plugin.hhthemestack.concatenate}
+    concatenateJs = {$plugin.hhthemestack.concatenate}
 }
 
 [globalString = ENV:HTTPS=on]
-    config.baseURL = https://{$plugin.hhthemekroeswang.baseURL}
+    config.baseURL = https://{$plugin.hhthemestack.baseURL}
 [global]
 
 [applicationContext = Development]
     config {
-        baseURL = http://{$plugin.hhthemekroeswang.baseURLdev}
+        baseURL = http://{$plugin.hhthemestack.baseURLdev}
         no_cache = 1
         compressCss = 0
         compressJs = 0
@@ -70,12 +70,12 @@ config {
 [global]
 
 [applicationContext = Development] && [globalString = ENV:HTTPS=on]
-    config.baseURL = https://{$plugin.hhthemekroeswang.baseURLdev}
+    config.baseURL = https://{$plugin.hhthemestack.baseURLdev}
 [global]
 
 [applicationContext = Development/Server]
     config {
-        baseURL = http://{$plugin.hhthemekroeswang.baseURLstage}
+        baseURL = http://{$plugin.hhthemestack.baseURLstage}
         no_cache = 1
         compressCss = 0
         compressJs = 0
@@ -85,7 +85,7 @@ config {
 [global]
 
 [applicationContext = Development/Server] && [globalString = ENV:HTTPS=on]
-    config.baseURL = https://{$plugin.hhthemekroeswang.baseURLstage}
+    config.baseURL = https://{$plugin.hhthemestack.baseURLstage}
 [global]
 
 page = PAGE
@@ -101,7 +101,7 @@ page {
         viewport = initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0,user-scalable=yes,width=device-width
 
         title {
-            noTrimWrap = |{$plugin.hhthemekroeswang.beforeMetaTitle} | {$plugin.hhthemekroeswang.afterMetaTitle}|
+            noTrimWrap = |{$plugin.hhthemestack.beforeMetaTitle} | {$plugin.hhthemestack.afterMetaTitle}|
             data = field:title
             data.override = field:subtitle
             data.override.if.isTrue.field = subtitle
@@ -137,7 +137,7 @@ page {
         abstract.field = abstract
         abstract.ifEmpty =
         author.field = author
-        author.ifEmpty = {$plugin.hhthemekroeswang.author}
+        author.ifEmpty = {$plugin.hhthemestack.author}
         keywords.field = keywords
         keywords.ifEmpty =
     }
@@ -153,7 +153,7 @@ page {
     ################################################################
     ### Header Data ###
     ################################################################
-    shortcutIcon = {$plugin.hhthemekroeswang.favi}
+    shortcutIcon = {$plugin.hhthemestack.favi}
     headerData {
         ###
         1 = TEXT
@@ -173,51 +173,51 @@ page {
                 field = title
                 override.field = subtitle
                 override.if.isTrue.field = subtitle
-                noTrimWrap = |<title>{$plugin.hhthemekroeswang.beforeMetaTitle} | {$plugin.hhthemekroeswang.afterMetaTitle}</title>|
+                noTrimWrap = |<title>{$plugin.hhthemestack.beforeMetaTitle} | {$plugin.hhthemestack.afterMetaTitle}</title>|
             }
 
             3 = COA
             3 {
                 20 = TEXT
                 20 {
-                    value = <meta name="geo.region" content="{$plugin.hhthemekroeswang.georegion}" />
-                    if.isTrue = {$plugin.hhthemekroeswang.georegion}
+                    value = <meta name="geo.region" content="{$plugin.hhthemestack.georegion}" />
+                    if.isTrue = {$plugin.hhthemestack.georegion}
                 }
 
                 30 = TEXT
                 30 {
-                    value = <meta name="geo.placename" content="{$plugin.hhthemekroeswang.geoplacename}" />
-                    if.isTrue = {$plugin.hhthemekroeswang.geoplacename}
+                    value = <meta name="geo.placename" content="{$plugin.hhthemestack.geoplacename}" />
+                    if.isTrue = {$plugin.hhthemestack.geoplacename}
                 }
 
                 40 = TEXT
                 40 {
-                    value = <meta name="geo.position" content="{$plugin.hhthemekroeswang.latitude};{$plugin.hhthemekroeswang.longitude}" />
-                    if.isTrue = {$plugin.hhthemekroeswang.latitude}
+                    value = <meta name="geo.position" content="{$plugin.hhthemestack.latitude};{$plugin.hhthemestack.longitude}" />
+                    if.isTrue = {$plugin.hhthemestack.latitude}
                 }
 
                 50 = TEXT
                 50 {
-                    value = <meta name="ICBM" content="{$plugin.hhthemekroeswang.latitude}, {$plugin.hhthemekroeswang.longitude}" />
-                    if.isTrue = {$plugin.hhthemekroeswang.longitude}
+                    value = <meta name="ICBM" content="{$plugin.hhthemestack.latitude}, {$plugin.hhthemestack.longitude}" />
+                    if.isTrue = {$plugin.hhthemestack.longitude}
                 }
 
                 60 = TEXT
                 60 {
-                    value = <meta name="page-topic" content="{$plugin.hhthemekroeswang.pagetopic}">
-                    if.isTrue = {$plugin.hhthemekroeswang.pagetopic}
+                    value = <meta name="page-topic" content="{$plugin.hhthemestack.pagetopic}">
+                    if.isTrue = {$plugin.hhthemestack.pagetopic}
                 }
 
                 70 = TEXT
                 70 {
-                    value = <meta name="audience" content="{$plugin.hhthemekroeswang.audience}">
-                    if.isTrue = {$plugin.hhthemekroeswang.audience}
+                    value = <meta name="audience" content="{$plugin.hhthemestack.audience}">
+                    if.isTrue = {$plugin.hhthemestack.audience}
                 }
 
                 80 = TEXT
                 80 {
-                    value = <meta name="designer" content="{$plugin.hhthemekroeswang.designer}">
-                    if.isTrue = {$plugin.hhthemekroeswang.designer}
+                    value = <meta name="designer" content="{$plugin.hhthemestack.designer}">
+                    if.isTrue = {$plugin.hhthemestack.designer}
                 }
 
                 90 = TEXT
@@ -225,15 +225,15 @@ page {
                     value (
                         <meta http-equiv="imagetoolbar" content="false">
                         <meta name="format-detection" content="telephone=no">
-                        <meta name="theme-color" content="{$plugin.hhthemekroeswang.themeColor}">
-                        <link rel="manifest" href="{$plugin.hhthemekroeswang.SSL}://{$plugin.hhthemekroeswang.baseURL}/{$theme.urls.themeFileadmin}manifest.json">
+                        <meta name="theme-color" content="{$plugin.hhthemestack.themeColor}">
+                        <link rel="manifest" href="{$plugin.hhthemestack.SSL}://{$plugin.hhthemestack.baseURL}/{$theme.urls.themeFileadmin}manifest.json">
                     )
                 }
 
                 100 = TEXT
                 100 {
-                    value = <meta name="google-site-verification" content="{$plugin.hhthemekroeswang.googlesiteverification}" />
-                    if.isTrue = {$plugin.hhthemekroeswang.googlesiteverification}
+                    value = <meta name="google-site-verification" content="{$plugin.hhthemestack.googlesiteverification}" />
+                    if.isTrue = {$plugin.hhthemestack.googlesiteverification}
                 }
             }
 
@@ -248,8 +248,8 @@ page {
                 4 {
                     1 = TEXT
                     1 {
-                        value = <meta property="of:site_name" content="{$plugin.hhthemekroeswang.name}">
-                        if.isTrue = {$plugin.hhthemekroeswang.name}
+                        value = <meta property="of:site_name" content="{$plugin.hhthemestack.name}">
+                        if.isTrue = {$plugin.hhthemestack.name}
                     }
                     2 = TEXT
                     2 {
@@ -282,75 +282,75 @@ page {
                         10 = TEXT
                         10 {
                             wrap = /|">
-                            value = {$plugin.hhthemekroeswang.image}
+                            value = {$plugin.hhthemestack.image}
                         }
-                        if.isTrue = {$plugin.hhthemekroeswang.image}
+                        if.isTrue = {$plugin.hhthemestack.image}
                     }
 
                     20 = TEXT
                     20 {
-                        value = <meta property="og:brand" content="{$plugin.hhthemekroeswang.name}">
-                        if.isTrue = {$plugin.hhthemekroeswang.name}
+                        value = <meta property="og:brand" content="{$plugin.hhthemestack.name}">
+                        if.isTrue = {$plugin.hhthemestack.name}
                     }
 
                     30 = TEXT
                     30 {
-                        value = <meta property="og:latitude" content="{$plugin.hhthemekroeswang.latitude}">
-                        if.isTrue = {$plugin.hhthemekroeswang.latitude}
+                        value = <meta property="og:latitude" content="{$plugin.hhthemestack.latitude}">
+                        if.isTrue = {$plugin.hhthemestack.latitude}
                     }
 
                     40 = TEXT
                     40 {
-                        value = <meta property="og:longitude" content="{$plugin.hhthemekroeswang.longitude}">
-                        if.isTrue = {$plugin.hhthemekroeswang.longitude}
+                        value = <meta property="og:longitude" content="{$plugin.hhthemestack.longitude}">
+                        if.isTrue = {$plugin.hhthemestack.longitude}
                     }
 
                     50 = TEXT
                     50 {
-                        value = <meta property="og:street-address" content="{$plugin.hhthemekroeswang.street}">
-                        if.isTrue = {$plugin.hhthemekroeswang.street}
+                        value = <meta property="og:street-address" content="{$plugin.hhthemestack.street}">
+                        if.isTrue = {$plugin.hhthemestack.street}
                     }
 
                     60 = TEXT
                     60 {
-                        value = <meta property="og:locale" content="{$plugin.hhthemekroeswang.city}">
-                        if.isTrue = {$plugin.hhthemekroeswang.city}
+                        value = <meta property="og:locale" content="{$plugin.hhthemestack.city}">
+                        if.isTrue = {$plugin.hhthemestack.city}
                     }
 
                     70 = TEXT
                     70 {
-                        value = <meta property="og:region" content="{$plugin.hhthemekroeswang.region}">
-                        if.isTrue = {$plugin.hhthemekroeswang.region}
+                        value = <meta property="og:region" content="{$plugin.hhthemestack.region}">
+                        if.isTrue = {$plugin.hhthemestack.region}
                     }
 
                     80 = TEXT
                     80 {
-                        value = <meta property="og:postal-code" content="{$plugin.hhthemekroeswang.plz}">
-                        if.isTrue = {$plugin.hhthemekroeswang.plz}
+                        value = <meta property="og:postal-code" content="{$plugin.hhthemestack.plz}">
+                        if.isTrue = {$plugin.hhthemestack.plz}
                     }
 
                     90 = TEXT
                     90 {
-                        value = <meta property="og:country-name" content="{$plugin.hhthemekroeswang.country}">
-                        if.isTrue = {$plugin.hhthemekroeswang.country}
+                        value = <meta property="og:country-name" content="{$plugin.hhthemestack.country}">
+                        if.isTrue = {$plugin.hhthemestack.country}
                     }
 
                     100 = TEXT
                     100 {
-                        value = <meta property="og:email" content="{$plugin.hhthemekroeswang.mail}">
-                        if.isTrue = {$plugin.hhthemekroeswang.mail}
+                        value = <meta property="og:email" content="{$plugin.hhthemestack.mail}">
+                        if.isTrue = {$plugin.hhthemestack.mail}
                     }
 
                     110 = TEXT
                     110 {
-                        value = <meta property="og:phone_number" content="{$plugin.hhthemekroeswang.tel}">
-                        if.isTrue = {$plugin.hhthemekroeswang.tel}
+                        value = <meta property="og:phone_number" content="{$plugin.hhthemestack.tel}">
+                        if.isTrue = {$plugin.hhthemestack.tel}
                     }
 
                     120 = TEXT
                     120 {
-                        value = <meta property="og:fax_number" content="{$plugin.hhthemekroeswang.fax}">
-                        if.isTrue = {$plugin.hhthemekroeswang.fax}
+                        value = <meta property="og:fax_number" content="{$plugin.hhthemestack.fax}">
+                        if.isTrue = {$plugin.hhthemestack.fax}
                     }
                 }
 
@@ -400,7 +400,7 @@ page {
             ### Apple touch icons
             10 = IMG_RESOURCE
             10 {
-                file = {$plugin.hhthemekroeswang.touchIconReference}
+                file = {$plugin.hhthemestack.touchIconReference}
                 file {
                     width = 57c
                     height = 57c
@@ -550,7 +550,7 @@ page {
             10 = TEXT
             10 {
                 value = <script type="application/ld+json"> [{ "@context" : "http://schema.org",
-                if.isTrue = {$plugin.hhthemekroeswang.name}
+                if.isTrue = {$plugin.hhthemestack.name}
             }
 
             ### cause syntax-editor }] </script>
@@ -558,21 +558,21 @@ page {
             20 = TEXT
             20 {
                 wrap = "@type" : "|",
-                value = {$plugin.hhthemekroeswang.type}
-                if.isTrue = {$plugin.hhthemekroeswang.type}
+                value = {$plugin.hhthemestack.type}
+                if.isTrue = {$plugin.hhthemestack.type}
             }
 
             30 = TEXT
             30 {
                 wrap = "name" : "|",
-                value = {$plugin.hhthemekroeswang.name}
-                if.isTrue = {$plugin.hhthemekroeswang.name}
+                value = {$plugin.hhthemestack.name}
+                if.isTrue = {$plugin.hhthemestack.name}
             }
 
             40 = TEXT
             40 {
-                value = "legalName" : "{$plugin.hhthemekroeswang.legalName}",
-                if.isTrue = {$plugin.hhthemekroeswang.legalName}
+                value = "legalName" : "{$plugin.hhthemestack.legalName}",
+                if.isTrue = {$plugin.hhthemestack.legalName}
             }
 
             50 = TEXT
@@ -592,76 +592,76 @@ page {
                 10 = TEXT
                 10 {
                     wrap = |",
-                    value = {$plugin.hhthemekroeswang.image}
+                    value = {$plugin.hhthemestack.image}
                 }
-                if.isTrue = {$plugin.hhthemekroeswang.image}
+                if.isTrue = {$plugin.hhthemestack.image}
             }
 
             70 = TEXT
             70 {
-                value = "telephone" : "{$plugin.hhthemekroeswang.tel}",
-                if.isTrue = {$plugin.hhthemekroeswang.tel}
+                value = "telephone" : "{$plugin.hhthemestack.tel}",
+                if.isTrue = {$plugin.hhthemestack.tel}
             }
             80 = TEXT
             80 {
-                value = "faxNumber" : "{$plugin.hhthemekroeswang.fax}",
-                if.isTrue = {$plugin.hhthemekroeswang.fax}
+                value = "faxNumber" : "{$plugin.hhthemestack.fax}",
+                if.isTrue = {$plugin.hhthemestack.fax}
             }
             90 = TEXT
             90 {
-                value = "email" : "{$plugin.hhthemekroeswang.mail}",
-                if.isTrue = {$plugin.hhthemekroeswang.mail}
+                value = "email" : "{$plugin.hhthemestack.mail}",
+                if.isTrue = {$plugin.hhthemestack.mail}
             }
             100 = COA
             100 {
                 10 = TEXT
                 10 {
                     value = "address" : { "@type" : "PostalAddress",
-                    if.isTrue = {$plugin.hhthemekroeswang.street}
+                    if.isTrue = {$plugin.hhthemestack.street}
                 }
                 10 = TEXT
                 10 {
-                    value = "streetAddress" : "{$plugin.hhthemekroeswang.street}",
-                    if.isTrue = {$plugin.hhthemekroeswang.street}
+                    value = "streetAddress" : "{$plugin.hhthemestack.street}",
+                    if.isTrue = {$plugin.hhthemestack.street}
                 }
                 20 = TEXT
                 20 {
-                    value = "addressLocality" : "{$plugin.hhthemekroeswang.city}",
-                    if.isTrue = {$plugin.hhthemekroeswang.city}
+                    value = "addressLocality" : "{$plugin.hhthemestack.city}",
+                    if.isTrue = {$plugin.hhthemestack.city}
                 }
                 30 = TEXT
                 30 {
-                    value = "addressRegion" : "{$plugin.hhthemekroeswang.region}",
-                    if.isTrue = {$plugin.hhthemekroeswang.region}
+                    value = "addressRegion" : "{$plugin.hhthemestack.region}",
+                    if.isTrue = {$plugin.hhthemestack.region}
                 }
                 40 = TEXT
                 40 {
-                    value = "addressCountry" : "{$plugin.hhthemekroeswang.country}",
-                    if.isTrue = {$plugin.hhthemekroeswang.country}
+                    value = "addressCountry" : "{$plugin.hhthemestack.country}",
+                    if.isTrue = {$plugin.hhthemestack.country}
                 }
                 50 = TEXT
                 50 {
-                    value = "postalCode" : "{$plugin.hhthemekroeswang.plz}"
-                    if.isTrue = {$plugin.hhthemekroeswang.plz}
+                    value = "postalCode" : "{$plugin.hhthemestack.plz}"
+                    if.isTrue = {$plugin.hhthemestack.plz}
                 }
                 60 = TEXT
                 60 {
                     value = },
-                    if.isTrue = {$plugin.hhthemekroeswang.street}
+                    if.isTrue = {$plugin.hhthemestack.street}
                 }
             }
             110 = TEXT
             110 {
-                value = "openingHours": [ {$plugin.hhthemekroeswang.hours} ]
-                if.isTrue = {$plugin.hhthemekroeswang.hours}
+                value = "openingHours": [ {$plugin.hhthemestack.hours} ]
+                if.isTrue = {$plugin.hhthemestack.hours}
             }
             500 = TEXT
             500 {
                 value = }] </script>
-                if.isTrue = {$plugin.hhthemekroeswang.name}
+                if.isTrue = {$plugin.hhthemestack.name}
             }
 
-            if.isTrue = {$plugin.hhthemekroeswang.name}
+            if.isTrue = {$plugin.hhthemestack.name}
         }
 
         ### Dateien werden per AJAX geladen - noscript für SEO
@@ -680,7 +680,7 @@ page {
         1000 = TEXT
         1000.value (
             <script>
-                var gaProperty = '{$plugin.hhthemekroeswang.googleAnalytics}';
+                var gaProperty = '{$plugin.hhthemestack.googleAnalytics}';
                 var disableStr = 'ga-disable-' + gaProperty;
                 if (document.cookie.indexOf(disableStr + '=true') > -1) {
                     window[disableStr] = true;
@@ -703,22 +703,22 @@ page {
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-                ga('create', '{$plugin.hhthemekroeswang.googleAnalytics}', 'auto');
+                ga('create', '{$plugin.hhthemestack.googleAnalytics}', 'auto');
                 ga('set', 'anonymizeIp', true);
                 ga('send', 'pageview');
                 setTimeout("ga('send','event','Webseitenaufenthalt','20 Sekunden auf Seite')", 20000);
             </script>
         )
-        1000.if.isTrue = {$plugin.hhthemekroeswang.googleAnalytics}
+        1000.if.isTrue = {$plugin.hhthemestack.googleAnalytics}
 
         ################################################################
         ### Google Tag Manager ###
         ################################################################
         1001 = TEXT
         1001.value (
-            {$plugin.hhthemekroeswang.googleTagManager}
+            {$plugin.hhthemestack.googleTagManager}
         )
-        1001.if.isTrue = {$plugin.hhthemekroeswang.googleTagManager}
+        1001.if.isTrue = {$plugin.hhthemestack.googleTagManager}
 
         ################################################################
         ### Piwik Analytics ###
@@ -731,7 +731,7 @@ page {
                 _paq.push(['trackPageView']);
                 _paq.push(['enableLinkTracking']);
                 (function() {
-                    var u="//{$plugin.hhthemekroeswang.piwikAnalytics}/";
+                    var u="//{$plugin.hhthemestack.piwikAnalytics}/";
                     _paq.push(['setTrackerUrl', u+'piwik.php']);
                     _paq.push(['setSiteId', '1']);
                     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -739,7 +739,7 @@ page {
                 })();
             </script>
         )
-        1010.if.isTrue = {$plugin.hhthemekroeswang.piwikAnalytics}
+        1010.if.isTrue = {$plugin.hhthemestack.piwikAnalytics}
     }
 
     ################################################################
@@ -747,7 +747,7 @@ page {
     ################################################################
     bodyTag >
     bodyTagCObject = TEXT
-    bodyTagCObject.stdWrap.dataWrap = <body id="page-{field:uid}" class="be-{field:backend_layout} {$plugin.hhthemekroeswang.layout}"><noscript><div><p>Sie haben JavaScript deaktiviert!<br />Um diese Seite in follen Zügen genießen zu können, aktivieren Sie bitte JavaScript in Ihrem Browser.<br />Danke.</p></div></noscript>
+    bodyTagCObject.stdWrap.dataWrap = <body id="page-{field:uid}" class="be-{field:backend_layout} {$plugin.hhthemestack.layout}"><noscript><div><p>Sie haben JavaScript deaktiviert!<br />Um diese Seite in follen Zügen genießen zu können, aktivieren Sie bitte JavaScript in Ihrem Browser.<br />Danke.</p></div></noscript>
 }
 
 ################################################################

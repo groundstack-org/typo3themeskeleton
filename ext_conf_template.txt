@@ -2,5 +2,5 @@
 ### RTE Presets ###
 ###################
 
-# cat=RTE; type=string; label=LLL:EXT:hhthemekroeswang/Resources/Private/Language/locallang_extconfig.xlf:extconfig.rtePresetsPath
-rtePresets = EXT:hhthemekroeswang/Configuration/RTE/rte_hauerheinrich.yaml
+# cat=RTE; type=string; label=LLL:EXT:hhthemestack/Resources/Private/Language/locallang_extconfig.xlf:extconfig.rtePresetsPath
+rtePresets = EXT:hhthemestack/Configuration/RTE/rte_hauerheinrich.yaml

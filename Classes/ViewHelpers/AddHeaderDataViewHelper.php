@@ -1,5 +1,5 @@
 <?php
-    namespace HauerHeinrich\Hhthemekroeswang\ViewHelpers;
+    namespace HauerHeinrich\Hhthemestack\ViewHelpers;
 
     /***************************************************************
      * Copyright notice

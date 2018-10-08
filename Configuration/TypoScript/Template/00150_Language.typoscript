@@ -22,7 +22,7 @@
     plugin.tx_indexedsearch._DEFAULT_PI_VARS.lang = 1
 
     page {
-        bodyTagCObject.stdWrap.dataWrap = <body id="page-{field:uid}" class="be-{field:backend_layout} {$plugin.hhthemekroeswang.layout}"><noscript><div><p>Your JavaScript is disabled!<br />To enjoy this site to the fullest please activate it!<br />Thank you.</p></div></noscript>
+        bodyTagCObject.stdWrap.dataWrap = <body id="page-{field:uid}" class="be-{field:backend_layout} {$plugin.hhthemestack.layout}"><noscript><div><p>Your JavaScript is disabled!<br />To enjoy this site to the fullest please activate it!<br />Thank you.</p></div></noscript>
     }
 [GLOBAL]
 
@@ -62,7 +62,7 @@ page {
                     }
                 }
             }
-            if.isTrue = {$plugin.hhthemekroeswang.multiLanguage}
+            if.isTrue = {$plugin.hhthemestack.multiLanguage}
         }
 
         105 = HMENU
@@ -94,6 +94,6 @@ page {
                 }
             }
         }
-        if.isTrue = {$plugin.hhthemekroeswang.multiLanguage}
+        if.isTrue = {$plugin.hhthemestack.multiLanguage}
     }
 }

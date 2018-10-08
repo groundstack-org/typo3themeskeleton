@@ -134,12 +134,12 @@ page {
                 special.value = 0,1
                 as = MenuLanguage
 
-                if.isTrue = {$plugin.hhthemekroeswang.multiLanguage}
+                if.isTrue = {$plugin.hhthemestack.multiLanguage}
             }
         }
 
         settings {
-            indexedSearchId = {$plugin.hhthemekroeswang.indexedSearchId}
+            indexedSearchId = {$plugin.hhthemestack.indexedSearchId}
             language = TSFE:sys_language_uid
         }
 
@@ -172,7 +172,7 @@ page {
                 table = tt_content
                 select {
                     where = colPos = 1000
-                    pidInList = {$plugin.hhthemekroeswang.footerSeitenID}
+                    pidInList = {$plugin.hhthemestack.footerSeitenID}
                     orderBy = sorting ASC, colPos ASC
                     languageField = sys_language_uid
                 }
