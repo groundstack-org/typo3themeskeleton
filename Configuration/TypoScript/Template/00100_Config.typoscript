@@ -58,12 +58,13 @@ page {
             ### https://securityheaders.com/
             1.header = Server:
             5.header = X-Powered-By:
+            ### sagt dem Browser er soll bitte gleich https verwenden !!erst ab IE 11!! Sperrt WEBMAIL
             10.header = strict-transport-security:max-age=31536000
             20.header = X-Frame-Options: SAMEORIGIN
             30.header = X-Xss-Protection: 1; mode=block
             40.header = X-Content-Type-Options: nosniff
             50.header = Referrer-Policy:strict-origin
-            60.header = Content-Security-Policy: default-src 'unsafe-inline' data: https://*
+            60.header = Content-Security-Policy: default-src 'unsafe-inline' 'unsafe-eval' data: https://*
             70.header = Feature-Policy: vibrate 'self'; push *; camera 'none'
         }
     }
@@ -89,7 +90,7 @@ page {
         config {
             additionalHeaders {
                 ### https://securityheaders.com/
-                60.header = Content-Security-Policy: default-src 'unsafe-inline' data: http://*
+                60.header = Content-Security-Policy: default-src 'unsafe-inline' 'unsafe-eval' data: http://*
             }
         }
     }
