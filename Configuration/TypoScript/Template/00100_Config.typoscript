@@ -544,18 +544,6 @@ page {
             1.NO.stdWrap.cObject.10.wrap = <link href="|" title="{field:title}" rel="next">
         }
 
-        10 = TEXT
-        10.value (
-            <!--[if lt IE 9]>
-                <body class="old-IE">
-                <p class="br-to-old">Your version of the browser is out of date! Please update to the latest or one of these <a href="http://outdatedbrowser.com/de" title="browser comparison and download">"browser comparison".</a></p>
-                <p class="br-to-old">Ihre Browserversion ist zu alt und wird nicht mehr unterstützt. Bitte aktualisieren Sie Ihren Browser oder verwenden Sie einen <a href="http://outdatedbrowser.com/de" title="Browser vergleich und Download">"alternativen Browser."</a> Danke.</p>
-            <![endif]-->
-            <!--[if IE 9]>
-                <meta http-equiv="X-UA-Compatible" content="IE=9">
-            <![endif]-->
-        )
-
         20 = TEXT
         20 {
             data = page : SYS_LASTCHANGED
