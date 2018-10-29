@@ -145,8 +145,18 @@ page {
         variables {
             layout = TEXT
             layout {
-                data = levelfield: -1, backend_layout_next_level, slide
-                override.field = backend_layout
+                cObject = TEXT
+                cObject {
+                    data = pagelayout
+                    required = 1
+                    case = uppercamelcase
+                    split {
+                        token = pagets__
+                        cObjNum = 1
+                        1.current = 1
+                    }
+                }
+                ifEmpty = Default
             }
 
             Banner =< styles.content.get
