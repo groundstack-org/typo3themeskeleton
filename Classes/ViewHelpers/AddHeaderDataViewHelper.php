@@ -1,5 +1,5 @@
 <?php
-namespace HauerHeinrich\Typo3ThemeSkeleton\ViewHelpers;
+namespace HauerHeinrich\HhThemeSkeleton\ViewHelpers;
 
 /***************************************************************
  * Copyright notice
@@ -36,14 +36,23 @@ class AddHeaderDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractV
     public function render($tag) {
         switch ($tag) {
             case 'css':
-                $cssContent = str_replace("<style>", "", $GLOBALS['TSFE']->additionalHeaderData['9999']);
-                $cssContent = str_replace("</style>", "", $cssContent);
-                $GLOBALS['TSFE']->additionalHeaderData['9999'] = "<style>".$cssContent . htmlspecialchars(trim($this->renderChildren())) ."</style>";
+                if($GLOBALS['TSFE']->additionalHeaderData['9999']) {
+                    $cssContent = str_replace("<style>", "", $GLOBALS['TSFE']->additionalHeaderData['9999']);
+                    $cssContent = str_replace("</style>", "", $cssContent);
+                    $GLOBALS['TSFE']->additionalHeaderData['9999'] = "<style>".$cssContent . htmlspecialchars(trim($this->renderChildren())) ."</style>";
+                } else {
+                    $GLOBALS['TSFE']->additionalHeaderData['9999'] = htmlspecialchars(trim($this->renderChildren()));
+                }
                 break;
             case 'js':
-                $jsContent = str_replace("<script>", "", $GLOBALS['TSFE']->additionalFooterData['9999']);
-                $jsContent = str_replace("</script>", "", $jsContent);
-                $GLOBALS['TSFE']->additionalFooterData['9999'] = "<script>".$jsContent . trim($this->renderChildren()) ."</script>";
+
+                if($GLOBALS['TSFE']->additionalFooterData['9999']) {
+                    $jsContent = str_replace("<script>", "", $GLOBALS['TSFE']->additionalFooterData['9999']);
+                    $jsContent = str_replace("</script>", "", $jsContent);
+                    $GLOBALS['TSFE']->additionalFooterData['9999'] = "<script>".$jsContent . trim($this->renderChildren()) ."</script>";
+                } else {
+                    $GLOBALS['TSFE']->additionalFooterData['9999'] = trim($this->renderChildren());
+                }
                 break;
             default:
                 $GLOBALS['TSFE']->additionalFooterData[] = "<div class='error'>ERROR: no or wrong tag in AddHeaderDataViewHelper</div>";
