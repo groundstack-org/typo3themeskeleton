@@ -13,16 +13,26 @@ imports:
 ### https://www.thomaskieslich.de/blog/127-typo3-8x-ckeditor-konfigurieren/
 
 editor:
+
   config:
+
     contentsCss:
       - "EXT:rte_ckeditor/Resources/Public/Css/contents.css"
-      - "EXT:typo3themeskeleton/Resources/Public/Css/UserRTE.min.css"
+      - "EXT:hhthemeskeleton/Resources/Public/Css/UserRTE.min.css"
 
-    resize_enabled: true
 
     stylesSet:
-      - { "name": "bigger-red", "element": "span", "attributes": {"class": "bigger-red"} }
-      - { "name": "bigger-grey", "element": "span", "attributes": {"class": "bigger-grey"} }
+      ### For block level e. g.:
+      - { name: "font-size xlarge", element: "p", attributes: { 'class': 'font-size-xlarge' } }
+      - { name: "font-size large", element: "p", attributes: { 'class': 'font-size-large' } }
+      - { name: "font-size medium", element: "p", attributes: { 'class': 'font-size-medium' } }
+      - { name: "font-size small", element: "p", attributes: { 'class': 'font-size-small' } }
+      - { name: "font-size xsmall", element: "p", attributes: { 'class': 'font-size-xsmall' } }
+
+      ### For inline stil e. g.:
+      - { name: "red brand", element: "span", attributes: {"class": "color-brand"} }
+      - { name: "btn-default", element: "span", attributes: {"class": "btn-default"} }
+      - { name: "btn-red", element: "span", attributes: {"class": "btn-red"} }
 
     ### format tags:
     format_tags: "p"
@@ -36,14 +46,17 @@ editor:
       - { name: document, groups: [ mode, document, doctools ] }
       - { name: clipboard, groups: [ clipboard, undo ] }
       - { name: editing, groups: [ find, selection, spellchecker, editing, removeformat ] }
+      - { name: forms, groups: [ forms ] }
       - { name: basicstyles, groups: [ basicstyles, cleanup ] }
       - "/"
       - { name: paragraph, groups: [ list, indent, blocks, align, bidi, paragraph ] }
       - { name: links, groups: [ links ] }
       - { name: insert, groups: [ insert ] }
       - { name: styles, groups: [ styles ] }
+      - { name: colors, groups: [ colors ] }
       - { name: tools, groups: [ tools ] }
       - { name: others, groups: [ others ] }
+      - { name: about, groups: [ about ] }
 
     justifyClasses:
       - text-left
@@ -82,18 +95,13 @@ editor:
       - Iframe
       - About
 
-    allowedContent:
-      - a: { classes: '*' }
-
     extraAllowedContent:
-      - a[href,document-href,tel,title,class,data-*]
-      - span[!data-*,class]
-      - p[!data-*]
-      - span(shy)
+      - a[!href,document-href,tel]
 
   ### external Plugin e. g.:
   # externalPlugins:
-    # simplebutton: { resource: "EXT:typo3themeskeleton/Resources/Public/JavaScript/RTE_Plugins/simplebutton/plugin.js" }
+    # dialogadvtab: { resource: "EXT:extensionName/Resources/Public/JavaScript/RTE_Plugins/dialogadvtab/plugin.js" }
+
 
 ### Button config and defaults
 buttons:
@@ -103,8 +111,6 @@ buttons:
     properties:
       class:
         allowedClasses: '
-            btn-blue,
-            btn-grey,
             link-internal,
             link-internal-blank,
             link-download,
