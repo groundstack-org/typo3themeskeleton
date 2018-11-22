@@ -1,5 +1,5 @@
 <?php
-namespace HauerHeinrich\HhThemeSkeleton\ViewHelpers;
+namespace GroundStack\HhThemeSkeleton\ViewHelpers;
 
 /***************************************************************
  * Copyright notice

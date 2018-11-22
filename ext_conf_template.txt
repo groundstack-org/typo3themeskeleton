@@ -3,4 +3,4 @@
 ###################
 
 # cat=RTE; type=string; label=LLL:EXT:typo3themeskeleton/Resources/Private/Language/locallang_extconfig.xlf:extconfig.rtePresetsPath
-rtePresets = EXT:typo3themeskeleton/Configuration/RTE/rte_hauerheinrich.yaml
+rtePresets = EXT:typo3themeskeleton/Configuration/RTE/rte_theme.yaml

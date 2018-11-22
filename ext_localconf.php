@@ -9,7 +9,7 @@ call_user_func(function() {
     $rtePresets = $_extConfig['rtePresets'];
 
     // Register own rte ckeditor config
-    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['rte_hauerheinrich'] = $rtePresets;
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['rte_theme'] = $rtePresets;
 
     // register svg icons: identifier and filename
     $iconsPng = [
@@ -85,10 +85,10 @@ call_user_func(function() {
     // Hooks
     // Hook for Viewhelper "AddHeaderDataViewHelper"
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-postProcess'][] =
-        HauerHeinrich\Typo3ThemeSkeleton\Hooks\AddFooterData::class . '->addJSFooter';
+        GroundStack\Typo3ThemeSkeleton\Hooks\AddFooterData::class . '->addJSFooter';
 
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-postProcess'][] =
-        HauerHeinrich\Typo3ThemeSkeleton\Hooks\AddHeaderData::class . '->addCSSHeader';
+        GroundStack\Typo3ThemeSkeleton\Hooks\AddHeaderData::class . '->addCSSHeader';
 
     // AJAX eID
     // $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['hhtheme'] = "EXT:{$extensionname}/Classes/EidApi/index.php";

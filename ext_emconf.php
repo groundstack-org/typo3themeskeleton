@@ -11,11 +11,11 @@
  ***************************************************************/
 
 $EM_CONF['typo3themeskeleton'] = [
-    'title' => 'Hauer-Heinrich Theme Skeleton',
+    'title' => 'GroundStack Theme Skeleton',
     'description' => 'Distribution theme skeleton: Anpassbar im Backend im Konstanten Editor.',
     'category' => 'distribution',
     'author' => 'Christian Hackl',
-    'author_email' => 'web@hauer-heinrich.de',
+    'author_email' => 'chackl@hauer-heinrich.de',
     'state' => 'beta',
     'internal' => '',
     'uploadfolder' => '0',
@@ -40,7 +40,7 @@ $EM_CONF['typo3themeskeleton'] = [
     ],
     'autoload' => [
         'psr-4' => [
-            'HauerHeinrich\\Typo3ThemeSkeleton\\' => 'Classes'
+            'GroundStack\\Typo3ThemeSkeleton\\' => 'Classes'
         ],
     ],
 ];

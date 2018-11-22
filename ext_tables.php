@@ -14,9 +14,9 @@ call_user_func(function() {
     if (TYPO3_MODE === 'BE' || TYPO3_MODE === 'FE' && isset($GLOBALS['BE_USER'])) {
         // add CSS and JS in TYPO3-BE
         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/backend.php']['constructPostProcess'][]
-            = \HauerHeinrich\HhThemeSkeleton\Hooks\BackendControllerHook::class . '->addCss';
+            = \GroundStack\HhThemeSkeleton\Hooks\BackendControllerHook::class . '->addCss';
 
         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/backend.php']['constructPostProcess'][]
-            = \HauerHeinrich\HhThemeSkeleton\Hooks\BackendControllerHook::class . '->addJavaScript';
+            = \GroundStack\HhThemeSkeleton\Hooks\BackendControllerHook::class . '->addJavaScript';
     }
 });

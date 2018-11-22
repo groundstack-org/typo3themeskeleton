@@ -8,6 +8,6 @@ call_user_func(function() {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionname,
         'Configuration/TypoScript',
-        'Hauer-Heinrich Theme Skeleton'
+        'GroundStack Theme Skeleton'
     );
 });

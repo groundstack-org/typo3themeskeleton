@@ -189,7 +189,7 @@ plugin.tx_ttaddress_pi1 {
             allWrap = <div class="address-default">|</div>
             phone {
                 ### Eigene Funktion für Links bei Telefonnummern
-                postUserFunc = HauerHeinrich\typo3themeskeleton\Hooks\tt_address_phone_link->user_tt_address_tel_link
+                postUserFunc = GroundStack\typo3themeskeleton\Hooks\tt_address_phone_link->user_tt_address_tel_link
                 postUserFunc {
                     countryCode = 43
                     areaCode = 4782
