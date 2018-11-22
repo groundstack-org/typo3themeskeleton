@@ -5,12 +5,17 @@
     "authors": [
         {
             "name": "Christian Hackl",
-            "email": "chackl@hauer-heinrich.de"
+            "email": "info@groundstack.de",
+            "homepage": "http://www.groundstack.de",
+            "role": "Developer"
         }
     ],
     "version": "0.1.0",
-    "license": "GPL-2.0",
+    "license": ["GPL-2.0-or-later"],
     "keywords": ["TYPO3 CMS", "Theme", "Distribution"],
+    "support": {
+        "issues": "https://github.com/groundstack-org/typo3themeskeleton/issues"
+    },
     "replace": {
         "demoext": "self.version",
         "typo3-ter/typo3themeskeleton": "self.version"
