@@ -1,5 +1,5 @@
 {
-    "name": "hauerheinrich/typo3themeskeleton",
+    "name": "groundstack/typo3themeskeleton",
     "type": "typo3-cms-extension",
     "description": "",
     "authors": [
@@ -8,6 +8,7 @@
             "email": "chackl@hauer-heinrich.de"
         }
     ],
+    "version": "0.1.0",
     "license": "GPL-2.0",
     "keywords": ["TYPO3 CMS", "Theme", "Distribution"],
     "replace": {
@@ -26,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "HauerHeinrich\\Typo3ThemeSkeleton\\": "Classes"
+            "GroundStack\\Typo3ThemeSkeleton\\": "Classes"
         }
     },
     "extra": {
