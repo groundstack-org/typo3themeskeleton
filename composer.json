@@ -1,7 +1,7 @@
 {
     "name": "groundstack/typo3themeskeleton",
     "type": "typo3-cms-extension",
-    "description": "",
+    "description": "to kickstart your typo3 theme",
     "authors": [
         {
             "name": "Christian Hackl",
@@ -17,7 +17,7 @@
         "issues": "https://github.com/groundstack-org/typo3themeskeleton/issues"
     },
     "replace": {
-        "demoext": "self.version",
+        "typo3themeskeleton": "self.version",
         "typo3-ter/typo3themeskeleton": "self.version"
     },
     "require": {
