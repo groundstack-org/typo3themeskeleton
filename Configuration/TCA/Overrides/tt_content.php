@@ -41,7 +41,7 @@ call_user_func(function() {
                         'value' => 4 / 3
                     ],
                 ],
-                'selectedRatio' => 'first',
+                'selectedRatio' => 'NaN',
             ],
         ],
     ];
