@@ -74,6 +74,7 @@ gulp.task('install:onsave-atom', function(done){
 });
 
 // INSTALLER - IDE Plugins for VSCode
+// install - VSCode Plugin: https://marketplace.visualstudio.com/items?itemName=wk-j.save-and-run
 gulp.task('install:onsave-vscode', function(done){
   commandExists('code').then(function(command){
     exec('code --install-extension wk-j.save-and-run', function (err, stdout, stderr) {
@@ -86,6 +87,20 @@ gulp.task('install:onsave-vscode', function(done){
     console.log("The Command \"code\" (from Visual Studio Code) was not found or is not accessible on your System (please read the docs if you want to use it in your vscode environment: https://code.visualstudio.com/docs/editor/command-line).\nSkipped Implementation of the Auto-Save Functionality..");
   });
 });
+
+// install - VSCode Plugin: https://marketplace.visualstudio.com/items?itemName=philfontaine.autolaunch
+gulp.task('install:autolaunch-vscode', function(done){
+    commandExists('code').then(function(command){
+      exec('code --install-extension philfontaine.autolaunch', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        console.log("Please restart your IDE so the Plugin can be correctly initialized.");
+        done(err);
+      });
+    }).catch(function(){
+      console.log("The Command \"code\" (from Visual Studio Code) was not found or is not accessible on your System (please read the docs if you want to use it in your vscode environment: https://code.visualstudio.com/docs/editor/command-line).\nSkipped Implementation of the Auto-Save Functionality..");
+    });
+  });
 
 // INSTALLER - IDE Plugins for ATOM AND VSCODE
 gulp.task('install:onsave', gulp.parallel('install:onsave-atom', 'install:onsave-vscode'));
