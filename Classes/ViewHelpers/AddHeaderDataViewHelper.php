@@ -1,6 +1,10 @@
 <?php
 namespace GroundStack\HhThemeSkeleton\ViewHelpers;
 
+
+/* !!! IMPORTANT - THIS VIEWHELPER IS DEPRICATED - PLEASE USE AddAssetsDataViewhelper!!! */
+
+
 /***************************************************************
  * Copyright notice
  *
