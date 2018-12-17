@@ -142,35 +142,6 @@ function removeClass(el, className) {
 }
 
 /**
- * Object merge:
- * Usage:
- * var myObject1 = { One: "One" };
- * myObject1.merge({ Two: "Two" }).merge({ Three: "Three" });
- * ### myObject1 is { One: "One", Two: "Two", Three: "Three", merge: function }
- *
- * var myObject2 = Object.merge2({ One: "One" }, { Two: "Two" });
- * Object.merge2(myObject2, { Three: "Three" });
- * ### myObject2 is { One: "One", Two: "Two", Three: "Three" }
- */
-// Extend the protype so you can make calls on the instance
-Object.prototype.merge = function(obj2) {
-    for (var attrname in obj2) {
-        this[attrname] = obj2[attrname];
-    }
-    // Returning this is optional and certainly up to your implementation.
-    // It allows for nice method chaining.
-    return this;
-};
-// Append to the object constructor function so you can only make static calls
-Object.merge2 = function(obj1, obj2) {
-    for (var attrname in obj2) {
-        obj1[attrname] = obj2[attrname];
-    }
-    // Returning obj1 is optional and certainly up to your implementation
-    return obj1;
-};
-
-/**
  * Print function
  * @public
  * @param {Element} content  the element to which should be printed
@@ -195,8 +166,24 @@ function printcontent(content) {
 var dictionary, set_lang;
 dictionary = {
     "en-EN": {
+        "_header": 'Cookies used on the website!',
+        "_message": 'Cookies facilitate the provision of our services. By using our services you agree that we use cookies.',
+        "_dismiss": 'I agree!',
+        "_allow": 'Allow cookies',
+        "_deny": 'Decline',
+        "_link": 'Read more',
+        "_href": '/datenschutz/',
+        "_close": '&#x274c;'
     },
     "de-DE": {
+        "_header": 'Cookies used on the website!',
+        "_message": 'Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklären Sie sich damit einverstanden, dass wir Cookies verwenden.',
+        "_dismiss": 'Einverstanden!',
+        "_allow": 'Allow cookies',
+        "_deny": 'Decline',
+        "_link": 'Mehr Informationen',
+        "_href": '/datenschutz/',
+        "_close": '&#x274c;'
     }
 };
 
