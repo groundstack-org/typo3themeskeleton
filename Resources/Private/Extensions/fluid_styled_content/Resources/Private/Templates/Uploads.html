@@ -1,0 +1,80 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:hh="http://typo3.org/ns/GroundStack/Typo3ThemeSkeleton/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+<f:if condition="{files}">
+    <f:switch expression="{data.uploads_type}">
+        <f:case value="3">
+            <f:render section="imageGallery" arguments="{_all}" />
+        </f:case>
+        <f:defaultCase>
+            <f:render section="default" arguments="{_all}" />
+        </f:defaultCase>
+    </f:switch>
+</f:if>
+</f:section>
+
+<f:section name="default">
+<ul class="ce-uploads">
+    <f:for each="{files}" as="file" iteration="fileIterator">
+        <li>
+            <f:if condition="{data.uploads_type} == 1">
+                <img src="{f:uri.resource(path: 'Icons/FileIcons/{file.extension}.gif', extensionName: 'frontend')}" alt="">
+            </f:if>
+            <f:if condition="{data.uploads_type} == 2">
+                <f:if condition="{f:uri.image(src: 'file:{f:if(condition: file.originalFile, then: \'file:{file.originalFile.uid}\', else: \'file:{file.uid}\')}')} != '/'">
+                    <f:then>
+                        <a href="{file.publicUrl}" {f:if(condition:data.target,then: ' target="{data.target}"')}{f:if(condition: file.title, then: ' title="{file.title}"')}>
+                            <f:media file="{file}" width="150" alt="{file.properties.alternative}" />
+                        </a>
+                    </f:then>
+                    <f:else>
+                        <img src="{f:uri.resource(path: 'Icons/FileIcons/{file.extension}.gif', extensionName: 'frontend')}" alt="">
+                    </f:else>
+                </f:if>
+            </f:if>
+            <div>
+                <a href="{file.publicUrl}" {f:if(condition:data.target,then: ' target="{data.target}"')}{f:if(condition: file.title, then: ' title="{file.title}"')}>
+                    <span class="ce-uploads-fileName">{f:if(condition: file.properties.title, then: file.properties.title, else: file.name) -> f:format.htmlspecialchars()}</span>
+                </a>
+                <f:if condition="{file.properties.description}">
+                    <f:if condition="{data.uploads_description}">
+                        <span class="ce-uploads-description">{file.properties.description}</span>
+                    </f:if>
+                </f:if>
+                <f:if condition="{data.filelink_size}">
+                    <span class="ce-uploads-filesize"><f:format.bytes value="{file.properties.size}" /></span>
+                </f:if>
+            </div>
+        </li>
+    </f:for>
+</ul>
+</f:section>
+
+
+<f:section name="imageGallery">
+    <div class="ce-uploads ce-uploads-imagegallery">
+        <f:for each="{files}" as="file">
+            <a href="{file.publicUrl}" {f:if(condition:data.target,then: ' target="{data.target}"')}{f:if(condition: file.properties.title, then: ' title="{file.properties.title}"')}{f:if(condition: file.properties.download_name, then: ' download="{file.properties.download_name}.{file.extension}"')}>
+                <figure class="image">
+                    <f:if condition="{file.properties.description}">
+                        <f:then>
+                                <f:render partial="Media/Rendering/Image" arguments="{_all}" />
+                            <figcaption>
+                                <f:format.raw>{file.properties.description}</f:format.raw>
+                            </figcaption>
+                        </f:then>
+                        <f:else>
+                                <f:render partial="Media/Rendering/Image" arguments="{_all}" />
+                        </f:else>
+                    </f:if>
+                </figure>
+            </a>
+        </f:for>
+    </div>
+</f:section>
+
+</html>
