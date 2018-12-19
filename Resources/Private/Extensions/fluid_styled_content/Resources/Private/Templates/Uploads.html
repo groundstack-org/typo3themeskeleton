@@ -62,19 +62,38 @@
                 <figure class="image">
                     <f:if condition="{file.properties.description}">
                         <f:then>
-                                <f:render partial="Media/Rendering/Image" arguments="{_all}" />
+                            <f:render section="imagefile" arguments="{_all}" />
                             <figcaption>
                                 <f:format.raw>{file.properties.description}</f:format.raw>
                             </figcaption>
                         </f:then>
                         <f:else>
-                                <f:render partial="Media/Rendering/Image" arguments="{_all}" />
+                            <f:render section="imagefile" arguments="{_all}" />
                         </f:else>
                     </f:if>
                 </figure>
             </a>
         </f:for>
     </div>
+</f:section>
+
+<f:section name="imagefile">
+    <picture>
+        <source srcset="{f:uri.image(src:'{file.publicUrl}', cropVariant: 'default', height: '358c', maxHeight: '{data.imageheight}', width: '550c', maxWidth: '1920')}" media="(min-width: 1601px)">
+        <source srcset="{f:uri.image(src:'{file.publicUrl}', cropVariant: 'default', height: '358c', maxHeight: '{data.imageheight}', width: '550c', maxWidth: '1600')}" media="(min-width: 1334px)">
+        <source srcset="{f:uri.image(src:'{file.publicUrl}', cropVariant: 'default', height: '358c', maxHeight: '{data.imageheight}', width: '550c', maxWidth: '1333')}" media="(min-width: 1001px)">
+        <source srcset="{f:uri.image(src:'{file.publicUrl}', cropVariant: 'default', height: '358c', maxHeight: '{data.imageheight}', width: '550c', maxWidth: '1000')}" media="(min-width: 801px)">
+        <source srcset="{f:uri.image(src:'{file.publicUrl}', cropVariant: 'smartphone', height: '358c', maxHeight: '{data.imageheight}', width: '550c', maxWidth: '800')}" media="(min-width: 601px)">
+        <source srcset="{f:uri.image(src:'{file.publicUrl}', cropVariant: 'smartphone', height: '358c', maxHeight: '{data.imageheight}', width: '550c', maxWidth: '600')}" media="(min-width: 401px)">
+        <source srcset="{f:uri.image(src:'{file.publicUrl}', cropVariant: 'smartphone', height: '267c', maxHeight: '{data.imageheight}', width: '400c', maxWidth: '400')}" media="(min-width: 321px)">
+        <source srcset="{f:uri.image(src:'{file.publicUrl}', cropVariant: 'smartphone', height: '214c', maxHeight: '{data.imageheight}', width: '320c', maxWidth: '320')}" media="(min-width: 200px)">
+        <img src="{f:uri.image(src:'{file.publicUrl}', cropVariant: 'default', height: '{file.properties.height}', maxHeight: '{data.imageheight}', width: '{file.properties.width}', maxWidth: '{data.imagewidth}')}"
+            {f:if(condition: '{data.imagewidth}', then: 'width="{data.imagewidth}"', else: 'width="{file.properties.width}"')}
+            {f:if(condition: '{data.imageheight}', then: 'height="{data.imageheight}"', else: 'height="{file.properties.height}"')}
+            {f:if(condition: '{file.properties.title}', then: 'title="{file.properties.title}"')}
+            {f:if(condition: '{file.properties.alternative}', then: 'title="{file.properties.alternative}"')}
+        />
+    </picture>
 </f:section>
 
 </html>
