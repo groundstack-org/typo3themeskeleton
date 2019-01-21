@@ -39,13 +39,14 @@ $customChanges = [
 $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customChanges);
 
 // Special for windows systems
-$customWindows = [
-    'SYS' => [
-        'systemLocale' => 'de-de',
-    ]
-];
-$GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customWindows);
-
+if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+    $customWindows = [
+        'SYS' => [
+            'systemLocale' => 'de-de',
+        ]
+    ];
+    $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customWindows);
+}
 
 // Developement:
 if(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopment()) {
