@@ -28,10 +28,8 @@ $EM_CONF['typo3themeskeleton'] = [
             'fluid_styled_content' => '8.7.0-9.0.0',
             'gridelements' => '8.0.0-8.9.9',
             'news' => '7.0.0-7.9.9',
-            'tt_address' => '3.2.3-3.9.9',
-            'cyz_address' => '0.5.0-0.9.9',
-            'powermail' => '6.0.0-6.9.9',
-            'realurl' => '2.4.0-2.99.99'
+            'tt_address' => '4.0.0-4.9.9',
+            'powermail' => '6.0.0-6.9.9'
         ],
         'conflicts' => [
         ],
