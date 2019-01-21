@@ -51,12 +51,7 @@ styles {
 ################################################################
 ### tt_address ###
 ################################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tt_address/static/pi1/constants.txt">
-
-################################################################
-### tt_address - cyz_address Plugin ###
-################################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cyz_address/Configuration/TypoScript/constants.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tt_address/Configuration/TypoScript/constants.typoscript">
 
 ################################################################
 ### indexed_search - Suche ###

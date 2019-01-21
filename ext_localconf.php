@@ -83,12 +83,6 @@ call_user_func(function() {
     ');
 
     // Hooks
-    // Hook for Viewhelper "AddHeaderDataViewHelper"
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-postProcess'][] =
-        GroundStack\Typo3ThemeSkeleton\Hooks\AddFooterData::class . '->addJSFooter';
-
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-postProcess'][] =
-        GroundStack\Typo3ThemeSkeleton\Hooks\AddHeaderData::class . '->addCSSHeader';
 
     // AJAX eID
     // $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['hhtheme'] = "EXT:{$extensionname}/Classes/EidApi/index.php";

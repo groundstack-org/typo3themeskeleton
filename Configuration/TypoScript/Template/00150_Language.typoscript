@@ -4,9 +4,9 @@
 [globalVar = LIT:1 = {$plugin.hhthemecrhydraulics.multiLanguage}]
     config {
         linkVars = L(0-1)
-        defaultGetVars {
-            L = 0
-        }
+        # defaultGetVars {
+        #     L = 0
+        # }
     }
 [global]
 

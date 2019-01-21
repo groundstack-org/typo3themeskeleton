@@ -18,27 +18,6 @@ lib.contentElement {
 }
 
 ################################################################
-### Heise shariff - tx_shariff ###
-################################################################
-tt_content.list.20.rxshariff_shariff {
-    settings {
-        enableBackend = 1
-        data {
-            lang = de
-            mail-body =
-            mail-subject =
-            mail-url = mailto:
-            media-url = null
-            orientation = horizontal
-            referrer-track = null
-            services =
-            theme = white
-            twitter-via = null
-        }
-    }
-}
-
-################################################################
 ### news - tx_news ###
 ################################################################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/setup.txt">
@@ -60,8 +39,7 @@ plugin.tx_news {
     settings {
         cssFile >
         link {
-            # Funktioniert nur mit angepasster realurl_conf.php
-            skipControllerAndAction = 1
+            skipControllerAndAction = 0
         }
 
         displayDummyIfNoMedia = 0
@@ -77,15 +55,6 @@ plugin.tx_news {
         }
     }
 }
-
-[globalVar = GP:tx_news_pi1|news > 0]
-    config.defaultGetVars {
-        tx_news_pi1 {
-            controller=News
-            action=detail
-        }
-    }
-[global]
 
 ################################################################
 ### Typo3 form Extenstion ###
@@ -176,180 +145,19 @@ search {
 }
 
 ################################################################
-### tt_address Plugin OLD ###
+### EXT: tt_address ###
 ################################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tt_address/static/pi1/setup.txt">
-plugin.tx_ttaddress_pi1 {
-    pidList = 20
-    templatePath = {$theme.urls.themeResources}Private/Extensions/tt_address/
-    defaultTemplateFileName = default_hcard.htm
-    wrap.if.isFalse = plugin.tx_ttaddress_pi1.templates.simple_hcard
-    templates {
-        default_hcard {
-            allWrap = <div class="address-default">|</div>
-            phone {
-                ### Eigene Funktion für Links bei Telefonnummern
-                postUserFunc = GroundStack\typo3themeskeleton\Hooks\tt_address_phone_link->user_tt_address_tel_link
-                postUserFunc {
-                    countryCode = 43
-                    areaCode = 4782
-                    titlename = Telefonisch für Sie erreichbar unter
-                    mobile = 0
-                }
-                innerWrap = Tel.:&nbsp;|
-                required = 1
-                10 = TEXT
-                10.value.data = LLL:EXT:typo3themeskeleton/Resources/Private/Language/locallang_ttaddress.xlf:fe.phone.title
-            }
-            mobile < .phone
-            mobile {
-                postUserFunc.mobile = 1
-                required = 1
-            }
-            fax {
-                noTrimWrap = |<span class="fax">Fax: |</span>|
-                required = 1
-            }
-            email {
-                wrap = <span class="email">|</span>
-                ### override = E-Mail
-                typolink {
-                    parameter.field = email
-                    title.field = name
-                    title.noTrimWrap = |Schreibe eine E-Mail an: | |
-                }
-                required = 1
-            }
-            www {
-                typolink {
-                    parameter.field = www
-                    target = _blank
-                    title.field = name
-                    title.noTrimWrap = |Rufe die Webseite von | auf. | |
-                }
-                wrap = <span class="url">|</span>
-                required = 1
-            }
-            address {
-                wrap = <span class="address">|</span>
-                required = 1
-            }
-            city {
-                wrap = <span class="city">|</span>
-                required = 1
-            }
-            zip {
-                wrap = <span class="zip">|</span>
-                required = 1
-            }
-            region {
-                wrap = <span class="region">|</span>
-                required = 1
-            }
-            country {
-                wrap = <span class="country">|</span>
-                required = 1
-            }
-            organization {
-                wrap = <span class="organization">|</span>
-                required = 1
-            }
-            position {
-                wrap = <span class="position">|</span>
-                required = 1
-            }
-            description {
-                wrap = <span class="description">|</span>
-                parseFunc = < lib.parseFunc_RTE
-                required = 1
-            }
-            facebook {
-                value = <img src="{$theme.urls.themeResources}Public/Images/Social/fb1.png" title="Follow me on Facebook" alt="Facebook Profil" />
-                typolink {
-                    value = test
-                    parameter.field = facebook
-                    typolink.target = _blank
-                    ATagParams = class="facebook"
-                }
-                required = 1
-            }
-        }
-        simple_hcard < .default_hcard
-        simple_hcard {
-            allWrap = <div class="address-simple">|</div>
-            placeholderImage = fileadmin/template/dummy/260x260.png
-            image {
-                file {
-                    width = 260
-                }
-            }
-        }
-
-        aside_hcard < .default_hcard
-        aside_hcard {
-            allWrap = <div class="address-aside">|</div>
-            image {
-                file {
-                    width = 320
-                }
-            }
-        }
-        aside_slider_hcard < .default_hcard
-        aside_slider_hcard {
-            allWrap = <div class="address-aside-slider">|</div>
-            placeholderImage = fileadmin/template/dummy/260x260.png
-            image {
-                file {
-                    width = 260
-                }
-            }
-        }
-        suppliers_hcard < .default_hcard
-        suppliers_hcard {
-            allWrap = <div class="address-suppliers">|</div>
-            country {
-                wrap = <span class="country">|–</span>
-                required = 1
-            }
-            phone {
-                innerWrap = Tel.:&nbsp;|
-            }
-        }
-    }
-}
-
-### NEW tt_address
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tt_address/Configuration/TypoScript/setup.typoscript">
 plugin.tx_ttaddress {
     view {
         templateRootPaths {
-            10 = EXT:tt_address/Resources/Private/Templates/Address/
-            20 = EXT:typo3themeskeleton/Resources/Private/Extensions/tt_address/Templates/
+            10 = EXT:typo3themeskeleton/Resources/Private/Extensions/tt_address/Templates/
         }
         partialRootPaths {
-            10 = EXT:tt_address/Resources/Private/Partials/
-            20 = EXT:typo3themeskeleton/Resources/Private/Extensions/tt_address/Partials/
+            10 = EXT:typo3themeskeleton/Resources/Private/Extensions/tt_address/Partials/
         }
         layoutRootPaths {
-            10 = EXT:tt_address/Resources/Private/Layouts/
-            20 = EXT:typo3themeskeleton/Resources/Private/Extensions/tt_address/Layouts/
-        }
-    }
-}
-
-################################################################
-### tt_address - cyz_address Plugin ###
-################################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:cyz_address/Configuration/TypoScript/setup.ts">
-plugin.tx_cyzaddress {
-    view {
-        templateRootPaths {
-            10 = {$theme.urls.themeResources}Private/Extensions/cyz_address/Templates/
-        }
-        partialRootPaths {
-            10 = {$theme.urls.themeResources}Private/Extensions/cyz_address/Partials/
-        }
-        layoutRootPaths {
-            10 = {$theme.urls.themeResources}Private/Extensions/cyz_address/Layouts/
+            10 = EXT:typo3themeskeleton/Resources/Private/Extensions/tt_address/Layouts/
         }
     }
 }

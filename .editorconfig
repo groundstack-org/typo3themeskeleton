@@ -20,6 +20,11 @@ indent_size = 4
 indent_style = space
 indent_size = 4
 
+# YAML-Files
+[*.yaml]
+indent_style = space
+indent_size = 2
+
 # CSS-Files
 [*.css]
 indent_style = space

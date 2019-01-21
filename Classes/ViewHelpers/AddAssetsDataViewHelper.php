@@ -1,5 +1,5 @@
 <?php
-namespace GroundStack\HhThemeSkeleton\ViewHelpers;
+namespace HauerHeinrich\HhSlider\ViewHelpers;
 
 /***************************************************************
  * Copyright notice
@@ -52,7 +52,7 @@ class AddAssetsDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractV
         switch ($this->arguments['type']) {
             case 'css':
                 $where = $this->arguments['where'] ? 'additional'.ucfirst($this->arguments['where']).'Data' : 'additionalHeaderData';
-                if($GLOBALS['TSFE']->$where['sliderCSS']) {
+                if($GLOBALS['TSFE']->$where['themeCSS']) {
                     $searchReplaceArray = array(
                         '<style>' => '',
                         '</style>' => ''
@@ -60,7 +60,7 @@ class AddAssetsDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractV
                     $resultOLD = str_replace(
                         array_keys($searchReplaceArray),
                         array_values($searchReplaceArray),
-                        $GLOBALS['TSFE']->$where['sliderCSS']
+                        $GLOBALS['TSFE']->$where['themeCSS']
                     );
                     $resultNEW = str_replace(
                         array_keys($searchReplaceArray),
@@ -68,16 +68,16 @@ class AddAssetsDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractV
                         trim($this->renderChildren())
                     );
 
-                    $GLOBALS['TSFE']->$where['sliderCSS'] = "<style>" . $resultOLD . $resultNEW ."</style>";
+                    $GLOBALS['TSFE']->$where['themeCSS'] = "<style>" . $resultOLD . $resultNEW ."</style>";
                 } else {
-                    $GLOBALS['TSFE']->$where['sliderCSS'] = htmlspecialchars(trim($this->renderChildren()));
+                    $GLOBALS['TSFE']->$where['themeCSS'] = htmlspecialchars(trim($this->renderChildren()));
                 }
 
                 // ToDo: $pageRender->addCssInlineBlock();
                 break;
             case 'js':
                 $where = $this->arguments['where'] ? 'additional'.ucfirst($this->arguments['where']).'Data' : 'additionalFooterData';
-                if($GLOBALS['TSFE']->$where['sliderJS']) {
+                if($GLOBALS['TSFE']->$where['themeJS']) {
                     $searchReplaceArray = array(
                         '<script>' => '',
                         '</script>' => ''
@@ -85,7 +85,7 @@ class AddAssetsDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractV
                     $resultOLD = str_replace(
                         array_keys($searchReplaceArray),
                         array_values($searchReplaceArray),
-                        $GLOBALS['TSFE']->$where['sliderJS']
+                        $GLOBALS['TSFE']->$where['themeJS']
                     );
                     $resultNEW = str_replace(
                         array_keys($searchReplaceArray),
@@ -93,9 +93,9 @@ class AddAssetsDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractV
                         trim($this->renderChildren())
                     );
 
-                    $GLOBALS['TSFE']->$where['sliderJS'] = "<script>" . $resultOLD . $resultNEW ."</script>";
+                    $GLOBALS['TSFE']->$where['themeJS'] = "<script>" . $resultOLD . $resultNEW ."</script>";
                 } else {
-                    $GLOBALS['TSFE']->$where['sliderJS'] = trim($this->renderChildren());
+                    $GLOBALS['TSFE']->$where['themeJS'] = trim($this->renderChildren());
                 }
 
                 // ToDo: $pageRender->addJsFooterInlineCode();  ->addJsInlineCode();
