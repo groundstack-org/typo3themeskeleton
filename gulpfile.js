@@ -162,7 +162,7 @@ gulp.task('sass:compressed', function(done){
     .pipe(sourcemaps.init())
     .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(rename({ suffix:".min" }))
-    .pipe(sourcemaps.write("."))
+    .pipe(sourcemaps.write("./sourcemaps/"))
     .pipe(gulp.dest(cssPath));
   done();
 });
@@ -175,8 +175,10 @@ gulp.task('sass:watch', function(done){
 // JAVASCRIPT COMPRESSION
 gulp.task('js:compressed', function(done){
   gulp.src([jsPath + '/**/*.js', '!'+ jsPath +'/**/*.min.js'])
+    .pipe(sourcemaps.init())
     .pipe(minify())
     .pipe(rename({ suffix:".min" }))
+    .pipe(sourcemaps.write("./sourcemaps/"))
     .pipe(gulp.dest(jsPath));
   done();
 });
