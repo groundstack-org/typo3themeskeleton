@@ -152,7 +152,7 @@ gulp.task('sass:uncompressed', function(done){
   gulp.src(scssPath + '/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(sourcemaps.write("."))
+    .pipe(sourcemaps.write("./sourcemaps/"))
     .pipe(gulp.dest(cssPath));
   done();
 });
@@ -176,7 +176,11 @@ gulp.task('sass:watch', function(done){
 gulp.task('js:compressed', function(done){
   gulp.src([jsPath + '/**/*.js', '!'+ jsPath +'/**/*.min.js'])
     .pipe(sourcemaps.init())
-    .pipe(minify())
+    .pipe(minify({
+        builtIns: false,
+        evaluate: false,
+        mangle: false
+    }))
     .pipe(rename({ suffix:".min" }))
     .pipe(sourcemaps.write("./sourcemaps/"))
     .pipe(gulp.dest(jsPath));
