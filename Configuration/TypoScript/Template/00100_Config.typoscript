@@ -751,8 +751,22 @@ page {
     ### Jede Seite eindeutig identifizieren ###
     ################################################################
     bodyTag >
-    bodyTagCObject = TEXT
-    bodyTagCObject.stdWrap.dataWrap = <body id="page-{field:uid}" class="be-{field:backend_layout} {$plugin.typo3themeskeleton.layout}"><noscript><div><p>Sie haben JavaScript deaktiviert!<br />Um diese Seite in follen Zügen genießen zu können, aktivieren Sie bitte JavaScript in Ihrem Browser.<br />Danke.</p></div></noscript>
+    bodyTagCObject = COA
+    bodyTagCObject{
+        10 = TEXT
+        10 {
+            if.isTrue.data = page:backend_layout
+            data = page:backend_layout
+            dataWrap = <body class="be-| {$plugin.typo3themeskeleton.layout}" id="page-{field:uid}">
+        }
+
+        15 = TEXT
+        15 {
+            if.isFalse.data = page:backend_layout
+            data = levelfield:-2, backend_layout, slide
+            dataWrap = <body class="be-| {$plugin.typo3themeskeleton.layout}" id="page-{field:uid}">
+        }
+    }
 }
 
 ################################################################

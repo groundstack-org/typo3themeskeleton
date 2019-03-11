@@ -38,6 +38,10 @@ $customChanges = [
 ];
 $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customChanges);
 
+// FE - addRootLineFields
+$rootLineField = empty($GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']) ? "backend_layout" : ",backend_layout";
+$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] = $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] . $rootLineField;
+
 // Special for windows systems
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
     $customWindows = [
