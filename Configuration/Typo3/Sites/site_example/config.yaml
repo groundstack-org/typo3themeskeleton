@@ -98,3 +98,20 @@ routeEnhancers:
                 oktober: 10
                 november: 11
                 dezember: 12
+  AddressPlugin:
+    type: Extbase
+    extension: TtAddress
+    plugin: ListView
+    routes:
+      - routePath: '/{address_slug}'
+        _controller: 'Address::show'
+        _arguments:
+          address_slug: address
+    aspects:
+      address_slug:
+        type: PersistedAliasReplaceMapper
+        replaceSource: ' '
+        replaceTarget: '-'
+        toLower: 1
+        tableName: tt_address
+        routeFieldName: name

@@ -151,13 +151,13 @@ search {
 plugin.tx_ttaddress {
     view {
         templateRootPaths {
-            10 = EXT:typo3themeskeleton/Resources/Private/Extensions/tt_address/Templates/
+            10 = {$theme.urls.themeResources}Private/Extensions/tt_address/Templates/
         }
         partialRootPaths {
-            10 = EXT:typo3themeskeleton/Resources/Private/Extensions/tt_address/Partials/
+            10 = {$theme.urls.themeResources}Private/Extensions/tt_address/Partials/
         }
         layoutRootPaths {
-            10 = EXT:typo3themeskeleton/Resources/Private/Extensions/tt_address/Layouts/
+            10 = {$theme.urls.themeResources}Private/Extensions/tt_address/Layouts/
         }
     }
 }
