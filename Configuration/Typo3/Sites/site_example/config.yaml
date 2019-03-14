@@ -39,6 +39,11 @@ routes:
     type: uri
     source: 't3://page?uid=1&type=1533906435' # uid = Domain/Root page UID from the BE page tree
 routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: '/'
+    map:
+      '/': 0
   NewsPlugin:
     type: Extbase
     extension: News
