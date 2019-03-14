@@ -13,7 +13,12 @@ $customChanges = [
         'lockSSL' => 1,
         'versionNumberInFilename' => 0,
         'RTE_imageStorageDir' => 'fileadmin/uploads_rte/',
-        'lockIP' => 4 // DSGVO / GDPR
+        'lockIP' => 4, // DSGVO / GDPR,
+        // only if server has no argon2i
+        // 'passwordHashing' => [
+        //     'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\BcryptPasswordHash',
+        //     'options' => [],
+        // ]
     ],
     'FE' => [
         'compressionLevel' => '0',
@@ -21,7 +26,12 @@ $customChanges = [
         'pageNotFound_handling' => '404.html',
         'pageUnavailable_handling' => '503.html',
         'disableNoCacheParameter' => 1,
-        'hidePagesIfNotTranslatedByDefault' => 1
+        'hidePagesIfNotTranslatedByDefault' => 1,
+        // only if server has no argon2i
+        // 'passwordHashing' => [
+        //     'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\BcryptPasswordHash',
+        //     'options' => [],
+        // ]
     ],
     'EXT' => [
         'extConf' => [
