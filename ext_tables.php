@@ -8,7 +8,7 @@ call_user_func(function() {
     // $pluginName = strtolower('PluginName');
     // $pluginSignature = $extensionName.'_'.$pluginName;
 
-    $classname = 'Typo3ThemeSkeleton';
+    $classname = 'HhThemeSkeleton';
 
     // If BE view - User logged in at BE
     if (TYPO3_MODE === 'BE' || TYPO3_MODE === 'FE' && isset($GLOBALS['BE_USER'])) {

@@ -1,5 +1,5 @@
 <?php
-namespace GroundStack\HhThemeSkeleton\Hooks;
+namespace HauerHeinrich\HhThemeSkeleton\Hooks;
 
 // use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -13,6 +13,12 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class BackendControllerHook {
 
+    protected $extensionname;
+
+    public function __construct() {
+        $this->extensionname =  "hhthemeskeleton";
+    }
+
     /**
      * Adds Filelist Css used e.g. by context menu
      *
@@ -20,11 +26,10 @@ class BackendControllerHook {
      * @param BackendController $backendController
      */
     public function addCss(array $configuration, BackendController $backendController) {
-        $extensionname = "hhthemeskeleton";
-        $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($extensionname);
+        $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($this->extensionname);
 
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-        $pageRenderer->addCssFile($path . '/Resources/Public/t3Backend/Css/main.css');
+        $pageRenderer->addCssFile($path . "/Resources/Public/Css/Backend/main.min.css");
     }
 
     /**
@@ -34,10 +39,9 @@ class BackendControllerHook {
      * @param BackendController $backendController
      */
     public function addJavaScript(array $configuration, BackendController $backendController) {
-        $extensionname = "hhthemeskeleton";
-        $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($extensionname);
+        $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($this->extensionname);
 
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-        $pageRenderer->addJsFile($path . '/Resources/Public/t3Backend/JavaScript/bemain.js');
+        $pageRenderer->loadRequireJsModule("TYPO3/CMS/HhThemeSkeleton/Backend/Bemain");
     }
 }
