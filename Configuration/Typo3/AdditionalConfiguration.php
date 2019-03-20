@@ -6,6 +6,10 @@ if (!defined('TYPO3_MODE')) {
 $databaseCredentialsFile = PATH_site . './../typo3_config/typo3_domain.php';
 if (file_exists($databaseCredentialsFile)) { require_once ($databaseCredentialsFile); }
 
+// FE - addRootLineFields
+$rootLineField = empty($GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']) ? "backend_layout" : ",backend_layout";
+$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] = $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] . $rootLineField;
+
 // Production / Live:
 $customChanges = [
     'BE' => [
@@ -48,18 +52,10 @@ $customChanges = [
 ];
 $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customChanges);
 
-// FE - addRootLineFields
-$rootLineField = empty($GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']) ? "backend_layout" : ",backend_layout";
-$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] = $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] . $rootLineField;
-
-// Special for windows systems
-if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-    $customWindows = [
-        'SYS' => [
-            'systemLocale' => 'de-de',
-        ]
-    ];
-    $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customWindows);
+// Developement - Stage / Preview:
+if(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->__toString() === "Development/Server"){
+    $databaseCredentialsFile = PATH_site . './../typo3_config/typo3_domain_prev.php';
+    if (file_exists($databaseCredentialsFile)) { require_once ($databaseCredentialsFile); }
 }
 
 // Developement:
@@ -135,4 +131,14 @@ if(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopmen
     ];
 
     $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customDevelopmentChanges);
+}
+
+// Special for windows systems
+if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+    $customWindows = [
+        'SYS' => [
+            'systemLocale' => 'de-de',
+        ]
+    ];
+    $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customWindows);
 }
