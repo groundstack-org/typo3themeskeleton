@@ -32,10 +32,12 @@ namespace GroundStack\HhThemeSkeleton\ViewHelpers;
  *  <hh:addAssetsData type="js" where="header">
  */
 
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+// use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class AddAssetsDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class AddAssetsDataViewHelper extends TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
     public function initializeArguments() {
         $this->registerArgument('type', 'string', 'Can be css or js', true);
         $this->registerArgument('where', 'string', 'Can be header (header is default for css) or footer (footer is default for js)', false);
@@ -43,15 +45,18 @@ class AddAssetsDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractV
     }
 
     /**
-     * Simple Fluid Viewhelper to add data to the html header tag
-     * @param string $tag
+     * @param array $arguments
+     * @param \Closure $renderChildrenClosure
+     * @param RenderingContextInterface $renderingContext
+     *
+     * @return string
      */
-    public function render() {
+    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext) {
         $pageRender = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
 
-        switch ($this->arguments['type']) {
+        switch ($arguments['type']) {
             case 'css':
-                $where = $this->arguments['where'] ? 'additional'.ucfirst($this->arguments['where']).'Data' : 'additionalHeaderData';
+                $where = $arguments['where'] ? 'additional'.ucfirst($arguments['where']).'Data' : 'additionalHeaderData';
                 if($GLOBALS['TSFE']->$where['themeCSS']) {
                     $searchReplaceArray = array(
                         '<style>' => '',
@@ -65,18 +70,18 @@ class AddAssetsDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractV
                     $resultNEW = str_replace(
                         array_keys($searchReplaceArray),
                         array_values($searchReplaceArray),
-                        trim($this->renderChildren())
+                        trim($renderChildrenClosure())
                     );
 
                     $GLOBALS['TSFE']->$where['themeCSS'] = "<style>" . $resultOLD . $resultNEW ."</style>";
                 } else {
-                    $GLOBALS['TSFE']->$where['themeCSS'] = htmlspecialchars(trim($this->renderChildren()));
+                    $GLOBALS['TSFE']->$where['themeCSS'] = htmlspecialchars(trim($renderChildrenClosure()));
                 }
 
                 // ToDo: $pageRender->addCssInlineBlock();
                 break;
             case 'js':
-                $where = $this->arguments['where'] ? 'additional'.ucfirst($this->arguments['where']).'Data' : 'additionalFooterData';
+                $where = $arguments['where'] ? 'additional'.ucfirst($arguments['where']).'Data' : 'additionalFooterData';
                 if($GLOBALS['TSFE']->$where['themeJS']) {
                     $searchReplaceArray = array(
                         '<script>' => '',
@@ -90,24 +95,24 @@ class AddAssetsDataViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractV
                     $resultNEW = str_replace(
                         array_keys($searchReplaceArray),
                         array_values($searchReplaceArray),
-                        trim($this->renderChildren())
+                        trim($renderChildrenClosure())
                     );
 
                     $GLOBALS['TSFE']->$where['themeJS'] = "<script>" . $resultOLD . $resultNEW ."</script>";
                 } else {
-                    $GLOBALS['TSFE']->$where['themeJS'] = trim($this->renderChildren());
+                    $GLOBALS['TSFE']->$where['themeJS'] = trim($renderChildrenClosure());
                 }
 
                 // ToDo: $pageRender->addJsFooterInlineCode();  ->addJsInlineCode();
                 break;
             case 'cssFile':
-                $pageRender->addCssFile(trim($this->arguments['file']), 'stylesheet', 'all');
+                $pageRender->addCssFile(trim($arguments['file']), 'stylesheet', 'all');
                 break;
             case 'jsFile':
-                if($this->arguments['where'] == "header") {
-                    $pageRender->addJsFile(trim($this->arguments['file']), '', true, false, '', true, '|', false, '', true);
+                if($arguments['where'] == "header") {
+                    $pageRender->addJsFile(trim($arguments['file']), '', true, false, '', true, '|', false, '', true);
                 } else {
-                    $pageRender->addJsFooterFile(trim($this->arguments['file']), '', true, false, '', true, '|', false, '', true);
+                    $pageRender->addJsFooterFile(trim($arguments['file']), '', true, false, '', true, '|', false, '', true);
                 }
                 break;
             default:

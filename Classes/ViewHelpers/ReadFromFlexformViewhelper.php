@@ -33,9 +33,11 @@ namespace GroundStack\HhThemeSkeleton\ViewHelpers;
  */
 
 // use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use \TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class ReadFromFlexformViewhelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class ReadFromFlexformViewhelper extends TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
     public function initializeArguments() {
         $this->registerArgument('flexform', 'string', 'xml flexform', true);
         $this->registerArgument('field', 'string', 'xml flexform field', true);
@@ -45,18 +47,21 @@ class ReadFromFlexformViewhelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstra
     }
 
     /**
+     * @param array $arguments
+     * @param \Closure $renderChildrenClosure
+     * @param RenderingContextInterface $renderingContext
      *
-     * @param string $tag
+     * @return string
      */
-    public function render() {
-        $flexformArray = GeneralUtility::xml2array($this->arguments['flexform']);
+    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext) {
+        $flexformArray = GeneralUtility::xml2array($arguments['flexform']);
         $abstractPlugin = new \TYPO3\CMS\Frontend\Plugin\AbstractPlugin();
 
         // https://api.typo3.org/typo3cms/8/html/class_t_y_p_o3_1_1_c_m_s_1_1_frontend_1_1_plugin_1_1_abstract_plugin.html#a28dce93387120cbe95320dca7e4842b7
-        $fieldName = $this->arguments['field'];
-        $sheet = $this->arguments['sheet'] ? $this->arguments['sheet'] : 'sDEF';
-        $lang = $this->arguments['lang'] ? $this->arguments['lang'] : 'lDEF';
-        $value = $this->arguments['value'] ? $this->arguments['value'] : 'vDEF';
+        $fieldName = $arguments['field'];
+        $sheet = $arguments['sheet'] ? $arguments['sheet'] : 'sDEF';
+        $lang = $arguments['lang'] ? $arguments['lang'] : 'lDEF';
+        $value = $arguments['value'] ? $arguments['value'] : 'vDEF';
         return $abstractPlugin->pi_getFFvalue($flexformArray, $fieldName, $sheet, $lang, $value);
     }
 }

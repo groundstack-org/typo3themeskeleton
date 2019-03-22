@@ -5,8 +5,13 @@ call_user_func(function() {
     $extensionname = "typo3themeskeleton";
 
     // Typo3 extension manager gearwheel icon (ext_conf_template.txt)
-    $_extConfig = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$extensionname]);
-    $rtePresets = $_extConfig['rtePresets'];
+    // Typo3 <= 8:
+    // $_extConfig = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$extensionname]);
+    // $rtePresets = $_extConfig['rtePresets'];
+    // TYPO3 9:
+    $rtePresets = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+    )->get($extensionKey, "rtePresets");
 
     // Register own rte ckeditor config
     $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['rte_theme'] = $rtePresets;

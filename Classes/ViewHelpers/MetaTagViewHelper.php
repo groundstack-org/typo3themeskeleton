@@ -34,32 +34,37 @@ namespace GroundStack\HhThemeSkeleton\ViewHelpers;
 
  /** under DEVELOPMENT */
 
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+// use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class MetaTagViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class MetaTagViewHelper extends TYPO3Fluid\Core\ViewHelper\AbstractViewHelper {
     public function initializeArguments() {
         $this->registerArgument('type', 'string', 'title', true);
         $this->registerArgument('string', 'string', 'New title string', false);
     }
 
     /**
-     * Simple Fluid Viewhelper to add data to the html header tag
-     * @param string $tag
+     * @param array $arguments
+     * @param \Closure $renderChildrenClosure
+     * @param RenderingContextInterface $renderingContext
+     *
+     * @return string
      */
-    public function render() {
+    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext) {
         $pageRender = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
         $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class);
 
-        switch ($this->arguments['type']) {
+        switch ($arguments['type']) {
             case 'title':
-                $pageRender->setTitle($this->arguments['string']);
+                $pageRender->setTitle($arguments['string']);
                 DebuggerUtility::var_dump($metaTagManager->getAllManagers());
                 break;
             case 'ogTitle':
                 $metaTagManager->getManagerForProperty('og:title');
-                $metaTagManager->addProperty('og:title', $this->arguments['string']);
+                $metaTagManager->addProperty('og:title', $arguments['string']);
                 break;
             default:
                 $GLOBALS['TSFE']->additionalFooterData[] = "<div class='error'>ERROR: no or wrong tag in AddHeaderDataViewHelper</div>";

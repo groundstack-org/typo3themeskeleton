@@ -23,10 +23,10 @@
     "require": {
         "typo3/cms-core": "^9.5.0 || ^9.5.99",
         "fluid_styled_content": "^9.5.0 || ^9.5.99",
-        "gridelements": "^8.0.0 || ^8.9.9",
-        "news": "^6.0.0 || ^9.0.0",
+        "gridelements": "^9.1.0 || ^8.9.9",
+        "news": "^7.0.0 || ^9.0.0",
         "tt_address": "4.*",
-        "powermail": "6.*"
+        "powermail": "7.*"
     },
     "autoload": {
         "psr-4": {
