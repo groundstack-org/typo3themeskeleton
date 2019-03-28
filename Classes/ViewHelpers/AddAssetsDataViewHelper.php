@@ -1,5 +1,5 @@
 <?php
-namespace GroundStack\HhThemeSkeleton\ViewHelpers;
+namespace GroundStack\Typo3ThemeSkeleton\ViewHelpers;
 
 /***************************************************************
  * Copyright notice

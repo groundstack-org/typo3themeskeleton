@@ -1,5 +1,5 @@
 <?php
-namespace HauerHeinrich\HhThemeSkeleton\Hooks;
+namespace GroundStack\Typo3ThemeSkeleton\Hooks;
 
 // use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -13,10 +13,10 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class BackendControllerHook {
 
-    protected $extensionname;
+    protected $extensionKey;
 
     public function __construct() {
-        $this->extensionname =  "hhthemeskeleton";
+        $this->extensionKey =  "typo3themeskeleton";
     }
 
     /**
@@ -26,7 +26,7 @@ class BackendControllerHook {
      * @param BackendController $backendController
      */
     public function addCss(array $configuration, BackendController $backendController) {
-        $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($this->extensionname);
+        $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($this->extensionKey);
 
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
         $pageRenderer->addCssFile($path . "/Resources/Public/Css/Backend/main.min.css");
@@ -39,9 +39,9 @@ class BackendControllerHook {
      * @param BackendController $backendController
      */
     public function addJavaScript(array $configuration, BackendController $backendController) {
-        $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($this->extensionname);
+        $path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($this->extensionKey);
 
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-        $pageRenderer->loadRequireJsModule("TYPO3/CMS/HhThemeSkeleton/Backend/Bemain");
+        $pageRenderer->loadRequireJsModule("TYPO3/CMS/Typo3ThemeSkeleton/Backend/Bemain");
     }
 }

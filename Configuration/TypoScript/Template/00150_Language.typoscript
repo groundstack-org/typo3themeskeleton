@@ -1,7 +1,7 @@
 ################################################################
 ### Language ###
 ################################################################
-[globalVar = LIT:1 = {$plugin.hhthemecrhydraulics.multiLanguage}]
+[globalVar = LIT:1 = {$plugin.typo3themecrhydraulics.multiLanguage}]
     config {
         linkVars = L(0-1)
         # defaultGetVars {

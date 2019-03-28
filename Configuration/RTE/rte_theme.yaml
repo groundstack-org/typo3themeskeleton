@@ -18,7 +18,7 @@ editor:
 
     contentsCss:
       - "EXT:rte_ckeditor/Resources/Public/Css/contents.css"
-      - "EXT:hhthemeskeleton/Resources/Public/Css/UserRTE.min.css"
+      - "EXT:typo3themeskeleton/Resources/Public/Css/UserRTE.min.css"
 
 
     stylesSet:
