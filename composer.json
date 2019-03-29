@@ -2,10 +2,14 @@
     "name": "hauerheinrich/hhthemestack",
     "type": "typo3-cms-extension",
     "description": "",
-    "authors": {
-        "name": "Christian Hackl / Sebastian Pieczona",
-        "email": "web@hauer-heinrich.de"
-    },
+    "authors": [
+        {
+            "name": "Christian Hackl",
+            "email": "info@groundstack.de",
+            "homepage": "http://www.groundstack.de",
+            "role": "Developer"
+        }
+    ],
     "license": "GPL-2.0",
     "keywords": ["TYPO3 CMS", "Theme", "Distribution"],
     "replace": {
