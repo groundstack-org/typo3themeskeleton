@@ -2,11 +2,11 @@
 defined('TYPO3_MODE') || die();
 
 call_user_func(function() {
-    $extensionname = "typo3themeskeleton";
+    $extensionKey = "typo3themeskeleton";
 
     // Typo3 extension manager gearwheel icon (ext_conf_template.txt)
     // Typo3 <= 8:
-    // $_extConfig = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$extensionname]);
+    // $_extConfig = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$extensionKey]);
     // $rtePresets = $_extConfig['rtePresets'];
     // TYPO3 9:
     $rtePresets = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
@@ -43,7 +43,7 @@ call_user_func(function() {
         $iconRegistry->registerIcon(
             $identifier,
             \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
-            ['source' => "EXT:{$extensionname}/Resources/Public/Images/{$path}"]
+            ['source' => "EXT:{$extensionKey}/Resources/Public/Images/{$path}"]
         );
     };
 
@@ -90,5 +90,5 @@ call_user_func(function() {
     // Hooks
 
     // AJAX eID
-    // $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['hhtheme'] = "EXT:{$extensionname}/Classes/EidApi/index.php";
+    // $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['hhtheme'] = "EXT:{$extensionKey}/Classes/EidApi/index.php";
 });

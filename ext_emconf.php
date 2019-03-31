@@ -24,12 +24,12 @@ $EM_CONF['typo3themeskeleton'] = [
     'version' => '0.0.1',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.0-9.5.99',
-            'fluid_styled_content' => '9.5.0-9.5.99',
-            'gridelements' => '8.0.0-8.9.9',
-            'news' => '7.0.0-7.9.9',
+            'typo3' => '9.5.0-9.9.99',
+            'fluid_styled_content' => '9.5.0-9.9.99',
+            'gridelements' => '9.0.0-9.9.9',
+            'news' => '7.0.0-9.9.9',
             'tt_address' => '4.0.0-4.9.9',
-            'powermail' => '6.0.0-6.9.9'
+            'powermail' => '6.0.0-9.9.9'
         ],
         'conflicts' => [
         ],
