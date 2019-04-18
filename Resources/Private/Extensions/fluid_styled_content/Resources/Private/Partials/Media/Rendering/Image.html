@@ -35,7 +35,7 @@
                             {f:if(condition: '{data.imagewidth}', then: 'width="{data.imagewidth}"', else: 'width="{dimensions.width}"')}
                             {f:if(condition: '{data.imageheight}', then: 'height="{data.imageheight}"', else: 'height="{dimensions.height}"')}
                             {f:if(condition: '{file.title}', then: 'title="{file.title}"')}
-                            {f:if(condition: '{file.alternative}', then: 'alt="{file.alternative}"')}
+                            {f:if(condition: '{file.alternative}', then: 'alt="{file.alternative}"', else: 'alt=""')}
                         />
                     </f:else>
                 </f:if>
