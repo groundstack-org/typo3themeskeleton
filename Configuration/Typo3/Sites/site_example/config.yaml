@@ -33,11 +33,51 @@ routes:
   -
     route: robots.txt
     type: staticText # content: end of line change the URL to the sitemap!
-    content: "User-Agent: *\r\nAllow: /\r\nDisallow: /fileadmin/templates\r\nDisallow: /typo3/\r\nDisallow: /t3lib/\r\nDisallow: /typo3conf/\r\nDisallow: /typo3temp/\r\nDisallow: /*?id=*\r\nDisallow: /*?tx_indexedsearch\r\nDisallow: /*?id=*\r\nDisallow: /print/\r\n\r\nSitemap: https://www.domain.tld/sitemap.xml"
+    content: "
+      User-Agent: *\r\n
+      Allow: /\r\n
+      Disallow: /fileadmin/templates\r\n
+      Disallow: /typo3/\r\n
+      Disallow: /t3lib/\r\n
+      Disallow: /typo3conf/\r\n
+      Disallow: /typo3temp/\r\n
+      Disallow: /*?id=*\r\n
+      Disallow: /*?tx_indexedsearch\r\n
+      Disallow: /*?id=*\r\n
+      Disallow: /print/\r\n
+      \r\n
+      Sitemap: https://www.domain.tld/sitemap.xml"
   -
     route: sitemap.xml
     type: uri
     source: 't3://page?uid=1&type=1533906435' # uid = Domain/Root page UID from the BE page tree
+  -
+    route: humans.txt
+    type: staticText
+    content: "
+      /* TEAM */\r\n
+      Author:
+      Contact:
+      \r\n
+      /* DESIGN & DEVELOPEMENT */\r\n
+      Chef:\r\n
+      Contact: www.groundstack.de\r\n
+      From: Passau, Bavaria, Germany\r\n
+      \r\n
+      Web designer:\r\n
+      Contact: \r\n
+      From: \r\n
+      \r\n
+      Developer: Christian Hackl\r\n
+      Contact: www.groundstack.de\r\n
+      Facebook: https://www.facebook.com/profile.php?id=100007889897625\r\n
+      From: Passau, Bavaria, Germany\r\n
+      \r\n
+      /* SITE */\r\n
+      Last update: 2019/04/18\r\n
+      Language: Deutsch / English\r\n
+      Standards: HTML5, CSS3, PHP\r\n
+      Software: VS Code, FileZilla, FireBug, Sourcetree\r\n"
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
@@ -114,9 +154,6 @@ routeEnhancers:
           address_slug: address
     aspects:
       address_slug:
-        type: PersistedAliasReplaceMapper
-        replaceSource: ' '
-        replaceTarget: '-'
-        toLower: 1
+        type: PersistedAliasMapper
         tableName: tt_address
-        routeFieldName: name
+        routeFieldName: slug
