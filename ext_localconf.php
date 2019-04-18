@@ -16,6 +16,11 @@ call_user_func(function() {
     // Register own rte ckeditor config
     $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['rte_theme'] = $rtePresets;
 
+    // Add addRootLineFields for example slide in TypoScript
+    $rootLineFields = &$GLOBALS["TYPO3_CONF_VARS"]["FE"]["addRootLineFields"];
+    if (trim($rootLineFields) != "") $rootLineFields .= ',';
+    $rootLineFields .= 'backend_layout';
+
     // register svg icons: identifier and filename
     $iconsPng = [
         // BackendLayouts

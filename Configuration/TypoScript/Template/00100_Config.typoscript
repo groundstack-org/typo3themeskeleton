@@ -752,19 +752,24 @@ page {
     ################################################################
     bodyTag >
     bodyTagCObject = COA
-    bodyTagCObject{
+    bodyTagCObject {
         10 = TEXT
         10 {
             if.isTrue.data = page:backend_layout
             data = page:backend_layout
-            dataWrap = <body class="be-| {$plugin.typo3themeskeleton.layout}" id="page-{field:uid}">
+            noTrimWrap = |<body class="be-| |
         }
 
         15 = TEXT
         15 {
             if.isFalse.data = page:backend_layout
             data = levelfield:-2, backend_layout, slide
-            dataWrap = <body class="be-| {$plugin.typo3themeskeleton.layout}" id="page-{field:uid}">
+            noTrimWrap = |<body class="be-| |
+        }
+
+        20 = TEXT
+        20 {
+            dataWrap = {$plugin.typo3themeskeleton.layout} fe-{field:layout}" id="page-{field:uid}">
         }
     }
 }

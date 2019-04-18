@@ -31,7 +31,6 @@ $customChanges = [
         'pageUnavailable_handling' => '503.html',
         'disableNoCacheParameter' => 1,
         'hidePagesIfNotTranslatedByDefault' => 1,
-        'addRootLineFields' => 'backend_layout',
         // only if server has no argon2i
         // 'passwordHashing' => [
         //     'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\BcryptPasswordHash',
