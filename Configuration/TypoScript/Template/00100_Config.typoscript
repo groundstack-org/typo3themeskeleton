@@ -1,5 +1,4 @@
 config {
-    baseURL = http://{$plugin.typo3themeskeleton.baseURL}
     admPanel = 1
     doctype = html5
     # htmlTag_setParams = manifest="/webstorage.appcache"
@@ -68,13 +67,8 @@ page {
     }
 }
 
-[globalString = ENV:HTTPS=on]
-    config.baseURL = https://{$plugin.typo3themeskeleton.baseURL}
-[global]
-
 [applicationContext = Development]
     config {
-        baseURL = http://{$plugin.typo3themeskeleton.baseURLdev}
         no_cache = 1
         compressCss = 0
         compressJs = 0
@@ -94,23 +88,14 @@ page {
     }
 [global]
 
-[applicationContext = Development] && [globalString = ENV:HTTPS=on]
-    config.baseURL = https://{$plugin.typo3themeskeleton.baseURLdev}
-[global]
-
 [applicationContext = Development/Server]
     config {
-        baseURL = http://{$plugin.typo3themeskeleton.baseURLstage}
         no_cache = 1
         compressCss = 0
         compressJs = 0
         concatenateCss = 0
         concatenateJs = 0
     }
-[global]
-
-[applicationContext = Development/Server] && [globalString = ENV:HTTPS=on]
-    config.baseURL = https://{$plugin.typo3themeskeleton.baseURLstage}
 [global]
 
 page = PAGE
@@ -294,7 +279,7 @@ page {
                         5 = TEXT
                         5 {
                             wrap = <meta property="og:image" content="|
-                            value < config.baseURL
+                            value < {$plugin.typo3themeskeleton.baseURL}
                         }
                         10 = TEXT
                         10 {
@@ -396,7 +381,7 @@ page {
                 5 = TEXT
                 5 {
                     wrap = <link rel="canonical" href="|
-                    value <= config.baseURL
+                    value <= {$plugin.typo3themeskeleton.baseURL}
                 }
 
                 10 = TEXT
@@ -583,8 +568,8 @@ page {
             50 = TEXT
             50 {
                 wrap = "url" : "|",
-                value < config.baseURL
-                if.isTrue = config.baseURL
+                value = {$plugin.typo3themeskeleton.baseURL}
+                if.isTrue = {$plugin.typo3themeskeleton.baseURL}
             }
 
             60 = COA
@@ -592,7 +577,7 @@ page {
                 5 = TEXT
                 5 {
                     wrap =  "image" : "|
-                    value < config.baseURL
+                    value = {$plugin.typo3themeskeleton.baseURL}
                 }
                 10 = TEXT
                 10 {
