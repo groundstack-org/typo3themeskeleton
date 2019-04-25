@@ -21,6 +21,10 @@
 /typo3_src-*
 /index.php
 
+# Giftp (Git Ftp)
+giftp.json
+.giftp
+
 ### MAC ###
 *.DS_Store
 .DS_Store
