@@ -31,7 +31,7 @@ styles {
 ################################################################
 ### gridelements ###
 ################################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/constants.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/constants.typoscript">
 
 ################################################################
 ### powermail ###

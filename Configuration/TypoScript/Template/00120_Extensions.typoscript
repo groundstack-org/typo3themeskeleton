@@ -165,7 +165,7 @@ plugin.tx_ttaddress {
 ################################################################
 ### Frontend - Grid Layout (gridelements) - Anpassen ###
 ################################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gridelements/Configuration/TypoScript/setup.typoscript">
 tt_content.gridelements_pi1.20.10.setup {
     ### ID des gridelements
     1 < lib.gridelements.defaultGridSetup
