@@ -4,9 +4,9 @@
     <f:case value="9">
         <div id="c{data.uid}" class="grid-container grid-slider-container grid-{data.flexform_layout}">
     </f:case>
-    <f:case default="true">
+    <f:defaultCase>
         <div id="c{data.uid}" class="grid-container row" data-children="{f:count(subject: data.tx_gridelements_view_children)}">
-    </f:case>
+    </f:defaultCase>
 </f:switch>
     <f:render partial="Header/All" arguments="{_all}" />
     <f:render section="content" />
