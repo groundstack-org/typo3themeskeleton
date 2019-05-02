@@ -3,7 +3,7 @@ if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
-$databaseCredentialsFile = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . './../typo3_config/typo3_domain.php';
+$databaseCredentialsFile = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/../typo3_config/typo3_domain.php';
 if (file_exists($databaseCredentialsFile)) { require_once ($databaseCredentialsFile); }
 
 // FE - addRootLineFields
@@ -54,13 +54,13 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'
 
 // Developement - Stage / Preview:
 if(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->__toString() === "Development/Server"){
-    $databaseCredentialsFile = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . './../typo3_config/typo3_domain_preview.php';
+    $databaseCredentialsFile = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/../typo3_config/typo3_domain_preview.php';
     if (file_exists($databaseCredentialsFile)) { require_once ($databaseCredentialsFile); }
 }
 
 // Developement:
 if(\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopment()) {
-    $databaseCredentialsFile = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . './../typo3_config/typo3_domain_local.php';
+    $databaseCredentialsFile = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/../typo3_config/typo3_domain_local.php';
     if (file_exists($databaseCredentialsFile)) { require_once ($databaseCredentialsFile); }
 
     $customDevelopmentChanges = [
