@@ -62,7 +62,7 @@ page {
             40.header = X-Content-Type-Options: nosniff
             50.header = Referrer-Policy:strict-origin
             60.header = Content-Security-Policy: default-src 'unsafe-inline' 'unsafe-eval' data: https://*
-            70.header = Feature-Policy: vibrate 'self'; push *; camera 'none'
+            70.header = Feature-Policy: microphone 'none'; camera 'none'; vibrate 'self'
         }
     }
 }
