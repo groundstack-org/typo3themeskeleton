@@ -40,6 +40,10 @@ page {
         file45 = {$theme.urls.themeResources}Public/JavaScript/LibsConfig/cookieconsent.config.min.js
         file45.async = 1
         file45.excludeFromConcatenation = 1
+
+        ### IO Framework
+        file50 = {$theme.urls.themeResources}Public/JavaScript/Libs/io.min.js
+        file50.excludeFromConcatenation = 1
     }
 
     includeJSFooter {
