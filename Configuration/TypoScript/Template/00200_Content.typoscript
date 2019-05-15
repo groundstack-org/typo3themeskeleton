@@ -54,6 +54,6 @@ lib.splittext {
 
         2 = TEXT
         2.current = 1
-        2.wrap = <span class="split split-2">|</span>
+        2.wrap = <br><span class="split split-2">|</span>
     }
 }
