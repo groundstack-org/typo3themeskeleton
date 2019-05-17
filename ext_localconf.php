@@ -53,46 +53,7 @@ call_user_func(function() {
     };
 
     // Add UserTS config as default for all BE users
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
-        ### https://docs.typo3.org/typo3cms/TSconfigReference/UserTsconfig/Options.html
-        options {
-            clearCache.pages = 1
-            folderTree.uploadFieldsInLinkBrowser = 3
-            pageTree.showDomainNameWithTitle = 1
-            enableBookmarks = 0
-        }
-
-        admPanel {
-            enable {
-                all = 0
-                preview = 1
-                cache = 0
-                publish = 0
-                edit = 0
-                tsdebug = 0
-                info = 0
-            }
-
-            override {
-                edit {
-                    displayFieldIcons = 0
-                    displayIcons = 0
-                }
-            }
-
-            hide = 0
-        }
-
-        ### Show pageUID in the pagetree
-        [adminUser = 1]
-            options {
-                pageTree.showPageIdWithTitle = 1
-                folderTree.uploadFieldsInLinkBrowser = 3
-            }
-        [GLOBAL]
-    ');
-
-    // Hooks
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:typo3themeskeleton/Configuration/TsConfig/User/0100_default.typoscript">');
 
     // AJAX eID
     // $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['hhtheme'] = "EXT:{$extensionKey}/Classes/EidApi/index.php";
