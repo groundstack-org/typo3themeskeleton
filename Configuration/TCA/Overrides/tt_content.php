@@ -2,8 +2,8 @@
 defined('TYPO3_MODE') || die();
 
 call_user_func(function() {
-    $extension = "typo3themeskeleton";
-    $extensionName = strtolower(\TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($extension));
+    // $extensionKey = "typo3themeskeleton";
+    // $extensionName = strtolower(\TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($extensionKey));
     // $pluginName = strtolower('PluginName');
     // $pluginSignature = $extensionName.'_'.$pluginName;
 

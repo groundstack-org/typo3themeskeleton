@@ -3,11 +3,11 @@ defined('TYPO3_MODE') || die();
 
 call_user_func(function() {
 
-    $extensionname = "typo3themeskeleton";
+    $extensionKey = "typo3themeskeleton";
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $extensionname,
-        'Configuration/TypoScript',
-        'GroundStack Theme Skeleton'
+        $extensionKey,
+        "Configuration/TypoScript",
+        "EXT:{$extensionKey} :: Theme Page TS"
     );
 });
