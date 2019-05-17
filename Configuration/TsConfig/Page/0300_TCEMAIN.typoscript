@@ -1,6 +1,7 @@
 TCEMAIN {
     ### Set default permissions for Usergoups (default groupid = 1 - All Users)
     permissions {
+        ### Change "groupid" to your needs
         groupid = 1
         user = show, editcontent, edit, new, delete
         group = show, editcontent, edit, new, delete
@@ -9,10 +10,10 @@ TCEMAIN {
 
     table {
         tt_content {
-            ### Inhaltselement kopieren ohne "Kopie 1" = 1
+            ### copy content element without "Copy 1" / "Kopie 1" = 1
             disablePrependAtCopy = 1
 
-            ### Inhaltselement kopieren ohne es zu verstecken = 1
+            ### Copy content element without hide it
             disableHideAtCopy = 1
         }
     }

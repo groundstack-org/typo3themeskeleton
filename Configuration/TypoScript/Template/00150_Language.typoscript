@@ -1,31 +1,6 @@
 ################################################################
 ### Language ###
 ################################################################
-[globalVar = LIT:1 = {$plugin.typo3themecrhydraulics.multiLanguage}]
-    config {
-        linkVars = L(0-1)
-        # defaultGetVars {
-        #     L = 0
-        # }
-    }
-[global]
-
-### Englisch
-[globalVar = GP:L=1]
-    config {
-        sys_language_uid = 1
-        language = en
-        locale_all = en_EN.UTF-8
-        htmlTag_langKey = en
-    }
-
-    plugin.tx_indexedsearch._DEFAULT_PI_VARS.lang = 1
-
-    page {
-        bodyTagCObject.stdWrap.dataWrap = <body id="page-{field:uid}" class="be-{field:backend_layout} {$plugin.typo3themeskeleton.layout}"><noscript><div><p>Your JavaScript is disabled!<br />To enjoy this site to the fullest please activate it!<br />Thank you.</p></div></noscript>
-    }
-[GLOBAL]
-
 page {
     headerData {
         ################################################################

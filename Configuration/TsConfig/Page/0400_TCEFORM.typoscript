@@ -6,9 +6,8 @@ TCEFORM {
             removeItems (
                 text, textpic, image, bullets, table, tx_ttaddress
             )
-
-
         }
+
         ### Disable fields for specific CEs
         rowDescription.types {
             textmedia.disabled = 1
@@ -44,7 +43,6 @@ TCEFORM {
         frame_class.disabled = 1
         ### END: tt_content hide CEs and fields in BE
 
-
         removeItems = 1,2,3
         header_layout {
             altLabels {
@@ -76,7 +74,6 @@ TCEFORM {
                     }
                 }
                 textmedia {
-                    removeItems = 1,2,3
                     addItems {
                         imageslider = Image Slider
                     }

@@ -3,10 +3,3 @@
 tx_news.templateLayouts {
     1 = News slider
 }
-
-### tt_address - cyz_address
-### Add custom layouts
-tx_cyzaddress.layouts {
-    1 = Slider simple
-    smalllist = Small list view
-}

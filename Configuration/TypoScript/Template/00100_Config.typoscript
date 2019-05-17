@@ -228,7 +228,6 @@ page {
                         <meta http-equiv="imagetoolbar" content="false">
                         <meta name="format-detection" content="telephone=no">
                         <meta name="theme-color" content="{$plugin.typo3themeskeleton.themeColor}">
-                        <link rel="manifest" href="{$plugin.typo3themeskeleton.SSL}://{$plugin.typo3themeskeleton.baseURL}/{$theme.urls.themeFileadmin}manifest.json">
                     )
                 }
 
