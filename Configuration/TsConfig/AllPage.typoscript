@@ -1,0 +1,2 @@
+### Include all PageTS files
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:hh_theme_bavarianracecup/Configuration/TsConfig/Page" extensions="typoscript">

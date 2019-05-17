@@ -8,7 +8,7 @@ call_user_func(function() {
     // make PageTsConfig selectable
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionname,
-        "Configuration/PageTS/All.typoscript",
+        "Configuration/TsConfig/AllPage.typoscript",
         "EXT:{$extensionname} :: Theme Page TS"
     );
 });
