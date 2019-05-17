@@ -40,7 +40,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class MetaTagViewHelper extends TYPO3Fluid\Core\ViewHelper\AbstractViewHelper {
+class MetaTagViewHelper extends AbstractViewHelper {
     public function initializeArguments() {
         $this->registerArgument('type', 'string', 'title', true);
         $this->registerArgument('string', 'string', 'New title string', false);

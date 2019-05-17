@@ -37,7 +37,7 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class AddAssetsDataViewHelper extends TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
+class AddAssetsDataViewHelper extends AbstractViewHelper {
     public function initializeArguments() {
         $this->registerArgument('type', 'string', 'Can be css or js', true);
         $this->registerArgument('where', 'string', 'Can be header (header is default for css) or footer (footer is default for js)', false);
