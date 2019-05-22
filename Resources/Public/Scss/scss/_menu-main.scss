@@ -82,31 +82,6 @@
     }
 }
 
-
-#menu-mobile-btn {
-    display: none;
-}
-
-#menu-pushbar {
-    -webkit-overflow-scrolling: touch;
-
-    #menu-main {
-        padding: 30px;
-
-        li {
-            width: 100%;
-        }
-
-        a:hover,
-        .act,
-        .active {
-            > ul {
-                display: block;
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 1550px) {
     #menu-main {
         > ul {
@@ -177,14 +152,9 @@
     }
 }
 
-.pushbar.from_left {
-    width: 320px;
-}
-
-
 /* Hamburger Menu Button */
 #mobile-btn {
-    margin-right: $container-gap-horizontal;
+    margin-right: 4vw;
     position: fixed;
     top: 25px;
     right: 0;
@@ -259,29 +229,74 @@
             transition-property: bottom, transform;
 }
 
-[pushbar="menu-mobile"] #mobile-btn span {
-    background: none;
-}
+.ionav--open {
+    #mobile-btn span {
+        background: none;
+    }
 
-[pushbar="menu-mobile"] #mobile-btn span::before {
-    background-color: #4c4e55;
-    top: 0;
-    @include prefix(( transform: rotate(45deg) ));
-    @include prefix(( transition: rotate() 500ms ));
-    @include prefix(( background-color 500ms ));
-}
+    #mobile-btn span::before {
+        background-color: #4c4e55;
+        top: 0;
+        @include prefix(( transform: rotate(45deg) ));
+        @include prefix(( transition: rotate() 500ms ));
+        @include prefix(( background-color 500ms ));
+    }
 
-[pushbar="menu-mobile"] #mobile-btn span::after {
-    background-color: #4c4e55;
-    bottom: 0;
-    @include prefix(( transform: rotate(-45deg) ));
-    @include prefix(( transition: rotate() 500ms ));
-    @include prefix(( background-color 500ms ));
-}
+    #mobile-btn span::after {
+        background-color: #4c4e55;
+        bottom: 0;
+        @include prefix(( transform: rotate(-45deg) ));
+        @include prefix(( transition: rotate() 500ms ));
+        @include prefix(( background-color 500ms ));
+    }
 
-[pushbar="menu-mobile"] #mobile-btn span::before,
-[pushbar="menu-mobile"] #mobile-btn span::after {
-    -webkit-transition-delay: 0s, 0.3s;
-            transition-delay: 0s, 0.3s;
+    #mobile-btn span::before,
+    #mobile-btn span::after {
+        -webkit-transition-delay: 0s, 0.3s;
+                transition-delay: 0s, 0.3s;
+    }
 }
 /* Hamburger Menu END */
+.ionav-overlay {
+    display: block;
+    margin-left: -100%;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.ionav-canvas {
+    margin-left: -100%;
+
+    transition: all 500ms;
+}
+
+.ionav--closed {
+    #mobile-btn {
+        &.ionav-btn::before {
+            display: none;
+        }
+    }
+}
+
+.ionav--open {
+    #mobile-btn {
+        &.ionav-btn {
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .ionav-overlay {
+        margin-left: 0;
+        opacity: 1;
+    }
+
+    .ionav-canvas {
+        margin-left: 0;
+    }
+}

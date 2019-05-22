@@ -518,20 +518,6 @@ span.blue {
   #menu-main li:hover > ul {
     display: block; }
 
-#menu-mobile-btn {
-  display: none; }
-
-#menu-pushbar {
-  -webkit-overflow-scrolling: touch; }
-  #menu-pushbar #menu-main {
-    padding: 30px; }
-    #menu-pushbar #menu-main li {
-      width: 100%; }
-    #menu-pushbar #menu-main a:hover > ul,
-    #menu-pushbar #menu-main .act > ul,
-    #menu-pushbar #menu-main .active > ul {
-      display: block; }
-
 @media screen and (max-width: 1550px) {
   #menu-main > ul {
     -webkit-justify-content: space-between;
@@ -572,12 +558,9 @@ span.blue {
   #menu-mobile-btn {
     display: block; } }
 
-.pushbar.from_left {
-  width: 320px; }
-
 /* Hamburger Menu Button */
 #mobile-btn {
-  margin-right: 6%;
+  margin-right: 4vw;
   position: fixed;
   top: 25px;
   right: 0;
@@ -647,10 +630,10 @@ span.blue {
   -webkit-transition-property: bottom, -webkit-transform;
   transition-property: bottom, transform; }
 
-[pushbar="menu-mobile"] #mobile-btn span {
+.ionav--open #mobile-btn span {
   background: none; }
 
-[pushbar="menu-mobile"] #mobile-btn span::before {
+.ionav--open #mobile-btn span::before {
   background-color: #4c4e55;
   top: 0;
   -webkit-transform: rotate(45deg);
@@ -668,7 +651,7 @@ span.blue {
   /* Output standard non-prefixed declaration */
   /* Output standard non-prefixed declaration */ }
 
-[pushbar="menu-mobile"] #mobile-btn span::after {
+.ionav--open #mobile-btn span::after {
   background-color: #4c4e55;
   bottom: 0;
   -webkit-transform: rotate(-45deg);
@@ -686,12 +669,38 @@ span.blue {
   /* Output standard non-prefixed declaration */
   /* Output standard non-prefixed declaration */ }
 
-[pushbar="menu-mobile"] #mobile-btn span::before,
-[pushbar="menu-mobile"] #mobile-btn span::after {
+.ionav--open #mobile-btn span::before,
+.ionav--open #mobile-btn span::after {
   -webkit-transition-delay: 0s, 0.3s;
   transition-delay: 0s, 0.3s; }
 
 /* Hamburger Menu END */
+.ionav-overlay {
+  display: block;
+  margin-left: -100%;
+  opacity: 0;
+  transition: opacity 500ms; }
+
+.ionav-canvas {
+  margin-left: -100%;
+  transition: all 500ms; }
+
+.ionav--closed #mobile-btn.ionav-btn::before {
+  display: none; }
+
+.ionav--open #mobile-btn.ionav-btn::before {
+  display: none; }
+
+.ionav--open #mobile-btn.ionav-btn::after {
+  display: none; }
+
+.ionav--open .ionav-overlay {
+  margin-left: 0;
+  opacity: 1; }
+
+.ionav--open .ionav-canvas {
+  margin-left: 0; }
+
 #menu-language {
   font-size: 17px; }
   #menu-language li {
@@ -723,88 +732,96 @@ span.blue {
     #menu-language .label:hover > ul {
       display: block; }
 
-.pushbar.opened {
+.ionav-btn {
+  display: none;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  z-index: 860;
+  width: 30px;
+  height: 30px;
+  cursor: pointer; }
+
+.ionav--closed .ionav-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.21em;
+  bottom: 0.21em;
+  z-index: 850;
+  width: 100%;
+  background: linear-gradient(to bottom, black, black 20%, transparent 20%, transparent 40%, black 40%, black 60%, transparent 60%, transparent 80%, black 80%, black 100%); }
+
+.ionav--open .ionav-btn:hover {
+  opacity: 1; }
+
+.ionav--open .ionav-btn:before, .ionav--open .ionav-btn:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 100%;
+  width: 3px;
+  background-color: #fff; }
+
+.ionav--open .ionav-btn:before {
+  transform: rotate(45deg); }
+
+.ionav--open .ionav-btn:after {
+  transform: rotate(-45deg); }
+
+.ionav-overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 840; }
+
+.ionav-hidden {
+  display: none; }
+
+.ionav--active .ionav-source {
+  display: none; }
+
+.ionav--active .ionav-source.logo, .ionav--active .ionav-source#logo {
   display: block; }
 
-html.pushbar_locked {
-  overflow: hidden;
-  -ms-touch-action: none;
-  touch-action: none; }
+.ionav--active .ionav-btn {
+  display: block; }
 
-.pushbar_locked .pushbar_main_content.pushbar_blur {
-  filter: blur(15px); }
-
-.pushbar {
-  z-index: 1000;
-  position: fixed;
-  will-change: transform;
-  overflow-y: auto;
-  transition: transform 0.5s ease;
-  will-change: transform;
+.ionav-canvas {
+  width: 40%;
+  min-height: 100%;
+  max-height: 100vw;
+  min-width: 240px;
   background: #fff; }
+  .ionav-canvas > * {
+    padding-top: 20px;
+    background-color: #fff; }
+  .ionav-canvas nav ul {
+    list-style-type: none; }
+  .ionav-canvas nav a {
+    display: block;
+    padding: 10px; }
+  .ionav-canvas .ionav-logo, .ionav-canvas #ionav-logo {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px; }
 
-.pushbar_overlay {
-  z-index: -999;
-  position: fixed;
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
-  will-change: opacity;
-  transition: opacity 0.5s ease;
-  opacity: 0;
-  will-change: opacity;
-  background: #3c3442; }
-
-html.pushbar_locked .pushbar_overlay {
-  opacity: 0.8;
-  z-index: 999;
-  transition: opacity 0.5s ease; }
-
-.pushbar.from_left {
-  top: 0;
-  left: 0;
-  width: 256px;
-  max-width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  transform: translateZ(0) translateX(-100%); }
-
-.pushbar.from_right {
-  top: 0;
-  right: 0;
-  width: 256px;
-  max-width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  transform: translateZ(0) translateX(100%); }
-
-.pushbar.from_top {
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100%;
-  min-height: 150px;
-  transform: translateZ(0) translateY(-100%); }
-
-.pushbar.from_bottom {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100%;
-  min-height: 150px;
-  transform: translateZ(0) translateY(100%); }
-
-.pushbar.opened {
-  transform: translateX(0px) translateY(0px); }
-
-html {
-  overflow: auto !important; }
-
-html.pushbar_locked body {
+html.ionav--open, .ionav--open body {
   overflow: hidden; }
+
+.ionav--open .ionav-overlay {
+  display: block; }
+
+.ionav--hasSubnav ul {
+  display: none; }
+
+ul.ionav--hasSubnav.ionav--active {
+  display: block; }
 
 picture {
   width: 100%;
