@@ -20,6 +20,10 @@ plugin.typo3themeskeleton {
     # cat=plugin.typo3themeskeleton_mainconfig/basic/0030; type=options[http,https]; label= Wird die Webseite Verschlüsselt(SSL-HTTPS) ausgeliefert?
         SSL = http
 
+    ### Plugins
+    # cat=plugin.typo3themeskeleton_plugins/basic/0010; type=options[svelte,jQuery,none]; label= options[svelte, jQuery, none]
+        library = svelte
+
     ### Logos & Icons
     ### LOGO
     # cat=plugin.typo3themeskeleton_LogoAndIcons/basic/0050; type=string; label= Main logo path (Logo für FE bitte in Pagesettings -> resources hinterlegen)

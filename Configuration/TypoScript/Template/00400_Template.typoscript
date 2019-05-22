@@ -19,30 +19,37 @@ page {
         file10 = {$theme.urls.themeResources}Public/JavaScript/Libs/jquery-3.3.1.min.js
         file10.forceOnTop = 1
         file10.excludeFromConcatenation = 1
+        file10.if.equals = {$plugin.typo3themeskeleton.library}
+        file10.if.value = jQuery
 
-        file15 = {$theme.urls.themeResources}Public/JavaScript/Libs/pushbar.min.js
+        file15 = {$theme.urls.themeResources}Public/JavaScript/Libs/svelte.min.js
+        file15.forceOnTop = 1
+        file15.excludeFromConcatenation = 1
+        file15.if.equals = {$plugin.typo3themeskeleton.library}
+        file15.if.value = svelte
 
-        ### Slider
-        file20 = {$theme.urls.themeResources}Public/JavaScript/Libs/swiper.min.js
-        file20.async = 1
+        ### Slider // Depricated
+        file25 = {$theme.urls.themeResources}Public/JavaScript/Libs/swiper.min.js
+        file25.defer = 1
+        file25.excludeFromConcatenation = 1
+
+        ### IO Framework
+        file20 = {$theme.urls.themeResources}Public/JavaScript/Libs/io.min.js
+        file20.defer = 1
         file20.excludeFromConcatenation = 1
 
         ### Lightbox
         file30 = {$theme.urls.themeResources}Public/JavaScript/Libs/baguetteBox.min.js
-        file30.async = 1
+        file30.defer = 1
         file30.excludeFromConcatenation = 1
 
         ### Cookie hint
         file40 = {$theme.urls.themeResources}Public/JavaScript/Libs/cookieconsent.min.js
-        file40.async = 1
+        file40.defer = 1
         file40.excludeFromConcatenation = 1
 
-        file45 = {$theme.urls.themeResources}Public/JavaScript/LibsConfig/cookieconsent.config.min.js
-        file45.async = 1
-        file45.excludeFromConcatenation = 1
-
-        ### IO Framework
-        file50 = {$theme.urls.themeResources}Public/JavaScript/Libs/io.min.js
+        file50 = {$theme.urls.themeResources}Public/JavaScript/LibsConfig/cookieconsent.config.min.js
+        file50.defer = 1
         file50.excludeFromConcatenation = 1
     }
 
