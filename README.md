@@ -15,9 +15,17 @@ To use it as your own:
 - rename all "GroundStack" to your new own NameSpaceVendor value (vendor)
 
 
-### Todos
+### Features
+- uses svelete.js as default insteed of jQuery (http://sveltejs.com/) - change this in the constants-editor
 
+
+### Todos
 - add "ext_icon.png"
+
+
+### Deprecated
+- Meta-tag generation over typoscript (will be replaced by other extension: hh_seo)
+- Swiper as slider (will be replaced by other extension: hh_slider)
 
 
 ##### Copyright notice
