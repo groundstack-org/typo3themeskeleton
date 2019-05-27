@@ -203,3 +203,18 @@ page {
         }
     }
 }
+
+### use jQuery insteed of svelte if powermail is loaded
+### cause powermail needs jQuery
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('powermail')]
+    page {
+        includeJSFooterlibs {
+            file10 >
+            file10 = {$theme.urls.themeResources}Public/JavaScript/Libs/jquery-3.3.1.min.js
+            file10.forceOnTop = 1
+            file10.excludeFromConcatenation = 1
+
+            file15 >
+        }
+    }
+[global]
