@@ -19,7 +19,8 @@ let gulp = require('gulp'),
     minify = require("gulp-babel-minify"),
     sourcemaps = require('gulp-sourcemaps'),
     commandExists = require('command-exists'),
-    download = require("gulp-download-stream");
+    download = require("gulp-download-stream"),
+    giftp = require('giftp');
 
 // NATIVE NODE MODULES
 let fs = require("fs"),
@@ -90,42 +91,81 @@ gulp.task('install:onsave-vscode', function(done){
 
 // install - VSCode Plugin: https://marketplace.visualstudio.com/items?itemName=philfontaine.autolaunch
 gulp.task('install:autolaunch-vscode', function(done){
-    commandExists('code').then(function(command){
-      exec('code --install-extension philfontaine.autolaunch', function (err, stdout, stderr) {
-        console.log(stdout);
-        console.log(stderr);
-        console.log("Please restart your IDE so the Plugin can be correctly initialized.");
-        done(err);
-      });
-    }).catch(function(){
-      console.log("The Command \"code\" (from Visual Studio Code) was not found or is not accessible on your System (please read the docs if you want to use it in your vscode environment: https://code.visualstudio.com/docs/editor/command-line).\nSkipped Implementation of the Auto-Save Functionality..");
+  commandExists('code').then(function(command){
+    exec('code --install-extension philfontaine.autolaunch', function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      console.log("Please restart your IDE so the Plugin can be correctly initialized.");
+      done(err);
     });
+  }).catch(function(){
+    console.log("The Command \"code\" (from Visual Studio Code) was not found or is not accessible on your System (please read the docs if you want to use it in your vscode environment: https://code.visualstudio.com/docs/editor/command-line).\nSkipped Implementation of the Auto-Save Functionality..");
   });
+});
 
 // INSTALLER - IDE Plugins for ATOM AND VSCODE
 gulp.task('install:onsave', gulp.parallel('install:onsave-atom', 'install:onsave-vscode'));
 
 // SETUP SYMLINKS (create generic theme symlinks)
-gulp.task('setup:symlinks', function(done){
-    fs.realpath('../../../fileadmin/' + themeName, function(err, resolvedPath){
-        if(err) { console.log(err); }
-        console.log("symlink from: ", resolvedPath);
+gulp.task('setup:symlinks', function(done) {
+  fs.realpath('../../../fileadmin/', function(err, resolvedPath) {
+      if(err) { console.log(err); }
+      console.log("symlink from: ", resolvedPath);
 
-        fs.realpath(imgPath, function(err2, resolvedImgPath){
-            if(err2) { console.log(err2); }
-            console.log("symlink to: ", resolvedImgPath);
+      fs.realpath(imgPath, function(errRealPath1, resolvedImgPath) {
+          if(errRealPath1) { console.log(errRealPath1); }
+          console.log("symlink to: ", resolvedImgPath);
+          const targetDir = resolvedPath + '/' + themeName;
 
-            fs.symlink(resolvedImgPath, resolvedPath + '/themeResources', 'dir', function(err){
-                if(err2) { console.log(err); }
-            });
-        });
-    });
+          if (!fs.existsSync(targetDir)) {
+              console.log("create dir: " + targetDir);
+              fs.mkdir(targetDir, { recursive: false }, (errDir) => {
+                  if (errDir) throw errDir;
+              });
+          }
 
-    done();
+          fs.symlink(resolvedImgPath, targetDir + '/themeResources', 'dir', function(errRealPath2) {
+              if(errRealPath2) { console.log(errRealPath2); }
+          });
+      });
+  });
+
+  done();
+});
+
+gulp.task('setup:symlinks_ext', function(done) {
+  function createSymlink(sourcePath, targetPath) {
+    if(fs.existsSync(sourcePath) && !fs.existsSync(targetPath)) {
+        console.log("Symlink from: " + sourcePath + " to " + targetPath);
+        try {
+          var checkFile = fs.lstatSync(sourcePath).isDirectory() ? 'dir' : 'file';
+          fs.symlink(sourcePath, targetPath, checkFile, function(err) {
+            if(err) { console.log(err); }
+          });
+        } catch(e) {
+          // Handle error
+          console.log("ERROR:");
+          console.log(e);
+          if(e.code == 'ENOENT') {
+              //no such file or directory
+              console.log("No such file or directory found: " + sourcePath);
+          }
+        }
+        console.log(checkFile);
+    } else {
+        console.log("ERROR: " + sourcePath + " - resolvedPath doesn't exist or targetPath: " + targetPath + " exists");
+    }
+  }
+
+  createSymlink(fs.realpathSync('Configuration/Typo3/AdditionalConfiguration.php'), '../../AdditionalConfiguration.php');
+  createSymlink(fs.realpathSync('Configuration/Typo3/sites'), '../../sites');
+
+  done();
 });
 
 // SETUP - FULL SETUP
-gulp.task('setup', gulp.series('install:onsave', 'setup:symlinks'));
+gulp.task('setup', gulp.series('install:onsave', 'setup:symlinks', 'setup:symlinks_ext'));
+gulp.task('setup:theme', gulp.series('setup:symlinks', 'setup:symlinks_ext'));
 
 // UPGRADE / SELF-UPDATER
 gulp.task('upgrade', function(done){
@@ -190,6 +230,27 @@ gulp.task('js:compressed', function(done){
 gulp.task('js:watch', function(done){
   let watcher = gulp.watch([jsPath + '/**/*.js', '!'+ jsPath +'/**/*.min.js']);
   watcher.on('change', gulp.series('js:compressed'));
+});
+
+// GIT FTP DEPLOYER
+gulp.task('gitftp', function(done){
+  fs.stat('giftp.json', function(err, stat){ // Check if giftp.json exists
+    if(err == null){
+      giftp.run();
+      done();
+    } else if(err.code == 'ENOENT'){
+      download(repoUrlRaw + '.giftp.json')
+        .pipe(rename("giftp.json"))
+        .pipe(gulp.dest("./"))
+        .on("end", function(){
+          console.log("\x1b[31m", "WARNING: Please configure giftp.json");
+          done();
+        });
+    } else {
+      console.log(err, stat);
+      done(err);
+    }
+  });
 });
 
 // GLOBAL WATCHER / BUILD COMMANDS
