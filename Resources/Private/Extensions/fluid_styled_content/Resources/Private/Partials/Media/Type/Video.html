@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<figure class="video" data-type="{f:if(condition: '{file.extension} == youtube || {file.extension} == vimeo', then: 'external')}">
+    <div class="video-embed">
+        <f:render partial="Media/Rendering/Video" arguments="{file: file, dimensions: dimensions, settings: settings}" />
+    </div>
+    <f:if condition="{file.description}">
+        <figcaption class="video-caption">
+            {file.description}
+        </figcaption>
+    </f:if>
+</figure>
+
+</html>

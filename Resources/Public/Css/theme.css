@@ -863,6 +863,25 @@ picture {
   font-weight: 700; }
 
 /* -------------------------------------------------------------- */
+/* video responsive*/
+.video .video-embed {
+  position: relative;
+  left: 0;
+  top: 0; }
+  .video .video-embed .video-embed-item {
+    max-width: 100%; }
+
+.video[data-type="external"] .video-embed {
+  padding-top: 56.25%;
+  overflow: hidden; }
+  .video[data-type="external"] .video-embed > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; }
+
 .ce-gallery.ce-border .ce-column {
   padding: 2.5vw; }
   @media screen and (min-width: 1921px) {
