@@ -48,10 +48,6 @@ routes:
       \r\n
       Sitemap: https://www.domain.tld/sitemap.xml"
   -
-    route: sitemap.xml
-    type: uri
-    source: 't3://page?uid=1&type=1533906435' # uid = Domain/Root page UID from the BE page tree
-  -
     route: humans.txt
     type: staticText
     content: "
@@ -81,9 +77,8 @@ routes:
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
-    default: '/'
     map:
-      '/': 0
+      sitemap.xml: 1533906435
   NewsPlugin:
     type: Extbase
     extension: News
