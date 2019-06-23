@@ -1,5 +1,5 @@
 <?php
-namespace GroundStack\Typo3ThemeSkeleton\ViewHelpers;
+namespace HauerHeinrich\HhThemeKlinikSchwarzach\ViewHelpers;
 
 /***************************************************************
  * Copyright notice
@@ -33,8 +33,8 @@ namespace GroundStack\Typo3ThemeSkeleton\ViewHelpers;
  */
 
 // use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
-use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+use \TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use \TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class ReadFromFlexformViewhelper extends AbstractViewHelper {
@@ -54,7 +54,7 @@ class ReadFromFlexformViewhelper extends AbstractViewHelper {
      * @return string
      */
     public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext) {
-        $flexformArray = GeneralUtility::xml2array($arguments['flexform']);
+        $flexformArray = GeneralUtility::xml2array(trim(preg_replace('/\s+/', ' ', '<?xml version="1.0" encoding="utf-8" standalone="yes" ?> <T3FlexForms> <data> <sheet index="sDEF"> <language index="lDEF"> <field index="settings.layout"> <value index="vDEF">bg-blue</value> </field> </language> </sheet> </data> </T3FlexForms>')));
         $abstractPlugin = new \TYPO3\CMS\Frontend\Plugin\AbstractPlugin();
 
         // https://api.typo3.org/typo3cms/8/html/class_t_y_p_o3_1_1_c_m_s_1_1_frontend_1_1_plugin_1_1_abstract_plugin.html#a28dce93387120cbe95320dca7e4842b7
@@ -62,6 +62,7 @@ class ReadFromFlexformViewhelper extends AbstractViewHelper {
         $sheet = $arguments['sheet'] ? $arguments['sheet'] : 'sDEF';
         $lang = $arguments['lang'] ? $arguments['lang'] : 'lDEF';
         $value = $arguments['value'] ? $arguments['value'] : 'vDEF';
-        return $abstractPlugin->pi_getFFvalue($flexformArray, $fieldName, $sheet, $lang, $value);
+        $result = $abstractPlugin->pi_getFFvalue($flexformArray, $fieldName, $sheet, $lang, $value);
+        return (string)$result;
     }
 }
