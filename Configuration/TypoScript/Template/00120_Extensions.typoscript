@@ -291,9 +291,9 @@ tt_content.gridelements_pi1.20.10.setup {
 ################################################################
 ### Hauer-Heinrich Slider - hh_slider ###
 ################################################################
-# <INCLUDE_TYPOSCRIPT: source="FILE:EXT:hh_slider/Configuration/TypoScript/setup.typoscript">
-# tt_content.hhslider_hh_slider.settings.cssFile >
-# tt_content.hhslider_hh_slider.settings.jsFile >
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hh_slider/Configuration/TypoScript/setup.typoscript">
+tt_content.hhslider_hh_slider.settings.cssFile >
+tt_content.hhslider_hh_slider.settings.jsFile >
 
 ################################################################
 ### Hauer-Heinrich SEO - hh_seo ###

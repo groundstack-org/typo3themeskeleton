@@ -28,11 +28,6 @@ page {
         file15.if.equals = {$plugin.typo3themeskeleton.library}
         file15.if.value = svelte
 
-        ### Slider // Depricated
-        file25 = {$theme.urls.themeResources}Public/JavaScript/Libs/swiper.min.js
-        file25.defer = 1
-        file25.excludeFromConcatenation = 1
-
         ### IO Framework
         file20 = {$theme.urls.themeResources}Public/JavaScript/Libs/io.min.js
         file20.defer = 1
