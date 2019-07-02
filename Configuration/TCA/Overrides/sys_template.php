@@ -9,6 +9,6 @@ call_user_func(function() {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
         "Configuration/TypoScript",
-        "EXT:{$extensionKey} :: Theme Page TS"
+        "EXT:{$extensionKey} :: Theme TS"
     );
 });
