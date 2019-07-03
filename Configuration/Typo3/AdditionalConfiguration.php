@@ -38,8 +38,15 @@ $customChanges = [
         // ]
     ],
     'EXT' => [
+        'runtimeActivatedPackages' => [
+
+        ],
         'extConf' => [
         ]
+    ],
+    'GFX' => [
+        'processor_stripColorProfileByDefault' => true,
+        'processor_stripColorProfileCommand' => '-strip',
     ],
     'SYS' => [
         'UTF8filesystem' => 1,
