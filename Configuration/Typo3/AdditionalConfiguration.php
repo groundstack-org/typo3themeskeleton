@@ -54,7 +54,10 @@ $customChanges = [
         'enableDeprecationLog' => 0,
         'phpTimeZone' => 'Europe/Berlin',
         'systemLocale' => 'de_DE.UTF-8',
-        'ipAnonymization' => '2'
+        'ipAnonymization' => '2',
+        'simplifiedControllerActionDispatching' => true,
+        'loginCopyrightWarrantyProvider' => 'www.hauer-heinrich.de',
+        'systemLogLevel' => 3
     ]
 ];
 $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], (array)$customChanges);
