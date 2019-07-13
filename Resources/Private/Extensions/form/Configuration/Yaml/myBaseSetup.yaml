@@ -15,8 +15,8 @@ TYPO3:
             Form:
               renderingOptions:
                 templateRootPaths:
-                  20: 'EXT:typo3themeskeleton/Resources/Private/Extensions/form/Resources/Private/Frontend/Templates/'
+                  20: 'EXT:typo3themeskeleton/Resources/Private/Extensions/form/Frontend/Templates/'
                 partialRootPaths:
-                  20: 'EXT:typo3themeskeleton/Resources/Private/Extensions/form/Resources/Private/Frontend/Partials/'
+                  20: 'EXT:typo3themeskeleton/Resources/Private/Extensions/form/Frontend/Partials/'
                 layoutRootPaths:
-                  20: 'EXT:typo3themeskeleton/Resources/Private/Extensions/form/Resources/Private/Frontend/Layouts/'
+                  20: 'EXT:typo3themeskeleton/Resources/Private/Extensions/form/Frontend/Layouts/'
