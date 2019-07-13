@@ -59,22 +59,22 @@ plugin.tx_news {
 ################################################################
 ### Typo3 form Extenstion ###
 ################################################################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:form/Configuration/TypoScript/setup.typoscript">
-plugin.tx_form {
-    settings {
-        yamlConfigurations {
-            100 = {$theme.urls.themeResources}Private/Extensions/form/Configuration/Yaml/myBaseSetup.yaml
-        }
-    }
-}
+# <INCLUDE_TYPOSCRIPT: source="FILE:EXT:form/Configuration/TypoScript/setup.typoscript">
+# plugin.tx_form {
+#     settings {
+#         yamlConfigurations {
+#             100 = {$theme.urls.themeResources}Private/Extensions/form/Configuration/Yaml/myBaseSetup.yaml
+#         }
+#     }
+# }
 
-module.tx_form {
-    settings {
-        yamlConfigurations {
-            100 = {$theme.urls.themeResources}Private/Extensions/form/Configuration/Yaml/myBaseSetup.yaml
-        }
-    }
-}
+# module.tx_form {
+#     settings {
+#         yamlConfigurations {
+#             100 = {$theme.urls.themeResources}Private/Extensions/form/Configuration/Yaml/myBaseSetup.yaml
+#         }
+#     }
+# }
 
 ################################################################
 ### Form - ext powermail ###
