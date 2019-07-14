@@ -152,3 +152,14 @@ routeEnhancers:
         type: PersistedAliasMapper
         tableName: tt_address
         routeFieldName: slug
+  IndexedSearchPlugin:
+    type: Extbase
+    namespace: 'tx_indexedsearch_pi2'
+    routes:
+      - { routePath: '/results', _controller: 'Search::search' }
+      -
+        routePath: '/results/{page}'
+        _controller: 'Search::search'
+        _arguments:
+          page: '@widget_0/currentPage'
+    defaultController: 'Search::search'
