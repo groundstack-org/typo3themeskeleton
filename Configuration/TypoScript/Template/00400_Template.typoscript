@@ -3,13 +3,6 @@ page {
     includeCSS {
         file10 = {$theme.urls.themeResources}Public/Css/theme.min.css
     }
-}
-
-page {
-    includeJS >
-    includeJSLibs >
-    includeJSFooter >
-    includeJSFooterlibs >
 
     includeJSLibs {
         file10 = {$theme.urls.themeResources}Public/JavaScript/functions.min.js
@@ -17,12 +10,14 @@ page {
 
     includeJSFooterlibs {
         file10 = {$theme.urls.themeResources}Public/JavaScript/Libs/jquery-3.3.1.min.js
+        file10.defer = 1
         file10.forceOnTop = 1
         file10.excludeFromConcatenation = 1
         file10.if.equals = {$plugin.typo3themeskeleton.library}
         file10.if.value = jQuery
 
         file15 = {$theme.urls.themeResources}Public/JavaScript/Libs/svelte.min.js
+        file15.defer = 1
         file15.forceOnTop = 1
         file15.excludeFromConcatenation = 1
         file15.if.equals = {$plugin.typo3themeskeleton.library}
@@ -50,8 +45,13 @@ page {
 
     includeJSFooter {
         file20 = {$theme.urls.themeResources}Public/JavaScript/Ajax.min.js
+        file20.defer = 1
+
         file600 = {$theme.urls.themeResources}Public/JavaScript/MenuMain.min.js
+        file20.defer = 1
+
         file1000 = {$theme.urls.themeResources}Public/JavaScript/Main.min.js
+        file20.defer = 1
     }
 
     10 = FLUIDTEMPLATE
