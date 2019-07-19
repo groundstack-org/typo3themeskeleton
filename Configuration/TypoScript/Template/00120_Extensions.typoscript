@@ -297,6 +297,57 @@ tt_content.hhslider_hh_slider.settings.cssFile >
 tt_content.hhslider_hh_slider.settings.jsFile >
 
 ################################################################
+### TYPO3 SEO - sitemap ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo/Configuration/TypoScript/XmlSitemap/setup.typoscript">
+plugin.tx_seo {
+    view {
+        templateRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/seo/Templates/XmlSitemap/
+            1000 = {$plugin.tx_seo.view.templateRootPath}
+        }
+        partialRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/seo/Partials/XmlSitemap/
+            1000 = {$plugin.tx_seo.view.partialRootPath}
+        }
+        layoutRootPaths {
+            10 = {$theme.urls.themeResources}Private/Extensions/seo/Layouts/XmlSitemap/
+            1000 = {$plugin.tx_seo.view.layoutRootPath}
+        }
+    }
+
+    config {
+        xmlSitemap {
+            sitemaps {
+                news {
+                    provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+                    config {
+                        table = tx_news_domain_model_news
+                        sortField = sorting
+                        lastModifiedField = tstamp
+                        recursive = 3
+                        pid = 51
+                        url {
+                            pageId = 53
+                            fieldToParameterMap {
+                                uid = tx_news_pi1[news]
+                            }
+
+                            additionalGetParameters {
+                                tx_news_pi1.controller = News
+                                tx_news_pi1.action = detail
+                            }
+
+                            useCacheHash = 1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+################################################################
 ### Hauer-Heinrich SEO - hh_seo ###
 ################################################################
-# <INCLUDE_TYPOSCRIPT: source="FILE:EXT:hh_seo/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hh_seo/Configuration/TypoScript/setup.typoscript">
