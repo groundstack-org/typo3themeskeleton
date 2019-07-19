@@ -22,12 +22,16 @@
     },
     "require": {
         "typo3/cms-core": "^9.5.0 || ^9.9.99",
-        "fluid_styled_content": "^9.5.0 || ^9.9.99",
-        "hh_slider": "",
-        "gridelements": "^9.0.0 || ^9.9.9",
-        "news": "^7.0.0 || ^9.0.0",
-        "tt_address": "4.*",
-        "powermail": "7.*"
+        "typo3/cms-fluid": "",
+        "typo3/cms-frontend": "",
+        "typo3/cms-fluid-styled-content": "^9.5.0 || ^9.9.99",
+        "typo3/cms-scheduler": "",
+        "typo3/cms-seo": "",
+        "gridelementsteam/gridelements": "^9.0.0 || ^9.9.9",
+        "georgringer/news": "^7.0.0 || ^9.0.0",
+        "friendsoftypo3/tt-address": "4.*",
+        "in2code/powermail": "7.*",
+        "hh_slider": ""
     },
     "autoload": {
         "psr-4": {
