@@ -22,16 +22,16 @@
     },
     "require": {
         "typo3/cms-core": "^9.5.0 || ^9.9.99",
-        "typo3/cms-fluid": "",
-        "typo3/cms-frontend": "",
+        "typo3/cms-fluid": "^9.5.0 || ^9.9.99",
+        "typo3/cms-frontend": "^9.5.0 || ^9.9.99",
         "typo3/cms-fluid-styled-content": "^9.5.0 || ^9.9.99",
-        "typo3/cms-scheduler": "",
-        "typo3/cms-seo": "",
+        "typo3/cms-scheduler": "^9.5.0 || ^9.9.99",
+        "typo3/cms-seo": "^9.5.0 || ^9.9.99",
         "gridelementsteam/gridelements": "^9.0.0 || ^9.9.9",
-        "georgringer/news": "^7.0.0 || ^9.0.0",
-        "friendsoftypo3/tt-address": "4.*",
-        "in2code/powermail": "7.*",
-        "hh_slider": ""
+        "georgringer/news": "^7.0.0 || ^8.0.0",
+        "friendsoftypo3/tt-address": "^4.0.0 || ^4.99.99",
+        "in2code/powermail": "^7.0.0 || ^7.99.99",
+        "hh_slider": "^0.1.0 || ^0.1.99"
     },
     "autoload": {
         "psr-4": {
