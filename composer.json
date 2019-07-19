@@ -31,7 +31,8 @@
         "georgringer/news": "^7.0.0 || ^8.0.0",
         "friendsoftypo3/tt-address": "^4.0.0 || ^4.99.99",
         "in2code/powermail": "^7.0.0 || ^7.99.99",
-        "hh_slider": "^0.1.0 || ^0.1.99"
+        "hauerheinrich/hh-slider": "^0.1.0 || ^0.1.99",
+        "hauerheinrich/hh-seo": "^0.1.0 || ^0.1.99"
     },
     "autoload": {
         "psr-4": {

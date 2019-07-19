@@ -26,12 +26,12 @@ $EM_CONF['typo3themeskeleton'] = [
         'depends' => [
             'typo3' => '9.5.0-9.9.99',
             'fluid_styled_content' => '9.5.0-9.9.99',
-            'hh_slider' => '',
             'gridelements' => '9.0.0-9.9.9',
             'news' => '7.0.0-9.9.9',
             'tt_address' => '4.0.0-4.9.9',
             'powermail' => '6.0.0-9.9.9',
-            // 'hh_seo' => ''
+            'hh_slider' => '',
+            'hh_seo' => ''
         ],
         'conflicts' => [
         ],
