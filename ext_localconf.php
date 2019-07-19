@@ -53,4 +53,14 @@ call_user_func(function() {
 
     // AJAX eID
     // $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['hhtheme'] = "EXT:{$extensionKey}/Classes/EidApi/index.php";
+
+    // after Install - disable not used extensions
+    /** @var \TYPO3\CMS\Extbase\SignalSlot\Dispatcher $signalSlotDispatcher */
+    $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
+    $signalSlotDispatcher->connect(
+        \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,
+        'afterExtensionInstall',
+        GroundStack\Typo3ThemeSkeleton\Signals\AfterExtensionInstall::class,
+        'disableExtensions'
+    );
 });

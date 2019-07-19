@@ -16,8 +16,8 @@ To use it as your own:
 
 
 ### Features
-- uses svelete.js as default insteed of jQuery (http://sveltejs.com/) - change this in the constants-editor
-
+- uses svelete.js as default insteed of jQuery (http://sveltejs.com/) - change this in the constants-editor (if powermail is installed, then jquery will be loaded anyway)
+- you can set up a "ext_disable.php" in this main extension directory (like the example). If you do that all extensions listed in it are automatically disabled when installing this theme
 
 ### Todos
 - add "ext_icon.png"
