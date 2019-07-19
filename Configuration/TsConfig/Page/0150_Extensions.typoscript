@@ -1,0 +1,4 @@
+################################################################
+### Hauer-Heinrich Slider - hh_slider ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hh_slider/Configuration/TsConfig/AllPage.typoscript">
