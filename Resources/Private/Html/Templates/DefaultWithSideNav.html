@@ -19,9 +19,12 @@
         </f:if>
 
         <f:if condition="{NavAside}">
-            <nav id="asideNav">
+            <f:then>
                 <f:format.raw>{NavAside}</f:format.raw>
-            </nav>
+            </f:then>
+            <f:else>
+                <f:render partial="Menu/MenuAside" arguments="{MenuAside: MenuAside}" />
+            </f:else>
         </f:if>
 
         <f:if condition="{NavAsideAfter}">

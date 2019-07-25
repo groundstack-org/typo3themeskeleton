@@ -171,6 +171,9 @@ page {
             MainContent =< styles.content.get
             MainContent.select.where = colPos = 1
 
+            NavAside =< styles.content.get
+            NavAside.select.where = colPos = 2
+
             NavAsideBefore =< styles.content.get
             NavAsideBefore.select.where = colPos = 3
 
