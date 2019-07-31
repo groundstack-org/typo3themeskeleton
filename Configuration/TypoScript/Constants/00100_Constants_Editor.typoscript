@@ -52,12 +52,6 @@ plugin.typo3themeskeleton {
         sitemapTxNewsStorageID =
     # cat=plugin.typo3themeskeleton_seo/page/0007; type=int+; label= tx_news Detail Page ID (if you have more than one then update / change the sitemap.ts!)
         sitemapTxNewsDetailID =
-    #cat=plugin.typo3themeskeleton_seo/page/0010; type=string; label= lang
-        defaultLang = de
-    #cat=plugin.typo3themeskeleton_seo/page/0020; type=string; label= localeall
-        defaultLocaleAll = de_DE.UTF-8
-    #cat=plugin.typo3themeskeleton_seo/page/0030; type=string; label= htmllangkey
-        defaultHtmlLangkey = de-DE
     #cat=plugin.typo3themeskeleton_seo/page/0100; type=string; label= bevor Meta Title
         beforeMetaTitle =
     #cat=plugin.typo3themeskeleton_seo/page/0110; type=string; label= nach Meta Title

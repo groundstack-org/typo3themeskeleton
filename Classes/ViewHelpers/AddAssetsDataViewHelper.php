@@ -75,7 +75,7 @@ class AddAssetsDataViewHelper extends AbstractViewHelper {
 
                     $GLOBALS['TSFE']->$where['themeCSS'] = "<style>" . $resultOLD . $resultNEW ."</style>";
                 } else {
-                    $GLOBALS['TSFE']->$where['themeCSS'] = htmlspecialchars(trim($renderChildrenClosure()));
+                    $GLOBALS['TSFE']->$where['themeCSS'] = trim($renderChildrenClosure());
                 }
 
                 // ToDo: $pageRender->addCssInlineBlock();

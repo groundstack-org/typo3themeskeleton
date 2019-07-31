@@ -2,15 +2,7 @@ config {
     admPanel = 1
     doctype = html5
     # htmlTag_setParams = manifest="/webstorage.appcache"
-    sys_language_UID = 0
-    sys_language_uid = 0
-    sys_language_mode = strict
-    sys_language_overlay = 0
-    linkVars = L(0)
-    language = {$plugin.typo3themeskeleton.defaultLang}
-    locale_all = {$plugin.typo3themeskeleton.defaultLocaleAll}
     metaCharset = utf-8
-    htmlTag_langKey = {$plugin.typo3themeskeleton.defaultHtmlLangkey}
     noPageTitle = 2
     pageTitleFirst = 0
     inlineStyle2TempFile = 1

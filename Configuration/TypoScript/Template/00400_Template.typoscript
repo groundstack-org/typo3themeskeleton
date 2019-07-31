@@ -133,10 +133,9 @@ page {
             ################################################################
             ### Language Menu ###
             ################################################################
-            40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            40 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
             40 {
-                special = language
-                special.value = 0,1
+                languages = auto
                 as = MenuLanguage
 
                 if.isTrue = {$plugin.typo3themeskeleton.multiLanguage}
