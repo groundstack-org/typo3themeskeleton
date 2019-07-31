@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:hh="http://typo3.org/ns/HauerHeinrich/HhThemeSkischuleArber/ViewHelpers"
+    xmlns:hhs="http://typo3.org/ns/HauerHeinrich/HhSeo/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<hhs:metaTag order="0">
+[{
+    <f:comment></f:comment>
+    "title": "{data.title}",
+    "titleBefore": "{settings.titleBefore}",
+    "titleAfter": "{settings.titleAfter}",
+    "titleSeparate": " - ",
+    "titleSeparateBefore": "",
+    "titleSeparateAfter": "",
+
+    "description": "{data.description}",
+
+    "designer": "https://www.hauer-heinrich.de",
+    "theme-color": "#1D3E79",
+    "shortcutIcon": "{settings.shortcutIcon}",
+    "touchIcon": "{settings.touchIcon}",
+    "imagetoolbar": "false",
+    "format-detection": "false",
+    "last-modified": "{lastModified}",
+
+    "author": "humans.txt",
+
+    "robots:index": "{f:if(condition: '{data.no_index}', then: 'noindex')}",
+    "robots:follow": "{f:if(condition: '{data.no_follow}', then: 'nofollow')}",
+
+    "og:title": "{data.og_title}",
+    "og:description": "{data.og_description}",
+    "og:image": "<f:if condition="{og_image.0}">{f:uri.image(src: '{og_image.0.uid}', treatIdAsReference: 1)}</f:if>",
+
+    "twitter:title": "{data.twitter_title}",
+    "twitter:description": "{data.twitter_description}",
+    "twitter:image": "<f:if condition="{twitter_image.0}">{f:uri.image(src: '{twitter_image.0.uid}', treatIdAsReference: 1)}</f:if>",
+
+    "geo:region": "{geoRegion}",
+    "geo:placename": "{geoPlacename}",
+    "geo:position:long": "{geoPositionLong}",
+    "geo:position:lat": "{geoPositionLat}"
+}]
+</hhs:metaTag>
+
+</html>
