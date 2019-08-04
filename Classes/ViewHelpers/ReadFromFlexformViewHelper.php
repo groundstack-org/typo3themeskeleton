@@ -1,5 +1,5 @@
 <?php
-namespace HauerHeinrich\HhThemeKlinikSchwarzach\ViewHelpers;
+namespace GroundStack\Typo3ThemeSkeleton\ViewHelpers;
 
 /***************************************************************
  * Copyright notice

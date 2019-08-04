@@ -58,15 +58,15 @@ page {
     10 {
         format = html
         layoutRootPaths {
-            10 = {$theme.urls.themeResources}Private/Html/Layouts/
+            10 = {$theme.urls.themeResources}Private/Theme/Layouts/
         }
 
         templateRootPaths {
-            10 = {$theme.urls.themeResources}Private/Html/Templates/
+            10 = {$theme.urls.themeResources}Private/Theme/Templates/
         }
 
         partialRootPaths {
-            10 = {$theme.urls.themeResources}Private/Html/Partials/
+            10 = {$theme.urls.themeResources}Private/Theme/Partials/
         }
 
         ### Template file name must be the same as the ID of the backendlayout

@@ -20,7 +20,6 @@ editor:
       - "EXT:rte_ckeditor/Resources/Public/Css/contents.css"
       - "EXT:typo3themeskeleton/Resources/Public/Css/UserRTE.min.css"
 
-
     stylesSet:
       ### For block level e. g.:
       - { name: "font-size xlarge", element: "p", attributes: { 'class': 'font-size-xlarge' } }
