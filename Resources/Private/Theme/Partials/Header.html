@@ -3,7 +3,7 @@
     data-namespace-typo3-fluid="true">
 
 <header id="header" class="main-header container">
-    <f:format.raw>{Logo}</f:format.raw>
+    <f:render partial="Logo" arguments="{logos}" />
 
     <nav id="menu-main">
         <f:render partial="Menu/MainMenu" arguments="{_all}" />

@@ -88,6 +88,19 @@ page {
 
         dataProcessing {
             ################################################################
+            ### Page Images - used for logo (first) and company image (second) ###
+            ################################################################
+            5 = GroundStack\Typo3ThemeSkeleton\DataProcessing\FilesProcessor
+            5 {
+                references {
+                    fieldName = media
+                    data = fullRootLine:-2
+                    table = pages
+                }
+                as = logos
+            }
+
+            ################################################################
             ### Main Menu ###
             ################################################################
             10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
