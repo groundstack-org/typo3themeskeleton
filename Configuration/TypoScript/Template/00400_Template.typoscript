@@ -88,6 +88,14 @@ page {
 
         dataProcessing {
             ################################################################
+            ### Site config ###
+            ################################################################
+            1 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+            1 {
+                as = site
+            }
+
+            ################################################################
             ### Page Images - used for logo (first) and company image (second) ###
             ################################################################
             5 = GroundStack\Typo3ThemeSkeleton\DataProcessing\FilesProcessor
