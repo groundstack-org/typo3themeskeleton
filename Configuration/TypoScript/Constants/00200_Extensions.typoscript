@@ -118,3 +118,8 @@ search {
 ### TYPO3 SEO - sitemap ###
 ################################################################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo/Configuration/TypoScript/XmlSitemap/constants.typoscript">
+
+################################################################
+### hh_seo ###
+################################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hh_seo/Configuration/TypoScript/constants.typoscript">
