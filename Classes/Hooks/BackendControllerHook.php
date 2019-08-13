@@ -13,18 +13,23 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class BackendControllerHook {
 
     /**
+     * extensionKey
+     *
      * @var string
      */
     protected $extensionKey;
 
     /**
+     * path
+     * path to this extension
+     *
      * @var string
      */
-    protected $extensionPath;
+    protected $path;
 
     public function __construct() {
-        $this->extensionKey = "typo3themeskeleton";
-        $this->extensionPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($this->extensionKey);
+        $this->extensionKey =  "typo3themeskeleton";
+        $this->path = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($this->extensionKey);
     }
 
     /**
@@ -35,7 +40,7 @@ class BackendControllerHook {
      */
     public function addCss(array $configuration, BackendController $backendController) {
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-        $pageRenderer->addCssFile($this->extensionPath . "/Resources/Public/Css/Backend/main.min.css");
+        $pageRenderer->addCssFile($this->path . '/Resources/Public/Css/Backend/main.min.css');
     }
 
     /**
@@ -46,6 +51,6 @@ class BackendControllerHook {
      */
     public function addJavaScript(array $configuration, BackendController $backendController) {
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-        $pageRenderer->loadRequireJsModule("TYPO3/CMS/Typo3ThemeSkeleton/Backend/Bemain");
+        $pageRenderer->loadRequireJsModule('TYPO3/CMS/Typo3ThemeSkeleton/Backend/Bemain');
     }
 }
