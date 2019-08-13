@@ -46,7 +46,8 @@ $customChanges = [
     ],
     'GFX' => [
         'processor_stripColorProfileByDefault' => true,
-        'processor_stripColorProfileCommand' => '-strip',
+        'processor_stripColorProfileCommand' => '-strip -interlace Plane -quality 80',
+        'jpg_quality' => 80
     ],
     'SYS' => [
         'UTF8filesystem' => 1,
