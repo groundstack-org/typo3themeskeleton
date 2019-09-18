@@ -161,6 +161,27 @@ page {
 
                 if.isTrue = {$plugin.typo3themeskeleton.multiLanguage}
             }
+
+            ################################################################
+            ### Menu Info ###
+            ################################################################
+            50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            50 {
+                special = directory
+                special.value = {$plugin.typo3themeskeleton.menuInfo}
+                entryLevel = 0
+                levels = 7
+                expandAll = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = media
+                    }
+                }
+                as = MenuInfo
+            }
         }
 
         settings {

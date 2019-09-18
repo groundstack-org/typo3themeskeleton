@@ -36,6 +36,8 @@ plugin.typo3themeskeleton {
     ### Layout
     # cat=plugin.typo3themeskeleton_Layout/basic/0031; type=int+; label= Page ID der Seite für den Inhalt für den Footer
         footerSeitenID = 9
+    # cat=plugin.typo3themeskeleton_Layout/basic/0032; type=int+; label= Page ID des Trenners für das info menu (datenschutz impressum etc.)
+        menuInfo =
     # cat=plugin.typo3themeskeleton_Layout/basic/0040; type=int+; label= Page ID der Suchergebnisseite
         indexedSearchId =
     # cat=plugin.typo3themeskeleton_Layout/basic/0055; type=boolean; label= Webseite mehrsprachig? (default de || en)
