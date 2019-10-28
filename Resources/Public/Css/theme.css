@@ -1416,6 +1416,102 @@ a[class^="btn-"] {
   50% {
     transform: scale(1); } }
 
+.powermail_form {
+  line-height: 1.35; }
+  .powermail_form * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    float: none; }
+  .powermail_form select, .powermail_form textarea, .powermail_form input, .powermail_form label, .powermail_form option {
+    color: #000; }
+  .powermail_form .powermail_fieldset {
+    margin: 0 0 12px 0;
+    border: 0; }
+    .powermail_form .powermail_fieldset .powermail_fieldwrap {
+      clear: both;
+      margin: 0 0 12px 0; }
+      .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_label {
+        padding: 0 0 2px 0;
+        margin: 0;
+        width: 100%;
+        display: inline-block; }
+      .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 0; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field label {
+          width: auto; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field select, .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field textarea, .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field input {
+          border: 1px solid #000;
+          border-radius: 3px;
+          width: 100%;
+          padding: 10px;
+          font-size: 1rem;
+          background: #fff; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field select {
+          appearance: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          cursor: pointer; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field select::-ms-expand {
+          display: none; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field input[type="checkbox"] {
+          width: auto; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field input[type="radio"] {
+          width: auto; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field input[type="hidden"] {
+          display: none; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field input[type="button"], .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field input[type="submit"] {
+          appearance: none;
+          -moz-appearance: none;
+          -webkit-appearance: none; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field input[type="submit"] {
+          transition: all 350ms;
+          background: #000;
+          color: #fff;
+          cursor: pointer; }
+          .powermail_form .powermail_fieldset .powermail_fieldwrap .powermail_field input[type="submit"]:hover {
+            background: #fff;
+            color: #000; }
+      .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_select .powermail_field::after {
+        content: "\25BE";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        font-size: 20px;
+        background: none; }
+      .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_check .powermail_label, .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_radio .powermail_label {
+        width: auto;
+        margin-right: 12px; }
+      .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_check .powermail_field, .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_radio .powermail_field {
+        width: auto; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_check .powermail_field .checkbox, .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_radio .powermail_field .checkbox {
+          margin: 0 12px;
+          display: inline-block; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_check .powermail_field .checkbox:first-of-type, .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_radio .powermail_field .checkbox:first-of-type {
+          margin-left: 0; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_check .powermail_field .checkbox:last-of-type, .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_radio .powermail_field .checkbox:last-of-type {
+          margin-right: 0; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_check .powermail_field .radio, .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_radio .powermail_field .radio {
+          margin: 0 12px;
+          display: inline-block; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_check .powermail_field .radio:first-of-type, .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_radio .powermail_field .radio:first-of-type {
+          margin-left: 0; }
+        .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_check .powermail_field .radio:last-of-type, .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_radio .powermail_field .radio:last-of-type {
+          margin-right: 0; }
+      .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_check.dataprotection .powermail_field .checkbox label, .powermail_form .powermail_fieldset .powermail_fieldwrap.powermail_fieldwrap_type_radio.dataprotection .powermail_field .checkbox label {
+        width: 100%; }
+  .powermail_form .parsley-errors-list {
+    list-style-type: none;
+    margin: 12px 0;
+    padding: 10px;
+    background: #BA2020;
+    color: #fff; }
+
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-user-select: none;

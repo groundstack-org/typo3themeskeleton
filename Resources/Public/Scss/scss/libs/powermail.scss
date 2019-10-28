@@ -1,0 +1,133 @@
+// Variables
+$pmTextColor: #000 !default;
+$pmBorderColor: #000 !default;
+$pmBgColor: #fff !default;
+$pmBoderRadius: 3px !default;
+$pmInputPadding: 10px !default;
+$pmInputMargin: 12px !default;
+$pmButtonBg: #000 !default;
+$pmButtonText: #fff !default;
+$pmFontSize: 1rem !default;
+$pmLineHeight: 1.35;
+$pmErrorBg: #BA2020 !default;
+$pmErrorColor: #fff !default;
+
+.powermail_form {
+    // Default Reset
+    * { padding: 0; margin: 0; box-sizing: border-box; float:none; }
+
+    // Default Form Styling
+    line-height:$pmLineHeight;
+
+    // Default Inputs Styling
+    select, textarea, input, label, option {
+        color: $pmTextColor;
+        // -webkit-appearance:none; -moz-appearance:none; appearance:none; // Hard Reset of Browser Stylings
+        // (be carefull, because checkboxes etc. are not working as expected)
+    }
+
+    // Fieldsets / Groups
+    .powermail_fieldset {
+        margin: 0 0 $pmInputMargin 0;
+        border:0;
+
+        // Field / Input Wrappers
+        .powermail_fieldwrap {
+            clear:both;
+            margin: 0 0 $pmInputMargin 0;
+
+            .powermail_label {
+                padding:0 0 2px 0;
+                margin:0;
+                width: 100%;
+                display:inline-block;
+            }
+
+            .powermail_field {
+                display:inline-block;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+
+                label { width:auto; }
+
+                select, textarea, input {
+                    border: 1px solid $pmBorderColor;
+                    border-radius: $pmBoderRadius;
+                    width: 100%;
+                    padding: $pmInputPadding;
+                    font-size:$pmFontSize;
+                    background:$pmBgColor;
+                }
+
+                select { appearance:none; -moz-appearance:none; -webkit-appearance:none; cursor:pointer; }
+                select::-ms-expand { display:none; }
+
+                input[type="checkbox"]{ width:auto; }
+                input[type="radio"]{ width:auto; }
+                input[type="hidden"]{ display:none; }
+
+                input[type="button"], input[type="submit"] {
+                    appearance:none; -moz-appearance:none; -webkit-appearance:none;
+                }
+
+                input[type="submit"]{
+                    transition:all 350ms;
+                    background:$pmButtonBg;
+                    color:$pmButtonText;
+                    cursor:pointer;
+
+                    &:hover { background:$pmButtonText; color:$pmButtonBg; }
+                }
+            }
+
+            &.powermail_fieldwrap_type_submit {}
+            &.powermail_fieldwrap_type_select {
+                .powermail_field {
+                    &::after {
+                        content:"\25BE";
+                        display:block;
+                        position:absolute;
+                        top:50%; right:10px;
+                        transform:translateY(-50%);
+                        font-size:20px;
+                        background:none;
+                    }
+                }
+            }
+            &.powermail_fieldwrap_type_textarea {}
+            &.powermail_fieldwrap_type_input {}
+            &.powermail_fieldwrap_type_html {}
+            &.powermail_fieldwrap_type_radio {}
+            &.powermail_fieldwrap_type_check {}
+            &.powermail_fieldwrap_type_check, &.powermail_fieldwrap_type_radio {
+                .powermail_label { width:auto; margin-right:$pmInputMargin; }
+                .powermail_field {
+                    width:auto;
+
+                    .checkbox { margin:0 $pmInputMargin; display:inline-block; }
+                    .checkbox:first-of-type { margin-left:0; }
+                    .checkbox:last-of-type { margin-right:0; }
+
+                    .radio { margin:0 $pmInputMargin; display:inline-block; }
+                    .radio:first-of-type { margin-left:0; }
+                    .radio:last-of-type { margin-right:0; }
+                }
+                &.dataprotection {
+                    .powermail_field {
+                        .checkbox {  }
+                        .checkbox label { width:100%; }
+                    }
+                }
+            }
+        }
+    }
+
+    .parsley-errors-list {
+        list-style-type: none;
+        margin:$pmInputMargin 0;
+        padding:$pmInputPadding;
+        background:$pmErrorBg;
+        color:$pmErrorColor;
+    }
+}
