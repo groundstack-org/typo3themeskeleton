@@ -1,5 +1,5 @@
 <?php
-namespace GroundStack\Typo3ThemeSkeleton\ViewHelpers;
+namespace HauerHeinrich\HhThemeJobsdahoam\ViewHelpers;
 
 /***************************************************************
  * Copyright notice
@@ -39,9 +39,12 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class AddAssetsDataViewHelper extends AbstractViewHelper {
     public function initializeArguments() {
-        $this->registerArgument('type', 'string', 'Can be css or js', true);
+        $this->registerArgument('type', 'string', 'Can be css or js or json-ld', true);
         $this->registerArgument('where', 'string', 'Can be header (header is default for css) or footer (footer is default for js)', false);
         $this->registerArgument('file', 'string', 'Can be css or js', false);
+        $this->registerArgument('current', 'boolean', 'Used for "file", if source is in current extension', false, true);
+        $this->registerArgument('class', 'string', 'class attribute', false);
+        $this->registerArgument('exclude', 'string', 'For CSS and JS files - excludeFromConcatenation ', false, true);
     }
 
     /**
@@ -53,6 +56,9 @@ class AddAssetsDataViewHelper extends AbstractViewHelper {
      */
     public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext) {
         $pageRender = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
+        if (isset($arguments)) {
+            # code...
+        }
 
         switch ($arguments['type']) {
             case 'css':
@@ -75,7 +81,7 @@ class AddAssetsDataViewHelper extends AbstractViewHelper {
 
                     $GLOBALS['TSFE']->$where['themeCSS'] = "<style>" . $resultOLD . $resultNEW ."</style>";
                 } else {
-                    $GLOBALS['TSFE']->$where['themeCSS'] = trim($renderChildrenClosure());
+                    $GLOBALS['TSFE']->$where['themeCSS'] = htmlspecialchars(trim($renderChildrenClosure()));
                 }
 
                 // ToDo: $pageRender->addCssInlineBlock();
@@ -106,14 +112,49 @@ class AddAssetsDataViewHelper extends AbstractViewHelper {
                 // ToDo: $pageRender->addJsFooterInlineCode();  ->addJsInlineCode();
                 break;
             case 'cssFile':
-                $pageRender->addCssFile(trim($arguments['file']), 'stylesheet', 'all');
+                if($arguments['current'] === true) {
+                    // Get current ExtKey from templatePath
+                    $templatePaths = array_reverse($renderingContext->getTemplatePaths()->getTemplateRootPaths());
+                    $extKey = '';
+                    foreach ($templatePaths as $key => $value) {
+                        if(!empty($value)) {
+                            $extKey = explode('/', explode('/ext/', $value)[1])[0];
+                        }
+                    }
+
+                    $path = 'EXT:'.$extKey.'/Resources/Public/Css/'.trim($arguments['file']);
+                } else {
+                    $path = trim($arguments['file']);
+                }
+                $pageRender->addCssFile($path, 'stylesheet', 'all', '', true, false, '', $arguments['exclude'] );
                 break;
             case 'jsFile':
-                if($arguments['where'] == "header") {
-                    $pageRender->addJsFile(trim($arguments['file']), '', true, false, '', true, '|', false, '', true);
+                if($arguments['current'] === true) {
+                    // Get current ExtKey from templatePath
+                    $templatePaths = array_reverse($renderingContext->getTemplatePaths()->getTemplateRootPaths());
+                    $extKey = '';
+                    foreach ($templatePaths as $key => $value) {
+                        if(!empty($value)) {
+                            $extKey = explode('/', explode('/ext/', $value)[1])[0];
+                        }
+                    }
+
+                    $path = 'EXT:'.$extKey.'/Resources/Public/JavaScript/'.trim($arguments['file']);
                 } else {
-                    $pageRender->addJsFooterFile(trim($arguments['file']), '', true, false, '', true, '|', false, '', true);
+                    $path = trim($arguments['file']);
                 }
+
+                if($arguments['where'] == "header") {
+                    $pageRender->addJsFile($path, '', true, false, '', $arguments['exclude'], '|', false, '', true);
+                } else {
+                    $pageRender->addJsFooterFile($path, '', true, false, '', $arguments['exclude'], '|', false, '', true);
+                }
+                break;
+            case 'json':
+                $pageRender->addHeaderData('<script type="application/json" class="'.$arguments['class'].'">'.trim($renderChildrenClosure()).'</script>');
+                break;
+            case 'json-ld':
+                $pageRender->addHeaderData('<script type="application/ld+json" class="'.$arguments['class'].'">'.trim($renderChildrenClosure()).'</script>');
                 break;
             default:
                 $GLOBALS['TSFE']->additionalFooterData[] = "<div class='error'>ERROR: no or wrong tag in AddHeaderDataViewHelper</div>";
