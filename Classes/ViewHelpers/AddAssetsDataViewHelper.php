@@ -119,6 +119,7 @@ class AddAssetsDataViewHelper extends AbstractViewHelper {
                     foreach ($templatePaths as $key => $value) {
                         if(!empty($value)) {
                             $extKey = explode('/', explode('/ext/', $value)[1])[0];
+                            break;
                         }
                     }
 
@@ -136,6 +137,7 @@ class AddAssetsDataViewHelper extends AbstractViewHelper {
                     foreach ($templatePaths as $key => $value) {
                         if(!empty($value)) {
                             $extKey = explode('/', explode('/ext/', $value)[1])[0];
+                            break;
                         }
                     }
 
